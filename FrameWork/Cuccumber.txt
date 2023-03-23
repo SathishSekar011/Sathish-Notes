@@ -1,0 +1,157 @@
+CUCUMBER FRAMEWORK:
+===================
+	==> BDD (Behaviour Driven Development) with the execution of TDD (Test Driven Development)
+	==> Used to convert the exact requirements into plain English language.
+	==> support insprint automation.
+	==> Non-Technical people can also understand the automation coverage.
+	==> Cucumber supports Ruby,Java,Grovy,Python,.NET and PHP.
+	==> We can use the Gherkin language or Gherkin Keyword (Plain English).
+	==> Cucumber options.
+	==> Cucumber Reports.
+
+BDD FRAMEWORK:
+==============
+1. Cucumber
+2. Jbehave
+3. Nbehave
+4. Specflow
+
+CUCUMBER ANNOTATIONS
+=====================
+==> @Given
+==> @When
+==> @Then
+==> @CucumberOption
+==> @Runwith(Cucumber.class)
+
+GHERKIN Keyword / GHERKIN Language:
+====================================
+==> Feature		
+==> Scenario
+==> Given
+==> When
+==> Then
+==> And
+==> But
+==> Scenario Outline
+==> Examples
+==> Background
+
+
+Feature:
+--------
+	--> Feature defines the logical test funtionality test [What you will test the feature file].
+	--> Feature keyword is present at the starting of the feature file.
+
+Scenario:
+---------
+	--> Business rule[Provides the scenario name /purpose of the scenario].
+
+Given:
+-------
+	--> Some precondition step.
+
+When:
+------
+	--> Some key actions.
+
+Then:
+-----
+	--> To observe the outcomes or validation.
+
+Scenario Outline:
+------------------
+	--> Used to execute the same scenario with multiple times wih different set of test datas.
+
+Examples:
+----------
+	--> Used to pass the parameters using the | (pipe symbol) | separate the each variables.
+
+But:
+----- 
+	--> Used to add negative type comments.
+
+Background:
+-----------
+	--> Define steps which is are common to all the tests in the feature file.
+And:
+-----
+	--> Used to add conditions in feature file.
+
+
+CUCUMBER OPTIONS:
+==================
+==> features	--> set: The paths of the feature files 		     --> {}
+==> glue	--> set: The paths of the step definition files		     --> {}
+==> dryRun	--> true: Checks if all the steps have the Step Definition   --> false
+==> monochrome	--> true: Display the console output in much readable format --> false
+==> plugin	--> set: What all the report formats to use		     --> {}
+==> pretty
+==> tags
+==> strict	--> true: Will fail execution, if there are undefined or pending steps --> false
+
+
+Dependencies:
+==============
+==> cucumber - junit
+==> cucumber - java
+
+Plugin:
+=======
+==> Download cucumber plugin from Eclipse Market Place
+
+
+Step 1:
+========
+	--> Create a maven project
+
+Step 2:Feature File
+====================
+	--> Plain English commands
+	--> Crete a Folder --> create a feature file(name.feature)
+
+Step 3: TestRunner Class
+=========================
+	--> it connects feature files and StepDefinitions
+
+Step 4: StepDefinitions
+=========================
+	--> Step by step of codings with respective to Feature file
+
+
+
+
+Background
+
+HooksClass:
+==============
+--> @Before
+--> @After
+--> @BeforeStep
+--> @AfterStep
+
+plugin :
+
+html ==> "html:location.filename.html"
+json ==> "json:location.filename.json"
+xml  ==> "junit:location.filename.xml"
+
+
+
+Tags:
+=======
+Scenario ==> @tagname1
+	 ==> @tagname2
+CuccumberOptions ==> tags = "@tagname1 and @tagname2"
+		 ==> tags = "@tagname1 or @tagname2"
+
+
+
+
+
+
+
+
+
+
+

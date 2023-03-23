@@ -1,0 +1,12 @@
+Robot Class:
+=============
+	--> predefined class used to perform keyboard actions
+	--> present in java.awt package
+	--> It'll throws AWT Exception
+
+==> Create object for Robot Class
+		--> Robot robot = new Robot();
+
+	Syntax:-- robot.keyPress(KeyEvent.VK_keytopress) ;
+		  robot.keyRelease(KeyEvent.VK_keytopress) ;
+		eg:-- robot.KeyPress(KeyEvent.VK_A);

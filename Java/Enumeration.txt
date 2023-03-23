@@ -1,0 +1,45 @@
+Cursors:
+=========
+ - used to retrive data from a collection 
+
+Three Types:
+============
+--> Enumeration
+--> Iterator
+--> ListIterator
+
+Enumeration:
+============
+	- Used to retrive data from old collection objects(legacy collection)
+
+Enumeration e = v.element();
+	v ==> Vector
+	element()==> method in vector
+
+Methods in Enumeration:
+------------------------
+1)hasMoreElement()
+2)nextElement()
+
+====================================
+while(e.hasMoreElements()){
+	Object a = e.nextElement();
+}
+====================================
+Limitations:
+==============
+	--> Only Legacy Classes(not universal)
+	--> can't able to remove
+
+
+
+
+
+
+
+
+
+
+
+
+

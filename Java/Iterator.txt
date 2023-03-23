@@ -1,0 +1,34 @@
+Iterator:
+=========
+	- Universal cursor - can retrive data from any collection
+	- Remove operation can be done iterator 
+
+
+==> Iterator i = c.iterator();
+	c--> Collection
+	iterator(); --> method in collection
+
+Methods in Iterator:
+====================
+1) hasNext();
+2) next();
+3) remove();
+
+
+Limitations of Iterator:
+=========================
+	- will move in a single direction(only forward directional)
+	- can't perform replacement operation
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+Access Modifiers:
+==================
+1) abstract:
+============
+==> Method : --> we can't able to write logics for an abstract method
+	     --> abstract methods can't be private --> should be public
+	     --> abstract method can be created only inside an abstract class or interface
+
+==> Class  : --> we can't able to create object for that class
+	     --> able to write both abstract and non-abstract methods
+
+==> Variable:--> we can't able declare an variable to an abstract variable	
+
+2) static:
+===========
+==> Method : --> we don't need an object to evoke the method
+	     --> to call a non-static varible inside a static method we must have to create object for 		 that class
+	     --> to call a static method in another class ==> ClassName.methodName();
+
+==> Class  : --> we can't declare a class to be static
+
+==> Variable:--> we can able to call the variable without object
+
+
+3) final:
+==========
+==> Method : --> we can't able to override the method
+==> Class  : --> we can't able to inherit the class
+==> Variable:--> we can't able to change the value
+

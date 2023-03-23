@@ -1,0 +1,143 @@
+Framework:
+-----------
+
+Maven: Build Management Tool
+             Build - Code
+
+Why Should we go build Management Tool:
+
+1, When the no of jar are more.
+2, Jar files -- Dependancies(piece of codes which will download the jar and store in Local workspace)
+
+Build Management Tool(Maven, Ant, Gradle)
+
+How to Configure Maven:
+----------------------------------
+Step 1: Download apache Maven
+	-->google --> download apache maven --> click first link(mvn repository) --> binary zip archive
+		--> extract  
+Step 2: Open Environment Variable
+		RC on ThisPC--Properties--Advanced System Settings--Environment Variables
+
+             User Variables:
+                              New--- Window popup
+                              Variable Name   : JAVA_HOME
+                              Variable Value    : Copy the address of the Java location and paste-OK
+							(C drive--proramme files -- java -- jdk)
+                              New 
+                              Variable Name   : MAVEN_HOME
+                              Variable Value    : Copy the address of Maven Location and paste
+
+             System Variables:
+                              Path--->Click---->Edit
+                              New
+                              Copy the address of the Java Location and Paste and add \bin along with 					the address--Ok
+
+                              New
+                              Copy the address of Maven Location and Paste and add \bin along with the 				address--Ok
+
+
+Step 3:   Verification
+      
+                         Open Cmd - 
+                                                   java -version  -Java Installed Version
+                                                   mvn -version  -Maven Installed Version
+
+Maven Project:
+--------------
+
+How to Create a Maven Project
+
+Step 1: Open IDE
+
+Step 2: File --New --Maven Project---create a simple project--next---- 
+					Group Id      : package name
+                                       	Artifact Id   : project name
+
+Maven Folder Structure:
+---------------------------------
+src/main/java                           - Developers(Code)
+src/main/resources                 	- Developers(Data)
+src/test/java                           - QA(Test--Code)
+src/test/resources                   	- QA(Test--Data)
+JRE System Library                   	- Predefined library files of java
+src                                     - Source Code
+target                                  - to store reports
+pom.xml                                 - to store dependancies
+
+
+Step 3:   Download dependancies and add in the pom.xml file
+
+                    For Selenium Project
+
+                    Selenium java dependancy            3.141.59
+                   
+                    WebDriverManager dependancy  	5.0.3
+
+
+	-->Ctrl+S
+
+Step 4: RC on Maven Project----Maven----update project---Force Update--Ok
+
+Step 5: Under src/test/java  -- Open a new Package--New Class---Main method
+
+Step 6: To set the property of the Browser
+
+               WebDriverManager.chromeDriver().setup();
+
+Maven Life Cycle:
+------------------------
+Clean
+Install
+Test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Validate:
+---------
+                 It will validate for all the dependancies in pom.xml a suitable jar files in present in .m2 folder
+
+Compile:
+--------
+                 It will convert the source code from Classname.java package into fileName.class
+
+Test:
+-----
+                 It will execute the Automation Script in the based on Added environment.        Unit Test
+
+Package:
+--------
+                 It will wrap all the Script, dependancy and external data source file into jar or war so that the project can be executed in another machine.
+
+Integaration Test:
+------------------
+                  Collection of unit test
+
+Verify:
+-------
+                  Regression Test
+
+Install and Deploy:
+-------------------
+                   Releasing the code in the production env
+
+
+

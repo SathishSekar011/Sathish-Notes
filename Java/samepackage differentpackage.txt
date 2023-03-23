@@ -1,0 +1,31 @@
+Same package and Different Package:
+===================================
+
+Same Package Different Class:         
+------------------------------
+ Creating method in a class and calling object in another class within a Package.
+
+ Parent Class----method create-----public
+
+ Child Class------ mainmethod------obj creation for both classes and calling methods
+
+
+
+Different Package Different Class:
+-----------------------------------
+ Calling Class and Methods of one package into another Package
+ To call we should use import
+
+ import packagename.ClassName;
+  
+ import should be inside the package.
+
+
+
+
+
+
+
+
+
+

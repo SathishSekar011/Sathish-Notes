@@ -1,0 +1,69 @@
+Java:
+=====
+Day 1 : Demo
+Day 2 : Demo code
+Day 3 : DataType,Scanner
+Day 4 : Inheritance
+Day 5 : Polymorphism
+Day 6 : Abstraction
+Day 7 : Control Statement[Up to Nested for loop]
+Day 8 : Control Statement[Jumping,Switch Case]
+Day 9 : String Methods
+Day 10: String Types
+Day 11: Array
+Day 12: Collection List
+Day 13: Collection Set,Map
+Day 14: Exception
+Day 15: User Define Exception
+Day 16: Constructor
+Day 17: Types of Varaiable,Access Specifier,Modifier
+Day 18: User Defined List , Set,Map
+Day 19: File Operation
+Day 20: Singleton
+
+Selenium :
+==========
+
+ No of Days : 18 
+
+Day 1 : Browser Lanuch
+Day 2 : Locator
+Day 3 : Xpath
+Day 4 : Navigation Commands,WebDriver Explaination
+Day 5 : Text,Contains
+Day 6 : Debug
+Day 7 : Actions
+Day 8 : Robot  
+Day 9 : Alert
+Day 10: JavaScriptExecutor,Scroll Up,Down
+Day 11: TakesScreenshot
+Day 12: Drop Down[Single Select] 
+Day 13: Drop Down[Multiple Select] 
+Day 14: Frames
+Day 15: Windows Handling
+Day 16: Windows Handling cont
+Day 17: Webtable
+Day 18: Waits
+
+Framework :
+===========
+
+ No of Days : 17 
+
+Day 1 : Maven Build Tool
+Day 2 : Data Driven Introduction
+Day 3 : Data Driven Read cont
+Day 4 : Data Driven Write and update
+Day 5 : Base Class
+Day 6 : Selenium Integration with Data Driven
+Day 7 : Page Object Model  
+Day 8 : Page Object Model cont
+Day 9 : Junit
+Day 10: Junit cont
+Day 11: Testng Introduction
+Day 12: Testng Parameter,Optional
+Day 13: Testng DataProvider
+Day 14: Testng Assert
+Day 15: Testng Groups
+Day 16: Testng Parallel , cross Browser
+Day 17: Testng Rerun

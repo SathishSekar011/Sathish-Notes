@@ -1,0 +1,75 @@
+Access specifier----It will specify the extent of access
+================
+
+Private  - Class Level Access Specifier - we can't able to call the methods in different class
+Default	 - Package Level Access Specifier - we can't able to call methods in different package
+Protected- Package Level Access Specifier but by Inheriting we can get the access in different package
+Public	 - Global Level Access Specifier
+
+
+
+
+
+
+
+Access Modifiers:----It will modify the extent of access
+---------------------------------------------------------
+abstract
+static
+final
+
+
+Abstract
+=========
+Class
+-----
+If we declare class as abstract we cannot create object for the class
+
+method 
+-------
+If we declare method as abstract we canot write any bussiness logic for that method 
+and the method should be declared as public
+
+variable
+--------
+we canot declare variable as abstract
+
+Static
+=======
+Class
+-----
+we canot declare class as static
+
+method 
+-------
+If we declare method as static no need to create object we can call directly by a method name
+In different class using extends we can  directly call by a method name
+without using extends "Classname.methodname();"
+
+variable
+--------
+If we declare variable as static no need to create object we can call directly by a variable name.
+We can use the variable in throughout class.
+In different class using extends we can  directly by a variable  name
+without using extends "Classname.variablename".
+
+Final
+------
+Class
+---------
+we declare class as final we cant inherited
+
+method
+---------
+we declrae method as final we cant overrided
+
+variable
+---------
+we declare variable as final we cant modified.
+
+
+
+
+
+
+

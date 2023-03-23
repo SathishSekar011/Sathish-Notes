@@ -1,0 +1,20 @@
+Navigation Commands:
+=====================
+	- Used to launch url and also to navigate from one url to another url
+	- It is also used to navigate to previous url and forward url
+	- We can also refresh the url
+
+Syntax:
+---------
+	--> driver.navigate().to("url");
+	--> driver.navigate().forward();
+	--> driver.navigate().back();
+	--> driver.navigate().refresh();
+
+
+
+
+
+
+
+

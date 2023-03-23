@@ -1,0 +1,79 @@
+
+Version Control System (VCS):
+==============================
+	--> used to control the versions of a project
+	--> Tracking code changes
+	--> Tracking who made changes
+	--> Coding collaboration -- Cloning
+
+
+1)Centralized VCS:
+==================
+	--> All files will be saved in a centralized server
+
+Cons:
+=====
+	--> If the server goes down there is no backup plan
+
+2)Distributed VCS:(GIT)
+=======================
+	--> Each developer will maintain their own repository
+
+Install GIT:
+============
+
+	--> Google --> git download --> first link --> widows --> 64-bit Git for Windows Setup 
+		--> Install
+
+Create the Account GITHUB:
+==========================
+
+	--> Google --> github --> official website --> create account
+
+
+Steps:
+======
+1) Right Click(Anywhere in a fiolder) --> GIT Bash here
+
+2) Configuring with GITHUB
+===========================
+	==> $ git config --global user.email "email id"
+	==> $ git config --global user.name "User Name"
+
+3) Create New Local Repository:
+================================
+	==> $ git init
+
+	(==> $ git status --> to check the status of files)
+
+4)Adding Files To Staging Area:
+================================
+	==> $ git add .    (or)  $ git add -a
+
+5)Moving Files To Local Repository:
+====================================
+	==> $ git commit -m "message"
+
+6) Create New Repository in GITHUB:
+====================================
+	==> +(in top right) --> New Repository --> Enter Repository Name --> Crete Repository
+
+7) Pushing Codes to Remote Repository:
+=======================================
+	==> git remote add origin repositoryURL
+	==> git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+Abstraction
+-------------
+hiding the implementation details or business logic details. 
+
+Types of abstraction:
+----------------------
+partial abstraction 
+Fully abstraction
+
+partial abstraction(abstract class):
+-------------------------------------  
+contain both abstract and non abstract methods
+contain keywords extends
+use a keyword abstract in both class and abstract method
+we cant create object 
+Dont have any default return type
+
+fully abstraction(Interface):
+-----------------------------
+contain only the  abstract methods
+contain keywords implements
+use a keyword interface instead of class 
+we cant create object 
+Default return type is public abstract
+
+
+
+
+
+
+8925811149 - Sathish
+Name:
+
+
+
+
+
+
+
+
+
+
+

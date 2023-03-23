@@ -1,0 +1,80 @@
+1. Insprint in Agile:
+======================
+	• To develop and automate user stories in the same sprint, is called in-sprint automation.
+	• If there are 4 User stories in a sprint-We will write a skeleton scripts for the User stories
+	 which we are going to automate it in this sprint. 
+	• In a 2 weeks sprint, for 6 days developer will Develop the application 
+	 7th day the build is delivered to Automation team.
+	• After that we will execute the scripts.
+
+2. Outsprint or n-1 Sprint:
+=============================
+	• To automate user stories for the previous sprint, is called out-sprint automation.
+	• Say there were 4 User stories from previous Sprint (Sprint1) which could be automated. 
+	• I will automate it in Sprint 2, which is called as n-1 or outsprint automation.
+	• In my previous Sprint i.e., Sprint 1, I will be working on the framework setup.
+
+3. Velocity:
+=============
+	Total Number of user story points consider in a particular sprint (We can say 40 Points)
+
+4. Capacity:
+=============
+	• Total no of working days*Total no of resources*Total number of working hours(PD) = Capacity
+		--> Capacity= 10*7*8
+
+5. Risk Based Testing:
+========================
+	- Identifying the functionalities which seems to cause failures to the application 
+	  and then testing those functionalities.
+
+6. Bug Leakage:
+===============
+	- Bug missed by testing team while testing and found by the end user in Live Environment
+
+7. Bug Release:
+================
+	- Releasing the application to the Live Environment with the known bugs
+
+8. Defect Age:
+===============
+	- It is the time interval between date of defect detection and date of defect closure.
+	       • Defect Age = Date of defect closure – Date of defect detection
+	       • Eg, A defect was found and reported on 17 May 2020 and it was fixed on 22 May 2020
+			the defect age is 5 days
+
+9. HotFix:
+===========
+	- A bug which needs to handle as more than high priority bug and needs to be fix it immediately
+
+10. RTM:
+=========
+	- Requirements Traceability Matrix (RTM) 
+ 	- trace the requirements - done by the testing side by matching the requirement with test cases
+
+11. Test Suite:
+================
+	- Test Suite is a collection of test cases
+
+12. Test Strategy:
+=====================
+	• It is a high-level document which captures the approach on how we go about testing the product 
+	    and achieve the goals.
+	• It is developed by project manager.
+	• Documents like Test Plan are prepared by keeping this document as a base.
+
+13. Test Environment:
+======================
+	- It is the combination of hardware and software on which Test Team performs testing
+
+
+
+
+
+
+
+
+
+
+
+

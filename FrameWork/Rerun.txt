@@ -1,0 +1,61 @@
+Rerun:
+=======
+	- we can rerun the failed test cases
+==> Manual Rerun
+==> Automatic Rerun
+
+
+==> Manual Rerun
+================
+	--> testng-failed.xml --> run
+
+==> Automatic Rerun
+===================
+
+--> Automatic Rerun when we know which test Case fails:
+--------------------------------------------------------
+>> IRetryAnalyzer is an interface
+	--> Create child class for IRetryAnalyzer class and implement unimplemented method
+
+
+public class FailureClass implements IRetryAnalyzer{
+	int min = 1;
+	int max = 3;
+	public boolean retry(ITestResult result) {
+		
+		if(a<b) {
+			a++;
+			return true;
+		}
+		return false;
+	}
+
+}
+
+	--> @Test(retryAnalyzer=ClassName.class) on test case
+
+--> Automatic Rerun when we dont know which test Case fails:
+-------------------------------------------------------------
+>> IAnnotationTransformer 
+	--> Create child class for IAnnotationTransformer class and implement unimplemented method
+
+public class AllFailures implements IAnnotationTransformer {
+	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, 			Method testMethod) {
+		
+		IRetryAnalyzer retryAnalyzer = annotation.getRetryAnalyzer();		
+		if(retryAnalyzer==null) {
+			annotation.setRetryAnalyzer(FailureClass.class);
+		}	
+	}
+}
+
+
+	--> add <Listeners> in xml
+
+<listeners>
+	<listener class-name="org.packagename.ClassName"></listener>
+</listeners>
+	
+
+
+

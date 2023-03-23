@@ -1,0 +1,8 @@
+1)SDLC
+2)Level of Testing
+3)Types of Testing
+4)Testing techniques
+5)Test case Preparation
+6)STLC
+7)Agile Methodology
+8)Defect Life Cycle

@@ -1,0 +1,94 @@
+Waterfall Model:
+=================
+	--> Docomentation Process
+	--> For long projects
+1)Requirement Analysis - SRS
+2)System Design
+3)Implementation
+4)Testing
+5)Deployment
+6)Maintenance
+
+	--> Every phase will be input for the next phase
+	--> Untill one phase completed we can't go for next phase
+
+Advantages:
+------------
+	- Quality will be good(Every phase will have detailed documentation)
+	- Requirements changes are not allowed so there is less chance in finding bugs
+	- Initial Investment is less
+	- When Requirements are freezed Waterfall is Preferd
+
+Disadvantages of WaterFall:
+-----------------------------
+	- Requirements changes are not allowed
+	- if there is a defect in one phase it'll be continued in upcomming phases
+
+===================================================
+Spiral Model:
+=============
+	- for each and every cycle a new version will be released to customer.
+	- for every cycle there will be requirement analysis , design , implementation , evaluation.
+	- iterative model
+	- it is also called version control model
+
+Advantages:
+-----------
+	- testing is done in every cycle
+	- customer can use software of every version
+	- requirement changes are allowed after completion of every cycle
+
+Disadvantage:
+-------------
+	- requirement changes are not allowed in between cycle	 
+
+===================================================
+
+V Model:
+========
+Two Parts:
+-----------
+	--> Verification
+	--> Validation
+
+	- for every phase there will be testing
+
+
+Advantages:
+-----------
+	--> testing involved in each and every phase
+
+Diadvantage:
+------------
+	--> Documentation is more
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

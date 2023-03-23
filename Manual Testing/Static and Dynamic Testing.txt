@@ -1,0 +1,29 @@
+Static Testing :
+-----------------
+	- Testing documents
+--> Review
+--> Walkthrough
+--> Inspection
+
+Dynamic Testing :
+------------------
+	- Testing Software
+--> Unit Testing
+--> Integration Testing
+--> Sysyem Testing
+--> UAT
+
+
+QA --> Quality Assurance
+QC --> Quality Control 
+QE --> Quality Engineering
+
+QA is process related(SDLC)
+QC is actual testing of the software(STLC)
+QE is Automation Tester who writes code and runs test
+
+
+
+
+
+

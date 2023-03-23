@@ -1,0 +1,68 @@
+Testing Techniques:
+===================
+
+1)Equivalence partitioning Technique:
+=====================================
+	- test cases are equally divided based upon positive and negative inputs
+	- valid and invalid inputs
+	- age factor for exam ==> 18 to 30
+	- <18     ==> 16,10,8   -- negative inputs
+	- 18 - 30 ==> 19,25,28	-- positive inputs
+	- >30	  ==> 31,33,54  -- negative inputs
+
+
+2)Decision Table Technique:
+===========================
+	- dealing with combinations of inputs
+	- have to consider conditions(input) and actions(output)
+
+Example:- Login validation:
+---------------------------
+	-->Conditions 1: valid username - valid password - Click Login
+             -- Actions 1: Display home page and Execute
+	-->Conditions 2: invalid username - valid password - Click Login
+	     -- Actions 2: Display Error message as invalid username
+
+3)State Transition Technique:
+=============================
+	- pick test cases from the application we need to test different system transitions
+	- an application gives different output for the same input depending on 
+	    what has happened in the earlier state.
+Example:
+---------
+	--> invalid username and password -3 times - account blocked until change password
+
+4)Boundary Value Analysis:
+=========================
+	- based on testing the boundary values of valid and invalid partitions
+	- Every partition has its maximum and minimum values (boundary values)
+Example:-
+----------
+	--> enter an amount between 18 to 30
+		- 16,17,18,19,20
+		- 28,29,30,31,32
+
+5)Error Guessing Technique:
+===========================
+	- find bugs in software application based on testers prior experience
+	- don't have to follow any specific rules
+
+6)Ad-hoc Testing:
+===================
+	- an informal testing type quite opposite to the formal testing 
+	- randomly test the application without following any documents and test design techniques
+	- primarily performed if the knowledge of testers in the application under test is very high
+	- randomly test the application without any test cases or any business requirement document
+
+
+
+
+
+
+
+
+
+
+
+
+

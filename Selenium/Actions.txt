@@ -1,0 +1,18 @@
+Actions:
+========
+	- Predefined class to perform mouse Operations
+	  (click,double click, drag and drop)
+	- It is an argument based Constructor
+	- its argument is WebDriver
+
+Syntax:-
+=========
+	Actions actions = new Actions(driver);
+	--> actions.click(WebELement).perform();  --------------------------- to click
+	--> actions.doubleClick(WebElement).perform(); ---------------------- to double click
+	--> actions.contextClick(WebElement).perform(); --------------------- to right click
+	--> actions.moveToElement(WebElement).perform(); --------------------- to mouse over
+	--> actions.dragAndDrop(sourceElement,targetElement).perform(); ------ to drag and drop
+	--> actions.clickAndHold(SourceElement).moveToElement(target).release().perform();
+
+

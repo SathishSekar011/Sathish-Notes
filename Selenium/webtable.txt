@@ -1,0 +1,72 @@
+Webtable:
+==========
+	- Tables present in webpage
+i)Static Webtable
+ii)Dynamic Webtable
+
+Structure Of Webtables in DOM:
+===============================
+<html>
+    <head>......</head>
+    <body>
+	<div>...</div>
+	<input>.....</input>
+	<table>
+	    <thead>
+		<tr>
+		     <th>id="Name"</th>
+		     <th>id="Country"</th>
+		</tr>
+	    </thead>
+	    <tbody>
+		<tr>
+		     <td>.........</td>
+		</tr>
+		<tr>
+		     <td>.........</td>
+		</tr>
+	    </tbody>
+	</table>
+    </body>
+</html>
+
+
+
+
+
+
+
+tr --> table row
+td --> table data
+
+
+	findElement();					findElements();
+--> locate only one element			   --> locates multiple elements
+--> Returntype - WebElement			   --> Returntype - List<WebElement>
+--> Incorrect locator - NoSuchElement Exception	   --> Incorrect locator - empty list[]	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

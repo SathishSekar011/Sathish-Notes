@@ -1,0 +1,47 @@
+Alerts:
+========
+	- It can be also called as JavaScript pop up
+	- The Alerts are web based Pop ups
+
+Types Of Allerts:
+=================
+	1) Simple Alert		- Only OK button
+	2) Confirm Alert	- Both OK and Cancel Button
+	3) Prompt Alert		- Ok button, Cancel Button and text box
+
+
+Characteristics of Alerts:
+---------------------------
+	- We cannot inspect a alert
+	- We cannot move the alert
+	- Once an allert is popped we can't able to perform any operations
+	- When the Alert is handled the webpage can be proceeded
+
+How to Handle Alerts:
+======================
+
+Step 1: Switch the control to the Alerts
+	==> driver.switchTo().alert();  ----> Alert (interface)
+
+Step 2: Handle the Alert
+
+	==>Simple Alert			--accept();
+
+Confirm Alert(OK)		--accept();
+
+Confirm Alert (Cancel)		--dismiss();
+
+Prompt Alert(text box)		--sendKeys();
+				--getText();
+
+
+
+
+
+
+
+
+
+
+
+

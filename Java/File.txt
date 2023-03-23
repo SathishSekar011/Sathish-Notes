@@ -1,0 +1,43 @@
+File Operations:
+================
+
+	The interaction between the files in local machine and Java Programme.
+
+Possible Interaction:
+=====================
+1) how to create New Folder on Directory: --> File (Predefined Class in java.io)
+
+	--> File file = new File(" Path of the file");--> (return type -boolean)
+
+	--> file.mkdir();
+
+  -IO Exception: compile time exception.
+
+	-->>boolean mkdir(); = file.mkdir();
+
+2)To Create New File:
+
+	- Create object for File class 
+	-->createNewFile(); 
+
+3)To check the Created file is Readable or not:
+
+	-->obj.canwrite (); boolean
+	-->obj.canRead();
+
+4)List File Names and Folder in Console: 
+	-->Objref.list();    --String[]
+	-->Objref.listFiles();--File[]
+
+5)How to Read the data From File, How to modify the existing data
+
+	-->FileUtils-- Predefined class (commons.io package Not in java (JRE)		
+		(we have download jar) (copy jar and Create New folder and part
+		 and have to integrate by right click build path→buildpath)
+
+	-->>List<string> readline = FileUtils.readLines(file);
+
+	-->>Sysout (readLine);
+6)To Modify Data:
+	--> write();
+	--> FileUtils.write(file,"Maven",true);

@@ -1,0 +1,111 @@
+OOPS:
+-----
+Object oriented programming structure
+It is method of implementation in which program is organised 
+as collection of object class and methods
+
+Object----run time memory allocation
+method----set of actions to be performed
+class-----collection of object and methods
+Package---collection of Classes
+Project---colection of Packages
+
+Polymorphism
+Abstraction
+Inheritance
+Encapsulation
+
+standard notation or coding standards:
+---------------------
+Pascal notation /initcap notation:
+----------------------------------
+First letter of Each word should be captial
+eg :GreensTechnologySolutionsLimited
+Followed in: project name,class name
+
+camel Notation:
+---------------
+First letter of First word is small remaining words should starts with captial
+eg : greensTechnologySolutionsLimited
+Followed in : object name,method name,Variable name.
+
+
+Package name should be small only and start with org.packagename  (or)  com.packagename
+
+Syntax:
+========
+Class:
+======
+public class ClassName{
+   }
+
+method creation:  
+================
+private void methodName(){
+	business logics;
+   }
+
+Main Method:
+============
+public static void main(String args[]){
+    }
+
+object Creation:                      
+----------------------
+ClassName objectName = new ClassName();
+            
+Method call:                          
+----------------
+ objectName.methodName();
+
+
+	
+
+
+
+
+
+
+
+
+
+
+8925811149----Sathish
+Name:
+DemoMsg
+
+Vel sir -- 9944152058 -- Demo Msg - Photo - Aadhaar (front & back)
+Saba sir - 8015908440 -- Demo Msg - ScreenShot
+Sathish - ScreenShot , PaymentProof
+
+
+Demo msg
+
+Vel Sir -- 9944152058 -- Photo + Aadhar
+Saba Sir - 8015908440 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

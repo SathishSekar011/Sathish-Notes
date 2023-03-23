@@ -1,0 +1,108 @@
+OOPS:
+=====
+	--> Object Oriented Programming Structure
+	--> programme must be a collection of classes , methods , object
+
+Object	--> memmory needed for your programme to execute a method
+Method	--> action performing inside a class
+Class	--> Collections of Methods and Objects
+Package --> Collections of Classes
+Project --> Collections of Packages
+
+--> Inheritance
+--> Polymorphism
+--> Abstraction
+--> Encapsulation
+
+Rules for Naming:
+	--> should not contain any spaces
+	--> should not contain any symbols(except _ , $)
+	--> should not start with numeric
+
+Standard Notations:
+====================
+1)Pascal Notation:
+------------------
+	- Every words first letter should starts with upper case
+	Eg:- GreensTechTrichy
+	==> Project , Class
+
+2)Camel Notation:
+-----------------
+	- First words first letter should be lower case and remaining words should starts with upper case
+	Eg:- greensTechTrichy
+	==> method , object , variable
+
+
+Package	==> org.packagename / com.packagename
+
+
+Syntax:
+========
+Class:
+======
+public class ClassName{
+   }
+
+method creation:  
+================
+private void methodName(){
+	business logics;
+   }
+
+Main Method:
+============
+public static void main(String args[]){
+    }
+
+object Creation:                      
+----------------------
+ClassName objectName = new ClassName();
+            
+Method call:                          
+----------------
+ objectName.methodName();
+
+
+Step 1 : Create a Project
+	File --> New --> Java Project --> Name of the project --> Finish
+
+Step 2 : Create a Package
+	RC on src --> New --> Package --> Name of the package --> Finish
+
+Step 3 : Create a Class
+	RC on package --> new --> class --> Name of the Class --> Finish
+
+Step 4 : Create a method inside a class
+
+Step 5 : Create a main method inside a class
+
+Step 6 : Create Object inside main method 
+
+Step 7 : Call the method inside main method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

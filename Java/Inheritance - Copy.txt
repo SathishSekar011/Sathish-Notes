@@ -1,0 +1,93 @@
+Inheritance:
+------------
+we can accesss one class property(method) from another class using extends keyword.
+
+
+It use a keywords extends , implements
+
+Parent Class / Super Class : from which properties are given 
+Child Class / Sub Class : which inherits properties from parent class
+
+
+Syntax:
+========
+parent:
+-------
+public class ParentClass{
+	}
+
+Child Class:
+-------------
+public class ChildClass extends ParentClass{
+     }
+
+
+Types of  inheritance:
+=======================
+Single inheritance:
+-------------------
+Combinations of one parent class and one child class.
+
+Multilevel inheritance:
+-----------------------
+More than one parent class accesing the child class in a tree level structure
+ 
+Hierarchical inheritance
+-------------------------------
+Combination of  one parent  and more than one child.
+
+Multiple inheritance:
+---------------------
+More than one parent class access the child class parallely at a time.
+
+Hybrid inheritance
+-------------------
+Combination of Single and Multiple inheritance
+
+
+Multiple Inhereitence is not possible in Java by using Class
+
+Reasons:
+
+(i) Priority problem
+
+(ii) Syntax error(By using extends keyword we cannot access two class parallely)
+
+
+Why we go for inhereitence:
+---------------------------
+reusable code purpose .
+memory wastage is low.
+
+
+
+JRE - Java Runtime Environment - predefined files and library
+
+JVM - Java Virtual Machine - allocate memmories - 
+
+
+
+
+
+
+Sathish - 8925811149
+Name:
+Emergency Contact:          (Relation)
+FeePay Receipt:
+Degree:
+YOP:
+WorkExperience:
+Fee Details :-- amount , mode , Date , ScreenShot
+
+Vel Sir  - 9944152058 - Demo Msg - Photo and Aadhar
+Saba Sir - 8015908440 - Demo Msg - ScreenShot
+Sathish  - ScreenShot 
+
+
+
+
+
+
+
+
+

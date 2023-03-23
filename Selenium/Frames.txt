@@ -1,0 +1,44 @@
+Frames:
+========
+	- Frames are the html documents embedded inside another html document
+	- i.e., a webpage inside another webpage
+	- Frames are often used to divide a window into multiple sections so that we can stop 
+interactions with webelements
+
+
+Identifying Frames:
+====================
+==> right click in webpage --> if there is an option called View Frame Source , then the webpage
+				has been created with frames.
+
+		(or)
+
+==> search in DOM page for keywords like frame, iframe , frameset then it has frames
+
+
+Handling Frames:
+================
+ - switch control to the frame we want to interact
+
+==> driver.switchTo().frame(index);
+==> driver.switchTo().frame(name or id);
+==> driver.switchTo().frame(WebElement);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

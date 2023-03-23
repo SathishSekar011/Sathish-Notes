@@ -1,0 +1,93 @@
+Selenium :
+==========
+Automation: 
+------------
+	- Performing any task with the help of a machine,tool or software is called Automation
+	- the tool that performs automation is called as Automation tool
+
+Software Automation Tools:
+-----------------------------
+(1) QTP Qualified or Quick Test Professional
+	- Desktop Based Applications 
+		Eg: Calculator, Calender, MS word, Eclipse
+
+(2) Appium
+	- Mobile Based Applications
+		Eg: Whatsapp, PUBG
+
+(3) Selenium 
+	- Automate web Based Applications, Browser, URL 
+		Eg: www.flipkart.com, www.facebook.com
+
+(4) TestComplete 
+	- Automate Both web Based Applications and Mobile Based Applications, Desktop Based Applications
+
+Advantages of Automation:
+-------------------------
+1, Less manual work 
+2, Time Saving
+3, More no of Test Data
+4, Restless
+5, Reusability
+
+Disadvantages of Automation:
+------------------------------
+1, Additional Skills
+2, Constant Mainitanence,
+3, Initial Setting up cost will be high
+
+Advantages of Selenium:
+========================
+(1) Open Source
+(2) It will support 14+ programming languages
+(3) It will work fine in 10+ operating system
+
+Disadvantages:
+===============
+1, Selenium will not automate OTP, captcha, Puzzle, Image, Video and Animation
+
+Different Versions or components of Selenium:
+============================================
+1, Selenium IDE:
+-----------------
+	-Integrated Development Environment
+	-First Version -- FireFox Browser
+	-It is extended for other Browsers
+	-It will automate only the web applications through Firefox Browser
+	-It contains Playback option to find the defects
+
+2, Selenium RC:
+------------------
+	-Remote Control
+	-It requires an intermediator for Encoding and Decoding 
+	-It has a indirect communication with the Browser
+
+3, Selenium WebDriver:
+----------------------
+	-It has a direct communication with the Browser 
+	-It will support different types of Browser
+	-It also contains Debug option
+4, Selenium Grid:
+-------------------
+	- Industry Version of Selenium
+	- Hub and node concept
+
+
+
+Name:
+Batch : 10:30 Selenium
+Form Link
+
+Sathish - 8925811149
+
+
+
+
+
+
+
+
+
+
+
+

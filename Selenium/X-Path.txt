@@ -1,0 +1,120 @@
+Customized Locators:
+=====================
+	--> X-Path
+	--> Css Selector
+
+X-Path:
+=======
+	--> When there is no regular primary locators in WebElement we should go for X-Path
+	--> It is used to locate the unique Element
+	--> We can validate locator before we use
+	--> X-Path is an expression to find the nodes in XML or HTML
+	--> X-Path can locate element more accurately than any other locators
+
+Types of X-Path:
+----------------
+	i) Absolute X-path
+	ii)Relative X-Path
+
+i)Absolute X-Path:
+-------------------
+	--> It locates the element from root element to desired element
+
+	Syntax:- /tagname/tagname[@attribute name= 'attribute value']
+	========
+Eg:- /html/body/div[2]/div/div/div/div/div/div/div/div/form/div/div/input[@type='text']
+
+	--> we have to write x-path from root element(i.e., html) to the desired element with every 
+nodes. To avoid that we are going for Relative X-Path
+
+ii)Relative X-Path:
+---------------------
+	--> It will locate the desired element directly
+
+	Syntax:- //tagname[@attribute name = 'attribute value']
+	========
+
+Different ways of Using Relative X-Path:
+------------------------------------------
+1)X-Path by Attribute:
+=======================
+	--> It is the conventional method of using X-Path(Most commonly used)
+
+	Syntax:- //tagname[@attribute name = 'attribute value']
+	Eg:- //button[@type='submit']
+	
+
+2)X-Path by Text:
+==================
+	--> If there is no attribute present for a particular element we can go for text.
+
+	Syntax:- //tagname[text() = 'text value']
+
+eg:- //span[text()='Nillkin Case for Apple iPhone 13 (6.1" Inch) Qin Pro Camshield Camera Slider Genuine Classic Leather Flip Folio + Card Slot Brown Color']
+
+
+3)X-Path by Partial Text:
+==========================
+	--> If text length is high we should go for Partial Text.
+
+	Syntax:- //tagname[contains(text(),'patial text value')]
+eg:- //span[contains(text(),'Nillkin Case')]
+
+4)X-Path by Index:
+===================
+	--> If we can't able to find unique locator, we can go for Xpath by Index
+	Syntax:- (xpath)[Index]
+
+eg:- (//span[text()='Apple iPhone 13 (128GB) - Blue'])[2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5)Xpath by Multiple Attributes:
+================================
+	Syntax:- //tagname[@attributename = 'attribute value' and @attributename = 'attribute value']
+
+--> you can also use --> or
+		     --> not
+
+6)Xpath by Dynamic Locator:
+============================
+
+	Syntax:- //tagname[contains(@attributename,'attribute values')]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

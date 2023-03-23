@@ -1,0 +1,192 @@
+TestNG: 
+=======
+	--> Used for Unit,Functional and Integration Testing
+
+Installation:
+==============
+
+==> Dependencies:
+	--> testng 6.14.3
+	--> jcommander 1.72
+==> TestNG Plugin:
+	--> Eclipse --> Help --> Eclipse MarketPlace --> search - TestNG --> Install TestNG for Eclipse
+
+
+Annotations:
+=============
+
+==> @BeforeClass
+==> @BeforeMethod
+==> @Test
+==> @AfterMethod
+==> @AfterClass
+
+
+Priority:
+=========
+==> @Test(priority=0)
+==> @Test(priority=1)
+==> @Test(priority=2,enabled=false) --> To Skip
+
+
+
+Invocation:
+============
+==> @Test(invocationCount = 3)
+
+TestNG vs JUnit:
+=================
+	--> TestNG annotations are easier to use and understand than JUnit.
+	--> Priority can be set in TestNG
+	--> Test in TestNG can be executed multiple times
+	--> Detailed Report can be availed in TestNG
+	--> Parallel Execution is Possible in TestNg
+
+
+
+
+Dependency:
+============
+==> @Test(depondsOnMethods="methodName")  --> the method will execute only if mention method executed
+
+
+Assert:
+=======
+	- Assert is used to set the validation point in test cases
+
+1) Hard Assert
+2) Soft Assert
+
+==> Hard Assert:
+==================
+	- When the assert fails execution of the particular test case will be stopped and marked as failed.
+Static methods in Assert:
+-------------------------
+	--> assertEquals(String actual,String expected) 
+	--> assertEquals(String actual,String expected, String message) 
+	--> assertEquals(boolean actual,boolean expected)
+	--> assertTrue(condition)
+	--> assertTrue(condition, message)
+	--> assertFalse(condition)
+	--> assertFalse(condition, message)
+	
+==> Soft Assert:
+==================
+	- When the assert fails execution of test case will never be stopped and marked as failed.
+	- It is also known as verify
+Non-Static methods in SoftAssert:
+----------------------------------
+	--> assertEquals(String actual,String expected) 
+	--> assertEquals(String actual,String expected, String message) 
+	--> assertEquals(boolean actual,boolean expected)
+	--> assertTrue(condition)
+	--> assertTrue(condition, message)
+	--> assertFalse(condition)
+	--> assertFalse(condition, message)
+
+*==> to see the Exceptions you must call  --> assertAll()
+
+Suite Level Execution:
+=======================
+	--> collection of TestNG Tests together is called as the Test Suite
+	--> to execute many test cases
+	--> Using Test Suite we can manage out Test execution
+Writing TestNG Suite in XML:
+============================
+	
+	--> RC --> New --> XML file --> enter name --> file will be created
+
+<Suite name="Suite Name">
+  <Test name="Test name">
+    <Classes>
+	<Class name="packagename.ClassName1"></Class>
+	<Class name="packagename.ClassName2"></Class>
+	<Class name="packagename.ClassName3"></Class>
+    </Classes>
+  </Test>
+</Suite>
+
+		(or)
+
+	--> select the classes --> RC --> TestNG --> Convert to TestNG --> Finish
+
+
+Grouping:
+=========
+	--> used to group test cases
+==> @Test(groups={"group1"})
+==> @Test(groups={"group2"})
+==> @Test(groups={"group3"})
+
+<Suite name="Suite Name">
+  <Test name="Test Name">
+    <groups>
+      <run>
+	<include name = "group1"></include>
+	<include name = "group2"></include>
+	<exclude name = "group3"></exclude>
+      </run>		
+    </groups> 
+    <Classes>
+	<Class name="packagename.ClassName1"></Class>
+	<Class name="packagename.ClassName2"></Class>
+	<Class name="packagename.ClassName3"></Class>
+    </Classes>
+  </Test>
+</Suite>
+
+Result:
+=======
+	group1 and group2 will execute whereas group3 will not execute
+
+Parameterization:
+==================
+	--> to pass parameters from XML to the code
+	--> we can declare a parameter both suite level and also test level
+
+==> @Test
+==> @Parameters("ParameterName")
+==> @Optional("value")         --------------> incase of values mismatch
+
+<Suite name="Suite Name">
+  <Test name="Test name">
+    <patameters name="ParameterName" value="ParameterValue"></parameters>
+    <Classes>
+	<Class name="packagename.ClassName1"></Class>
+	<Class name="packagename.ClassName2"></Class>
+	<Class name="packagename.ClassName3"></Class>
+    </Classes>
+  </Test>
+</Suite>
+
+
+
+
+DataProvider:
+==============
+	--> using DataProvider we can pass bulk data to a test case 
+	--> for every set of data the test case will be executed again and again 
+	
+	==> @DataProvider(name="name")
+	    public Object[][] data(){
+		return[][]{
+			{data1-1,data1-2},
+			{data2-1,data2-2}
+ 		};	
+
+	--> for the test case we want to use data provider we must include dataProvider option
+	==> @Test(dataProvider="name") 
+
+  --> DataProvider from other class
+	==> @Test(dataProvider="name",dataProviderClass=ClassName.class)
+
+ --> DataProvider from other package
+	==> @Test(dataProvider="name",dataProviderClass=org.packagename.ClassName.class)
+
+==> @BeforeSuite
+==> @BeforeTest
+==> @AfterTest
+==> @AfterSuite
+
+
+

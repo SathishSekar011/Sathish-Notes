@@ -1,0 +1,94 @@
+Day 1 Class: 
+============ 
+C++:     Nokia                                          
+----------------
+platform dependent(single platform) -- Programming code will not be converted into machine code(010101)
+run single application at a time
+
+Java:    Whatsapp
+------------------
+platform independent(multiple platform)----Programming code will be converted into machine code(0100)
+run multiple application at a time
+
+Java:
+-----
+simple programming languages
+     (If we dont have a Programming language background then also it is easy to learn
+      The programming codes will be in simple English language)
+Run as platform independent 
+oops based one - The programming of java is based on oops concept
+Easy to run and debug
+
+Java main features:
+--------------------
+Open sources---If we dont want a license
+Platform independent
+portable------ We can write the programme once and run the programme anywhere, 
+               We can convert the programme as a file with file extension .java
+multi threading----We can run multiple programme at the same time
+more secure---- It creates a virtual firewall between the computer and programme 
+                so it doesnt grant unauthorized access.
+
+JDK:
+=====
+java development kit
+whenever i want to run or develop a program in java jdk is essential
+1.0 to 1.18
+most stable 1.8
+
+JDK=JRE+JVM
+
+JRE:
+----
+Java runtime environment 
+It contain predefined files and library 
+
+JVM:
+-----
+Java virtual machine
+It is used for memory allocation,object creation
+
+IDE:(Intrgrated Devolopment Environment)
+=========================================
+tools:
+----------
+Eclipse--95%(photon)
+IntelliJ
+Netbeans
+Jdeveloper---oracle
+RAD--IBM
+
+
+NotePad
+
+Java Configuration and setup:
+-----------------------------------
+-->goto to google Jdk 1.8 download---sub link
+scroll down - Windows x64 Installer - click-  jdk-8u301-windows-x64.exe
+create oracle new account - enter details - verify email- login - download jdk-8u301-windows-x64.exe.
+Install jdk
+verify jdk
+
+-->Download eclipse as zip[Url :https://www.eclipse.org/downloads/packages/release/photon/r
+extract and lanuch workspace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

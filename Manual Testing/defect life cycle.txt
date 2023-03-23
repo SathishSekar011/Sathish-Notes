@@ -1,0 +1,61 @@
+Defect Life Cycle: 
+===================
+New:
+----
+	- defect is found and posted for the first time
+
+Assigned:
+---------
+	-  defect is posted(bug) the testing team lead will assign it to Developing Team
+
+Open:
+-----
+	- developer opens the bug and works on to fix it
+
+Fixed:
+------
+	- developer fix the bug with appropriate codes
+
+Pending Retest:
+---------------
+	-  developer fixes the bug - moved to testing team
+
+Retest:
+-------
+	-  tester retesting whether the bug raised was fixed or not
+
+Verified:
+----------
+	-  tester confirms that the bug is fixed
+
+Reopen:
+-------
+	-  tester confirms that the bug is not yet fixed and found the same defect
+	-  it will be moved to Assigned Stage and the flow continuous
+
+Closed:
+-------
+	- tester verified that the bug is fixed - defect raised will be closed
+
+Duplicate:
+-----------
+	- bug is already raised by someone and raised again it is duplicate
+
+Rejected/Not a Bug:
+--------------------
+	- the developer feels that the bug is not genuine
+
+Deferred:
+----------
+	- The bug which developer feels that it can be fixed later on the upcoming sprints
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+POM: Page Object Model:
+=========================
+	- POM is a design pattern used in Selenium where we create an object repository to store web elements
+	- POM will act as a repository for Locators
+	- POM helps us to overcome StaleElementException
+	- POM will be developed based on POJO Class
+
+How to Integrate POM:
+======================
+Step 1: Create a Class
+
+Step 2: Declare private variables for every WebElement needed
+
+Step 3: Generate getters
+
+Step 4: Use anotations for every private variables 
+
+	==> @FindBy(locator="value")  --> findElement();
+	==> @FindBys{@FindBy(locator="value"),FindBy(locator="value"),....} 
+			--> findElement();  using multiple attributes(AND);
+	==> @FindAll{@FindBy(locator="value"),FindBy(locator="value"),....}
+			--> findElement();  using multiple attributes(OR);
+	==> @CacheLookUp{@FindBy(locator="value"),FindBy(locator="value"),....}
+		 --> to store the web elements in cache memory after reading for the first time
+
+Step 5: Create a Constructor inside pom and initialize the WebElements
+	
+	==> PafeFactory.initElements(WebDriver ref,this);
+
+
+
+Page Factory:
+=============
+ 	- It is a class in Selenium WebDriver used to implement the Page Object Model	
+	- above seen annotations belongs to the PageFactory class
+
+
+
+PageManager:
+=============
+	- user defined class to integrate many POM files into a single object
+	- based on Singleton
+
+Step 1: Create a Class
+
+Step 2: Declare private variables for every POM 
+
+Step 3: Generate getters
+
+
+public class PageManager {	
+	private LoginPOM login;
+	private SearchHotelPOM searchHotel;
+	public LoginPOM getLogin() {
+		if (login==null) {
+			login = new LoginPOM();
+		}
+		return LoginPOM;
+	}
+	
+	public SearchHotelPOM getSearchHotel() {
+		if (searchHotel==null) {
+			searchHotel=new SearchHotelPOM();
+		}
+		return SearchHotelPOM;
+	}
+
+}
+
+
+
+
+

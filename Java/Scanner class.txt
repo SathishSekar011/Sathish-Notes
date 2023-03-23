@@ -1,0 +1,47 @@
+Scanner Class:
+==============
+	- It is a predefined class in java.util package which is used to get input from the console
+
+Syntax:
+=======
+Scanner obj = new Scanner(System.in);
+datatype var = obj.nextDataType();
+
+
+Methods in Scanner class:
+==========================
+
+--> nextByte();
+--> nextShort();
+--> nextInt();
+--> nextLong();
+--> nextFloat();
+--> nextDouble();
+--> nextBoolean();
+--> next();
+--> nextLine();
+--> next().charAt(0);
+
+
+Steps:
+=======
+import
+obj create-----scanner
+input------- variable ------store
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

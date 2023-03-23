@@ -1,0 +1,18 @@
+BROKEN LINKS:
+===============
+
+- If any link is failed load it’s destination page then that link is called as broken links.
+- It is not possible to verify broken links by using selenium.
+- We can verify the broken links by using Java
+- In order to verify the broken links we use a class called URL which is available in java.net packag
+
+
+URL url = new URL("link");
+
+URL - url.openConnection();  ---> Returns Open Connection
+				--> type cast to HttpURLConnection
+
+
+--> getResponseCode();			--> 200(not broken link)
+--> getResponseMessage();	
+

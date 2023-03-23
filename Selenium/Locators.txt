@@ -1,0 +1,83 @@
+Locators:
+==========
+
+WebElements: 
+------------
+		--> Small elements that contains Data
+		--> An Web Page is the collection of WebElements
+		--> We can do an operation in a WebPage by interacting with webelements 
+		--> To Interact with WebElements we must fine the address of the WebElement
+		--> To find the address of the WebElement we are Using Locators
+
+DOM Page:(Document Object Model)
+---------
+		--> It Contains the address of all the Webelement
+		--> It will be in html or xml format
+		--> Web Page -->Right Click -->Inspect --> DOM page will Open
+
+		==>  <tagname attributename = "value" \tagname>
+			tagname        -- Purple
+			attributename  -- Brown
+			attributevalue -- Blue
+			text	       -- Black
+
+
+Locators:
+==========
+	--> Locators are used to Locate the WebElement
+	--> By locating a webelement we can find out the address of the webelement
+	--> Locators are the Static methods present in the predefined abstract class -- By --
+
+==>Static Methods in By Class
+================================
+
+	1)id();           -- Fastest Locator
+	2)name();
+	3)className();
+	4)tagName();
+	5)linkText();
+	6)partialLinkText();
+		(Primary Locators)
+	7)xpath();
+	8)cssSelector();
+		(Customised Locator)			
+
+
+Interacting with webElements:
+==============================	
+										      	 
+Step 1:- Set the property of the browser
+	--> System.setProperty(Key,Value); 
+	
+Step 2:- Initialize the Web driver:
+
+	--> WebDriver driver = new ChromeDriver();
+
+Step 3: Open URL:
+	--> driver.get("url");
+
+Step 4: Find the Address of the WebElement:
+	-->By.locators();
+
+	Eg:--  By.id(".....");  -- (return type -- By) 
+
+Step 5: Find the Element on the Corresponding Address:
+
+	--> findElement(address); -- (return type -- WebElement)
+
+Step 6: Entering Values:
+	--> element.sendKeys("values");
+
+Step 7: Clicking a Button:
+	--> element.click();
+
+
+Name  :
+Batch : Offline 9:00AM 
+Topic : Locators
+
+Fee Receipt:
+
+
+
+	 		

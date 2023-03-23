@@ -1,0 +1,70 @@
+Manage:
+=======
+	- Used to manage the windows
+
+ Maximizing a window:
+-------------------------
+	--> Syntax:- driver.manage().window().maximize();
+
+
+		==> manage() is a abstract method it returns Option[I]
+
+		==> Option[I] has following Abstract method 
+			i)  window()
+			ii) deleteAllCookies()
+
+		==> window() will returns Window[I]
+
+		==> Window[I] has following abstract methods
+			i)  minimize()
+			ii) maximize()
+			iii)setSize()
+			iv) setPosition()
+
+Resizing the Window:
+--------------------
+	--> Syntax:- driver.manage().window().setSize(dimension);
+
+		==> Dimensions is a pre-defined class to mention the size of the window in pixels
+
+		==> Dimensions dimensions = new Dimensions(pixel,pixel);	
+		---------------------------------------------------------
+
+Repositioning the window:
+--------------------------
+	--> Syntax:- driver.manage().window().setPosition(point);
+
+		==> Point is the pre-defined class to mention the location in pixels
+
+		==> Point point = new Point(pixel,pixel);
+
+Delete Cookies:
+---------------
+	--> Syntax:- driver.manage().deleteAllCookies();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+Child      Parent
+class	   class
+======     =======
+I implements I		==>	Not Possible
+I implements C		==>	Not Possible
+I implements A		==> 	Not Possible
+I extends I		==> 	Possible
+I extends C		==> 	Not Possible
+I extends A		==> 	Not Possible
+			
+C implements I		==>	Possible
+C implements C		==>	Not Possible
+C implements A		==> 	Not Possible
+C extends I		==>	Not Possible
+C extends C		==>	Possible
+C extends A		==>	Possible
+			
+A implements I		==> 	Possible
+A implements C		==> 	Not Possible
+A implements A		==> 	Not Possible
+A extends I		==>	Not Possible
+A extends C		==>	Possible
+A extends A		==>	Possible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

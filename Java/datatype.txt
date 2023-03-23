@@ -1,0 +1,86 @@
+Data types:
+============                                                 
+It specifies the type and size of the variable.
+        							
+Variable is used to store the values.
+--------------------------------------
+Primitive DataTypes:
+=====================
+1.byte -- 1 byte 
+2.short
+3.int
+4.long
+   (for whole numbers) - 57,87,98,111 , 100000000000000
+5.float
+6.double
+   (for decimal numbers) - 44.5
+7.char -- 'S'
+8.Boolean -- true / false
+
+Non-Primitive DataTypes:
+===========================
+9)String
+ 
+Range calculating formula
+------------------------------
+1 byte = 8 bits  n= no of bits
+range=  -(2^(n-1)) to ((2^(n-1))-1)             byte = -(2^7) to (2^7)-1
+    = -128 to 127  
+
+ 
+Wrapper class
+--------------
+class of data type is called wrapper class
+
+Variable Declaration: SYNTAX
+-----------------------------
+Datatype variableName = value;
+
+ Datatype a=10
+=--->assignment operator
+
+-->Variable name
+=================
+  can't start with numbers(may consist)
+  only $  _ symbols can be used 
+--> Values can't start with zero(or else it would be considered as octadecimal)
+
+Primitive Datatypes:
+----------------------
+Most basic Datatypes
+Building Blocks of Data manupulation
+
+Non Primitive Datatypes:
+-------------------------
+Classes, Arrays, Interface.....
+
+
+
+8925811149 -- Sathish
+Name:
+
+Name
+Id
+Mobile No
+Age
+Address
+
+int age = 28;
+
+
+
+
+
+ 
+
+
+
+
+  
+
+
+
+
+
+
+

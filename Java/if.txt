@@ -1,0 +1,243 @@
+Control Statements:
+---------------------
+1, Conditional
+2, looping
+3, Breaking or terminating
+
+Conditional Statements:
+=======================
+1, if
+2, if else
+3, nested if or if ladder
+4, switch case
+
+if:
+===
+Syntax: 	
+
+if(condition){
+       business logic;
+	  }
+
+Comparing Operators:
+=====================
+>	greater
+<	lesser
+>=	greater and equal
+<=	lesser and equal
+==	equals to
+!=	not equals
+
+
+Arithmetic Operators:
+----------------------
++
+-
+/
+*
+%--modulus
+ 5/2=2;
+ 5%2=1;
+
+8%3=2;
+
+
+if else
+--------
+Syntax:		if(condition){
+			business logic;
+			     }
+		else{
+			business logic;
+			}
+
+		Condition is passed - business logic inside the if block will executed
+		Condition is failed - business logic inside the else block will executed
+
+Logical Operators:
+---------------------
+If we want to pass more than one condition in if block 
+
+
+AND Operator	- multiplication
+OR Operator	- Addition
+
+AND Operator:(&&)
+-----------------	
+T -1, F-0
+
+Condition 1		Condition 2		Result
+T(1)			T(1)			T
+T(1)			F(0)			F
+F(0)			T(1)			F
+F(0)			F(0)			F
+
+
+OR Operator:(||)
+-----------------
+
+T-1, F-0
+
+Condition1	Condition2		Result
+T(1)		T(1)			T
+T(1)		F(0)			T
+F(0)		T(1)			T
+F(0)		F(0)			F
+
+Bitwise Operators:
+===================
+AND(&)
+OR(|)
+
+nested if
+------------
+We have multiple if blocks
+
+Syntax: 
+	if(condition){
+		business logic;
+		      }
+	else if(condition){
+		business logic;
+			}
+	else{
+	     buiness logic;
+	    }
+
+
+
+switch case
+-----------
+It is used to check the quality of a variable against multiple values
+
+	Syntax: switch(variablename){
+		case value : business logic; break;
+		case value : business logic; break;
+		default    : business logic;
+				}
+
+2)LOOPING:
+=============
+i)for loop:
+-----------
+syntax:
+========
+	for(initialization;condition;inc/dec){
+		business logics;
+	  }
+
+
+		*1   *2	  *4
+	for(int i=1;i<5;i++){
+			*3
+		System.out.println(i);
+	}
+
+	1*		2*		3*		4*
+	i=1		1<5		h		i=i+1=1+1=2
+			2<5		h		i=3
+			3<5		h		i=4
+			4<5		h		i=5
+			5<5(terminared)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+ii)nested for loop:
+	for(initialization;condition;inc/dec){
+		for(initialization;Condition,inc/dec){
+			business logics;
+		}
+	}
+	
+		3<3(outer for loop terminate)
+
+
+
+
+
+
+iii)while:
+============
+Syntax:
+=======
+		initialization;
+		while(condition){
+			business logics;
+			inc/dec
+		}
+		  //1
+		int i=1;
+			//2
+		while(i<=3){
+				//3
+			System.out.println("h");
+			//4
+			i++;
+		}
+	//1		//2		//3		//4
+	i=1		1<=3		h		i=2
+	i=2		2<=3		h		i=3
+	i=3		3<=3		h		i=4
+	i=4		4<=3(loop terminate)
+
+
+
+
+
+iv)do-while
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+Agile methodology
+
+PO - product owner - preparing the userstory
+			maintaining the userstory - product backlog
+			
+Scrum master - agile ceremonies/scrum meeting organizing
+Scrum team - dev and testing team
+
+userstory - 
+description - acceptance criteria
+sprint - fixed time interval -decided by PO
+
+
+1 sprint - understanding, planning, status - review, self analysis
+
+1) Sprint grooming
+	- PO explain the userstory
+	- understand the requirmenets
+
+2) sprint planning
+	- stories taken for current sprint
+	- complexity of story
+	- move the story from product backlog to sprint backlog by scrum master
+3) daily stand upcall/scrum call
+	- daily
+	- fixed time
+	- updating status 
+4) sprint review meeting
+	- demo to PO
+	- PO review the functionalities
+5) Sprint retrospective meeting
+	- what went right?, what went wrong?
+	- feedback session
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+ListIterator:
+=============
+	- Bidirectional (Both forward and backward)
+	- can able to replacement and addition of new object
+
+==> ListIterator ltr = l.listIterator();
+  
+Methods in ListIterator:
+=========================
+1) hasNext();
+2) next();
+3) nextIndex();
+4) hasPrevious();
+5) previous();
+6) previousIndex();
+7) remove();
+8) set(Object new);
+9) add(Object new);
+
+Limitations:
+==============
+	--> Applicable only for List(not Universal)
+
+
+
+
+
+
+
+

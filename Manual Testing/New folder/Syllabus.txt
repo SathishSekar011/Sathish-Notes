@@ -1,0 +1,15 @@
+SDLC
+Types of testing
+level of testing
+testing techniques
+test case preparation - conversion of test case into test script
+STLC
+waterfall
+agile methodology
+defect life cycle - priority and severity
+Bug raising
+JIRA Demonstration
+Domain explanation
+Data preparation from your project
+Roles and responsibilities, Daily activities 
+Self Intro

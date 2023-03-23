@@ -1,0 +1,57 @@
+Test Case Preparation:
+=======================
+Test Case ID(TC_ID):
+----------------------
+	- Unique ID to identify/report the bug
+
+
+Test Case Objective:
+----------------------
+	- purpose of the test
+        - lists to be generated to perform intended task
+	- results should follow the test case objective
+
+Pre-requisite:
+---------------
+	- environment setup - supporting software  for the project in which user will give the input
+	- test cases can be planned accordingly
+
+Steps:
+-------
+	- steps to be performed to give input to the system to get the result 
+	- automated testing - scripting language
+
+Input Data:
+-----------
+	- dependeds on test case  and technique 
+         --> equivalence partitioning, boundary value analysis etc.
+
+Expected Result:
+----------------
+	- It can be the user required output to be shown
+
+Actual Result:
+--------------
+	- results obtained by executing programme
+Status:
+-------
+	- expected results and actual result matches -- PASS
+
+	- expected results and actual result not matches -- FAIL
+
+Defect:
+========
+	- will assign a new defect if error ocurs
+
+
+
+
+
+
+
+
+
+
+
+
+

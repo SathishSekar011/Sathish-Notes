@@ -1,0 +1,143 @@
+Sathish - 8925811149
+SQL : Structured Query Language
+================================
+	- you can retrive , store and manipulate data from databases
+	- It is based on English 
+	- SQL keywords are not case sensitive
+
+DataBase : Oracle
+Language : SQL/PLSQL
+Tool	 : ISQLPLUS , SQLPLUS , Toad
+Version  : 10g
+
+
+To Install Oracle DataBase:(Initial Setup)
+===========================================
+	--> download OracleXE from drive --> Extract --> Open Extracted Folder --> Install OracleXE
+	--> While Installing follow Installing steps --> Password ==> desired password --> Enter
+	
+To unlock the sample user account:(Initial Setup)
+==================================================
+	--> Start --> Go To Database Home Page 
+		==> Username: Enter System for the user name.
+		==> Password: Enter the password that enterd when Oracle Database XE was installed
+		==> Login
+
+	--> Administration --> Database Users --> HR
+		==> Password		 : hr
+		==> Confirm Password	 : hr
+		==> Account Status	 : Unlocked
+		==> Roles		 : CONNECT and RESOURCE should be enabled
+		==> Click Alter User
+
+To Open Sample Account:
+========================
+	--> Start --> Go To Database Home Page 
+		==> Username: hr
+		==> Password: hr
+		==> Login
+
+http://127.0.0.1:8080/apex/wwv_flow_help.show_get_started
+=======================================================================================================
+
+SQL Commands:
+=============
+--> SELECT	 	- extracts data from a database
+--> UPDATE	 	- updates data in a database
+--> DELETE		- deletes data from a database
+--> INSERT INTO 	- inserts new data into a database
+--> CREATE DATABASE 	- creates a new database
+--> ALTER DATABASE 	- modifies a database
+--> CREATE TABLE 	- creates a new table
+--> ALTER TABLE 	- modifies a table
+--> DROP TABLE 		- deletes a table
+--> CREATE INDEX 	- creates an index (search key)
+--> DROP INDEX 		- deletes an index
+
+=======================================================================================================
+	=======$$$$$$=======
+	Select * from employees
+	Select first_name from employees
+	Select first_name , last_name from employees
+	=======$$$$$$=======
+
+Select      ==> Statement
+*	    ==> All Columns
+from	    ==> Clause
+employee    ==> Table Name
+first_name  ==> Column Name(Specific column)
+
+Result:--> Respective rows and columns from table will be displayed
+
+=======================================================================================================
+
+	=======$$$$$$=======
+	Select * from employees
+	Where first_name='Ellen'
+	=======$$$$$$=======
+
+Result:--> All datas with first name Ellen will be displayed
+
+=======================================================================================================
+
+Order By:
+=========
+	=======$$$$$$=======
+	Select * from employees
+	Order by first_name asc
+	=======$$$$$$=======
+
+asc  --> ascending order
+desc --> descending order
+
+=======================================================================================================
+Relational Operators:
+=====================
+<			-----> lesser than
+>			-----> greater than
+distinct / unique	-----> to get unique value
+is null			-----> to display null values
+is not null		-----> to display without null values
+between			-----> to display value between range
+as			-----> alias name
+in 			-----> to display multiple datas
+''			-----> literal string
+||			-----> concatination
+like			-----> starts with(a%) , ends with(%a), contains(%an%) , second char with(_ _ s)
+not like
+dual			-----> dummy table
+
+
+======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

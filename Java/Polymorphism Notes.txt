@@ -1,0 +1,55 @@
+Polymorphism:
+-------------
+
+One method that can be executed in many ways is called polymorphism.
+                           (or)
+Executing methods in more than one forms.
+
+poly- many
+morphism- forms
+
+Two types of Polymorphism:
+===========================
+
+1.Method Overloading or Compiletime Polymorphism.
+
+2.Method Overriding or RunTime Polymorphsim.
+
+1.Method Overloading:
+=====================
+same method name with different arguments in a single class.
+                              (or)
+When we are going to overload a method again and again with same method name by different its arguments.       
+the arguments depends on data type, datatype order, datatype count.
+
+Same Classname
+Same methodName
+Different Arguments
+
+Example - int id, float num, long phoneNumber, String name.
+-------
+
+2.Method Overriding:
+====================
+when we are not satisfied with the parent class method, 
+we can create the same method in our child class 
+and we can write our required business logics.
+
+Different Classname
+Same methodName
+Same Arguments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

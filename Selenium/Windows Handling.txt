@@ -1,0 +1,31 @@
+Windows Handling:
+=================
+	- Wndows Handling are used to handle multiple windows
+	- while interacting with a webpage , a new window will be eventually opened. To interact with 
+the new window we have to switch the control from old window(Parent) to the new window(Child)
+
+
+WindowHandle:
+=============
+	- an unique identifier that contains the addresses of all windows as String
+
+Methods to Handle Windows:
+==========================
+
+==> getWindowHandle() ----> to get the windowhandle of current window     ---> return type: String
+==> getWindowHandles()----> to get the windowhandle of all opened windows ---> return type: Set<String>
+
+==> switchTo()        ----> to switch control between the windows
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+Parallel Execution:
+  Running of script on different browser at a same time --->Parallel Execution
+
+To perform parallel Execution, we need to convert our class into suite level.
+
+ We can perform parallel Execution in 3 ways
+  1.Method level
+  2.class level
+  3.test level
+
+Method level:
+   --->method will execute parallely but class will execute on squential manner
+
+xml:
+---
+<suite name="suite" parallel ="methods" thread-count="5">
+  <test>
+    <classes>
+       <class name="packagename.classname"/>
+     </classes>
+  </test>
+</suite>
+
+
+Class level
+  All the classes will execute parallely but Method inside the class will run in sequential order.
+
+xml:
+----
+
+<suite name="suite" paralle="classes" thread-count="5">
+ <test>
+   <classes>
+     <class name="packagename.classname"/>
+     <class name="packagename.classname"/>
+   </classes>
+ </test>
+</suite>
+
+Test level  
+   All the test tag will run parallely but inside the test tag all the classes will run in sequential manaer
+
+<suite name="suite" parallel="tests" thread-count="5">
+ <test name="test">
+   <classes>
+        <class name="packagename.classname"/>
+       <class name="packagename.classname"/>
+   </classes>
+ </test>
+ <test name="test1">
+   <classes>
+        <class name="packagename.classname"/>
+       <class name="packagename.classname"/>
+   </classes>
+ </test>
+</suite>
+     
+
+cross browser Execution:
+------------------------
+ It very similar to parallel in test level.
+Here we never use parallel.
+In each test tag contains parameter tag.
+In that name are going to be same but for each test tag value is get differ
+ 
+<suite name="suite" parallel="tests" thread-count="5">
+ <test name="test">
+   <parameter name="browser" value="chrome"/>
+   <classes>
+        <class name="packagename.classname"/>
+       <class name="packagename.classname"/>
+   </classes>
+ </test>
+ <test name="test1">
+   <parameter name="browser" value="edge"/>
+   <classes>
+        <class name="packagename.classname"/>
+       <class name="packagename.classname"/>
+   </classes>
+ </test>
+</suite>
+     

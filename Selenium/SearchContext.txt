@@ -1,0 +1,57 @@
+SearchContext:
+==============
+	- Super most interface in Selenium
+	- RemoteWebDriver is the super most class
+
+Methods in SearchContext:
+===========================
+1)findElement();
+2)findElements();
+
+Methods in WebDriver:
+=====================
+1)get();
+2)getTitle();
+3)getCurrentUrl();
+4)getPageSource();
+5)close();
+6)quit();
+7)getWindowHandle();
+8)getWindowHandles();
+9)manage();
+10)navigate();
+11)switchTo();
+12)findElement();
+13)findElements();
+
+
+Methods in WebElement:
+=======================
+1)sendKeys();
+2)click();
+3)getAttribute();
+4)getText();
+5)submit();
+6)isEnabled();
+7)isDisabled();
+8)getLocator();
+9)clear();
+10)getCssValue();
+11)findElement();
+12)findElements();
+
+Methods in JavaScriptExecutor:
+==============================
+executeScript();
+
+Method in TakeScreenShot:
+=========================
+getScreenshotAs();
+
+
+
+
+
+
+
+

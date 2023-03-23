@@ -1,0 +1,45 @@
+Windows Handling
+=================
+
+
+public static void main(String[] args) {
+
+		// Set the property of browser
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Lenovo\\eclipse-workspace\\LanuageDetails\\SeleniumFirstDay\\Drivers\\chromedriver.exe");
+
+		// Initialize the WebDriver
+		// Browser Launch
+
+		WebDriver driver = new ChromeDriver();
+
+		// launching url
+		driver.get("https://www.amazon.in/");
+driver.manage().window().maximize();
+		WebElement txtSearchBox = driver.findElement(By.id("twotabsearchtextbox"));
+		txtSearchBox.sendKeys("iphone", Keys.ENTER);
+
+		WebElement btnPhone = driver.findElement(By.xpath("//span[text()='Apple iPhone 14 128GB Starlight']"));
+		btnPhone.click();
+		
+		//to get parent window id
+		String prtWin = driver.getWindowHandle();
+		System.out.println(prtWin);
+		
+		//to get all window id
+		Set<String> allWin = driver.getWindowHandles();
+		System.out.println(allWin);
+		
+		//switch to child window
+		//we need to iteration
+		for (String win : allWin) {
+			
+			if (!prtWin.equals(win)) {
+				driver.switchTo().window(win);
+			}
+		}
+		
+
+		WebElement btnAddToCart = driver.findElement(By.id("add-to-cart-button"));
+		btnAddToCart.click();
+	}

@@ -1,0 +1,59 @@
+Launching Chrome:
+===================
+Step 1:Create a new java project
+
+Step 2: Create 2 folders inside a project
+	--> New java project --> Src--> right click -->newfolder -->Library - new folder--> Driver
+
+Library -->Pre defined library of Selenium 
+Driver  -->Pre defined driver of Selenium
+
+ Download Selenium library file and add :
+ ========================================
+   Library-->>Google-Selenium Jar file →first link-->download (latest stable) 
+   -------		--> Copy  the file → paste Inside the library folder
+
+   
+   Driver-->> Scroll same page -->browser →Select browser → documentation →allversions are available 
+   -------	-->[3rd version]-->Chrome driver win32.exe → Zip file will be downloaded Extract
+		-->Chrome driver app file-->Copy and paste in driver.
+
+Step3:-Integrate the Predefined library files of Selenium and Java. 
+
+	-->>Selenium libray file -->right click -->build path --> add to build path 
+		--> reference library folder will be created.
+
+Step 4:-Create a Class and main method
+
+Step 5:- Set the property of the browser
+	-->>System.set property(Key,Value); 
+
+	 key:
+	=======
+		-->"webdriver.chrome.driver" (for chrome) 
+		-->"webdriver.gecko.driver" (fire fox).
+		-->"webdriver.ie.driver" (IE).			
+		-->"webdriver.edge.driver" (edge).
+
+	 Value --> Copy the location of drivers file and paste. 
+	=========
+		(right click file → property-->Copy location and paste)
+	
+Step 6: -Initialize the Web driver:
+
+	--> Syntax: WebDriver obj = new ChromeDriver();
+	--> import
+
+Step 7: Open URL:
+	--> driver.get("url");
+
+
+
+
+
+
+
+
+
+
+

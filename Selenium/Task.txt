@@ -1,0 +1,264 @@
+JAVA:
+======
+1)Context Grammer:
+===================
+public class Main
+{
+    public static String parseString(String input){
+        String s="";
+        for(int i=0;i<input.length();i++){
+            char c = input.charAt(i);
+            if(c=='a'){
+                s=s+"aa";
+            }else if(c=='b') {
+                
+                if(i+2<input.length()){
+                 if(input.charAt(i+2)=='b'){
+                     s=s+"b";
+                 } else if(input.charAt(i+1)=='b'){
+                        
+                    } else{
+                        s=s+"b";
+                    } 
+                } else if(i+1<input.length()){
+                    if(input.charAt(i+1)=='b'){
+                       
+                    } else{
+                        s=s+"b";
+                    } 
+                }
+                else{
+                    s=s+"b";
+                }
+            
+                
+            }else if(c=='c'){
+                if(i+1<input.length()){
+                 if(input.charAt(i+1)=='c'){
+                     s=s+"cc";
+                 }
+                }
+            }
+        }
+        return s;
+        
+    }
+	public static void main(String[] args) {
+		System.out.println(parseString("abaabbcbaccb"));
+	}
+}
+
+2)Pig LAtin:
+=============
+package org.javatest;
+
+import java.util.Scanner;
+public class PigLatin {
+	
+	
+	public static void main(String[] args) {
+		String s2="";
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter your word");
+		String string = scanner.nextLine();
+		
+		String[] split = string.split(" ");
+		String[] output = new String[split.length];
+		for (int i = 0; i < split.length; i++) {
+			String s = "";
+			char[] word = split[i].toCharArray();
+			for (int j = 1; j < word.length; j++) {
+				s = s+word[j];				
+			}
+			output[i]=s+word[0]+"ay";
+			
+		}
+		
+		for (int i = 0; i < output.length; i++) {
+			s2 = s2+output[i]+" ";
+		}
+		
+		String pigLatin = s2.trim();
+		System.out.println("Pig Latin : "+pigLatin);
+	}
+
+}
+
+3)String in 5 blocks:
+======================
+package org.javatest;
+
+import java.util.Scanner;
+
+public class FiveBlockString {
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter your word");
+		String string = scanner.nextLine();
+		
+		String fullString="";
+		String[] split = string.split(" ");
+		
+		for (int i = 0; i < split.length; i++) {
+			fullString = fullString+split[i];
+		}
+		String s ="";
+		int length = fullString.length();
+		for (int i = 0; i < length; i=i+5) {
+			String subString="";
+			int a=i+5;
+			if(a<length) {
+			 subString = fullString.substring(i, a);
+			}
+			else {
+				subString = fullString.substring(i, length);
+			}
+			s=s+subString+" ";
+		}
+		String result = s.trim();
+		System.out.println(result);
+		
+	}
+
+}
+
+
+SELENIUM:
+==========
+1)Selenium Tutorial:
+====================
+package org.selenium;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class SeleniumTutorial {
+	
+	public static void main(String[] args) throws IOException {
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Lenovo\\eclipse-workspace\\LanuageDetails\\SeleniumTest\\Driver\\chromedriver.exe");
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.google.com/");
+	
+		WebElement searchBox = driver.findElement(By.xpath("//input[@title='Search']"));
+	
+		searchBox.sendKeys("Selenium Tutorial" , Keys.ENTER);	
+		
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		
+		File screenshotAs = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File("C:\\Users\\Lenovo\\Desktop\\Test\\test.png");
+		
+		FileUtils.copyFile(screenshotAs, file); 
+		
+	}
+}
+
+2)WebTable:
+============
+package org.selenium;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WebTable {
+
+	public static void main(String[] args) {
+
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Lenovo\\eclipse-workspace\\LanuageDetails\\SeleniumTest\\Driver\\chromedriver.exe");
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+
+		driver.get("https://the-internet.herokuapp.com/tables");
+
+		WebElement tableElement = driver.findElement(By.xpath("//table[@id='table1']"));
+
+		List<WebElement> headingElements = tableElement.findElements(By.tagName("th"));
+
+		for (int i = 0; i < headingElements.size(); i++) {
+			WebElement headingElement = headingElements.get(i);
+			String text = headingElement.getText();
+			System.out.println(text);
+		}
+
+		List<WebElement> dataElements = tableElement.findElements(By.tagName("td"));
+
+		for (int i = 0; i < dataElements.size(); i++) {
+			WebElement dataElement = dataElements.get(i);
+			String text = dataElement.getText();
+			System.out.println(text);
+		}
+
+	}
+
+}
+
+3)DropDown:
+============
+package org.selenium;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WebTable {
+
+	public static void main(String[] args) {
+
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Lenovo\\eclipse-workspace\\LanuageDetails\\SeleniumTest\\Driver\\chromedriver.exe");
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+
+		driver.get("https://the-internet.herokuapp.com/tables");
+
+		WebElement tableElement = driver.findElement(By.xpath("//table[@id='table1']"));
+
+		List<WebElement> headingElements = tableElement.findElements(By.tagName("th"));
+
+		for (int i = 0; i < headingElements.size(); i++) {
+			WebElement headingElement = headingElements.get(i);
+			String text = headingElement.getText();
+			System.out.println(text);
+		}
+
+		List<WebElement> dataElements = tableElement.findElements(By.tagName("td"));
+
+		for (int i = 0; i < dataElements.size(); i++) {
+			WebElement dataElement = dataElements.get(i);
+			String text = dataElement.getText();
+			System.out.println(text);
+		}
+
+	}
+
+}
+
+
+

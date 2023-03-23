@@ -1,0 +1,16 @@
+Singleton:
+===========
+Singleton: a single person
+	--> Singleton design pattern is used to restrict the object creation
+	--> for a Singleton Class we can able to create only one Object
+	--> Less Memmory wastage
+
+  ==> Early Instantiation: The object creation takes place at the load time.
+  ==> Lazy Instantiation: The object creation is done according to the requirement.
+
+
+Step 1: Create a Private constructor to prevent instantiation of the class from other classes
+
+Step 2: Create a Private static variable of the class
+
+Step 3: Generate getter for that static variable

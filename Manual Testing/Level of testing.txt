@@ -1,0 +1,48 @@
+Level of Testing:
+=================
+		-to ensure the Quality of the Application
+		-to find the missing Areas and to avoid Overlapping and repetation of SDLC
+
+1) Unit testing:
+=================
+	-Should be done by Developers
+	-Analyzing each module/unit component
+	-White Box Techniques
+
+
+2) Integration testing:
+========================
+	-Should done by Testers
+	-Integration--Combining or merging two Modules
+	-to test the dataflow while integrating modules
+	-going to test modules Software in a Group
+	-to find out the accuracy of communication Between modules  
+	-testers do test to validate the stability of app
+	-Based on Black Box Techniques
+		top down approach - higher modules to lower modules
+		bottom up approach - lower modules to higher Modules
+		big bang approach - integrated modules
+
+
+3) System testing:
+==================
+	-Done by Testers
+	-To check Complete Appplications
+	-based on Black Box Testing Technique
+Types of System Testing:
+-------------------------
+	• Functional Testing---Smoke Testing, Sanity Testing, Regression Testing
+	• Usability Testing
+	• Performance 
+	• Security Testing
+
+4) UAT - user acceptance testing:
+==================================
+	- done by client side
+	- Alpha testing - inhouse developers/testers
+	- Beta testing - loyal customers/ limited customers.
+
+
+
+
+

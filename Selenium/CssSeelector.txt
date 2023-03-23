@@ -1,0 +1,48 @@
+Css Selector:
+==============
+	- It is the second fastest locator(i.e., faster than xpath)
+	- It also uses tagname , attributename and attribute values to find a WebElement 
+	- We can also use Special Characters in Css Selector
+
+Syntax:- 
+--------- 
+-->id:
+------
+	==> tagname#AttributeValueOfId
+
+-->class:
+----------
+	==> tagname.AttributeValueOfClass
+
+-->Attribute:
+-------------
+	==> tagname[attributename='attribute value']
+
+-->Multiple Attribute:
+-----------------------
+	==> tagname[attributename1='attribute value1'][attributename2='attribute value2']
+
+-->Parent-Child:
+----------------
+	Parent > Child
+
+-->Sibling:
+------------
+	ElderSibling+YoungerSibling
+(---> Reverse direction is not possible in CssSelector
+---> and , or--> not possible in CssSelector)
+
+-->not operator:
+----------------
+
+
+
+
+
+
+
+
+Difference between Xpath and CssSelector:
+=========================================
+	- Xpath can traverse in forward and backward direction but Css Selector can traverse only
+	  in forward direction 

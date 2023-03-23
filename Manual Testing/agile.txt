@@ -1,0 +1,127 @@
+SDLC --> Agile , waterfall , V-shape
+
+Agile:-being able to understand, adapt, and change quickly in an ever-evolving environment
+======
+
+Agile Model:
+============
+	- continuous iteration of development and testing throughout SDLC
+	- both development and testing activities are concurrent 
+	- small and potential approach instead of large approach
+
+Framework:--  SCRUM -
+--------------------
+	- iterative and incremental 
+	- meetings, tools , roles that works together to help the team to manage their work
+ 
+Members/Role Players in Agile:
+================================
+Product Owner:
+---------------
+	- will communicate with team on behalf of Client
+	- possess complete knowledge about product 
+	- defines features of the product and decides release date
+	- can accept or reject work item result
+
+Scrum Master:
+-------------
+	- manages the team and look after the team's productivity
+	- setting up the team, scrum meeting invite and removes obstacles to progress
+
+Scrum Team/Dev Team:
+---------------------
+	- usually about 5-9 members involved in development and testing
+	- organizes the work to complete the sprint or cycle and attend the scrum meetings
+
+Different Artifacts used in Agile:
+===================================
+User story:
+------------
+	- short explanation of functionalities of system under test
+
+Acceptance Criteria:
+--------------------
+	- detailed explanation of functionalities of the system under test 
+	- shows what we have to do
+
+Product Backlog:
+-----------------
+	- collection of user stories captured for a scrum product
+	- prepared and maintained by product owner
+ 
+Sprint:
+-------
+	- set period of time to complete the user stories
+	- usually takes 2-3 weeks of time
+
+Sprint Backlog:
+-----------------
+	- set of user stories to be completed in a sprint from the product backlog
+
+Burnup and Burndown Chart:
+---------------------------
+	-->burn-up chart - amount of completed work in a project  
+	-->burn-down chart - amount of work remained to complete a project
+	- used to trace the progress of a project
+
+Qtest - Test Management Tool 
+JIRA - Defect Management Tool 
+
+Agile Ceremonies or Meetings:
+------------------------------
+1. Sprint Grooming:
+-------------------
+	- understand the user stories explained by Product Owner	
+	- Meeting Duration - 1 hour
+	- Attended by - Product Owner, Scrum Master and Scrum Team
+
+2. Sprint Planning:
+--------------------
+	- product owner already prioritized product backlog
+	- Work selected from Product Backlog and pulled into the Sprint Backlog
+	- Meeting Duration - 1 to 3 hours.
+	- Attended by - Scrum Master and Scrum Team.
+
+3. Daily Scrum Meeting (or) Daily Stand-up calls:
+--------------------------------------------------
+	- quickly inform everyone of what's going on across the team
+	- not a detailed status meeting
+	- What did I complete yesterday?
+	- What will I work on today?
+	- Am I blocked by anything?
+	- Meeting Duration - 15 minutes.
+	- Attended by - Scrum Master and Scrum Team.
+
+4. Sprint Review Meeting:
+--------------------------
+	- After completion of every sprint showcase to the product owner
+	- Scrum team shows the demo of app with current sprint's completed stories
+	- Meeting Duration - 1 hour
+	- Attended by - Product Owner, Scrum Master and Scrum Team
+
+5. Sprint Retrospective Meeting:
+--------------------------------
+	- what worked well–and what didn't
+	- Team will rate the sprint out of 10 
+	- What went right?
+	- What went wrong?
+	- What can be done better for next sprint?
+	- Meeting Duration - 1 hour.
+	- Attended by - Scrum Master and Scrum Team.
+
+Why we go for Agile--
+---------------------
+	- More Control
+	- Better Productivity
+	- Better Quality
+	- Higher Customer Satisfaction
+	- Higher return on investment
+
+Agile Manifesto (Principles):
+------------------------------
+Importance to be given to
+	- Individual and team interactions over the processes and tools
+	- Working software over comprehensive documentation
+	- Customer collaboration over contract negotiation
+	- Responding to change over following a plan
+

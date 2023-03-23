@@ -1,0 +1,120 @@
+JUNIT Framework:
+=================
+Testing:
+
+	unit testing -- Checking a single functionality or a single module
+	Integration  -- Testing Testng, Cucumber
+	Regression   -- Testing Newly added feature has any impact over existing feature
+-->It is used for carriying out the Unit Testing 
+-->It is also used for setting up the Verification point
+
+How to Integrate the Junit Framework with Maven:
+------------------------------------------------
+
+Step 1: Create a Maven Project
+
+Step 2: add dependancies:
+		WebDriverManager
+		Selenium Java
+          	Junit 4.12
+
+Annotations:
+------------
+	- These are hidden group of codes which will instantiate the JVM necessary for Execution
+
+	- It should be always represented by @
+
+Annotations used in JUNIT Framework:
+-------------------------------------
+
+@BeforeClass	- It will execute before the execution of all the methods in the class
+		- Once only setup
+
+@Before		- It will execute before every @Test present in the class
+
+@Test		- It is the mandatory annotation
+
+@After		- It will execute after every @Test present in the class
+
+@AfterClass	- It will execute after the execution of all the methods in the class
+		- Once-only tear down
+
+RealTime Use:
+-------------
+
+@BeforeClass	- InitialSetup (Browser launch, maximize)
+
+@Before		- To set up the Verification point, to calculate the time before main functinality
+
+@Test		- It is the mandatory annotation 
+
+@After		- It will execute after every @Test present in the class
+
+@AfetrClass	- TearDownOperations (closing the Browser, quitting the Browser, Screenshot)
+
+Note:
+
+1, All methods in JUnit should be public
+
+2, @BeforeClass and @AfterClass should be public static
+
+
+
+
+
+
+
+Ignoring a Test Case:
+======================
+==> @Ignore --> used to ignore particular tests or group of tests in order to skip the build failure
+--> @Ignore along with @Test annotation --> to ignore one test
+--> @Ignore at the class level --> to ignore all test in a class
+
+
+@Test(timeout=500)  -	to set some timeout during test execution
+
+@Test(expected=IllegalArgumentException.class) -to handle some exception during test execution
+
+
+
+Junit Test Runner:
+===================
+	--> a tool for execution of your test cases
+	--> JUnitCore(class) --> org.junit.runner --> used to execute tests in another class
+
+==>JUnitCore.runClasses(CreateAndSetName.class); --> Return type ==> Result (object) 
+==>result.getFailures();
+==>result.wasSuccessful()
+
+
+ASSERTS:
+=========
+==> assertEquals(string1,string2);
+==> assertSame(string3, string4);
+==> assertNotSame(string1, string3);
+==> assertNotNull(string1);
+==> assertNull(string5);
+==> assertTrue(condition);
+==> assertFalse(condition);
+==>assertArrayEquals(airethematicArrary1, airethematicArrary2);
+
+Suite Execution:
+=================
+==>@Runwith(Suite.class)
+==>@SuiteClasses(test1.class,test2.class……)
+
+	--> Suites to be executed in a dummy class
+
+
+
+
+
+
+
+
+
+
+
+
+
+

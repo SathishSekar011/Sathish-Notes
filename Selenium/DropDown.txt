@@ -1,0 +1,32 @@
+Drop Down:
+===========
+
+Two types:
+==========
+1) Single Select DropDown (deselect is not Possible)
+2) MultiSelect Dropdown (deselect is possible)
+
+
+to identify a dropdown is present in the webpage:
+
+	-->Inspect the webpage and find "select" tag is present or not
+
+tag Name Arrangement for DropDown
+
+	<Select>
+		<option
+		<option
+
+Methods to handle dropdown:
+============================
+	--> isMultiple();
+	--> selectByIndex();
+	--> selectByValue(); 
+	--> selectByVisibleText();
+	--> getOptions();		---> List<WebElement> 
+	--> getAllSelectedOption(); 	---> Only selected options----List<WebElement>
+ 	--> getFirstSelectedOption();   ---> First Selected ---- WebElement
+	--> deselectAll();
+	--> deSelectByIndex(); 
+	--> deSelectByValue();
+	--> deSelectByvisibleText();

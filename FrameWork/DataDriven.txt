@@ -1,0 +1,124 @@
+Data Driven Framework:
+=======================
+	- Used to maintain test data
+
+1)By Using Excel
+2)By Using Database
+
+Format Of Excel:
+=================
+i) .xlx --> before version 2007(2^9 rows * 2^16 columns) --> HSSFWorkbook
+ii).xlsx--> after version 2007(2^16rows * 2^20columns)	 --> XSSFWorkbook
+
+
+==> apache poi ooxml ==> is a dependency which helps as to interact with Excel using Java
+
+     ==> Google-->apache poi ooxml-->mvn repository-->version 4.1.2-->copy & paste in pom.xml-->Ctrl+S
+
+Step 1:
+========
+	- Create an excel and save it with some data
+
+Step 2:
+=======
+	- Create Folder to maintain Test Data
+	
+	--> RC the Project --> New --> Folder --> Name: Test Data --> Finish --> Copy & Paste the excel
+
+Step 3:
+=======
+	- Create Class and Main Method
+
+Step 4:
+=======
+	- Set the path of the excel
+
+	==> File file = new File(location of excel);
+
+Step 5:
+=======
+	- Reading Data
+
+	==> FileInputStream stream = new FileInputStream(file);
+
+Step 6:
+=======
+	- Accessing Workbook
+
+	==> Workbook workbook = new XSSFWorkbook(stream);	
+	==> workbook.getSheet("sheet name");
+
+Step 7:
+=======
+	- Accessing Row
+
+	==> sheet.getRow(row no);
+
+Step 8:
+=======
+	- Accessing Column
+
+	==> row.getCell(cell no);
+
+	==> cell.getStringCellValue();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
