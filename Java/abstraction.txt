@@ -27,6 +27,20 @@ Default return type is public abstract
 
 
 
+Abstract Method : we can't write logics
+		  it should not be private
+		  it must be created only inside abstract class
+
+Abstract Class 	: we can't instantiate the abstract class(Object Creation)
+
+Interface	: we can't instantiate the interface(Object Creation)
+		: we can't write logics for methods in an interface
+
+
+
+
+
+
 
 8925811149 - Sathish
 Name:

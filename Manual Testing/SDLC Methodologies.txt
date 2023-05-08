@@ -1,3 +1,5 @@
+SDLC --> Waterfall Methodology , Spiral Methodology , V-shape Methodology , Agile 
+
 Waterfall Model:
 =================
 	--> Docomentation Process

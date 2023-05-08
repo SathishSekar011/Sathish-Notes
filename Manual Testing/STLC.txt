@@ -14,49 +14,68 @@ understand - plan - design - execution - sign off
 1) Requirement analysis:
 ========================
 	-->Entry criteria:-BRD
-	-----------------------
+	
 	- understanding the requiremnts
-	- doubts -query log- BA - walkthrough session 
-	- identify types of testing
-	-->Exit criteria : scope of the project
-	----------------------------------------
+		- doubts -query log- BA - walkthrough session 
+		- identify types of testing
 
-2) Test Plan:
-==============
-	-->Entry Criteria:-Scope of the project
-	-------------------------------------------
-	- preparation of test plan document(schedule, deadlines)
-	- selection of tools
-	- resource planning
-	-->exit criteria - test plan 
-	------------------------------
+	-->Exit criteria : Project Plan , Functional Requirements
+	
 
-3) Test Design:
-================
-	-->Entry Criteria: Test Plan
-	-----------------------------
-	- scenario, test data, test case, 	
-	- review the test case,approval
-	- RTM (requirement traceability matrix) 
-	- test script
+2) Test Planning:
+==================
+	-->Entry Criteria:-Project Plan , Functional Requirements
+	
+	--> what , when and how to test?
+	     	- preparation of test plan document(schedule, deadlines)
+	     	- selection of tools
+	     	- resource planning
+	     	- Team Formation
+	     	- Test Estimation(Duration)
+	     	- Preparing Test Plan
+	     	- Revieving Test Plan
+	--> Responsible Person : Team Lead / Test Lead and Test Manager
+
+	-->exit criteria - Test plan Document
+	
+
+3) Test Designing:
+==================
+	-->Entry Criteria: Test Plan Document , Project Plan , Functional Requirements
+	
+		- preparation of test scenarios, test data, test case 	
+		- review the test case,approval
+		- RTM (requirement traceability matrix) --> excel that maps requirements and Test Cases
+		- test script
+		- test case sign-off
+
+	--> Responsible Person : Test Lead and Test Engineers
+
 	-->Exit Criteria: Test Scenarios, Test Case, Test Data, RTM
-	------------------------------------------------------------
+	
 
 4) Test Execution:
-===================
-	-->Entry Criteria: Test Scenarios, Test Case, Test Data, RTM
-	------------------------------------------------------------
-	- execute as per plan
-	- defect - raise the bug 
-	- retest
-	-->Exit Criteria:execution result, Defect log
-	----------------------------------------------
+==================
+	-->Entry Criteria: Build , Test Scenarios, Test Case, Test Data, RTM
+	
+		- execute as per plan
+		- defect - raise the bug 
+		- retest
+
+	--> Responsible Person : Test Lead and Test Engineers
+
+	-->Exit Criteria:Test Reports, Defect log
+
 
 5) sign off:
 ==============
-	test result analysis
-	test closure report
+	-->Entry Criteria: Test Reports, Defect log
+		- test result analysis
+	 	- Defect Log analysis
 
+	--> Responsible Person : Test Manager , Test Lead and Test Engineers
+
+	-->Exit Criteria:Test Summary Reports
 
 
 

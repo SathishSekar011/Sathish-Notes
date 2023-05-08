@@ -1,0 +1,64 @@
+STLC - software testing life cycle:
+=====================================
+	- sequence of stages to perform testing
+
+Entry Criteria:
+----------------
+	- prerequired items to be completed before testing begin
+Exit Criteria:
+---------------
+	- items to be completed before testing concluded
+
+understand - plan - design - execution - sign off
+
+1) Requirement analysis:
+========================
+	-->Entry criteria:-BRD
+	-----------------------
+	- understanding the requiremnts
+	- doubts -query log- BA - walkthrough session 
+	- identify types of testing
+	-->Exit criteria : scope of the project
+	---------------------------------------
+
+2) Test Plan:
+=============
+	-->Entry Criteria:-Scope of the project
+	---------------------------------------
+	- preparation of test plan document(schedule, deadlines)
+	- selection of tools
+	- resource planning
+	-->exit criteria - test plan 
+	----------------------------
+
+3) Test Design:
+===============
+	-->Entry Criteria: Test Plan
+	-----------------------------
+	- scenario, test data, test case, 	
+	- review the test case,approval
+	- RTM (requirement traceability matrix) 
+	- test script
+	-->Exit Criteria: Test Scenarios, Test Case, Test Data, RTM
+	-----------------------------------------------------------
+
+4) Test Execution:
+==================
+	-->Entry Criteria: Test Scenarios, Test Case, Test Data, RTM
+	------------------------------------------------------------
+	- execute as per plan
+	- defect - raise the bug 
+	- retest
+	-->Exit Criteria:execution result, Defect log
+	----------------------------------------------
+
+5) sign off:
+==============
+	test result analysis
+	test closure report
+
+
+
+
+
+

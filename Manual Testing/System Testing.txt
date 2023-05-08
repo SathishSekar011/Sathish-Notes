@@ -1,0 +1,143 @@
+System Testing:
+===============
+--> GUI Testing
+--> Usablity Testing
+--> Functinal Testing
+--> Non-Functional Testing
+
+
+--> GUI Testing:
+=================
+	- Graphical User Interface Testing is the process of Testing User Interface of the application.
+	- we'll mainly focus on look and feel of UI like 
+		-- testing size,position,colour of particular element
+		-- testing screen with different resolutions
+		-- image clarity
+		-- allignment , spelling of text
+
+--> Usablity Testing:
+=====================
+	- to check how easily an end user can able to understand and operate the application.
+	- we are going to check whether the options provided is helpfull or not
+		-- User Manuals
+		-- help menu
+
+--> Functional Testing:
+========================
+	- checking the functionality or feature of the application
+	- focuses on requirements of client
+
+	> Object Properties Testing
+	> Database Testing
+	> Error Handling
+	> Calculation or Manupulation Testing	
+	> Links Testing
+	> Cookies and Sessions
+
+
+  > Object Properties Testing:
+ ------------------------------
+	- Checking the properties of particular objects in Application like
+		-- text box enabled or not
+		-- text box allows special characters
+		-- is drop down multi select
+		-- is radio button works properly
+
+
+  > Database Testing / Backend Testing :
+  --------------------------------------
+	- we are going to check the communication of UI with Database
+	- DML operations(Data Manupulation Language)
+		-- inserting / submitting data
+		-- retriving data
+		-- updating data
+		-- deleting data
+	- grey box tesing
+		-- from UI sending datas(Black box)
+		-- from Database writing queries and manupulating data tables(White box)
+
+  > Error Handling:
+  -----------------	
+	- Verifying error messages in application.
+		-- readable , understandable , simple and precise , content
+
+
+  > Calculation or Manupulation Testing:
+  --------------------------------------
+	- verifying calculations in application
+
+  > Links Testing:
+  ----------------
+	--> Links Existence - placement of links in application
+	--> Links Execution - navigation functionality of links
+	
+	Types of Links:
+	     -- Internal Link
+	     -- External Link
+	     -- Broken Link
+
+
+  > Cookies and Sessions:
+  -----------------------
+	cookies --> temporary files created by browser
+        session --> time slot created by server to close the session after timeout
+
+
+--> Non-functional Testing:
+============================
+	- checking behaviour of application
+	- once application is stable we do non-functional testing
+	- focuses on expectations of client
+	
+	> Performance Testing (Load Testing , Stress Testing , Volume Testing)
+	> Security Testing
+	> Recovery Testing
+	> Compatablity Testing
+	> Configuration Testing
+	> Installation Testing
+	> Sanitation / Garbage Testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+

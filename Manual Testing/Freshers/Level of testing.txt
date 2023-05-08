@@ -20,26 +20,10 @@ Level of Testing:
 	- testers do test to validate the stability of app
 	- Based on Black Box Techniques
 
-	==> Unit Integration Testing: This is the part which the Developer needs to check before providing the Build to the QA Team. This Unit test will atleast ensure that Basic Integration between the Features are working fine.
 
-	==> Thorough Integration Testing: This is the major part and hence the Tester is the whole responsible for this part. QA Team need to ensure that all the Basic and Advanced functionality of the integration tests are working fine.
-
-Types of Integration Testing:
------------------------------
-	i)  Incremental Integration Testing
-	ii) Non-increnmental Integration Testing
-
-i) Incremental Integration Testing:
-------------------------------------
-	--> Incementally adding modules one by one and testing the data flow between modules
 		top down approach  - higher modules to lower modules(Parent to Child)
 		bottom up approach - lower modules to higher Modules
 		big bang approach  - integrated modules
-
-ii) Non-increnmental Integration Testing:
-------------------------------------------
-	--> integrating all modules at once and then testing
-	--> in case of any defects it is very difficult to find the root cause of the defect
 
 
 3) System testing:
@@ -63,6 +47,7 @@ Types of System Testing:
 	- Beta testing - loyal customers/ limited customers.
 
 
-
+Requirements Gathering --> Define as BRD --> Design(DDS) --> Implementation --> Testing --> Deployment
+--> Maintain
 
 

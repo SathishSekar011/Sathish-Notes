@@ -1,0 +1,110 @@
+Defect:
+========
+	- when the expected and actual is not matching it is a defect
+	- when the application does not conform to the requirement specification
+
+Bug:
+====
+	-the tester raises a defect to developer then it is called as bug
+
+==> Defect Report :
+===================
+	--> Defect_ID : Unique identification number for the defect.
+
+	--> Defect Description : Detailed description of the defect including information about the module in which defect was found.
+
+	--> Version : Version of the application in which defect was found.
+
+	--> Steps : Detailed steps along with screenshots with which the developer can reproduce the defects.
+
+	--> Date Raised : Date when the defect is raised
+
+	--> Reference : where you Provide reference to the documents like, requirements, design, architecture or may be even screenshots of the error to help understand the defect
+
+	--> Detected By : Name/ID of the tester who raised the defect
+
+	--> Status : Status of the defect, more on this later
+
+	--> Fixed by : Name/ID of the developer who fixed it
+
+	--> Date Closed : Date when the defect is closed
+
+	--> Severity : which describes the impact of the defect on the application
+
+	--> Priority : which is related to defect fixing urgency. Severity Priority could be High/Medium/Low based on the impact urgency at which the defect should be fixed respectively
+	--> Resolution type : (Filled by Developer)
+
+
+
+==> Defect Severity :
+======================
+	--> Severity describes the seriousness of defect and how much impact on Business workflow.
+
+Types Of Severity:
+-------------------
+	- Blocker(Show stopper): This defect indicates nothing can proceed further.	
+		Eg:-- Application crashed, Login Not worked
+
+	- Critical: The main/basic functionality is not working. Customer business workflow is
+broken. They cannot proceed further.
+		Eg:-- Fund transfer is not working in net banking
+		Eg:-- Ordering product in ecommerce application is not working.
+
+	- Major: It cause some undesirable behavior, but the feature/application is still functional.
+		Eg:-- After sending email there is no confirm message
+		Eg:-- After booking cab there is no confirmation.
+
+	- Minor: It won't cause any major break-down of the system
+		Eg:-- Look and feel issues, spellings, alignments.
+
+
+
+==> Defect Priority:
+====================
+	--> Priority describes the importance of defect.
+	--> Defect Priority states the order in which a defect should be fixed.
+
+Defect priority can be categorized into three class
+-----------------------------------------------------
+	- PO (High): The defect must be resolved immediately as it affects the system severely and cannot be used until it is fixed.
+
+	- P1 (Medium): It can wait until a new versions/builds is created
+
+	- P2 (Low): Developer can fix it in later releases.
+
+
+High Priority High Severity  	==> Fund Transfer is not Working
+High Priority Low Severity	==> Website Logo , Product Name
+Low Priority High Severity	==> wrong acnowledment message
+Low Priority Low Severity	==> spelling mistakes
+
+
+==> Defect Resolution:
+=======================
+	--> After receiving the defect report from the testing team, development team conduct a review meeting to fix defects. Then they send a Resolution Type to the testing team for further communication.
+
+Resolution Types:-
+-------------------
+	- Accept
+	- Reject
+	- Duplicate
+	- Enhancement
+	- Need more information
+	- Not Reproducible
+	- Fixed
+	- As Designed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

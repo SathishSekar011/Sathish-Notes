@@ -55,7 +55,6 @@ Different Versions or components of Selenium:
 	-It is extended for other Browsers
 	-It will automate only the web applications through Firefox Browser
 	-It contains Playback option to find the defects
-
 2, Selenium RC:
 ------------------
 	-Remote Control
@@ -67,6 +66,7 @@ Different Versions or components of Selenium:
 	-It has a direct communication with the Browser 
 	-It will support different types of Browser
 	-It also contains Debug option
+
 4, Selenium Grid:
 -------------------
 	- Industry Version of Selenium

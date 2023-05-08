@@ -28,7 +28,7 @@ Class level
 xml:
 ----
 
-<suite name="suite" paralle="classes" thread-count="5">
+<suite name="suite" parallel="classes" thread-count="5">
  <test>
    <classes>
      <class name="packagename.classname"/>

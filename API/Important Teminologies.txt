@@ -1,0 +1,50 @@
+Important Terminlogies:
+========================
+--> URI : Uniform Resource Identifier
+--------------------------------------
+	--> It is a string of characters that uniquely identify a name or a resource on the internet.
+	--> An URI identifies a resource by name, location, or both.
+	--> URIs have two specializations 
+		- Uniform Resource Locator (URL)
+		- Uniform Resource Name (URN)
+
+--> URL : Uniform Resource Locator
+-----------------------------------
+	--> It is a type of URI that specifies not only a resource, but how to reach it on the internet 			Eg:- http://, ftp://, or mailto://.
+
+--> URN : Uniform Resource Name
+--------------------------------
+	--> It is a type of URI that uses the specific naming scheme of urn
+		Eg:— urn:isbn:0-486-27557-4 or urn:isbn:0-395-36341-1.
+
+
+==> Base URI:
+-------------
+	--> it is the address where the Server is hosted in the internet.
+
+==> Resources:
+--------------
+	--> it is the data source present in the server.
+	--> will be represented by /
+
+==> Query Parameter:
+--------------------
+	--> Query params are used to filter and sort the data that is returned from an API.
+	--> They are used while retrieving multiple resources, such as a list of products or a list of users or any list of data.
+	Eg:- Filtering by Price , Category 
+	--> will be represented by ?
+	--> more than one parameter will be added by using &
+	
+==> Path Parameter:
+--------------------
+	--> Path params should be used when retrieving a single resource. 
+	--> They are used while the resource is identified by a unique identifier, such as an ID or a username or product name.
+	Eg:- Selecting a Single Product
+
+==> EndPoint:
+-------------
+	--> An API endpoint is the point of entry in a communication channel when two systems are interacting.  
+	--> It refers to touchpoints of the communication between an API and a server.
+	--> The endpoint can be viewed as the means from which the API can access the resources they need from a server to perform their task. 
+	--> An API endpoint is basically a URL of a server or service.
+

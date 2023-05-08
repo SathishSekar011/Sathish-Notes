@@ -1,0 +1,109 @@
+Test Scenario:
+---------------
+	-idea of what we are going to test
+	-high level Testcase.
+Test Case:
+-----------
+	-idea of how we are going to test
+	-it includes test case (tc) name, test data, expected & actual results, status, etc
+Test Data:
+-----------
+	-actual input to be use in the application for testing
+Defect:
+--------
+	-when the expected and actual is not matching it is a defect
+	-when the application does not conform to the requirement specification
+Bug:
+-----
+	-the tester raises a defect to developer then it is called as bug
+
+
+
+Type of testing:
+=================
+
+1) Black Box testing:
+----------------------
+	- done by testers
+	- without knowing the internal coding knowledge of the application
+	- User Perspective
+2) White box testing:
+-----------------------
+	- done by developers
+	- by knowing the internal coding knowledge
+	- glass box testing, clear box testing, structural testing
+	- developer perspective
+* Grey Box testing:
+-------------------
+	- done by testers
+	- by knowing the internal coding knowledge
+	- user perspective with some internal access
+
+3) Positive testing:
+--------------------
+	- testing with valid input data
+	- to determine what system supposed to do
+	- helps to check whether the application is justifying the requirements or not
+ 
+4) Negative testing:
+---------------------- 
+	- testing with invalid data
+ 	- to determine what system not supposed to do
+	- helps to find the defects from the software
+
+5) Formal testing:
+------------------
+	 - preplanned procedures and proper documentation
+
+6) Informal testing:
+--------------------
+	 - not following the procedure and not documented
+
+7) smoke testing:
+-----------------
+	 - day zero check
+	 - to make sure that the build received from the development team is testable or not
+	 - basic functionalitites 
+	 - validate the stability of build
+	 - build level test
+	 - helps to not wasting time in whole application when the key features not working properly
+ 
+8) Regression testing:
+----------------------- 
+	- adding new feature may impact the old feature
+	- testing new feature alone not sufficient
+	- solution? - validate the entire application
+	- validate the end to end scenarios(cover all functionalities)
+	- whenever a new functionalities added regression testing should be done
+	
+9) Sanity testing:
+-------------------
+	- done during the release phase to check for the main functionalities of the application 
+	   without going deeper
+	- subset of regression testing
+	- validate the main functionalities
+	- time constraint
+
+10) Monkey testing :
+--------------------
+	- performing abnormal activites	to validate the stability of the application
+
+11)Beta Testing:
+-----------------
+	- done by a limited number of end users before delivery
+	- done in the client place.
+
+12) Live environment testing:
+-----------------------------
+	- after release -Bug leakage 
+
+13) Retest:
+-----------
+	- to ensure the bug fixed or not
+
+
+
+8925811149--sathish
+
+
+

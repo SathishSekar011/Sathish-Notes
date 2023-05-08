@@ -1,24 +1,3 @@
-Test Scenario:
----------------
-	-idea of what we are going to test
-	-high level Testcase.
-Test Case:
------------
-	-idea of how we are going to test
-	-it includes test case (tc) name, test data, expected & actual results, status, etc
-Test Data:
------------
-	-actual input to be use in the application for testing
-Defect:
---------
-	-when the expected and actual is not matching it is a defect
-	-when the application does not conform to the requirement specification
-Bug:
------
-	-the tester raises a defect to developer then it is called as bug
-
-
-
 Type of testing:
 =================
 
@@ -61,43 +40,102 @@ Type of testing:
 
 7) smoke testing:
 -----------------
-	 - day zero check
-	 - to make sure that the build received from the development team is testable or not
-	 - basic functionalitites 
-	 - validate the stability of build
-	 - build level test
-	 - helps to not wasting time in whole application when the key features not working properly
+	- day zero check
+	- this is done at initial stages when build is unstable
+	- to make sure that the build received from the development team is testable or not
+	- basic functionalitites 
+	- validate the stability of build
+	- build level test
+	- helps to not wasting time in whole application when the key features not working properly
+	- done by both developers and testers
+
+8) Sanity testing:
+-------------------
+	- this is done once the build becomes stable
+	- it is a subset of regression testing
+	- done during the release phase to check for the main functionalities of the application 
+	   without going deeper
+	- validate the main functionalities
+	- time constraint
+	- done by testers
  
-8) Regression testing:
+9) Regression testing:
 ----------------------- 
-	- adding new feature may impact the old feature
+	- adding new feature or deleting / modifying  existing feature in a build may impact the other integrated builds also
 	- testing new feature alone not sufficient
 	- solution? - validate the entire application
 	- validate the end to end scenarios(cover all functionalities)
 	- whenever a new functionalities added regression testing should be done
-	
-9) Sanity testing:
--------------------
-	- done during the release phase to check for the main functionalities of the application 
-	   without going deeper
-	- subset of regression testing
-	- validate the main functionalities
-	- time constraint
 
-10) Monkey testing :
+   --> Unit Regression Testing 
+   -----------------------------
+	- Testing only the modules where changes or modifications done by the developers.
+ 
+   --> Regional Regression Testing
+   ----------------------------------
+	- Testing modified modules along with impacted modules which can be identified by coducting Impact Analysis meeting with Developers and QA.
+
+  --> Full Regression Testing
+  ----------------------------
+	- when changes has made on many modules we should do Full Regression Testing
+
+10) Exploratory Testing:
+=========================
+	- if we don't have any documents related to the build received we have to explore the build and understand the scenarios and produce documentation then proceed with testing.
+	- will be done by testers with previous experience in that domain but does not know about the functionalities in that application.
+   Cons:
+   -----
+	- there will be possiblities of misunderstanding between bug and feature
+	- difficult to identify bugs
+	- time consuming
+
+11)Ad-hoc Testing:
+===================
+	- an informal testing type quite opposite to the formal testing 
+	- randomly test the application without following any documents and test design techniques
+	- primarily performed if the knowledge of testers in the application under test is very high
+	- randomly test the application without any test cases or any business requirement document
+	- will be done by testers with previous experience in that domain and also knows about the functionalities in that application.
+
+12) Monkey testing :
 --------------------
 	- performing abnormal activites	to validate the stability of the application
+	- this test is done by testers without having any knowlede of application
 
-11)Beta Testing:
+   *Random Testing ==> Exploratory Testing , Ad-hoc Testing , Monkey testing
+
+13) End-To-End Testing :
+-------------------------
+	- testing an application with test case that covers all the major functionalities of that application
+
+14) Globalization and Localization Testing :
+---------------------------------------------
+
+  > Globalization Testing:
+  -------------------------
+	- Performed to ensure the system or software application can run in any cultural or local environment.
+	- Different aspects of the software application are tested to ensure that it supports every language and different attributes.
+	- It tests the different currency formats, mobile number formats and address formats are supported by the application.
+
+	--> Example:  Facebook.com , Google.com
+
+  > Localization Testing:
+  ------------------------
+	- Performed to check system or software application for a specific geographical and cultural environment.
+	- Localized product only supports the specific kind of language and is usable only in specific region.
+	- It testes the specific currency format, mobile number format and address format is working properly or not.
+	--> Example: Baidu.com 
+
+15)Beta Testing:
 -----------------
 	- done by a limited number of end users before delivery
 	- done in the client place.
 
-12) Live environment testing:
+16) Live environment testing:
 -----------------------------
 	- after release -Bug leakage 
 
-13) Retest:
+17) Retest:
 -----------
 	- to ensure the bug fixed or not
 

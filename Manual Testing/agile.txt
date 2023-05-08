@@ -9,7 +9,7 @@ Agile Model:
 	- both development and testing activities are concurrent 
 	- small and potential approach instead of large approach
 
-Framework:--  SCRUM -
+Framework:--  SCRUM 
 --------------------
 	- iterative and incremental 
 	- meetings, tools , roles that works together to help the team to manage their work
@@ -58,14 +58,17 @@ Sprint Backlog:
 -----------------
 	- set of user stories to be completed in a sprint from the product backlog
 
+Story Point:
+-------------
+	- Rough estimation of user stories , will be given by Dev and QA
+
+
 Burnup and Burndown Chart:
 ---------------------------
-	-->burn-up chart - amount of completed work in a project  
-	-->burn-down chart - amount of work remained to complete a project
+	--> burn-up chart - amount of completed work in a project  
+	--> burn-down chart - amount of work remained to complete a project
 	- used to trace the progress of a project
 
-Qtest - Test Management Tool 
-JIRA - Defect Management Tool 
 
 Agile Ceremonies or Meetings:
 ------------------------------
@@ -124,4 +127,22 @@ Importance to be given to
 	- Working software over comprehensive documentation
 	- Customer collaboration over contract negotiation
 	- Responding to change over following a plan
+
+
+Scrum Board:
+============
+	- it'll provide us the information about Stories Planned , To Do , In Progress , Testing , Done
+
+Agile Management Tool :  JIRA , VersionOne , TeamCity
+
+
+
+
+
+
+
+
+
+
+
 

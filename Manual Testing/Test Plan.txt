@@ -1,0 +1,58 @@
+==> Test Plan :
+================
+	--> A Test Plan is a document that describes the test scope, test strategy, objectives, schedule, deliverables and resources required to perform testing for a software product.
+
+
+Test plan template contents:
+-----------------------------
+	--> Overview
+	--> Scope
+		- Inclusions
+		- Test Environments
+		- Exclusions
+	--> Test Strategy
+	--> Defect Reporting Procedure
+	--> Roles/Responsibilities
+	--> Test Schedule
+	--> Test Deliverables
+	--> Pricing
+	--> Entry and Exit Criteria
+	--> Suspension and Resumption Criteria
+	--> Tools
+	--> Risks and Mitigations(alternate plans)
+	--> Approvals
+
+
+==> Requrement Traceablity Matrix(RTM):
+========================================
+	--> RTM describes the mapping of Requirement's with the Test cases.
+	--> The main purpose of RTM is to see that all test cases are covered so that no functionality
+should miss while doing Software testing.
+
+Requirement Traceability Matrix-Parameters:
+-------------------------------------------
+	- Requirement ID
+	- Req Description
+	- Test case ID's
+
+
+==> Test Environment:
+======================
+	--> we have to replicate the customers environment before getting build from Developer
+	--> Test Environment is a platform specially build for test case execution on the software product.
+	--> It is created by integrating the required software and hardware along with proper network configurations.	
+	--> Test environment simulates production/real time environment.
+	--> also called as Test Bed.
+
+
+
+
+
+
+
+
+
+
+
+
+

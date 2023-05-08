@@ -61,17 +61,20 @@ RAD--IBM
 
 NotePad
 
-Java Configuration and setup:
------------------------------------
--->goto to google Jdk 1.8 download---sub link
-scroll down - Windows x64 Installer - click-  jdk-8u301-windows-x64.exe
-create oracle new account - enter details - verify email- login - download jdk-8u301-windows-x64.exe.
-Install jdk
-verify jdk
+JDK Installation:
+==================
+Google-->jdk 1.8 download --> Java SE 8 Archive Downloads (JDK 8u211 and later)
+-->Java SE Development Kit 8u351 -->jdk-8u351-windows-x64.exe
+-->Dowload -->Sign In -->Create Account -->Login
+-->JDK will be downloaded -->Install
 
--->Download eclipse as zip[Url :https://www.eclipse.org/downloads/packages/release/photon/r
-extract and lanuch workspace
 
+Eclipse:
+=========
+Google --> eclipse photon download --> First Link
+--> R packages -->Eclipse IDE for Java EE Developers
+-->click the link of your os version -->Eclipse will be downladed as Zip folder
+-->Extract the Zip folder
 
 
 

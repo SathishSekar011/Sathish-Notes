@@ -14,16 +14,43 @@ Dynamic Testing :
 --> UAT
 
 
+Static Testing:
+===============
+==> Review:
+===========
+   --> to ensure the reliablity of documents
+	--> Requirement Reviews
+	--> Design Reviews
+	--> Code Reviews
+	--> Test Plan Reviews
+	--> Test Case Reviews
+
+==> Walkthrough:
+================
+	--> in case of any doubts in documents we will approach the author of the documment and he'll
+provide quick explaination about it.
+	--> it is not pre-planned(informal testing) will be done when needed
+	
+
+==> Inspection:
+===============
+	--> properly scheduled review(formal)
+  -- Reader --> author --> will read meating
+  -- Writer --> will write or note on meeting
+  -- Moderator --> will manage meeting
+
 QA --> Quality Assurance
 QC --> Quality Control 
 QE --> Quality Engineering
 
-QA is process related(SDLC)
-QC is actual testing of the software(STLC)
-QE is Automation Tester who writes code and runs test
+	--> QA is process related(SDLC) will focus on building a quality product in order to prevent defects
+
+	--> QC is actual testing of the software(STLC) will focus on testing the quality of product in order to detect the defects in builds(Both Automation and Manual Testers)
+
+	-->QE is Automation Tester who writes code and runs test
 
 
 
 
-
-
+Requirement Analysis --> BRD --> DDS --> Development plan
+			     --> Test Plan --> Test Cases --> Defect log

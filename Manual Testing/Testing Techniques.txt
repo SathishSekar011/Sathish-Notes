@@ -1,30 +1,47 @@
-Testing Techniques:
-===================
+Testing Data Design Techniques:
+================================
 
-1)Equivalence partitioning Technique:
-=====================================
-	- test cases are equally divided based upon positive and negative inputs
-	- valid and invalid inputs
-	- age factor for exam ==> 18 to 30
-	- <18     ==> 16,10,8   -- negative inputs
-	- 18 - 30 ==> 19,25,28	-- positive inputs
-	- >30	  ==> 31,33,54  -- negative inputs
+	- to prepare data that covers all the scenarios of testing
+
+1)Equivalence Class partitioning Technique(ECP):
+================================================
+	- test cases are equally divided into various classes based upon positive and negative data
+	- using Equivalence partitioning Technique we can reduce number of test cases
+
+	Eg :- 21 to 50
+		Class1 ==> < 21     ==> 18 , 15 , 17
+		Class2 ==> > 50     ==> 51 , 54 , 58
+		Class3 ==> 21 - 30  ==> 31 , 34 , 37
+		Class4 ==> 31 - 40  ==> 33 , 36 , 38
+		Class5 ==> 41 - 50  ==> 45 , 47 , 49
 
 
-2)Decision Table Technique:
+
+2)Boundary Value Analysis(BVA):
+================================
+	- based on testing the boundary values of valid and invalid partitions
+	- Every partition has its maximum and minimum values (boundary values)
+
+	Eg :- 21 to 50
+		21 (Lower boundary Value)   --> 19,20 --> Negative data
+					    --> 21,22 --> positive data
+		50 (Higher boundary Value)
+					    --> 51,52 --> Negative data
+					    --> 48,49 --> Positive data
+
+	*==> ECP and BVA will be used to prepare test data for Input domain testing where the values will be verified in text boxes or input fields
+
+
+3)Decision Table Technique:
 ===========================
+	- also called as Cause-Effect Table
 	- dealing with combinations of inputs
 	- have to consider conditions(input) and actions(output)
 
-Example:- Login validation:
----------------------------
-	-->Conditions 1: valid username - valid password - Click Login
-             -- Actions 1: Display home page and Execute
-	-->Conditions 2: invalid username - valid password - Click Login
-	     -- Actions 2: Display Error message as invalid username
 
-3)State Transition Technique:
+4)State Transition Technique:
 =============================
+	- this technique will be used when the build is having different states of transition
 	- pick test cases from the application we need to test different system transitions
 	- an application gives different output for the same input depending on 
 	    what has happened in the earlier state.
@@ -32,36 +49,11 @@ Example:
 ---------
 	--> invalid username and password -3 times - account blocked until change password
 
-4)Boundary Value Analysis:
-=========================
-	- based on testing the boundary values of valid and invalid partitions
-	- Every partition has its maximum and minimum values (boundary values)
-Example:-
-----------
-	--> enter an amount between 18 to 30
-		- 16,17,18,19,20
-		- 28,29,30,31,32
 
 5)Error Guessing Technique:
 ===========================
 	- find bugs in software application based on testers prior experience
 	- don't have to follow any specific rules
-
-6)Ad-hoc Testing:
-===================
-	- an informal testing type quite opposite to the formal testing 
-	- randomly test the application without following any documents and test design techniques
-	- primarily performed if the knowledge of testers in the application under test is very high
-	- randomly test the application without any test cases or any business requirement document
-
-
-
-
-
-
-
-
-
 
 
 

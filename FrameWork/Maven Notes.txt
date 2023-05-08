@@ -12,21 +12,21 @@ Why Should we go build Management Tool:
 Build Management Tool(Maven, Ant, Gradle)
 
 How to Configure Maven:
-----------------------------------
+------------------------
 Step 1: Download apache Maven
 	-->google --> download apache maven --> click first link(mvn repository) --> binary zip archive
 		--> extract  
 Step 2: Open Environment Variable
-		RC on ThisPC--Properties--Advanced System Settings--Environment Variables
+		RC on ThisPC-->Properties-->Advanced System Settings-->Environment Variables
 
              User Variables:
                               New--- Window popup
                               Variable Name   : JAVA_HOME
-                              Variable Value    : Copy the address of the Java location and paste-OK
-							(C drive--proramme files -- java -- jdk)
+                              Variable Value  : Copy the address of the Java location and paste-OK
+							(C drive-->proramme files --> java --> jdk)
                               New 
                               Variable Name   : MAVEN_HOME
-                              Variable Value    : Copy the address of Maven Location and paste
+                              Variable Value  : Copy the address of Maven Location and paste
 
              System Variables:
                               Path--->Click---->Edit

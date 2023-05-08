@@ -48,25 +48,6 @@ Step 2: Declare private variables for every POM
 Step 3: Generate getters
 
 
-public class PageManager {	
-	private LoginPOM login;
-	private SearchHotelPOM searchHotel;
-	public LoginPOM getLogin() {
-		if (login==null) {
-			login = new LoginPOM();
-		}
-		return LoginPOM;
-	}
-	
-	public SearchHotelPOM getSearchHotel() {
-		if (searchHotel==null) {
-			searchHotel=new SearchHotelPOM();
-		}
-		return SearchHotelPOM;
-	}
-
-}
-
 
 
 

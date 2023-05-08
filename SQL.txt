@@ -5,7 +5,7 @@ SQL : Structured Query Language
 	- It is based on English 
 	- SQL keywords are not case sensitive
 
-DataBase : Oracle
+DataBase : OracleXE
 Language : SQL/PLSQL
 Tool	 : ISQLPLUS , SQLPLUS , Toad
 Version  : 10g

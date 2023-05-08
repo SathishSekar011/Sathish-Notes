@@ -4,6 +4,9 @@ Test Case ID(TC_ID):
 ----------------------
 	- Unique ID to identify/report the bug
 
+Test Case Title :
+-----------------
+	- name of the test case
 
 Test Case Objective:
 ----------------------

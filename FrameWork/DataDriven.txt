@@ -57,9 +57,7 @@ Step 7:
 Step 8:
 =======
 	- Accessing Column
-
 	==> row.getCell(cell no);
-
 	==> cell.getStringCellValue();
 
 

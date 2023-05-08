@@ -1,0 +1,97 @@
+Postman - API testing tool
+===========================
+	--> We can do manual testing of API's using postman.
+
+Installation:
+-------------
+	--> Googgle --> download postman --> windows 64 bit --> download and Install
+	--> Open Postman --> sign-up
+
+
+Request = BaseURI + Resources + Query Parameter/PathParameter
+
+
+Navigations in Postman:
+=======================
+	--> Header
+	--> Response
+	--> Sidebar
+	--> Builder
+
+--> Header:
+------------
+	--> Postman consists of New, Import, Runner (used to execute tests with Collection Runner), Open New, Interceptor, Sync menus, and so on. It shows the workspace name – My Workspace along with the option for Invite for sharing it among teams.
+
+
+--> Response:
+--------------
+	--> Response section shall have values populated only when a request is made. It generally contains the Response details.
+
+
+--> Sidebar:
+-------------
+	--> Sidebar consists of Collections (used to maintain tests, containing folders, sub-folders, requests), History (records all API requests made in the past), and APIs.
+
+
+--> Builder:
+------------
+	--> Builder is the most important section of the Postman application. 
+	--> It has the request tab and displays the current request name.
+	--> It contains the request type (GET, POST, PUT, and so on) and URL. 
+
+
+
+==> workspace: area where we maintain files and saved.
+	 --> creat workspace, rename, delete
+
+==> collection - contains number of folders and http requests.
+	--> create, rename, delete, run the collection
+	--> we can create any number of collections under workspace.
+
+
+
+http requests:
+==============
+	==> Get	   --> to retrive the resource from database
+	
+	==> Post   --> to create resource on database
+
+	==> Put    --> to update existing resource on database
+
+	==> Patch  --> to update partial details of resource
+
+	==> Delete --> to delete existing resource from database
+
+
+API Validations:
+=================
+	--> Status Code
+	--> Response time
+	--> Data size
+	--> Response Body
+	--> Cookies
+	--> Headers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

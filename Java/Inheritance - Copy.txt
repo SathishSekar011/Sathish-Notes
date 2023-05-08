@@ -61,9 +61,7 @@ memory wastage is low.
 
 
 
-JRE - Java Runtime Environment - predefined files and library
 
-JVM - Java Virtual Machine - allocate memmories - 
 
 
 

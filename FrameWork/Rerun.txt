@@ -21,15 +21,13 @@ Rerun:
 public class FailureClass implements IRetryAnalyzer{
 	int min = 1;
 	int max = 3;
-	public boolean retry(ITestResult result) {
-		
+	public boolean retry(ITestResult result) {		
 		if(a<b) {
 			a++;
 			return true;
 		}
 		return false;
 	}
-
 }
 
 	--> @Test(retryAnalyzer=ClassName.class) on test case
@@ -41,11 +39,9 @@ public class FailureClass implements IRetryAnalyzer{
 
 public class AllFailures implements IAnnotationTransformer {
 	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, 			Method testMethod) {
-		
-		IRetryAnalyzer retryAnalyzer = annotation.getRetryAnalyzer();		
-		if(retryAnalyzer==null) {
+	
 			annotation.setRetryAnalyzer(FailureClass.class);
-		}	
+	
 	}
 }
 

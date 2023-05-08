@@ -91,6 +91,7 @@ Suite Level Execution:
 	--> collection of TestNG Tests together is called as the Test Suite
 	--> to execute many test cases
 	--> Using Test Suite we can manage out Test execution
+
 Writing TestNG Suite in XML:
 ============================
 	
@@ -169,9 +170,9 @@ DataProvider:
 	
 	==> @DataProvider(name="name")
 	    public Object[][] data(){
-		return[][]{
+		return Object[][]{
 			{data1-1,data1-2},
-			{data2-1,data2-2}
+			{data2-1,data2-2
  		};	
 
 	--> for the test case we want to use data provider we must include dataProvider option

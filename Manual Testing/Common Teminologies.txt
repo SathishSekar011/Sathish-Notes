@@ -1,0 +1,37 @@
+Use Case :
+-----------
+	- it describes requirements more clear and simplest way(picture or flow diagram)
+	--> Actor  - users
+	--> Action - operations or process
+	--> Goal   - expected result
+
+Test Scenario:
+---------------
+	-idea of what we are going to test
+	-high level Testcase.
+
+Test Case:
+-----------
+	-idea of how we are going to test
+	- Test Case is a set of actions executed to validate a functionality
+	-it includes test case (tc) name, test data, expected & actual results, status, etc
+
+Test Data:
+-----------
+	-actual input to be use in the application for testing
+
+Test Suite:
+-----------
+	- group of test cases
+
+Defect:
+--------
+	-when the expected and actual is not matching it is a defect
+	-when the application does not conform to the requirement specification
+
+Bug:
+-----
+	-the tester raises a defect to developer then it is called as bug
+
+
+
