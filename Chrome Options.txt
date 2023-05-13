@@ -1,0 +1,21 @@
+ Chromeoptions:
+================
+	--> It is a Class in Selenium WebDriver for manipulating various properties of the Chrome driver 
+	--> The Chrome options class is generally used in conjunction with Desired Capabilities for customizing Chrome driver sessions. 
+	--> It helps you perform various operations like opening Chrome in maximized mode, disable existing extensions, disable pop-ups, etc.
+
+Method in ChromeOptions:
+=========================
+==> addArguments(String arguments);
+
+List of available and most commonly used arguments for ChromeOptions class:
+-----------------------------------------------------------------------------
+--> remote-allow-origins=*	==> Websocket issue(403==>Forbidden)
+--> start-maximized 		==> Opens Chrome in maximize mode
+--> incognito			==> Opens Chrome in incognito mode
+--> headless			==> Opens Chrome in headless mode
+--> disable-extensions		==> Disables existing extensions on Chrome browser
+--> disable-popup-blocking 	==> Disables pop-ups displayed on Chrome browser
+--> make-default-browser	==> Makes Chrome default browser
+--> version			==> Prints chrome browser version
+--> disable-infobars		==> Prevents Chrome from displaying the notification ‘Chrome is being 				    controlled by automated software

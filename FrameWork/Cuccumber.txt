@@ -86,7 +86,7 @@ CUCUMBER OPTIONS:
 ==> dryRun	--> true: Checks if all the steps have the Step Definition   --> false
 ==> monochrome	--> true: Display the console output in much readable format --> false
 ==> plugin	--> set: What all the report formats to use		     --> {}
-==> pretty
+		--> pretty
 ==> tags
 ==> strict	--> true: Will fail execution, if there are undefined or pending steps --> false
 
@@ -119,11 +119,41 @@ Step 4: StepDefinitions
 	--> Step by step of codings with respective to Feature file
 
 
+
+
+
+
+
+
+
 Data Tables:
 ============
+	- is used to get values from feature file
+--> 1D Datatable without Heading	--> asList();	--> List
+--> 1D Datatable with Heading		--> asMap();	--> Map
+--> 2D Datatable without Heading	--> asLists();  --> List<List>
+--> 2D Datable with Heading		--> asMaps();	--> List<Map>
 
 
-Background
+
+
+
+plugin :
+pretty
+html ==> "html:location\\filename.html"
+json ==> "json:location\\filename.json"
+xml  ==> "junit:location\\filename.xml"
+
+
+Background:
+===========
+	- used to define a step or series of steps that are common to all the tests in the feature file. 	- It allows you to add some context to the scenarios for a feature where it is defined. 
+	- A Background is much like a scenario containing a number of steps but it runs before each and every scenario were for a feature in which it is defined. 
+
+
+
+
+
 
 HooksClass:
 ==============
@@ -132,13 +162,12 @@ HooksClass:
 --> @BeforeStep
 --> @AfterStep
 
-plugin :
+**==> If we are creating HooksClass inside StepDefinition Class no need to add it to glue option, or else we have to add the package that contains Hooks class in glue option
 
-html ==> "html:location.filename.html"
-json ==> "json:location.filename.json"
-xml  ==> "junit:location.filename.xml"
-
-
+**==> The background is run before each of your scenarios but after any of your @Before hook.
+**==> Any feature level dependency should be tie with the background and any scenario level dependency should be tie with hooks.
+**==>Use Background when you provide customer-readable pre-conditions to your scenarios
+**==>Use Before when you have to do some technical setup before your scenarios
 
 Tags:
 =======
@@ -147,8 +176,14 @@ Scenario ==> @tagname1
 CuccumberOptions ==> tags = "@tagname1 and @tagname2"
 		 ==> tags = "@tagname1 or @tagname2"
 
+Tagged Hooks:
+=============
+@Before(@tagname1)  --> will execute only before that particualr tag
 
 
+
+Name : 
+Batch :online 7.30pm cucumber  
 
 
 

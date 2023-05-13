@@ -1,0 +1,139 @@
+Extent Report:
+=================
+
+Step 1: Add Extent Report Dependency:
+=======================================
+
+************************************************************************
+<dependency>								
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber7-adapter</artifactId>
+    <version>1.10.0</version>
+</dependency>
+************************************************************************
+
+Step 2: Add Plugin at Cucumber Options:
+========================================
+
+*****************************************************************************************
+											*
+plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}	*
+											*
+*****************************************************************************************
+
+Step 3: Create extent.properties file:
+=========================================
+	--> src/test/resources --> New --> File --> extent.properties
+
+Step 4: Add Keys and Values in properties file:
+===============================================
+	==> Enabling Spark Reports via properties file:
+	------------------------------------------------
+***********************************************************************
+
+	extent.reporter.spark.start=true
+	extent.reporter.spark.out=test-output/SparkReport/Spark.html
+
+***********************************************************************
+
+
+	==> Enabling pdf Reports via properties file:
+	------------------------------------------------
+**********************************************************************
+
+	extent.reporter.pdf.start=true
+	extent.reporter.pdf.out=test output/PdfReport/ExtentPdf.pdf
+
+***********************************************************************
+
+
+	==> Enabling Excel Reports via properties file:
+	------------------------------------------------
+*****************************************************************************
+
+	extent.reporter.excel.start=true
+	extent.reporter.excel.out=test output/ExcelReport/ExtentExcel.xlsx
+
+*****************************************************************************
+
+
+
+To Attach Screenshot of failed Test Case:
+==========================================
+************************************************************************************************
+	@After
+	public void afterEveryStep(Scenario scenario) {
+		if (scenario.isFailed()) {
+			TakesScreenshot screenshot = (TakesScreenshot) driver;
+			byte[] screenshotAs = screenshot.getScreenshotAs(OutputType.BYTES);
+			scenario.attach(screenshotAs, "image/png", scenario.getName());
+		}
+	}
+**************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+Queue:
+======
+	--> interface of the Java collections framework provides the functionality of the queue data structure 
+	--> extends the Collection interface
+
+Child Classes of Queue:
+-----------------------
+	--> ArrayDeque		--> First In First Out(FIFO)
+	--> LinkedList		--> First In First Out(FIFO)
+	--> PriorityQueue	--> Ascending Order
+
+Methods in Queue:
+------------------
+--> add() 	--> Inserts the specified element into the queue - if successful returns true
+								 - if not it throws an exception.
+--> offer() 	--> Inserts the specified element into the queue - if successful returns true
+								 - if not it returns false.
+--> element() 	--> Returns the head of the queue. Throws an exception if the queue is empty.
+--> peek() 	--> Returns the head of the queue. Returns null if the queue is empty.
+--> remove() 	--> Returns and removes the head of the queue. Throws an exception if the queue is empty
+--> poll() 	--> Returns and removes the head of the queue. Returns null if the queue is empty.
+
+
+
+
+
+
+
+
+

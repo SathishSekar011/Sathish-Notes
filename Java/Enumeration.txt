@@ -29,7 +29,7 @@ while(e.hasMoreElements()){
 Limitations:
 ==============
 	--> Only Legacy Classes(not universal)
-	--> can't able to remove
+	--> can't able to remove , replace and add
 
 
 

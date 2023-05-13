@@ -1,0 +1,53 @@
+Serialization:
+===============
+	--> Serialization is a process of converting an Instance of a Class (Object of a class) into a Byte Stream so that the Byte Stream can be then stored as a file on the disk or can also be sent to another computer via the network. 
+	--> Serialization can also be used to save the sate of Object when the program shuts down or hibernates. 
+	--> Once the state is saved on disk using Serialization, we can restore the state by DeSerializing the class from disk.
+
+
+Methods for Serialization:
+===========================
+Step 1: Create a Class and implement Serializable Interface
+	**--> Serializable is a marker interface present in java.io package.
+	  --> we do not have to implement any methods from this interface.
+	  --> Since it is a marker, Java runtime will check for the presence of this interface in the class when trying to Serialize the class and if Serializable interface is present in the class inheritance hierarchy, Java run time will take care of Serialization of the class. 
+
+Step 2: Create a new FileOutputStream of a file where we want to serialize the class
+
+Step 3: Create an ObjectOutputStream on the FileOutputStream
+
+Step 4: Write the object into the ObjectOutputStream
+		--> objectOutputStream.writeObject(classObject);
+
+Step 5: Close the Streams:
+		--> objectOutputStream.close();
+		--> fileOutputStream.close();
+
+
+Deserialization:
+================
+	--> Deserialization is the process of converting Byte Stream from a file to an Object (Opposite to Serialization)
+
+Methods for DeSerialization:
+=============================
+Step 1: Create a Class 
+
+Step 2: Create a new FileInputStream of a file from which we want to deserialize
+
+Step 3: Create an ObjectInputStream on the FileInputStream
+
+Step 4: Read the object from the ObjectInputStream
+		--> objectInputStream.readObject(); --> Returns Object
+						    --> To get this Object for Particular Class
+							you have to Type Cast it.
+Step 5: Close the Streams:
+		--> objectInputStream.close();
+		--> fileInputStream.close();
+
+
+
+
+
+
+
+

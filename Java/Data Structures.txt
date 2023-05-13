@@ -1,0 +1,19 @@
+Data Structures:
+=================
+	--> data structure is defined as the format for arranging, processing, accessing, and storing data.
+
+
+Types of Data Structures in Java:
+----------------------------------
+1) Linear Data Structure:
+-------------------------
+	- Array
+	- Linked List
+	- Stack --> LIFO
+	- Queue --> FIFO
+
+2) Non-Linear Data Structure:
+------------------------------
+	- Heap
+	- Hashing 
+	- Graph

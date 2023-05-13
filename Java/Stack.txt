@@ -1,0 +1,19 @@
+Stack Implementation:
+======================
+	--> child class of Vector.
+	--> elements are stored and accessed in Last In First Out manner(LIFO).
+	--> elements are added to the top of the stack and removed from the top of the stack.
+
+
+
+Methods in Stack:
+==================
+
+--> push()	--> to add an element to the top of the stack
+--> pop() 	--> to remove an element from the top of the stack
+--> peek() 	--> returns an object from the top of the stack
+--> search() 	--> to search the position of the element from the top of the stack
+--> empty() 	--> to check whether a stack is empty or not
+
+
+

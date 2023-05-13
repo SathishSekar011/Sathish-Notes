@@ -4,6 +4,7 @@ POM: Page Object Model:
 	- POM will act as a repository for Locators
 	- POM helps us to overcome StaleElementException
 	- POM will be developed based on POJO Class
+	- POM also used as repository of methods that are often used on that particular page
 
 How to Integrate POM:
 ======================
@@ -15,13 +16,13 @@ Step 3: Generate getters
 
 Step 4: Use anotations for every private variables 
 
-	==> @FindBy(locator="value")  --> findElement();
+	==> @FindBy(locator="value")  	--> findElement();
 	==> @FindBys{@FindBy(locator="value"),FindBy(locator="value"),....} 
-			--> findElement();  using multiple attributes(AND);
+					--> findElement();  using multiple attributes(AND);
 	==> @FindAll{@FindBy(locator="value"),FindBy(locator="value"),....}
-			--> findElement();  using multiple attributes(OR);
+					--> findElement();  using multiple attributes(OR);
 	==> @CacheLookUp{@FindBy(locator="value"),FindBy(locator="value"),....}
-		 --> to store the web elements in cache memory after reading for the first time
+		 			--> to store the web elements in cache memory after reading for 						the first time
 
 Step 5: Create a Constructor inside pom and initialize the WebElements
 	
