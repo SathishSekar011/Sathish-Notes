@@ -178,7 +178,7 @@ CuccumberOptions ==> tags = "@tagname1 and @tagname2"
 
 Tagged Hooks:
 =============
-@Before(@tagname1)  --> will execute only before that particualr tag
+@Before("@tagname1")  --> will execute only before that particualr tag
 
 
 

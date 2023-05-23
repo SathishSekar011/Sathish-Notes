@@ -60,6 +60,14 @@ Step 4: Add Keys and Values in properties file:
 
 To Attach Screenshot of failed Test Case:
 ==========================================
+
+*****************************************************************************
+
+	screenshot.dir=target/screenshots/
+	screenshot.rel.path=../screenshots/
+
+*****************************************************************************
+
 ************************************************************************************************
 	@After
 	public void afterEveryStep(Scenario scenario) {

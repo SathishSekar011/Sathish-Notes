@@ -1,0 +1,58 @@
+Software:
+==========
+	--> A Software is a collection of computer programs that helps us to perform a task.
+
+Types of Software:
+-------------------
+1) System software      ==> Device drivers, Operating Systems, Servers, Utilities, etc.
+
+2) Programming software ==> compilers, debuggers, interpreters, etc
+
+3) Application software ==> Web Applications, Mobile Apps, Desktop Applications etc.
+
+
+A Quality Software should be
+	- Bug-free.
+	- Delivered on time.
+	- Within budget. Meets requirements and/or expectations.
+	- easilly maintainable.
+
+Reasons that affects Software Quality
+	- Miscommunication or no communication
+	- Software complexity
+	- Changing requirements
+	- Programming errors 
+	- Lack of skilled testers
+
+Software Testing:
+=================
+	--> Software Testing is a part of software development process.
+	--> Software Testing is an activity to detect and identify the defects in the software.
+	--> The objective of testing is to release quality product to the client.
+
+
+Project Vs Product:
+===================
+	--> If software application is developed for specific customer based on the requirement then it is called Project.
+
+	--> If software application is developed for multiple customers based on market requirements then it called Product.
+
+
+
+
+Product Based Companies	==> own product develope ==> microsoft , google , amazon
+
+Service Based Companies	==> will develope prouct for clients ==> tcs , cts , infosys
+
+Client Company		==> will provide employees for service based through contract basis
+
+
+
+
+
+
+
+
+
+
+

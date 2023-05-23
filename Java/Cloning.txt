@@ -1,0 +1,38 @@
+Object cloning:
+===============
+	--> we can create exact copy of an object using clone() method present in class Object of java.
+	--> clone() method copies the values of an object to another object and saves the extra processing task for creating the exact copy of an object.
+	--> clone() method does not invoke any constructor.
+
+Step 1 : Create a class and oveeride clone() method
+
+Step 2 : implement Clonable interface or else JVM will throw CloneNotSupportedException
+
+Step 3 : Create object for the class in child class 
+
+Step 4 : call clone() method in child class to copy the created object to a new object
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,6 +11,7 @@ Step 1: Create a Class and implement Serializable Interface
 	**--> Serializable is a marker interface present in java.io package.
 	  --> we do not have to implement any methods from this interface.
 	  --> Since it is a marker, Java runtime will check for the presence of this interface in the class when trying to Serialize the class and if Serializable interface is present in the class inheritance hierarchy, Java run time will take care of Serialization of the class. 
+	  --> If we don't implement Serializable NotSerializableException will be throwed.
 
 Step 2: Create a new FileOutputStream of a file where we want to serialize the class
 

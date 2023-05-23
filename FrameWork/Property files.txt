@@ -3,7 +3,7 @@ Property files :
 	--> Properties files are mainly used in Java programs to maintain project configuration data, database config or project settings, etc.
 	--> Properties files will have .properties as extensions
 	--> Each parameter in properties file is stored as a pair of strings, in key-value pair format, where each key is on one line.
-	--> Properties files can be read by using Properties class present in java.util
+	--> Properties files can be read by using   class present in java.util
 
 Advantages of Property file in Java:
 =====================================

@@ -77,18 +77,11 @@ Ignoring a Test Case:
 
 
 
-Junit Test Runner:
-===================
-	--> a tool for execution of your test cases
-	--> JUnitCore(class) --> org.junit.runner --> used to execute tests in another class
-
-==>JUnitCore.runClasses(CreateAndSetName.class); --> Return type ==> Result (object) 
-==>result.getFailures();
-==>result.wasSuccessful()
 
 
 ASSERTS:
 =========
+	- used to validate a checkpoint 
 ==> assertEquals(string1,string2);
 ==> assertSame(string3, string4);
 ==> assertNotSame(string1, string3);
@@ -97,6 +90,18 @@ ASSERTS:
 ==> assertTrue(condition);
 ==> assertFalse(condition);
 ==>assertArrayEquals(airethematicArrary1, airethematicArrary2);
+
+
+
+Junit Test Runner:
+===================
+	--> a tool for execution of your test cases
+	--> JUnitCore(class) --> org.junit.runner --> used to execute tests in another class
+
+==>JUnitCore.runClasses(CreateAndSetName.class); --> Return type ==> Result (object) 
+==>result.getFailures();
+==>result.wasSuccessful();
+
 
 Suite Execution:
 =================

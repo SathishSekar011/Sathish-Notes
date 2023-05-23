@@ -1,0 +1,78 @@
+
+Parallel Execution in Cucumber:
+===============================
+Maven Project cmd prompt:
+===========================
+Execute maven in pom.xml
+-------------------------
+--> maven compiler plugin
+--------------------------
+	--> google --> maven compiler plugin --> first link --> usage --> copy and paste plugin inside pom.xml
+(**==> a plugin must be inside <build> tag)
+
+
+--> maven surefire plugin
+--------------------------
+	--> google --> maven surefire plugin --> first link --> usage --> copy and paste plugin inside pom.xml
+
+
+=============================================================
+Commands to execute maven project in cmd
+
+==> mvn compile
+
+==> mvn clean test
+
+============================================================== 
+To Run Parallel Execution:
+===========================
+	--> add below configuration inside surefire plugin
+		<configuration>
+			<parallel>methods</parallel>
+			<useUnlimitedThreads>true</useUnlimitedThreads>
+		</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
