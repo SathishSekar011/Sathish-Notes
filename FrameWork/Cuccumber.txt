@@ -28,12 +28,12 @@ GHERKIN Keyword / GHERKIN Language:
 ====================================
 ==> Feature		
 ==> Scenario
+==> Scenario Outline
 ==> Given
 ==> When
 ==> Then
 ==> And
 ==> But
-==> Scenario Outline
 ==> Examples
 ==> Background
 
@@ -182,8 +182,7 @@ Tagged Hooks:
 
 
 
-Name : 
-Batch :online 7.30pm cucumber  
+ 
 
 
 

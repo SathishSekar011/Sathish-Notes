@@ -1,4 +1,4 @@
-Group By Functions:
+Analytical Functions:
 ====================
 
 ==> min
@@ -7,10 +7,23 @@ Group By Functions:
 ==> avg
 ==> count
 
-=======================================================================================================
+==============================================================================================
 
 	===========$$$$$$$$==========
 Select max(salary),min(salary),sum(saalary),avg(salary),count(salary) from Employees
+	===========$$$$$$$$==========
+
+
+Group By:
+=========
+	- The GROUP BY statement groups rows that have the same values into summary rows
+
+Syntax:
+	===========$$$$$$$$==========
+	SELECT column_name(s)
+	FROM table_name
+	WHERE condition
+	GROUP BY column_name(s)
 	===========$$$$$$$$==========
 
 
@@ -22,15 +35,14 @@ Select first_name,count(first_name) from Employees
 Group By first_time
 	===========$$$$$$$$==========
 
-Group By--Clause
------------------
-	===>  Whenever Group by function is combined with non-group by function we must add 
-		=====> Group By and followed by non group by functions
 
 Result:--> first_name with number of counts will be displayed
 ========
 
-=====================================================================================================
+
+HAVING:
+========
+	- WHERE keyword cannot be used with Group by functions instead we have to use HAVING
 
 	===========$$$$$$$$==========
 Select first_name,count(first_name) from Employees
@@ -40,7 +52,7 @@ Having count(first_name)>1
 
 Result:--> will display count greater than one
 
-======================================================================================================
+==============================================================================================
 
 	===========$$$$$$$$==========
 Select department_id,max(Salary) from Employees
@@ -48,7 +60,6 @@ Group By department_id
 	===========$$$$$$$$==========
 
 Result:--> max salary of every department id will be displayed
-======================================================================================================
 
 
 

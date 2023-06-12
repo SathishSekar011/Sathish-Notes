@@ -72,12 +72,6 @@ Step 7: Clicking a Button:
 	--> element.click();
 
 
-Name  :
-Batch : Offline 9:00AM 
-Topic : Locators
-
-Fee Receipt:
-
 
 
 	 		

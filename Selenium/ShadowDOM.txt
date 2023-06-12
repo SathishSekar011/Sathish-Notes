@@ -1,0 +1,53 @@
+Shadow DOM:
+===========
+	- Shadow DOM is a functionality that allows the web browser to render DOM elements without putting them into the main document DOM tree. 
+	- The Shadow DOM is a way to achieve encapsulation in the HTML document.
+	- using normal locators we can't locate elements in shadow DOM
+	- we have to use JavaScriptExecutor for locating elements in shadow dom 
+	- prescence of shadow DOM can be confirmed by prescence of #shadow-root(open) in a DOM page
+
+==> Shadow host --> The regular DOM node to which the Shadow DOM is attached.
+==> Shadow root --> The root node of the Shadow tree.
+==> Shadow tree --> The DOM tree inside the Shadow DOM.
+==> Shadow boundary --> The place where the Shadow DOM ends and the regular DOM begins.
+
+
+Ways to access the Shadow DOM locators:
+----------------------------------------
+	--> Using JavaScriptExecutor
+	--> Using getShadowRoot() 
+
+Demo Site : http://watir.com/examples/shadow_dom.html
+
+--> Using JavaScriptExecutor:
+------------------------------
+Step 1: find WebElement for Shadow Host or Root Element
+	==> driver.findElement();
+
+Step 2: JavaScriptExecutor
+	==> SearchContext shadowDom1 = (SearchContext)js.executeScript
+					("return arguments[0].shadowRoot", rootWebElement);
+
+Step 3: find WebElement of the element from shadowDom1
+	==> shadowDom1.findElement();
+	***--> We have to use cssSelector or class as locator here
+
+--> Using getShadowRoot():
+--------------------------
+Step 1: find WebElement for Shadow Host or Root Element
+	==> driver.findElement();
+
+Step 2: find WebElement for Shadow Root
+	==> rootWebElement.getShadowRoot();
+
+
+
+
+
+
+
+
+
+
+
+

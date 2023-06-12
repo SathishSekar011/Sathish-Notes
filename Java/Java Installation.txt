@@ -1,7 +1,7 @@
 JDK Installation:
 ==================
 Google-->jdk 1.8 download --> Java SE 8 Archive Downloads (JDK 8u211 and later)
--->Java SE Development Kit 8u351 -->jdk-8u351-windows-x64.exe
+-->Java SE Development Kit 8u361 -->jdk-8u361-windows-x64.exe
 -->Dowload -->Sign In -->Create Account -->Login
 -->JDK will be downloaded -->Install
 

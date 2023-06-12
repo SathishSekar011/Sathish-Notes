@@ -69,20 +69,6 @@ eg:- (//span[text()='Apple iPhone 13 (128GB) - Blue'])[2]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 5)Xpath by Multiple Attributes:
 ================================
 	Syntax:- //tagname[@attributename = 'attribute value' and @attributename = 'attribute value']
@@ -90,10 +76,11 @@ eg:- (//span[text()='Apple iPhone 13 (128GB) - Blue'])[2]
 --> you can also use --> or
 		     --> not
 
-6)Xpath by Dynamic Locator:
+6)Xpath for Dynamic Locator:
 ============================
 
 	Syntax:- //tagname[contains(@attributename,'attribute values')]
+                 //tagname[starts-with(@attributename,'attribute values')]
 
 
 

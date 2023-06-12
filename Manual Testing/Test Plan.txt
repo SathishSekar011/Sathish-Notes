@@ -26,8 +26,7 @@ Test plan template contents:
 ==> Requrement Traceablity Matrix(RTM):
 ========================================
 	--> RTM describes the mapping of Requirement's with the Test cases.
-	--> The main purpose of RTM is to see that all test cases are covered so that no functionality
-should miss while doing Software testing.
+	--> The main purpose of RTM is to see that all test cases are covered so that no functionality should miss while doing Software testing.
 
 Requirement Traceability Matrix-Parameters:
 -------------------------------------------

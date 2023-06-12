@@ -170,7 +170,7 @@ DataProvider:
 	
 	==> @DataProvider(name="name")
 	    public Object[][] data(){
-		return Object[][]{
+		return new Object[][]{
 			{data1-1,data1-2},
 			{data2-1,data2-2
  		};	

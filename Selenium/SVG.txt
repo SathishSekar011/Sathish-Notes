@@ -1,0 +1,20 @@
+SVG :
+======
+	- Scalable Vector Graphics is used to create vector-type diagrams like bar charts, pie charts, scalable icons, scalable logos, and other design diagrams. 
+	- SVG elements can not be captured by the selenium IDE using any locators.
+	- we have to use xpath with some modification to locate svg elements
+
+	==> //*[local-name()='svg' and @attribute='value']
+	
+	- we can't able to use axes(xpath relations) while locating svg elements.
+
+The challenges faced by the automation engineer in capturing these SVG elements are,
+	- Time-consuming
+	- Might not be accurate 
+	- Might not be stable
+
+
+
+
+
+

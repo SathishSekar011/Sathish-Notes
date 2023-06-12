@@ -1,0 +1,52 @@
+Xpath Axes:
+===========
+==> self	--> Selects the current node
+==> parent	--> Selects the parent of the current node
+==> child	--> Selects all children of the current node
+==> ancestor	--> Selects all ancestors (parent, grandparent, etc.) of the current node
+==> descendant	--> Selects all descendants (children, grandchildren, etc.) of the current 			node
+==> following	--> Selects everything in the document after the closing tag of the current 			node
+==> preceding	--> Selects all nodes that appear before the current node in the document, 			except ancestors, attribute nodes and namespace nodes
+==> following-sibling	--> Selects all siblings after the current node
+==> preceding-sibling	--> Selects all siblings before the current node
+
+
+Syntax:
+========
+	==> knownelementxpath/relation::unknownelement
+	==> //div[@class='_6ltj']/preceding-sibling::div[@class='_6ltg']/child::button
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

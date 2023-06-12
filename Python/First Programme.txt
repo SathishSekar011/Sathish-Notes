@@ -1,0 +1,30 @@
+Phython can be executed in different ways
+
+1) Using default python launcher:
+----------------------------------
+	--> Start --> Phython --> Open --> Python CMD will open
+
+2) Using IDLE(Shell):
+----------------------
+	--> Start --> IDLE --> Shell --> Python shell will open
+
+3) cmd:
+--------
+	--> open cmd prompt --> python --> to run only interuptor
+			    --> python filename.py --> to run a file
+
+4) PyCharm:
+-----------
+
+5) Eclipse:
+------------
+	--> PyDev Plugin
+	--> windows --> preferences --> PyDev --> Interpreter --> Python InterPretor --> New
+		==> Interpreter Name : Python 
+		==> Interpreter Executable : location of python.exe
+	
+
+
+
+
+

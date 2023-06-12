@@ -1,0 +1,70 @@
+CssSelector:
+=============
+	- It is the second fastest locator(i.e., faster than xpath)
+	- It also uses tagname , attributename and attribute values to locate a WebElement 
+	- We can also use Special Characters in Css Selector
+
+1. CssSelector using ID:(#):
+---------------------------- 
+	==> htmltag#idvalue  	--> input#email
+	==> #idvalue 		--> #idvalue
+
+2. CssSelector using Class:(.):
+---------------------------- --
+	==> htmltag.classname
+	==> .classname
+	==> htmltag.c1.c2.c3.,
+	==> .c1.c2.c3.,
+
+
+3. CssSelector using other Attributes:
+---------------------------------------
+ 	==> htmltag[attribute='value']        --------> css with one attribute
+			--> input[type='text']
+	==> htmltag[attribute1='value'][attribute2='value']--------> css with two attribute 
+			--> input[type='text'][name='email']
+
+4. CssSelector for Dynamic Attributes:
+---------------------------------------
+contains:(*):
+-------------
+	==> htmltag[attribute*='value']
+
+starts-with:(^):
+----------------
+	==> htmltag[attribute^='value']
+
+ends with:($):
+---------------
+	==> htmltag[attribute$='value']
+
+
+5. CssSelector by Relation:
+---------------------------
+parent to child:(>):
+--------------------
+	==> parent>childtag
+
+sibling:(+):
+------------
+	==> self+sibling
+
+6. not operator :
+------------------
+	==> CssSelector:not(CssSelector)
+
+
+Difference between Xpath and CssSelector:
+=========================================
+	- Xpath can traverse in forward and backward direction but Css Selector can traverse only in forward direction  
+	- Success Rate of Xpath is higher than CssSelector
+	- CssSelector is faster than Xpath
+	- Xpath will search based on xml path whereas css selector search will be based on css properties
+
+
+
+
+
+
+
+

@@ -25,9 +25,7 @@ client company:-an organization that leases all or part of its workforce
  
 SDLC - software development life cycle:
 ========================================
-
 1) Requirment gathering
-
 	- Functional requirements
 	- non functional requirements - performance, userfriendly
 	- stakeholder requirments
@@ -41,14 +39,17 @@ SDLC - software development life cycle:
 
 4) Implementation
 	- dev team - dev environment - develop the application - build
+
 5) Testing
 	- test environment 
 	- comparing the application(actual) with requirements(BRD)(expected)
 	- expected not matched with actual - Defect - intimate to developer
 		- raise the bug - developer will fix- retest - to ensure bug fix
 	- expected matched with actual - no defect 
+
 6) Deployment
 	- live environemnt - non peak hrs
+
 7) Operation and Maintenance
 	- maintenance - minor bugs will be fixed
 
@@ -76,31 +77,6 @@ SDLC - software development life cycle:
 
 
 
-
-Sathish----8925811149
-Name:
-
-
-
-
-
-
-
-
-
-
-
-
-
-Degree:
-YOP:
-Experience:
-Fee Details:
-	Amount--mode of payment
-	ScreenShot
-		
-	7:00PM Online
-	7:00Pm Offline
 
 
 

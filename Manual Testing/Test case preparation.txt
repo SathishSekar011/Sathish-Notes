@@ -16,7 +16,7 @@ Test Case Objective:
 
 Pre-requisite:
 ---------------
-	- environment setup - supporting software  for the project in which user will give the input
+	- environment setup - supporting software for the project in which user will give the input
 	- test cases can be planned accordingly
 
 Steps:

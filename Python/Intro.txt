@@ -1,0 +1,58 @@
+Python:
+========
+	- created by Guido van Rossum during 1985- 1990 and released in 1991
+	
+
+Features Of Python:
+--------------------
+	- Open Source --> available free of cost
+	- works on different platforms 
+	- simple and so easy to learn
+	- has syntaxes that allows developers to write programs with fewer lines comparing with other programming languages like java , c++ ,..
+	- runs on an interpreter system --> code can be executed as soon as it is written
+	- Python is dynamically-typed and garbage-collected programming language.
+	- Python supports multiple programming paradigms including Procedural, Object Oriented and Functional programming language
+	- versatile and can be used to create many different things
+	- has powerful development libraries include AI, ML etc
+
+
+Disadvantages of Python:
+------------------------
+	- Since Python is an interpreted language it is slow as compared to C/C++ or Java
+	- it is a weak language for mobile development
+	- memory consumption is also high, due to the flexibility of the data types
+	- equires more testing and also it has errors that only show up at runtime this is because the language is dynamically typed
+	- lacks number of features provided by other modern programming languages So that the programmers have to use a number of third-party frameworks and tools
+
+
+Installation:
+--------------
+Python :
+--------
+	--> Google --> download python --> First Link --> Download Latest Version
+
+PyCharm:
+---------
+	--> Google --> download pycharm community edition --> First Link --> download community edition
+
+
+==> Set Environment Variables in order to run in cmd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

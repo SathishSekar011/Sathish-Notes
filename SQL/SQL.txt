@@ -1,4 +1,3 @@
-Sathish - 8925811149
 SQL : Structured Query Language
 ================================
 	- you can retrive , store and manipulate data from databases
@@ -38,7 +37,7 @@ To Open Sample Account:
 		==> Login
 
 http://127.0.0.1:8080/apex/wwv_flow_help.show_get_started
-=======================================================================================================
+==============================================================================================
 
 SQL Commands:
 =============
@@ -54,8 +53,16 @@ SQL Commands:
 --> CREATE INDEX 	- creates an index (search key)
 --> DROP INDEX 		- deletes an index
 
-=======================================================================================================
+
+--> SELECT:
+===========
+ 	- extracts data from a database
+Syntax:
 	=======$$$$$$=======
+	SELECT column1, column2, ...
+	FROM table_name
+	=======$$$$$$=======
+Eg:-
 	Select * from employees
 	Select first_name from employees
 	Select first_name , last_name from employees
@@ -63,26 +70,47 @@ SQL Commands:
 
 Select      ==> Statement
 *	    ==> All Columns
-from	    ==> Clause
+from	    ==> Clause in SQL which is used to select the database tables
 employee    ==> Table Name
 first_name  ==> Column Name(Specific column)
 
 Result:--> Respective rows and columns from table will be displayed
 
-=======================================================================================================
 
+--> WHERE:
+==========   
+	- The WHERE clause is used to filter records.
+	- It is used to extract only those records that fulfill a specified condition.
+
+	
+Syntax:
+-------
 	=======$$$$$$=======
+	SELECT column1, column2, ...
+	FROM table_name
+	WHERE condition
+	=======$$$$$$=======
+Eg:-
 	Select * from employees
 	Where first_name='Ellen'
 	=======$$$$$$=======
 
 Result:--> All datas with first name Ellen will be displayed
 
-=======================================================================================================
+
 
 Order By:
 =========
+	- ORDER BY keyword is used to sort the result-set in ascending or descending order.
+	- ORDER BY keyword sorts the records in ascending order by default to sort the records in descending order use the DESC keyword.
+
+Syntax:-
 	=======$$$$$$=======
+	SELECT column1, column2, ...
+	FROM table_name
+	ORDER BY column1, column2, ... ASC|DESC
+	=======$$$$$$=======
+Eg:-
 	Select * from employees
 	Order by first_name asc
 	=======$$$$$$=======
@@ -90,7 +118,7 @@ Order By:
 asc  --> ascending order
 desc --> descending order
 
-=======================================================================================================
+
 Relational Operators:
 =====================
 <			-----> lesser than
@@ -103,17 +131,40 @@ as			-----> alias name
 in 			-----> to display multiple datas
 ''			-----> literal string
 ||			-----> concatination
-like			-----> starts with(a%) , ends with(%a), contains(%an%) , second char with(_ _ s)
+like			-----> starts with(a%) , ends with(%a), contains(%an%) , 
+                               second char with(_ _ s)
 not like
 dual			-----> dummy table
 
 
-======================================================================================================
+===============================================
+IN Syntax:
+-----------
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...)
+===============================================
 
-
-
-
-
+--> AND, OR, and NOT operators:
+--------------------------------
+AND Syntax:
+	=======$$$$$$=======
+	SELECT column1, column2, ...
+	FROM table_name
+	WHERE condition1 AND condition2 AND condition3 ...
+	=======$$$$$$=======
+OR Syntax:
+	=======$$$$$$=======
+	SELECT column1, column2, ...
+	FROM table_name
+	WHERE condition1 OR condition2 OR condition3 ...
+	=======$$$$$$=======
+NOT Syntax:
+	=======$$$$$$=======
+	SELECT column1, column2, ...
+	FROM table_name
+	WHERE NOT condition
+	=======$$$$$$=======
 
 
 

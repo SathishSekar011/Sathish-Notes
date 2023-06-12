@@ -4,19 +4,16 @@ Rerun:
 ==> Manual Rerun
 ==> Automatic Rerun
 
-
 ==> Manual Rerun
 ================
 	--> testng-failed.xml --> run
 
 ==> Automatic Rerun
 ===================
-
 --> Automatic Rerun when we know which test Case fails:
 --------------------------------------------------------
 >> IRetryAnalyzer is an interface
 	--> Create child class for IRetryAnalyzer class and implement unimplemented method
-
 
 public class FailureClass implements IRetryAnalyzer{
 	int min = 1;
