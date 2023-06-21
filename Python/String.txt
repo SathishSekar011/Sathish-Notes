@@ -1,0 +1,151 @@
+Strings:
+========
+	--> Strings in python are surrounded by either single quotation marks, or double quotation marks.
+		==> s='abcd' (or) s="abcd"
+
+	--> We can assign a multiline string to a variable by using three double or single quotes
+		==> s="""line1
+			 line2
+                         line3"""	
+
+	--> Strings in Python are arrays of bytes representing unicode characters
+	--> Python does not have a character data type, a single character is simply a string with a length of 1.
+	--> each element in a string can be accessed by []
+	--> we can iterate string using for loop
+
+==> s[0]	--> to get a particular character in an index
+
+Slicing:
+--------
+	--> we can return a range of characters by using the slice syntax
+	--> we have to specify the start index and the end index, separated by a colon, to return a part of the string
+==> s[1:5]	--> to get a string within index range 1 to 4 	
+==> s[2:]	--> to get a string from index 2 to the end of the string
+==> s[:3]	--> to get a string from 0 to 2
+==> s[-5,-2]	--> to start the slice from the end of the string
+
+
+==> +	--> To concatenate, or combine, two strings 
+
+To concatenate string with int or any other variables:
+------------------------------------------------------
+==> format()
+	a=10
+	b=20
+
+	s="id is {} age is{}"
+	--> result = s.format(a,b)	==> id is 10 age is 20
+
+ - we can also use index numbers {0} 
+	s="id is {1} age is{0}"
+	--> result = s.format(a,b)	==> id is 20 age is 10
+
+ - we can also use named indexes {name}
+	s="id is {p} age is{q:.2f}"
+	--> result = s.format(p=b,q=a)	==> id is 20 age is 10.00
+
+Escape Character:
+==================
+	--> To insert characters that are illegal in a string we use an escape character
+	--> An escape character is a backslash \ followed by the character you want to insert.
+
+Code	Result	Try it
+\'	Single Quote	
+\"	Double Quote
+\\	Backslash	
+\n	New Line	
+\r	Carriage Return	
+\t	Tab	
+\b	Backspace	
+
+
+
+==> in		--> keyword is used to check weather the given phrase or character is present 		            in the string
+
+==> len()	--> to find the length of the String
+==> count()	--> Returns the number of times a specified value occurs in a string 
+
+==> upper()	--> returns the string in upper case
+==> lower()	--> returns the string in lower case
+==> casefold()	--> Converts string into lower case
+==> capitalize()--> Converts the first character to upper case
+==> swapcase()	--> Swaps cases, lower case becomes upper case and vice versa
+==> title()	--> Converts the first character of each word to upper case
+
+==> strip() 	--> removes any whitespace from the beginning or the end
+==> rstrip()	--> Returns a right trim version of the string
+==> lstrip()	--> Returns a left trim version of the string
+
+==> replace() 	--> replaces a string with another string
+==> maketrans(x,y,z) --> returns a mapping table that can be used with the translate()
+	-->x --> characters we want to replace (dictinary or string)
+	-->y --> Optional ,If x is string then y has to be declared as same length as x.
+	-->z --> Optional ,string describing the characters to remove from the original string
+==> translate() --> returns a string where some specified characters are replaced with the 		         character described in a dictionary, or in a mapping table
+
+==> split(separator, maxsplit) --> returns a List with splitted values 
+     --> separator --> Optional. By default any whitespace is a separator
+     --> maxsplit  --> Optional.how many splits to do->Default value is -1("all occurrences")
+==> rsplit() 	--> splits a string into a list, starting from the right
+==> splitlines(keeplinebreaks)  --> splits a string at line breaks and set into a list
+    --> keeplinebreaks --> Optional.Specifies line breaks should included(True) or not (False)
+==> partition(value)--> splits the string into a tuple containing three elements (searches for 			the first occurrence of value)
+==> rpartition(value)->	splits the string into a tuple containing three elements (searches for 			the last occurrence of value)
+
+==> center(length,character)	--> Returns a centered string
+				--> character is optional by default it is space
+==> ljust(length, character)	--> Returns a left justified version of the string
+==> rjust(length, character)	--> Returns a right justified version of the string
+	--> length-->Required.The length of the returned string 
+	--> character-->Optional.character to fill the missing space. Default is " " (space).
+==> zfill()	--> Fills the string with a specified number of 0 values at the beginning
+
+==> startswith()--> Returns true if the string starts with the specified value
+==> endswith()	--> Returns true if the string ends with the specified value
+==> expandtabs()--> Sets the tab size of the string
+==> find(value, start, end)	--> to find the first occurrence of the specified value
+				--> will return -1 if the value is not in that string
+				--> start and end is to set range and it is optional
+==> rfind(value, start, end)    --> to find the last occurrence of the specified value
+==> index(value, start, end)	--> to find the first occurrence of the specified value
+				--> will raise an exception if the value is not in that string
+==> rindex(value, start, end)   --> to find the last occurrence of the specified value
+
+==> isalnum()	--> Returns True if all characters in the string are alphanumeric
+==> isalpha()	--> Returns True if all characters in the string are in the alphabet
+==> isdecimal()	--> Returns True if all characters in the string are decimals
+==> isdigit()	--> Returns True if all characters in the string are digits
+==> isidentifier()--> Returns True if the string is an identifier
+		  --> a valid identifier if it only contains alphanumeric letters or 		                      underscores (_) and cannot start with a number, or contain any spaces
+==> islower()	--> Returns True if all characters in the string are lower case
+==> isupper()	--> Returns True if all characters in the string are upper case
+==> isnumeric()	--> Returns True if all characters in the string are numeric
+==> isprintable()-> Returns True if all characters in the string are printable
+		    (escape sequences cannot be printed)
+==> isspace()	--> Returns True if all characters in the string are whitespaces
+==> istitle()   --> Returns True if all words in a text start with a upper case letter andthe 		            rest of the word are lower case letters, otherwise False
+
+==> join(list)	--> method takes all items in an iterable and joins them into one string
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+operators in the following groups
+---------------------------------
+	--> Arithmetic operators
+	--> Assignment operators
+	--> Comparison operators
+	--> Logical operators
+	--> Identity operators
+	--> Membership operators
+	--> Bitwise operators
+
+Arithmetic operators
+=====================
+
++	-->	Addition	
+-	-->	Subtraction		
+*	-->	Multiplication		
+/	-->	Division
+//	-->	Floor division		
+%	-->	Modulus	x % y	
+**	-->	Exponentiation		
+	
+
+Comparison operators 
+=====================
+==	-->	Equal		
+!=	-->	Not equal	
+>	-->	Greater than	
+<	-->	Less than	
+>=	-->	Greater than or equal to	
+<=	-->	Less than or equal to
+
+
+Logical operators 
+==================
+and	--> 	Returns True if both statements are true		
+or	-->	Returns True if one of the statements is true		
+not	-->	Reverse the result, returns False if the result is true	
+
+
+Membership operators 
+=====================
+in	--> Returns True if a sequence with the specified value is present in the object	
+not in	--> Returns True if a sequence with the specified value is not present in the object	
+
+Bitwise operators 
+==================
+&  --> AND --> Sets each bit to 1 if both bits are 1		
+|  --> OR  --> Sets each bit to 1 if one of two bits is 1	
+^  --> XOR --> Sets each bit to 1 if only one of two bits is 1	
+~  --> NOT --> Inverts all the bits		
+<< --> Zero fill left shift
+	   --> Shift left by pushing zeros in from the right and the leftmost bits fall off
+>> --> Signed right shift
+	   --> Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

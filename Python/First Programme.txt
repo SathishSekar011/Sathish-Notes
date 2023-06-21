@@ -24,6 +24,38 @@ Phython can be executed in different ways
 		==> Interpreter Executable : location of python.exe
 	
 
+Comments:
+==========
+Single Line ==> #comments
+Multi - line ==> """ comments """ 
+	     ==> ''' comments '''
+
+Indentation:
+=============
+	- Indentation refers to the spaces at the beginning of a code line.
+	- In other Programming languages like Java , C++ the indentation in code is for readability but in Python indentation is used to indicate a block of code.
+
+Function:
+=========
+	- block of code which only runs when it is called
+
+Syntax:
+	==> def func_name():
+		line1
+      		line2
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

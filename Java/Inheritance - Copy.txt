@@ -42,7 +42,7 @@ More than one parent class access the child class parallely at a time.
 
 Hybrid inheritance
 -------------------
-Combination of Single and Multiple inheritance
+Combination of Hierarchical and Multiple inheritance
 
 
 Multiple Inhereitence is not possible in Java by using Class

@@ -1,0 +1,128 @@
+Python Collections (Arrays):
+=============================
+	--> List
+	--> Set
+	--> Tuple
+	--> Dictionary
+
+--> List:
+==========
+	--> used to store multiple items in a single variable
+	--> ordered, changeable, and allow duplicate values
+	--> index based
+	--> A list can contain data of different data types
+	--> List are written with square brackets
+Syntax:
+--------
+	==> listname = [val1,val2,val3]
+		(or)
+	==> listname = list((val1,val2,val3))
+
+
+Accessing item in a List:
+-------------------------
+==> particuar index --> listname[index]
+==> negative index  --> listname[-1]  ==> -1 --> last value --> -2 --> second last
+==> Range of Indexes--> listname[3,5] ==> starts with index 3 and ends with 4(5 not included)
+		    --> listname[:5]  ==> starts with index 0 and ends with 4(5 not included)
+		    --> listname[2:]  ==> starts with index 2 and ends with last value 
+
+Changing item in a List:
+------------------------
+==> particuar index --> listname[index]=value
+==> Range of Indexes--> listname[3,5] = [val1,val2]
+		    --> listname[3,5] = [val1]
+(**==> The length of the list will change when the number of items inserted does not match the number of items replaced)
+
+
+==> in	--> keyword to determine if a specified item is present in a list or not 
+
+Iterating List:
+---------------
+==> Loop through a List
+	for x in listname:
+		print(x)	
+
+==> Loop through index
+	for x in range(len(list)):
+		print(list[x])
+		
+==> Using a While Loop
+	int i = 0
+	while i < len(list):
+		print(list[i])
+		i+=1
+
+
+List Comprehension:
+===================
+	--> List Comprehension offers the shortest syntax for looping through lists
+
+--> print all items in a list:
+	==> [print(x) for x in list]
+
+--> to create a new list based on the values of an existing list:
+	==> newlist = [expression for item in iterable if condition == True]
+   Eg:-
+   ----
+	==> list = [x for x in listname]
+	==> list = [x for x in listname if x>10]
+	==> list = [x if x>10 else 0 for x in listname]
+
+     --> expression --> is the current item in the iteration, but it is also the outcome, 		         which you can manipulate before it ends up like a list item in the new list
+     --> iterable  --> any iterable object, like a list, tuple, set etc
+     --> condition -->like a filter that only accepts the items that valuate to True
+		   --> optional and can be omitted
+
+
+
+
+
+List Methods:
+-------------
+==> len(list)	--> Return length of List
+==> count(value)--> Return the number of times the value appears in the list
+==> index(value)--> Returns the position at the first occurrence of the specified value
+==> append(item)--> to append an item to the existing list(item will be added at end of list)
+==> insert(item)--> inserts an item at the specified index
+==> extend(iterable)--> append elements from another collection(iterable) to the current list 
+==> remove(item)--> removes the specified item
+==> pop(index)	--> removes the specified index
+		--> If index is not specified the pop() method removes the last item
+==> clear() 	--> empties the list
+(**==> del --> keyword --> del listname --> delete entire list
+		       --> del listname[index] --> to delete particular item)
+==> sort() 	--> sort the list alphanumerically, ascending, by default
+==> sort(reverse = True) --> sort by descending order
+==> sort(key = str.lower)--> sort without case sensitivity
+==> reverse() 	--> reverses the current sorting order of the elements 
+==> copy()	--> to make a copy of a list 
+==> list(iterable) --> to create a list from any iterable
+(**==> list2 = list1 ==> list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2)   
+
+
+Join Two Lists:
+================
+--> using the + operator
+--> using for loop
+--> using extend()
+
+Customize Sort Function:
+=========================
+	--> We can also customize own function by using the keyword argument key = function.
+	--> The function will return a number that will be used to sort the list (the lowest number first)
+
+Example:
+--------
+Sort the list based on how close the number is to 50:
+
+def myfunc(n):
+  return abs(n - 50)
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+
+
+
+

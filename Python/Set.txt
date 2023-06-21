@@ -1,0 +1,63 @@
+Set:
+====
+	--> used to store multiple items in a single variable
+	--> unordered, unchangeable, and does not allow duplicate values
+	--> value based
+	--> A set can contain data of different data types
+	--> Set are written with flower brackets
+	--> Set items are unchangeable, but we can remove items and add new items
+	--> Only one None is allowed
+	--> True and 1 are same / False and 0 are same
+
+Syntax:
+=======
+	==> setname = {value1, value2, value3}
+	==> setname = set((value1, value2, value3))
+
+
+Iterating Set:
+--------------
+==> Loop through a Set
+	for x in setname:
+		print(x)
+
+
+Set Methods:
+============
+==> add()	==> Adds an element to the set
+==> update()	==> Update the set with the union of this set and others
+==> union()	==> Return a set containing the union of sets
+==> copy()	==> Returns a copy of the set
+==> difference()==> Returns a set containing the difference between two or more sets
+==> difference_update() ==> Removes the common item from the set
+==> symmetric_difference() ==> Returns a set that contains all items from both set except the 	
+				common items
+==> symmetric_difference_update() ==> updates the original set by removing items that are 					common in both sets and inserting the other items
+==> intersection() ==> Returns a set that contains the similarity between two or more sets
+==> intersection_update() ==> Removes the items in this set that are not common 
+==> isdisjoint()==> Returns True if none of the items are present in both sets
+==> issubset()  ==> Returns True if all items in the set exists in the specified set
+==> issuperset()==> Returns True if all items in the specified set exists in the original set
+==> remove()	==> Removes the specified element. If item does not exist will raise an error
+==> discard()	==> Remove the specified item. If item does not exist will not raise an error
+==> pop()	==> Removes a random element from the set
+==> clear()	==> Removes all the elements from the set
+(**==> del --> keyword --> del setname --> delete entire list)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

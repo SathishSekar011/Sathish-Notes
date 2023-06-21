@@ -1,0 +1,76 @@
+Data Types:
+===========
+
+Text Type	--> str
+Numeric Types	--> int, float, complex
+Boolean Type	--> bool
+Sequence Types	--> list, tuple, range
+Mapping Type	--> dict
+Set Types	--> set, frozenset
+Binary Types	--> bytes, bytearray, memoryview
+None Type	--> NoneType
+
+
+Numerics:
+==========
+	--> int, float, complex
+
+
+int	--> whole number --> positive or negative without decimals of unlimited length
+
+float	--> positive or negative that contains one or more decimals
+
+complex --> numbers are written with a "j" as the imaginary part
+
+
+--> declare a binary number	==> var=0b101110
+--> declare a octal number	==> var=0o171
+--> declare a hexal number	==> var=0x1a2c
+
+	(**==> by default all these values will be converted to int and stored as int value
+
+
+Boolean Type:
+=============
+	--> True(0) 
+	--> False(1)
+--> Comparing two values
+==> bool(value)	--> Returns the boolean value of the specified object
+		--> Any string is True, except empty strings
+		--> Any number is True, except 0
+		--> Any list, tuple, set, and dictionary are True, except empty ones
+
+
+
+==> bin()	--> Returns the binary version of a int as string
+==> oct()	--> Returns the octal version of a int as string
+==> hex()	--> Returns the hexal version of a int as string
+==> int(str,base)--> Returns an integer number of given string and float
+		 --> by default base value is 10(decimal)
+==> float()	--> Returns a floating point number
+==> complex()	--> Returns a complex number
+
+==>random.randrange(start, end)	--> Returns a random integer number between given range
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

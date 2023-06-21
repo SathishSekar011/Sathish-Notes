@@ -1,0 +1,77 @@
+Variables:
+===========
+	- used to store data 
+
+Syntax:	
+Assigning single variable:
+	==> var_name = value
+
+Assigning multiple variable of different data:
+	==> var1, var2, var3 = value1, value2, value3
+
+Assigning multiple variable of same data:
+	==> var1, var2, var3 = value
+
+Assigning variable with specific datatype:
+	==> var = datatype(value)	-----------> Casting
+
+	--> Dynamically type --> To create a variable in python we don't have to specify the                                   datatype 
+			     --> we can also change the type after they have been set
+
+Rules For Declaring Variable Names:
+------------------------------------
+	- must start with a letter or the underscore character
+	- cannot start with a number
+	- can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+	- case-sensitive (age, Age and AGE are three different variables)
+	- cannot be any of the Python keywords
+
+
+--> Get Output of Single Variable:
+	==> print(var)
+	
+--> Get Output of Multiple Variable:
+	==> print(var1,var2,var3)
+
++  ==> add ==> in case of numbers
+   ==> concat ==> in case of String
+   ==> throw error ==> in case of String and Number
+
+
+type()	==> to get the data type of the variable
+
+Local Variable --> Declared Inside a Function
+Global Variable --> Declared Outside the Function
+
+
+global  --> Key word used to declare global variable inside a function
+	--> if we wan't to change the value of global variable inside a function we have to 		use global keyword
+			==> global var_name
+			    var_name = value
+
+globals()['var_name']	--> used to define a global variable inside a function suppose if  				    name of local and global variables are same
+
+
+input()		--> Function used to get input from console
+		 
+	==> var_name = input("message")
+		--> By default type of data will be String
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

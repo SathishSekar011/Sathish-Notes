@@ -1,0 +1,117 @@
+Tuple:
+======
+	--> used to store multiple items in a single variable
+	--> ordered, unchangeable, and allow duplicate values
+	--> index based
+	--> A list can contain data of different data types
+	--> Tuples are written with round brackets
+
+Syntax:
+=======
+	==> tuplename = (value1,value2,value3)
+	==> tuplename = tuple((value1,value2,value3))
+
+(**==> To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple)
+
+Accessing item in a List:
+-------------------------
+==> particuar index --> tuplename[index]
+==> negative index  --> tuplename[-1]  ==> -1 --> last value --> -2 --> second last
+==> Range of Indexes--> tuplename[3,5] ==> starts with index 3 and ends with 4(5 not included)
+		    --> tuplename[:5]  ==> starts with index 0 and ends with 4(5 not included)
+		    --> tuplename[2:]  ==> starts with index 2 and ends with last value 
+
+Update Tuples:
+---------------
+	- Tuples are unchangeable so that we cannot change, add, or remove items once the tuple is created.
+	- But we can convert the tuple into a list, change the list and convert the list back into a tuple
+	- We can add tuple to a tuple
+
+Unpacking a Tuple:
+------------------
+	- While creating a tuple we have to assign values to it.It is called as "packing" 
+	- We can also allowed to extract the values back into variables. This is called "unpacking"
+
+	Packing   ==> tuplename = (value1,value2,value3)
+	UnPacking ==> (var1,var2,var3) = tuplename
+	
+	- number of variables must match the number of values in the tuple, if not, we must use an asterisk to collect the remaining values as a list
+
+	UnPacking ==> (var1,var2,*var3) = tuplename
+
+
+==> in	--> keyword to determine if a specified item is present in a tuple or not 
+
+Iterating Tuple:
+----------------
+==> Loop through a Tuple
+	for x in tuplename:
+		print(x)	
+
+==> Loop through index
+	for x in range(len(tuplename)):
+		print(tuplename[x])
+		
+==> Using a While Loop
+	int i = 0
+	while i < tuplename(list):
+		print(tuplename[i])
+		i+=1
+
+Tuple Comprehension:
+====================
+	--> Tuple Comprehension offers the shortest syntax for looping through lists
+
+--> print all items in a tuple:
+	==> [print(x) for x in tuplename]
+
+--> to create a new tuple based on the values of an existing tuple:
+	==> newtuple = [expression for item in iterable if condition == True]
+   Eg:-
+   ----
+	==> tuple = [x for x in tuplename]
+	==> tuple = [x for x in tuplename if x>10]
+	==> tuple = [x if x>10 else 0 for x in tuplename]
+
+     --> expression --> is the current item in the iteration, but it is also the outcome, 		         which you can manipulate before it ends up like a tuple item in the new tuple
+     --> iterable  --> any iterable object, like a list, tuple, set etc
+     --> condition -->like a filter that only accepts the items that valuate to True
+		   --> optional and can be omitted
+
+
+List Methods:
+-------------
+==> len(tuplename)	--> Return length of Tuple
+==> count(value)--> Return the number of times the value appears in the list
+==> index(value)--> Returns the position at the first occurrence of the specified value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+Conditional Statements:
+=======================
+	--> if statement
+	--> if else statement
+	--> elif statement
+	--> Shortend if
+	--> Shortend if else
+
+--> if statement:
+-----------------
+	==> if condition:
+		logics
+
+--> if else statement:
+-----------------------
+	==> if condition:
+		logics
+	    else
+		logics
+
+--> elif statement:
+--------------------
+	==> if condition:
+		logics
+	    elif
+		logics
+	    else
+		logics
+
+--> Shortend if:
+----------------
+	==> if condition: logics
+
+
+--> Shortend if else:
+----------------------
+	==> logic if condition else logics
+
+
+
+
+
+

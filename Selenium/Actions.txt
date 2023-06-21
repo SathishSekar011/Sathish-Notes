@@ -11,8 +11,23 @@ Syntax:-
 	--> actions.click(WebELement).perform();  --------------------------- to click
 	--> actions.doubleClick(WebElement).perform(); ---------------------- to double click
 	--> actions.contextClick(WebElement).perform(); --------------------- to right click
-	--> actions.moveToElement(WebElement).perform(); --------------------- to mouse over
-	--> actions.dragAndDrop(sourceElement,targetElement).perform(); ------ to drag and drop
+	--> actions.moveToElement(WebElement).perform(); -------------------- to mouse hover
+	--> actions.dragAndDrop(sourceElement,targetElement).perform(); ----- to drag and drop
 	--> actions.clickAndHold(SourceElement).moveToElement(target).release().perform();
+	--> actions.scrollToElement(element).perform();
 
 
+
+
+
+
+
+
+
+
+
+Keyboard Actions in Selenium:
+=============================
+--> sendKeys() --> Sends a series of keys to the element
+--> keyUp()    --> Performs key release
+--> keyDown()  --> Performs keypress without release

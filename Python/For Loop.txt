@@ -1,0 +1,82 @@
+Loops:
+======
+	--> for
+	--> while
+
+For Loops:
+==========
+	--> A for loop is used for executing a set of logics for a given number of time and also to iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string)
+
+--> Looping String:
+--------------------
+	s="abc";
+	for x in s:
+	   print(x)
+
+--> Looping List:
+------------------
+	l=["a","b","c"]
+	for x in l:
+	   print(x)
+
+--> Looping For a Particular no.of time:
+-----------------------------------------
+	for x in range():
+	    logics
+
+==> range(5)	--> Starts with 0 and ends with 5
+==> range(2,5)	--> Starts with 2 and ends with 5
+==> range(1,10,3)--> Starts with 1 and ends with 9 with increment of 3
+
+
+--> Else in For Loop:
+----------------------
+	--> else keyword in a for loop specifies a block of code to be executed when the loop is finished
+
+	for x in range(5):
+ 	   logics
+	else:
+  	   logics
+
+**==> The else block will not be executed if the loop is stopped by a break statement
+
+
+--> nested for loop:
+---------------------
+	for x in range(5):
+	   for y in range(5):
+		logics
+
+
+
+--> break
+--> continue
+
+
+==> while
+==========
+	while condition:
+	    logics
+
+
+--> Else in while Loop:
+----------------------
+	--> else keyword in a for loop specifies a block of code to be executed when the loop is finished
+
+	while condition:
+ 	   logics
+	else:
+  	   logics
+
+
+
+
+
+
+
+
+
+
+
+
+
