@@ -24,6 +24,7 @@ Handling Frames:
 ==> driver.switchTo().frame(name or id);
 ==> driver.switchTo().frame(WebElement);
 
+==> driver.switchTo().defaultContent(); -----> to switch back to page
 
 
 

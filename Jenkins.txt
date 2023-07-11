@@ -1,0 +1,196 @@
+Jenkins:
+========
+	
+==> Running Java Programme using cmd:
+=======================================
+	--> Compile ==> javac filename.java
+	--> Run	    ==> java filename.java
+
+
+==> Running Maven Project using cmd:
+=====================================
+
+	<build>
+	    <pluginManagement>
+		<plugins>
+		  <plugin>
+		  <plugin>
+		<plugins>
+	    <pluginManagement>
+	</build>
+
+--> add maven surefire plugin to pom.xml
+	add below code inside surefire plugin
+		<configuration>
+			<suiteXmlFiles>testng.xml</suiteXmlFiles>
+		</configuration>
+--> add maven compiler plugin
+
+--> open cmd prompt
+	==> compile : mvn compile
+	==> execute : mvn clean test
+
+
+
+Jenkins Installation:
+======================
+1) Download Jenkins
+	google --> download jenkins --> first link -->  Download Jenkins 2.401.1 LTS for
+--> GenericJavaPackage.war
+	==> jenkins.war
+
+2) Configure Jenkins
+	--> go to jenkins.war location --> open cmd --> cd to downloads location
+
+	==> java -jar jenkins.war
+	(**==> if above doesn't work
+		==> java -jar jenkins.war --httpPort=8081
+
+3) Access the Server
+	==> java -jar jenkins.war
+	--------------------------
+		--> open browser --> url --> localhost:8080
+
+	==> java -jar jenkins.war --httpPort=8081
+	------------------------------------------
+		--> open browser --> url --> localhost:8081
+
+4) First Time Login:
+	==> UserName --> admin
+	==> Password --> C:\Users\ComputerName\.jenkins\secrets\initial admin password
+			--> open file --> copy and paste the password
+			--> create the username and password
+
+
+
+Executing Programmes Using Jenkins:
+====================================
+--> Freestyle Job
+--> Pipelene Job
+
+
+--> Freestyle Job:
+===================
+1) Set Up Environment:
+=======================
+Open Jenkins --> Manage Jenkins
+ 	--> JDK	--> JDK Installation --> Add JDK
+		Name : JAVA_HOME
+		Location : Location of JDK
+	--> Maven --> Add Maven
+		Name : MAVEN_HOME
+		Location : Location of Maven
+			or
+		Add Automatically --> Version --> Install
+		
+	--> Save
+
+2) Crete a Freestyle Job:
+==========================
+	--> Jenkins --> Dashboard --> New Item --> Enter the name of Job --> Select Freestyle Project --> OK --> Job Will be Created
+
+3) Configure The Job:
+======================
+	--> Open the Job --> Configuration --> Enter the Description Of Job --> Scroll Down 
+--> Build Step --> add Build Step --> Select Execute Windows Batch Commanands 
+		==> javac filename.java
+		==> java filename.java
+	--> Save 
+
+4) To Run the Job:
+====================
+	--> Open Job --> Build Now --> First time ==> Fails
+		--> Copy and Paste the Java Programme file into the Jenkins Workspace
+	==> C:\Users\Lenovo\.jenkins\workspace\Java Freestyle Job
+	--> Build Now --> Execution Will Start
+
+5) To See the Result:
+=======================
+	--> Build History --> open the execution --> Console Output
+
+
+
+To Run Jobs Periodically:
+=========================
+	--> Job --> Configure --> Build Triggers --> Build Periodically
+
+
+Schedule:
+=========
+	1 2 3 4 5
+1 ==> minute
+2 ==> hour
+3 ==> day in month
+4 ==> month of year
+5 ==> day in week
+
+	* * * * *  ==> every minute every hour every day in month ......
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

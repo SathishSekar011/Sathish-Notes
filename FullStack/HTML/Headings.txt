@@ -1,0 +1,13 @@
+Headings:
+=========
+	--> headings are the titles or subtitles that we want to display on a webpage
+	--> headings are defined with the <h1> to <h6> tags
+		==> h1 --> Most Important
+		==> h6 --> Least Important
+	--> Search engines uses the headings to index the structure and content of a web page 
+	--> It is important to use headings to show the document structure properly and more elegantly
+	--> Users will browse a page based on a heading
+
+==> we can specify the size of a heading with the style attribute using the CSS font-size 
+
+	==> style = "font-size: 50px;"	

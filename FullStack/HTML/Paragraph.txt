@@ -1,0 +1,25 @@
+Paragraphs:
+============
+	--> a paragraph is dfined by element <p>
+	--> A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.
+	--> browser will automatically remove any extra spaces and lines when the page is displayed
+	--> a paragraph will be displayed according to the size of a window(the allignment will be automatically adjusted by the browser)
+	--> if we want to have a new line we must go for a new <p> element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

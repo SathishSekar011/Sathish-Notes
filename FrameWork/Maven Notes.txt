@@ -22,8 +22,8 @@ Step 2: Open Environment Variable
              User Variables:
                               New--- Window popup
                               Variable Name   : JAVA_HOME
-                              Variable Value  : Copy the address of the Java location and paste-OK
-							(C drive-->proramme files --> java --> jdk)
+                              Variable Value  : Copy the address of Java location and paste-OK
+						(C drive-->proramme files --> java --> jdk)
                               New 
                               Variable Name   : MAVEN_HOME
                               Variable Value  : Copy the address of Maven Location and paste
@@ -31,10 +31,10 @@ Step 2: Open Environment Variable
              System Variables:
                               Path--->Click---->Edit
                               New
-                              Copy the address of the Java Location and Paste and add \bin along with 					the address--Ok
+                              Copy the address of the Java Location and Paste and add \bin 				along with the address--Ok
 
                               New
-                              Copy the address of Maven Location and Paste and add \bin along with the 				address--Ok
+                              Copy the address of Maven Location and Paste and add \bin along 				with the address--Ok
 
 
 Step 3:   Verification

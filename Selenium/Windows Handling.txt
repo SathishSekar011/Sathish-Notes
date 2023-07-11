@@ -12,9 +12,10 @@ WindowHandle:
 Methods to Handle Windows:
 ==========================
 
-==> getWindowHandle() ----> to get the windowhandle of current window     ---> return type: String
-==> getWindowHandles()----> to get the windowhandle of all opened windows ---> return type: Set<String>
-
+==> getWindowHandle() ----> to get the windowhandle of current window    
+			 ---> return type: String
+==> getWindowHandles()----> to get the windowhandle of all opened windows 
+			 ---> return type: Set<String>
 ==> switchTo()        ----> to switch control between the windows
 
 

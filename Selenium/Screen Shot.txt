@@ -9,8 +9,7 @@ Steps to take screen shot of a web page:
  1) create reference of TakesScreenShot interface.
  2) Get the screen shot using getScreenShotAs().
 
-	- By default it will store screen shots in temp folder so Create destination to store the file using File class. 
-      ====	
+	- By default it will store screen shots in temp folder so Create destination to store the file using File class. 	
 	- Copy the file from src to destination using copyFile() of FileUtils class.
 
 Syntax:Type Casting:

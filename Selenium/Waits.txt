@@ -10,11 +10,10 @@ Two types of Waits:
 -------------------
 
 (i)Static Wait:
-================
+===============
 	--> Thread.sleep(millis);
 
-	- For the mentioned time the Selenium will wait whether the webpage is loaded or not and
-	  Only when the wait time is over then it will proceed to the next step
+	- For the mentioned time the Selenium will wait whether the webpage is loaded or not and Only when the wait time is over then it will proceed to the next step
 
 (ii) Dynamic Wait:
 ==================
@@ -30,7 +29,7 @@ Three types:
 	- It will resolve the Synchronization issue of findElement and findElements method 
 	- It will check whether the element is present or not only
 	- It wont check the element is interactable, displayed or clickable
-	- Once implicit wait is initialized then all the findElement, findElements correspending to 	  object driver will come under implicit wait except driver.quit();
+	- Once implicit wait is initialized then all the findElement, findElements correspending to object driver will come under implicit wait except driver.quit();
 	======
 	- implicit wait has a default polling period of 500ms, For every 500ms it will check 
 	  the element is present or not
@@ -39,23 +38,30 @@ Three types:
 		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(12));
 
 Cons:-- 
-	- It'll check weather the element is present in DOM or not. It won't check weather it is
-	  visible or interactable. so that there is posiblities of throwing exception.
+	- It'll check weather the element is present in DOM or not. It won't check weather it is visible or interactable. so that there is posiblities of throwing exception.
 	- We can't able to define conditions for waiting period
 
 2) Explicit Wait:
 ================
 	- Apart from locating the elements it will also check if the element is intractable or not 
 	- For every instance Explicit wait has to be declared
+		-- elementToBeClickable()
+		-- elementToBeSelected()
 		-- Element is present or not
 		-- Element contains text or not
 		-- Alert is present
 		-- WebPage is loaded completely
 		-- Button is clickable
 		-- frames is present
-	- The default timeUnit for Explicit wait is SECONDS
 	- It is achieved by WebDriverWait
 	- This WebDriverWait will always require ExpectedConditions
+
+Syntax:
+=======
+	==> WebDriverWait wait = new WebDriverWait(WebDriver,Duration);
+	==> wait.until(ExpectedConditions.condition(WebElement));
+
+
 
 3)Fluent Waits:
 ===============

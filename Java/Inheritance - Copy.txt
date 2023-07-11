@@ -26,23 +26,23 @@ Types of  inheritance:
 =======================
 Single inheritance:
 -------------------
-Combinations of one parent class and one child class.
+	- a single child getting access from a single parent
 
 Multilevel inheritance:
 -----------------------
-More than one parent class accesing the child class in a tree level structure
+	- a child class will access a parent class and that parent class will access their parent class and so on like a chain of inheritance
  
-Hierarchical inheritance
--------------------------------
-Combination of  one parent  and more than one child.
+Hierarchical inheritance:
+-------------------------
+	- more than one child class accessing a single parent
 
 Multiple inheritance:
 ---------------------
-More than one parent class access the child class parallely at a time.
+	- a single child class getting access from more than one parent class at same time
 
-Hybrid inheritance
+Hybrid inheritance:
 -------------------
-Combination of Hierarchical and Multiple inheritance
+	- Combination of Hierarchical and Multiple inheritance
 
 
 Multiple Inhereitence is not possible in Java by using Class

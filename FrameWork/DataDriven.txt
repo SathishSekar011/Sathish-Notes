@@ -38,22 +38,16 @@ Step 4:
 Step 5:
 =======
 	- Reading Data
-
 	==> FileInputStream stream = new FileInputStream(file);
-
 Step 6:
 =======
 	- Accessing Workbook
-
 	==> Workbook workbook = new XSSFWorkbook(stream);	
 	==> workbook.getSheet("sheet name");
-
 Step 7:
 =======
 	- Accessing Row
-
 	==> sheet.getRow(row no);
-
 Step 8:
 =======
 	- Accessing Column

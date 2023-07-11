@@ -1,0 +1,16 @@
+
+==> <html>	--> the root element and it defines the whole HTML document
+==> <head>	--> to define the information about the page
+==> <body> 	--> to define the document's body
+==> <h1> 	--> defines a heading
+==> <p> 	--> defines a paragraph
+==> <a>		--> defines a link
+==> <input>	--> defines a input format
+==> <img>	--> defines a image
+==> 
+
+
+
+
+
+

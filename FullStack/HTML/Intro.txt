@@ -1,0 +1,73 @@
+Layers of a Web Page:
+=====================
+--> Structure Layer	--> HTML
+--> Presentation Layer	--> CSS
+--> Behaviour Layer	--> Java Script
+
+HTML:
+=====
+	--> Hyper Text Markup Language
+	--> it is the standard markup language for creating Web pages
+	--> describes the structure of a Web page
+	--> HTML elements tell the browser how to display the content(heding , links , image)
+
+To Do a HTML Project:
+======================
+--> Browser (Chrome , Firefox , Edge ,...)
+--> Text Editor (VS Code , Sublime , Notepad , Notepad++)
+
+	--> Google --> Download VS Code --> Download and Install
+
+HTML Element:
+--------------
+	--> An HTML element is defined by a start tag, some content, and an end tag.
+
+	==> <tagname> Attributes </tagname>
+
+HTML Attributes:
+-----------------
+	--> provides additional information about elements
+	--> should be specified inside the start tag
+
+	==> attribute name="value"
+
+Web Browsers:
+-------------
+	-->The purpose of a web browser is to read HTML documents and display them correctly.
+	--> A browser does not display the HTML tags, but uses them to determine how to display the document
+
+
+
+Structure of HTML Page:
+--------------------------
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Page title</title>
+   </head>
+   <body>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <p>paragraph</p>
+      <p>paragraph</p>
+   </body>
+</html>
+
+
+==> <!DOCTYPE html> --> declaration to represents the document type, and helps browsers to 			display web pages correctly
+==> <html>	--> root element of an HTML page
+==> <head> 	--> element that contains meta information about the HTML page
+==> <title> 	--> element that specifies a title for the HTML page 
+==> <body> 	--> element that defines the pages content
+==> <h1> 	--> element that defines the heading(ranges from h1 to h6)
+==> <p> 	--> element that defines a paragraph
+
+
+
+
+
+
+
+
+
+
