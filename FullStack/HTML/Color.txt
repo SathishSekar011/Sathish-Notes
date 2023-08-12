@@ -1,0 +1,89 @@
+Colors:
+========
+	--> colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.
+	--> HTML supports 140 standard color names
+
+==> Color Names:
+-----------------
+	- Tomato
+	- Orange
+	- DodgerBlue
+	- MediumSeaGreen
+	- Gray
+	- SlateBlue
+	- Violet
+	- LightGray
+
+==> Color Values:
+-----------------
+	--> RGB values
+	--> HEX values
+	--> HSL values
+	--> RGBA values
+	--> HSLA values
+
+
+--> RGB value :
+----------------
+	- RED, GREEN, and BLUE light sources
+	==> rgb(red,green,blue) ==> (each value ranges from 0 to 255)
+				==> 256*256*256 = 16777216 possible colors
+
+--> RGBA values :
+-----------------
+	- RED, GREEN, BLUE and Alpha light sources
+	- Alpha --> Opacity --> Ranges from 0.0 to 1.0
+	==> rgba(red, green, blue, alpha)
+
+--> HEX values:
+----------------
+	-->  hexadecimal color is specified with: #RRGGBB
+	==> #rrggbb  ==> (each value ranges from 00 to ff)
+
+
+--> HSL values:
+----------------
+	- hue, saturation, and lightness
+	==> hsl(hue, saturation, lightness)
+		==> hue --> degree on the color wheel from 0 to 360
+			--> 0   --> red
+			--> 120 --> green
+			--> 240 --> blue.
+		==> Saturation is a percentage of gray added to the Color
+			--> 0% --> shade of gray
+			--> 100% --> full color.
+		==> Lightness --> 0% is black
+			      --> 100% is white.
+
+
+--> HSLA values :
+------------------
+	==> hsla(hue, saturation, lightness, alpha)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

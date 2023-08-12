@@ -1,0 +1,179 @@
+PROJECT DOMAIN:
+===============
+Travel Domain:
+--------------
+	--> Car: Ola, Uber
+	--> Bus: Redbus, Makemytrip
+	--> Train: irctc
+	--> Air: Air India, Air Canada
+
+Airline Domain:
+===============
+	Select any airline which should not be familiar among us (eg: European and African Airlines)
+
+Modules:
+========
+--> Booking Module: Explain the complete booking flow to book a flight ticket
+--> Check In: It is a process that a particular airline accepts the passenger prior to travel
+	--> It is done at airport and online airline authority to enter the passenger to board  	    their flight
+	--> Boarding Pass: Pass given by airline
+--> Flight Status: To check the status of the particular flight
+--> Login: Credentials given by the airline to the frequent customers and agents
+	--> Guest
+	--> Frequent Flyer
+	--> Agent
+--> Baggage: Maintaining the passenger's luggage
+	--> Carryon Baggage - Carry inside flights
+	--> Checkin Baggage - Other Bags based upon weights
+--> Upgrade: Passenger can travel from his lower class to upper class
+
+--> Booking Module:
+====================
+1. Home Page:
+	--> Trips
+		--> Round Trip - Chennai to Madurai to Chennai
+		--> One Way - Chennai to Madurai
+		--> Multicity - Chennai to Madurai to Trichy to Bangalore to Mumbai
+	--> Passenger
+		--> Adult (16-18+)
+		--> Youth (12-16 or 12-18)
+		--> Child (2-11)
+		--> Infant (0-2)
+	--> Source and Destination
+	--> Travel Date
+	--> Promocode - Offer given by the airline for the particular routes or flights
+
+2. Flight Select Result Page:
+	--> Flight Name
+	--> Travel Duration - Departure and Arrival Time
+	--> Flight Details - Direct or connecting flight
+	--> Cabin Selection
+		--> Economy
+		--> Premium Economy 
+		--> Business
+	--> Fare Details
+
+3. Passenger Information Page:
+	--> Complete passenger details with first name, last name, gender, DOB, Mobile No, Email Address and Frequent Flyer Program
+
+4. Seat Selection Page:
+	--> Available Seats
+		--> Regular Seats - Not payable
+		--> Preferred Seats - Payable for Extra Legroom, etc.
+	--> Occupied Seats
+
+5. Payment Page:
+	--> Different Types of payment to be made
+		--> Online Banking
+		--> Card payment
+		--> App Payment
+
+6. Booking Confirmation Page:
+	--> PNR (Passenger Name Record) / Booking Reference Number
+	--> Seat Number
+	--> Ticket in downloadable format
+
+7. Manage My Booking Page:
+	--> Cancel Booking by entering Last Name and PNR
+	--> Change Seats
+	--> Change Flight
+	--> Change Cabin
+
+********************************************************************************************
+Ecommerce Domain:
+==================
+	- Online Purchasing Websites
+E.g.: Amazon, Flipkart, Snapdeal
+
+Ecommerce Domain:
+------------------
+	Select any online purchasing websites which should not be familiar among us.
+Modules:
+---------
+	--> Purchasing Module - End to End purchasing a product
+	--> Login Module - Credentials given by the website
+	--> Cart Module - Managing our purchasing
+	--> Product List Module - List of products available in the website
+
+Purchasing Module:
+------------------
+1. Home Page:
+	--> Hero Image
+	--> Search Product 
+		--> By providing product name
+		--> By clicking on product list
+		--> By clicking the offers available
+		--> By clicking on our preferred products available
+
+2. Search Result Page:
+	--> List of searched products available
+	--> Product Details with different brands
+	--> Image
+	--> Price
+	--> Offers
+	--> Review
+	--> Filters
+	--> Multiple pages available
+
+3. Product Details Page:
+	--> Detailed information of the selected product
+	--> Offers available for the selected product
+	--> Additional Images of the selected product
+	--> Review of the selected product
+	--> Delivery Options
+	--> Shipping Information
+	--> In Stock/Out of Stock
+	--> Add to Cart
+
+4. Shopping Cart Page:
+	--> Selected product is added
+	--> No of products
+	--> Total amount with delivery charges and discounts
+	--> Add a product
+	--> Remove a product
+	--> Shipping amount with different shipping options
+
+5. Payment Page:
+	--> Different Payment Options
+	--> Purchase by Guest or Login 
+	--> If no login, give sign up
+	--> Storing card details
+	--> Session timeout if signed up for a long time
+	--> Email/SMS confirmation
+
+6. My Orders:
+	--> Change the order
+	--> Cancel the order
+	--> Track the order
+	--> Return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

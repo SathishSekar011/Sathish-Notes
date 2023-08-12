@@ -22,7 +22,7 @@ Step 4: Use anotations for every private variables
 	==> @FindAll{@FindBy(locator="value"),FindBy(locator="value"),....}
 					--> findElement();  using multiple attributes(OR);
 	==> @CacheLookUp{@FindBy(locator="value"),FindBy(locator="value"),....}
-		 			--> to store the web elements in cache memory after reading for 						the first time
+		 			--> to store the web elements in cache memory after 						reading for the first time
 
 Step 5: Create a Constructor inside pom and initialize the WebElements
 	

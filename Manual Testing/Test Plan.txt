@@ -1,8 +1,6 @@
 ==> Test Plan :
 ================
 	--> A Test Plan is a document that describes the test scope, test strategy, objectives, schedule, deliverables and resources required to perform testing for a software product.
-
-
 Test plan template contents:
 -----------------------------
 	--> Overview

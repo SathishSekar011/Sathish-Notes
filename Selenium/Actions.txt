@@ -1,10 +1,10 @@
 Actions:
 ========
-	- Predefined class to perform mouse Operations
-	  (click,double click, drag and drop)
+	- Predefined class to perform user actions such as mouse and keyboard actions in a web application.
+	- These operations are performed using the advanced user interactions API. 
+	- It mainly consists of Actions that are needed while performing these operations.
 	- It is an argument based Constructor
 	- its argument is WebDriver
-
 Syntax:-
 =========
 	Actions actions = new Actions(driver);
@@ -16,18 +16,8 @@ Syntax:-
 	--> actions.clickAndHold(SourceElement).moveToElement(target).release().perform();
 	--> actions.scrollToElement(element).perform();
 
+	--> actions.keyDown(modifier_key).perform(); --------> Performs a modifier key press
+	--> actions.keyUp(modifier_key).perform(); --------> Performs a key release
+	--> sendKeys(element, charsequence);
+	
 
-
-
-
-
-
-
-
-
-
-Keyboard Actions in Selenium:
-=============================
---> sendKeys() --> Sends a series of keys to the element
---> keyUp()    --> Performs key release
---> keyDown()  --> Performs keypress without release

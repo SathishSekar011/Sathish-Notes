@@ -1,12 +1,10 @@
 Software testing - manual and automation
 ================= -----------------------
-
 manual testing :
 =================
 	-100% Automation is not possible
 	-image,captcha,Desktop Applications Cannot be automated
-	-manual testers possess domain Knowledge
-		
+	-manual testers possess domain Knowledge		
 
 Application -   Webapplication - eg. flipkart, 
 		Desktop application - eg.calculator, excel, word, web browsers

@@ -3,22 +3,46 @@ Paragraphs:
 	--> a paragraph is dfined by element <p>
 	--> A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.
 	--> browser will automatically remove any extra spaces and lines when the page is displayed
-	--> a paragraph will be displayed according to the size of a window(the allignment will be automatically adjusted by the browser)
-	--> if we want to have a new line we must go for a new <p> element
+	--> if we wants to display as the same format as we declared we have to use <pre> instead of <p>
+	--> a paragraph will be displayed according to the size of a window(the alignment will be automatically adjusted by the browser)
+	--> if we want to have a new line we must go for a new <p> element or <br> tag
+	 
 
+Formating Texts:
+--------------------
+==> <b>		--> bold
+==> <i>		--> itallic
+==> <strong> 	--> used to define text with strong importance(text inside this tag is bold)
+==> <em> 	--> emphasizes on the important word or section of words
+	(**==> <b> and <i> are used for style purpose whereas <strong> and <em> are used for defining the importance)
+==>  <cite> 	--> defines the title of a creative work (e.g. a book, a poem, a song, a 			movie, a painting, a sculpture, etc.).				
+		--> The text in the <cite> element usually renders in italic.
+==> <dfn>	--> defines the word for which the definition is given
+==> <sup>	--> Super script(power)
+==> <sub>	--> Sub script(chemical formulas)
+==> <br>	--> to break the current line and continue in next line
+		--> Empty tag --> doesn't need closing tag
+==> <hr>	--> horizontal rule (will create horizontal line)
+		--> Empty tag --> doesn't need closing tag
+==> <pre>	--> defines preformatted text and it preserves both spaces and line breaks
+==> <small> 	--> defines smaller text	
+==> <mark> 	--> defines text that should be marked or highlighted	
+==> <del> 	--> defines text that has been deleted from a document
+		--> Browsers will usually strike a line through deleted text
+==> <ins> 	--> defines a text that has been inserted into a document
+		--> Browsers will usually underline inserted text
 
+==> <blockquote>--> defines a section that is quoted from another source
+			(Eg:- famous quotes by phillosophers)
+==> <q> 	--> defines a short quotation
+==> <abbr> 	--> defines an abbreviation or an acronym
+		--> value of title attribute will be shown when we move cursor to the element
+==> <address> 	--> defines the contact information (email address, URL, physical address, 		    phone number, social media handle)
+		--> element usually renders in italic, and browsers will always add a line 		    break before and after the <address> element.
 
+==> <bdo dir="rtl">	--> This text will be written from right to left
 
-
-
-
-
-
-
-
-
-
-
+==> <bdo dir="ltr">	--> This text will be written from left to right
 
 
 

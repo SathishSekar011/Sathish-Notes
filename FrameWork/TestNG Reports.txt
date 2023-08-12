@@ -1,0 +1,65 @@
+--> Dashboard In Eclipse
+--> Console Reports
+--> index.html
+--> emailable-report.html
+--> Reporter.log(string); --> storing the logs inside the reports
+
+
+ITestListener:
+===============
+	- interface in TestNG
+	- implement ITestListener in a user defined Class and override the needed methods
+
+Methods in ITestListener:
+--------------------------
+--> onStart()		--> OnStart method is called when any Test starts.
+--> onTestSuccess()	--> onTestSuccess method is called on the success of any Test.
+--> onTestFailure()	--> onTestFailure method is called on the failure of any Test.
+--> onTestSkipped()	--> onTestSkipped method is called on skipped of any Test.
+--> onFinish()		--> onFinish method is called after all Tests are executed.
+
+
+
+Listeners can implement in two ways in TestNG can implement in two ways in TestNG:
+
+1) At the class level	--> @Listeners(ListenersTestNG.class)
+2) At the suite level
+	<listeners>
+    		<listener class-name = "ListenersTestNG"></listener>
+   	</listeners>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,7 +12,7 @@ Waterfall Model:
 6)Maintenance
 
 	--> Every phase will be input for the next phase
-	--> Untill one phase completed we can't go for next phase
+	--> Until one phase completed we can't go for next phase
 
 Advantages:
 ------------

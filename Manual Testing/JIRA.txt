@@ -1,9 +1,62 @@
 JIRA:
 =====
 
-Installation :
+Open JIRA :
 --------------
-	--> Google --> Jiara
+	--> Google --> Jira --> First Link --> Sign UP --> JIRA Software
+
+
+Create a Project:
+-------------------
+	--> Projects --> Create Project --> Scrum --> Company Managed --> NAme and Key
+
+Add Members:
+------------
+	--> Settings (icon at top right) --> user management --> add users
+
+Work Flow in JIRA:
+-------------------
+	1 --> Backlog
+	2 --> Epic
+	3 --> Stories
+
+1) Create the Backlog:
+----------------------
+	--> Click Backlog in left pannel --> Versions --> Create version
+	==> Name :
+	==> Description :
+	==> Start-Date : 
+	==> End-Date : 
+
+2) Create the Epic:
+--------------------
+	--> Create (button in top) 
+		==> Project : Current Project
+		==> Issue   : Epic
+		==> Name    :
+		==> Summary :
+		==> Assignee:
+
+3) Create the Stories:
+----------------------
+	--> Create (button in top) 
+
+		==> Project : Current Project
+		==> Issue   : Stories
+		==> Summary :
+		==> Assignee:
+		==> Epic    :
+
+Add the Story Points:
+---------------------
+	--> Click on Stories --> Story Poins : 
+
+Create a Sprint:
+----------------
+	--> Backlog --> create sprint --> Drag and Drop the Stories --> Start Sprint
+	
+
+
 
 
 

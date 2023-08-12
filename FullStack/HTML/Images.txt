@@ -1,0 +1,161 @@
+Images:
+========
+	- Images can improve the design and the appearance of a web page.
+	- Images can be linked to a Web page by <img> tag.
+	- <img> tag creates a holding space for the referenced image (i.e, we are not inserting an image in a web page instead we are just linking the image)
+	- <img> tag is an empty tag (like <br>,<hr>) so that it does not have a closing tag
+	
+
+HTML Image Tags:
+-----------------
+--> <img>	--> Defines an image
+--> <map>	--> Defines an image map
+--> <area>	--> Defines a clickable area inside an image map
+--> <picture>	--> Defines a container for multiple image resources
+
+Must have attributes:
+----------------------
+--> src 	--> Specifies the path to the image(may be local path(relative url) or address 		    of image in any external website(absolute url))
+--> alt 	--> Specifies an alternate text for the image if image is blocked
+
+
+Optional Attributes:
+---------------------
+--> width 	--> specify the width of the image (in pixels)
+--> height	--> specify the height of the image (in pixels)
+			-------> above 2 are deprecated
+--> style 	-->  specify the CSS properties
+	==> style="width:42px;height:42px; --> specify the height and size
+	==> style="float:right;width:42px;height:42px;" --> float to right of text
+	==> style="float:left;width:42px;height:42px;"  --> float to left of a text
+(**==> we can also add image inside <a> tag to make the image to act as a link)
+
+Common Image Formats:
+---------------------
+--> .apng
+--> .gif
+--> .ico, .cur
+--> .jpg, .jpeg, .jfif, .pjpeg, .pjp
+--> .png
+--> .svg
+
+===========================================================================================
+
+Image Maps:
+============
+--> <map> 	--> defines an image map
+		--> An image map is an image with clickable areas in an image. 
+--> <area>	--> used to define the clickable area
+
+	==> we have to declare usemape attribute
+	==>The usemap value starts with a hash tag # followed by the name of the image map, and is used to create a relationship between the image and the image map
+	==> name attribute in <map> must have the same value as the <img>'s usemap attribute
+
+
+*************************************************************************
+<img src="greens.jpg" alt="Greens" usemap="#greensmap">
+
+<map name="greensmap">
+  <area shape="rect" coords="34,44,270,350" alt="gg" href="greens.in">
+</map>
+*************************************************************************
+
+Shape:
+-------
+--> rect 	--> defines a rectangular region --> coords="x1,y1,x2,y2"
+						        x1,y1 ==> top left pixel
+							x2,y2 ==> bottom right pixel
+--> circle 	--> defines a circular region	 --> coords="x1,y1,r"
+							x1,y1 ==> center of circle in pixel
+							r ==> radius in pixel
+--> poly 	--> defines a polygonal region	 --> coords="x1,y1,x2,y2,x3,y3,..."
+--> default 	--> defines the entire region
+
+(**==> to find the pixel coordinate use paint with rulers or any online tool)
+
+
+
+with Java Script:
+------------------
+*************************************************************************
+<img src="greens.jpg" alt="Greens" usemap="#greensmap">
+
+<map name="greensmap">
+  <area shape="rect" coords="34,44,270,350" alt="gg" href="greens.in" onclick="myFunction()">
+</map>
+
+<script>
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
+</script>
+
+*************************************************************************
+
+
+===========================================================================================
+
+Background Image :
+===================
+	- we can add background image for any Web Element of an entire page
+	
+
+--> Specifying on a Particular WebElement:
+--------------------------------------------
+	==> <p style="background-image: url('img.jpg');">
+
+--> Specifying for Web Elements inside <head>:
+----------------------------------------------
+	==> <style>
+		p {
+ 		 background-image: url('img_girl.jpg');
+		}
+	    </style>
+
+
+--> For Entire Page inside <head>:
+-----------------------------------
+	==> <style>
+		body {
+ 		 background-image: url('img_girl.jpg');
+		}
+	    </style
+
+	(**--> If the background image is smaller than the element, the image will repeat itself, horizontally and vertically, until it reaches the end of the element.
+	--> To avoid add 
+		background-repeat: no-repeat;) --- inside <style>
+
+background image to cover the entire element:
+---------------------------------------------
+	<style>
+		body {
+ 		 background-image: url('img_girl.jpg');
+ 		 background-repeat: no-repeat;
+ 		 background-attachment: fixed;
+ 		 background-size: cover;
+		}
+	</style>
+
+	==> background-size: 100% 100%; --> to stretch
+
+
+<picture> Element:
+===================
+	--> <picture> element gives web developers more flexibility in specifying image resources.
+	--> contains one or more <source> elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device.
+	--> Each <source> element has a media attribute that defines when the image is the most suitable
+
+
+	<picture>
+ 	  <source media="(min-width: 650px)" srcset="img_food.jpg">
+	  <source media="(min-width: 465px)" srcset="img_car.jpg">
+	  <img src="img_girl.jpg">
+	</picture>
+
+
+
+
+
+
+
+

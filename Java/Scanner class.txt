@@ -7,10 +7,8 @@ Syntax:
 Scanner obj = new Scanner(System.in);
 datatype var = obj.nextDataType();
 
-
 Methods in Scanner class:
 ==========================
-
 --> nextByte();
 --> nextShort();
 --> nextInt();

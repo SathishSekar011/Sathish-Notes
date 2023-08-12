@@ -90,12 +90,9 @@ Suite Level Execution:
 	--> collection of TestNG Tests together is called as the Test Suite
 	--> to execute many test cases
 	--> Using Test Suite we can manage out Test execution
-
 Writing TestNG Suite in XML:
-============================
-	
+============================	
 	--> RC --> New --> XML file --> enter name --> file will be created
-
 <Suite name="Suite Name">
   <Test name="Test name">
     <Classes>
@@ -105,7 +102,6 @@ Writing TestNG Suite in XML:
     </Classes>
   </Test>
 </Suite>
-
 		(or)
 
 	--> select the classes --> RC --> TestNG --> Convert to TestNG --> Finish

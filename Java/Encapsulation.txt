@@ -1,7 +1,8 @@
 ENCAPSULATION:
 ==============
-	-wrapping of data and the code acting on data.
-	-acheived by POJO clas.
+	- used for data hiding in java
+	- is the process wrapping up of data(variable) with code acting on it(method) and make them to act as a single unit
+	- it can be acheived with the POJO class design pattern
 
 POJO--> Plain Old Java Object:
 ===============================
@@ -11,13 +12,11 @@ POJO--> Plain Old Java Object:
 
 Implementation of POJO Class:
 ------------------------------
-
 1) Create a class
 2) Create private variable inside the class 
 3) generate getters and setters for the POJO
 	-->right click on class --> Source generate getters and setters --> OK 
 	[getters and setters will be generated automatically]
-
  	-->you won't run encapsulation in Same Program you have to execute in another class
 
 

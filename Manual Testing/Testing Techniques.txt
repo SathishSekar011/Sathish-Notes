@@ -7,22 +7,20 @@ Testing Data Design Techniques:
 ================================================
 	- test cases are equally divided into various classes based upon positive and negative data
 	- using Equivalence partitioning Technique we can reduce number of test cases
-
-	Eg :- 21 to 50
-	Class1 ==> <21	==> 19,18,11
-	Class2 ==>21-30 ==> 22,25,28
-	Class3 ==>31-40 ==> 34,32,37
-	Class4 ==>41-50 ==> 42,45,48
-	Class5 ==> >50	==> 53,55,58
-		
-
+		21 to 50
+		==> Class 1 ==> 21 to 30 ==> 22,26
+		==> Class 2 ==> 31 to 40 ==> 32,39
+		==> Class 3 ==> 41 to 50 ==> 41,46
+		==> Class 4 ==> 11 to 20 ==> 18,13
+		==> Class 5 ==> 51 to 60 ==> 54,57
+	
 2)Boundary Value Analysis(BVA):
 ================================
 	- based on testing the boundary values of valid and invalid partitions
 	- Every partition has its maximum and minimum values (boundary values)
 
 	Eg :- 21 to 50
-		==> 18,19,20,21,22	
+		==> 19,20,21,22,23
 		==> 48,49,50,51,52
 	*==> ECP and BVA will be used to prepare test data for Input domain testing where the values will be verified in text boxes or input fields
 

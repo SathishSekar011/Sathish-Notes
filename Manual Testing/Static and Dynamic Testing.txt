@@ -27,8 +27,7 @@ Static Testing:
 
 ==> Walkthrough:
 ================
-	--> in case of any doubts in documents we will approach the author of the documment and he'll
-provide quick explaination about it.
+	--> in case of any doubts in documents we will approach the author of the documment and he'll provide quick explaination about it.
 	--> it is not pre-planned(informal testing) will be done when needed
 	
 
@@ -47,7 +46,7 @@ QE --> Quality Engineering
 
 	--> QC is actual testing of the software(STLC) will focus on testing the quality of product in order to detect the defects in builds(Both Automation and Manual Testers)
 
-	-->QE is Automation Tester who writes code and runs test
+	--> QE is Automation Tester who writes code and runs test
 
 
 

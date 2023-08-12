@@ -10,15 +10,12 @@ Software Automation Tools:
 (1) QTP Qualified or Quick Test Professional
 	- Desktop Based Applications 
 		Eg: Calculator, Calender, MS word, Eclipse
-
 (2) Appium
 	- Mobile Based Applications
 		Eg: Whatsapp, PUBG
-
 (3) Selenium 
 	- Automate web Based Applications, Browser, URL 
 		Eg: www.flipkart.com, www.facebook.com
-
 (4) TestComplete 
 	- Automate Both web Based Applications and Mobile Based Applications, Desktop Based Applications
 

@@ -1,0 +1,122 @@
+Links - Hyperlinks:
+-------------------
+	- using links we can jump to another page source
+	- we can able to set link for text , image or any other elements
+	- <a> tag is used to define a hyperlink
+	- text inside <a> tag is called as Link text
+
+Attributes:
+-------------
+--> href 	--> to define the link address
+--> target 	--> to define where to open the linked document
+--> title 	--> specifies extra information about an element and will be shown at tooltip
+
+--> href:
+----------
+	--> absolute URL --> a full web address (used in case of external page)
+	--> relative URL --> without the "https://www" (page within the same website)
+
+
+--> target :
+------------
+	--> _self  --> Opens the document in the same window/tab as it was clicked(default)
+	--> _blank --> Opens the document in a new window or tab
+	--> _parent--> Opens the document in the parent frame
+	--> _top   --> Opens the document in the full body of the window
+
+
+==> image as a link --> create <img> tag inside the <a> tag
+
+Sending Email:
+--------------
+	--> we have to use mailto: inside the href attribute 
+
+	==> <a href="mailto:greens@gmail.com">Send email</a>
+
+Button as a Link:
+-----------------
+	- To use HTML button as a link we have to add some JavaScript code
+
+	==> <button onclick="document.location='url'">Button</button>
+
+
+Link Colours:
+--------------
+By default, links will appear as follows in all browsers:
+	--> An unvisited link is underlined and blue
+	--> A visited link is underlined and purple
+	--> An active link is underlined and red
+
+Using CSS we can change colour:
+--------------------------------
+<style>
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+
+
+==> We can also style the link like a button:
+----------------------------------------------
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+
+
+HTML Links - Create Bookmarks:
+-------------------------------
+	- HTML links can be used to create bookmarks, so that readers can jump to specific parts of a web page.
+	- When the link is clicked, the page will scroll down or up to the location with the bookmark.
+	- We have to add id attribute to the element 
+	- Use the href attribute (href="#value") to link to the bookmark
+
+	==> <h2 id="C1">Chapter 1</h2>
+	==> <h2 id="C2">Chapter 2</h2>
+	==> <h2 id="C3">Chapter 3</h2>
+	==> <h2 id="C4">Chapter 4</h2>
+
+	==> <a href="#C2">Jump to Chapter 2</a>
+
+
+
+
+
+
+
+
+
+
+
+
+

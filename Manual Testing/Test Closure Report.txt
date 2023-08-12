@@ -1,6 +1,5 @@
 Test Cycle Closure:
 ===================
-
 ==> Activities:
 ----------------
 	- Evaluate cycle completion criteria based on Time, Test coverage, Cost, Software, Critical Business Objectives, Quality

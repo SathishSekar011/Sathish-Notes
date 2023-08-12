@@ -70,14 +70,9 @@ Ignoring a Test Case:
 --> @Ignore along with @Test annotation --> to ignore one test
 --> @Ignore at the class level --> to ignore all test in a class
 
-
 @Test(timeout=500)  -	to set some timeout during test execution
 
 @Test(expected=IllegalArgumentException.class) -to handle some exception during test execution
-
-
-
-
 
 ASSERTS:
 =========

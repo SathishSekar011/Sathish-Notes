@@ -1,15 +1,12 @@
 Testing Techniques:
 ===================
 
-1)Equivalence partitioning Technique:
-=====================================
+1)Equivalence class partitioning Technique:
+============================================
 	- test cases are equally divided based upon positive and negative inputs
 	- valid and invalid inputs
-	- age factor for exam ==> 18 to 30
-	- <18     ==> 16,10,8   -- negative inputs
-	- 18 - 30 ==> 19,25,28	-- positive inputs
-	- >30	  ==> 31,33,54  -- negative inputs
-
+	- age factor for exam ==> 20 to 50
+	
 
 2)Decision Table Technique:
 ===========================
@@ -39,8 +36,7 @@ Example:
 Example:-
 ----------
 	--> enter an amount between 18 to 30
-		- 16,17,18,19,20
-		- 28,29,30,31,32
+		
 
 5)Error Guessing Technique:
 ===========================

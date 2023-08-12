@@ -53,8 +53,7 @@ Type of testing:
 -------------------
 	- this is done once the build becomes stable
 	- it is a subset of regression testing
-	- done during the release phase to check for the main functionalities of the application 
-	   without going deeper
+	- done during the release phase to check for the main functionalities of the application without going deeper
 	- validate the main functionalities
 	- time constraint
 	- done by testers

@@ -1,0 +1,2 @@
+	--> dropdowns are created using <select> HTML tag and some others are created using <ul> ,<li>, <button> and <div> tags.
+	--> 

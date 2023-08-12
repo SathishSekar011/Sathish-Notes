@@ -12,6 +12,7 @@ Phython can be executed in different ways
 --------
 	--> open cmd prompt --> python --> to run only interuptor
 			    --> python filename.py --> to run a file
+	--> exit() --> to exit python
 
 4) PyCharm:
 -----------

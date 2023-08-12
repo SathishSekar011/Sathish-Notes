@@ -24,8 +24,7 @@ i)Absolute X-Path:
 	========
 Eg:- /html/body/div[2]/div/div/div/div/div/div/div/div/form/div/div/input[@type='text']
 
-	--> we have to write x-path from root element(i.e., html) to the desired element with every 
-nodes. To avoid that we are going for Relative X-Path
+	--> we have to write x-path from root element(i.e., html) to the desired element with every nodes. To avoid that we are going for Relative X-Path
 
 ii)Relative X-Path:
 ---------------------
@@ -71,7 +70,7 @@ eg:- (//span[text()='Apple iPhone 13 (128GB) - Blue'])[2]
 
 5)Xpath by Multiple Attributes:
 ================================
-	Syntax:- //tagname[@attributename = 'attribute value' and @attributename = 'attribute value']
+	Syntax:- //tagname[@attributename = 'attribute value' or @attributename = 'attribute value']
 
 --> you can also use --> or
 		     --> not

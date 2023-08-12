@@ -60,34 +60,42 @@ Method call:
 
 
 	
+Step 1: Create a Project:
+--------------------------
+	--> Eclipse --> File --> New --> Java Project --> Enter the Project Name in Pascal Notation --> OK
+
+Step 2: Create a Package:
+--------------------------
+	--> Project --> RC on src --> New --> Package --> Enter the Package Name --> OK 
 
 
+Step 3: Create a Class File:
+-----------------------------
+	--> RC on Package --> New --> ClassName --> Name --> OK
 
 
+Step 4: Create a Class:
+-------------------------
+	==> public class ClassName {
+	    }
 
+Step 5: Create a method inside the class
+----------------------------------------
+	==> private void methodName() {
+	    }
 
+Step 6: Create a main method inside the class
+----------------------------------------------
+	==> public static void main(String args[]){
+	    }
 
+Step 7: Create a Object inside the main method
+-------------------------------------------------
+	==> ClassName objName = new ClassName();
 
-
-
-8925811149----Sathish
-Name:
-DemoMsg
-
-Vel sir -- 9944152058 -- Demo Msg - Photo - Aadhaar (front & back)
-Saba sir - 8015908440 -- Demo Msg - ScreenShot
-Sathish - ScreenShot , PaymentProof
-
-
-Demo msg
-
-Vel Sir -- 9944152058 -- Photo + Aadhar
-Saba Sir - 8015908440 
-
-
-
-
-
+Step 8: Call the Object Inside the main method:
+-------------------------------------------------
+	==> objName.methodName();
 
 
 

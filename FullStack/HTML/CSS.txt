@@ -1,0 +1,76 @@
+CSS (Cascading Style Sheets):
+-----------------------------
+	- sed to format the layout of a webpage
+	- we can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes,.
+	- CSS saves a lot of work. We can control the layout of multiple web pages all at once.
+
+
+Ways to add CSS in HTML:
+--------------------------
+	--> Inline 	--> using the style attribute inside HTML elements
+	--> Internal 	--> using a <style> element in the <head> section
+	--> External 	--> using a <link> element to link to an external CSS file
+
+==> Inline CSS:
+---------------
+	- used to apply a unique style to a single HTML element.
+	- we have to use the style attribute inside an HTML element.
+	
+	==> <tagname style="property:value;">
+ - property:
+ -----------
+	--> background-color --> background color
+	--> color 	     --> text colors
+	--> font-family      --> text fonts
+	--> font-size 	     --> text sizes
+	--> text-align 	     --> text alignment
+	--> border 	     --> for borders
+	--> padding 	     --> for space between the border and text
+	--> margin 	     --> for space outside the border
+ 
+ 
+==> Internal CSS:
+=================
+	--> internal CSS is used to define a style for a single HTML page.
+	--> internal CSS will be defined inside the <head> section of an HTML page
+	--> we have to use <style> element  
+
+	==> <head>
+		<style>
+		    tag {
+			property:value;
+			property:value;
+		    }
+                </style>
+	    </head>
+
+==> External CSS:
+==================
+	- external style sheet is used to define the style for many HTML pages.
+	- To use an external style sheet we have to add a <link> tag inside the <head> section of each HTML page
+	- External style sheet can be written in any text editor. 
+	- The file must not contain any HTML code, and must be saved with a .css extension
+
+
+	==> <link rel="stylesheet" href="styles.css">	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

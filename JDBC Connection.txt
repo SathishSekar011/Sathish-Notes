@@ -1,0 +1,83 @@
+JDBC:
+----
+Java Database Connection
+
+==> ojdbc14.jar
+
+Step 1:
+------
+Loading the driver
+	==> Class.forName("oracle.jdbc.driver.OracleDriver");
+
+Step 2:
+------
+Create the connection
+
+	==> Connection con=DriverManager.getConnection(url,user,password)
+
+Url : jdbc:oracle:thin:@localhost:1521:xe
+oracle    ---> Database name
+thin      ---> driver used
+@localhost --> Ip address where database is stored
+1521 ----------> Port number
+xe -----------> service provider
+Step 3:
+------
+Write a query
+
+	==> String sql="query";
+
+Step 4:
+------
+prepare statement
+	==> PreparedStatement statement = connection.prepareStatement(sql);
+
+Step 5:
+-------
+ExecuteQuery
+	==> ResultSet resultSet = statement.executeQuery();
+
+Step 6:
+--------
+Query Iteration
+
+Step 7:
+--------
+driver close
+	==> connection.close
+
+
+
+
+
+
+
+-----------------------------------------------------------
+package org.sel;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class pojo {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "hr", "admin");
+
+		String sql = "select * from studentdetails";
+		PreparedStatement ps = connection.prepareStatement(sql);
+		ResultSet eq = ps.executeQuery(sql);
+		while (eq.next()) {
+			int int1 = eq.getInt("sid");
+			System.out.println(int1);
+
+		}
+		connection.close();
+
+
+
+
