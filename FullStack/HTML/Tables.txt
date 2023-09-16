@@ -1,0 +1,75 @@
+Table:
+=======
+==> <table>
+==> <thead>
+==> <tbody>
+==> <tr>
+==> <th>
+==> <td>
+==> <caption>
+CSS Properties:
+-----------------
+--> border: 1px solid black;	--> to add a border
+--> border-collapse: collapse;  --> to collapse the border:
+--> background-color: #96D4D4;	--> to change the background color
+--> border-radius: 10px;	--> to add radius to border
+--> border-color: #96D4D4;	--> to change the border color
+--> border-style: dotted;	--> to change border style
+(dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden)
+--> style="height:200px"
+--> style="width:100%"
+--> text-align: left;		--> to change the text allignment
+--> padding: 15px;		--> space between the cell edges and the cell content
+				    (default value is zero)
+--> padding-top: 10px;
+--> padding-bottom: 20px;
+--> padding-left: 30px;
+--> padding-right: 40px;
+--> border-spacing: 30px;	--> space between each cell(default value 2 pixels)
+--> colspan="2"			--> column merging
+--> rowspan="2"			--> row merging
+
+HTML Table - Zebra Stripes:
+----------------------------
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+HTML Table - Vertical Zebra Stripes:
+-------------------------------------
+td:nth-child(even), th:nth-child(even) {
+  background-color: #D6EEEE;
+}
+
+
+Horizontal Dividers:
+--------------------
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+Hoverable Table:
+-----------------
+tr:hover {
+  background-color: #D6EEEE;
+}
+
+HTML Table Colgroup:
+--------------------
+	- If we want to style the first columns of a table, use the <colgroup> and <col> elements.
+
+<colgroup>
+    <col span="2" style="background-color: #D6EEEE">
+    <col span="3" style="background-color: pink">
+</colgroup>
+
+
+
+
+
+
+
+
+
+
+

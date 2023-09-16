@@ -8,16 +8,13 @@ How to Achieve Synchronization:-   Waits
 
 Two types of Waits:
 -------------------
-
 (i)Static Wait:
 ===============
 	--> Thread.sleep(millis);
-
 	- For the mentioned time the Selenium will wait whether the webpage is loaded or not and Only when the wait time is over then it will proceed to the next step
 
 (ii) Dynamic Wait:
 ==================
-
 	- Once the Webpage is loaded within the mentioned time, it will not wait for the remaining time
 
 Dynamic Wait:
@@ -30,11 +27,10 @@ Three types:
 	- It will check whether the element is present or not only
 	- It wont check the element is interactable, displayed or clickable
 	- Once implicit wait is initialized then all the findElement, findElements correspending to object driver will come under implicit wait except driver.quit();
-	======
 	- implicit wait has a default polling period of 500ms, For every 500ms it will check 
 	  the element is present or not
 
-	--> Syntax: driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+	--> Syntax: driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
 		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(12));
 
 Cons:-- 

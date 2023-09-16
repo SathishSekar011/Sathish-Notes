@@ -1,6 +1,6 @@
 Windows Handling:
 =================
-	- Wndows Handling are used to handle multiple windows
+	- Windows Handling are used to handle multiple windows
 	- while interacting with a webpage , a new window will be eventually opened. To interact with 
 the new window we have to switch the control from old window(Parent) to the new window(Child)
 

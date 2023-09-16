@@ -1,0 +1,61 @@
+
+--> CSS element Selector:
+---------------------------
+element {
+  property: value;
+}
+
+
+--> CSS id Selector:
+---------------------
+#id {
+  property: value;
+}
+
+
+--> CSS class Selector:
+-------------------------
+.class {
+  property: value;
+}
+
+we can also specify that only specific HTML elements should be affected by a class.
+element.class {
+  property: value;
+}
+
+
+--> CSS Universal Selector:
+---------------------------
+* {
+  property: value;
+}
+
+
+--> CSS Grouping Selector:
+---------------------------
+element,element,.. {
+  property: value;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

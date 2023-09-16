@@ -7,7 +7,10 @@ Headings:
 	--> Search engines uses the headings to index the structure and content of a web page 
 	--> It is important to use headings to show the document structure properly and more elegantly
 	--> Users will browse a page based on a heading
+	--> there shouldn't be more than one h1 tag in a page
 
 ==> we can specify the size of a heading with the style attribute using the CSS font-size 
 
 	==> style = "font-size: 50px;"	
+
+

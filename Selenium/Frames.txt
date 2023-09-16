@@ -15,7 +15,6 @@ Identifying Frames:
 
 ==> search in DOM page for keywords like frame, iframe , frameset then it has frames
 
-
 Handling Frames:
 ================
  - switch control to the frame we want to interact

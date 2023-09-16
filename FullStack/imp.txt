@@ -1,0 +1,10 @@
+<hr /> , <br /> ==> Void elements(No content)
+
+lipsum.com
+diffchecker.com
+picsum.photos
+colorhunt.code
+
+
+--> CSS Overview
+--> Pesticide for chrome --> extension

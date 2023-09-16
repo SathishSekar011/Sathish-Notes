@@ -1,0 +1,56 @@
+CSS :
+=====
+<style>
+    cssselector {
+	property : value;  
+    }
+</style>
+
+
+CSS Selectors:
+--------------
+--> Element (<p> , <li>)
+--> id (#idname)
+--> class (.classname)
+--> attribute (element[attribute])
+
+
+Rules Of Css Importance:
+=========================
+--> Position:
+--------------
+	- the rule which is lower in the order will be given importance in case if property is repeated
+	==> p {
+		color : blue;
+                color : red;
+	    }
+		------> text will be in red
+	    p {
+	    	color : yellow;
+	    }
+		------> text will be in yellow
+
+--> Specificity:
+----------------
+	- importance will be given by the following order
+	--> id (most imp)
+	--> attribute
+	--> class
+	--> element (least imp)
+
+--> Type:
+----------
+	- importance will be given by the following order
+	--> inline (most imp)
+	--> internal
+	--> external (leat imp)
+
+--> Importance:
+---------------
+	==> p {
+          	color : blue;
+                color : red; !important;
+            }
+	--> if the property is marked !important it'll be given most importance among any
+
+

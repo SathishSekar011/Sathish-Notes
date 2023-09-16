@@ -31,10 +31,10 @@ Step 2: Open Environment Variable
              System Variables:
                               Path--->Click---->Edit
                               New
-                              Copy the address of the Java Location and Paste and add \bin 				along with the address--Ok
+                              Copy the address of the Java Location and Paste and add \bin 					along with the address--Ok
 
                               New
-                              Copy the address of Maven Location and Paste and add \bin along 				with the address--Ok
+                              Copy the address of Maven Location and Paste and add \bin along 					with the address--Ok
 
 
 Step 3:   Verification

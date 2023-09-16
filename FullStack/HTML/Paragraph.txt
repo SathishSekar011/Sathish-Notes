@@ -11,11 +11,11 @@ Paragraphs:
 Formating Texts:
 --------------------
 ==> <b>		--> bold
-==> <i>		--> itallic
+==> <i>		--> italic
 ==> <strong> 	--> used to define text with strong importance(text inside this tag is bold)
 ==> <em> 	--> emphasizes on the important word or section of words
-	(**==> <b> and <i> are used for style purpose whereas <strong> and <em> are used for defining the importance)
-==>  <cite> 	--> defines the title of a creative work (e.g. a book, a poem, a song, a 			movie, a painting, a sculpture, etc.).				
+		(**==> <b> and <i> are used for style purpose whereas <strong> and <em> are 		used for defining the importance)
+==> <cite> 	--> defines the title of a creative work (e.g. a book, a poem, a song, a 			movie, a painting, a sculpture, etc.).				
 		--> The text in the <cite> element usually renders in italic.
 ==> <dfn>	--> defines the word for which the definition is given
 ==> <sup>	--> Super script(power)

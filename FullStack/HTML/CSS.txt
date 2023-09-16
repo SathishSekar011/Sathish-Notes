@@ -1,6 +1,6 @@
 CSS (Cascading Style Sheets):
 -----------------------------
-	- sed to format the layout of a webpage
+	- used to format the layout of a webpage
 	- we can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes,.
 	- CSS saves a lot of work. We can control the layout of multiple web pages all at once.
 

@@ -1,0 +1,61 @@
+HTML Block and Inline Elements:
+===============================
+	--> Every HTML element has a default display value, depending on what type of element it is.
+
+two display values: 
+	--> Block-level Elements 
+	--> Inline-level Elements
+
+--> Block-level element:
+========================
+	--> always starts on a new line and the browsers automatically add some space (margin) before and after the element.
+	--> block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+
+Eg:-
+ <p> and <div>.
+
+-->  <p> --> defines a paragraph in an HTML document.
+--> <div>--> defines a division or a section in an HTML document.
+
+
+--> <div>:
+----------
+	--> <div> element is often used as a container for other HTML elements.
+	--> <div> element has no required attributes, but style, class and id are common.
+	--> When used together with CSS, the <div> element can be used to style blocks of content
+********************************************************************************
+<div style="background-color:black;color:white;padding:20px;">
+  <h2>London</h2>
+  <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+********************************************************************************
+
+Inline Elements:
+=================
+	--> An inline element does not start on a new line.
+	--> An inline element only takes up as much width as necessary.
+	--> This is a <span> element inside a paragraph.
+
+--> <span> Element:
+-------------------
+	--> <span> element is an inline container used to mark up a part of a text, or a part of a document.
+	--> <span> element has no required attributes, but style, class and id are common.
+	--> When used together with CSS, the <span> element can be used to style parts of the text
+
+*********************************************************************************************
+<p>My mother has <span style="color:blue;font-weight:bold;">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold;">dark green</span> eyes.</p>
+
+*********************************************************************************************
+<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label>
+<map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time>
+<tt><var>
+**********************************************************************************************
+
+
+
+
+
+
+
+
+

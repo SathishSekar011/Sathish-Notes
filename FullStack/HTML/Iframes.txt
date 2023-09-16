@@ -1,0 +1,55 @@
+Iframes:
+=========
+	--> An HTML iframe is used to display a web page within a web page.
+
+==> <iframe> --> tag specifies an inline frame.
+
+	--> An inline frame is used to embed another document within the current HTML document.
+
+Syntax:
+-------
+	==> <iframe src="url" title="description"></iframe>
+
+	--> It is a good practice to always include a title attribute for the <iframe>.
+	--> This is used by screen readers to read out what the content of the iframe is.
+	--> Use the height and width attributes to specify the size of the iframe.
+
+	==> <iframe src="url" height="200" width="300" title="desc"></iframe>
+
+	--> we can also add the style attribute and use the CSS height and width properties
+
+	==> <iframe src="url" style="height:200px;width:300px;" title="desc"></iframe>
+
+	--> By default, an iframe has a border around it
+	--> To remove the border, add the style attribute and use the CSS border property
+		
+	==> <iframe src="url" style="border:none;" title="description"></iframe>
+
+	--> An iframe can be used as the target frame for a link.
+	--> The target attribute of the link must refer to the name attribute of the iframe:
+
+**********************************************************************************
+<iframe src="url" name="demo" title="Iframe Example"></iframe>
+
+<p><a href="https://www.google.com" target="demo">link text</a></p>
+**********************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

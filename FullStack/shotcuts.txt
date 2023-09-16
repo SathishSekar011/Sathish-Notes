@@ -1,0 +1,14 @@
+--> Ctrl + K + C 	--> Comment
+--> alt + shift + F	--> Auto align
+--> ! + ENTER		--> html doc structure
+--> Ctrl + Alt + Up/Down--> Multiple Cursors-->allows to make edits in multiple lines 
+--> Ctrl + Shift + K	--> delete a line
+--> Ctrl + L		--> Select a line
+--> Shift + Alt + Up/Down--> to copy a line, up or down
+--> Ctrl + B		--> Toggle Sidebar
+--> F2			--> Rename an element
+--> Ctrl + Pg Up/Pg Down--> switching tabs
+--> Ctrl + `		--> Toggle terminal
+
+
+ 

@@ -129,9 +129,10 @@ Step 4: StepDefinitions
 Data Tables:
 ============
 	- is used to get values from feature file
---> 1D Datatable without Heading	--> asList();	--> List
---> 1D Datatable with Heading		--> asMap();	--> Map
---> 2D Datatable without Heading	--> asLists();  --> List<List>
+--> 1D Datatable without Heading(1 Column multiple rows)--> asList();	--> List
+--> 1D Datatable with Heading(2 Column Multiple rows)	--> asMap();	--> Map(key-->heding)
+									      (value-->value)
+--> 2D Datatable without Heading(multiple rows and column)-> asLists();  --> List<List>
 --> 2D Datable with Heading		--> asMaps();	--> List<Map>
 
 
