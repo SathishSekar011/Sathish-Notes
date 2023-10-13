@@ -2,13 +2,27 @@ Form :
 ======
 --> <form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
 
+attribute:
+----------
+--> actions  --> used to define the target page when the form is submitted
+--> method   --> PUT , POST , GET
+--> target
+--> autocomplete
+
 <input>:
 ---------
 --> <input type="text">		--> a single-line text input field
---> <input type="radio">	--> a radio button (for selecting one of many choices)
+--> <input type="radio">	--> a radio button (for selecting one of many choices)	
+				--> value is must have attribute
+				--> name attribute should have same value
 --> <input type="checkbox">	--> a checkbox (for selecting zero or more of many choices) 
+--> <input type="file">		--> file uploading
 --> <input type="submit">	--> a submit button (for submitting the form)
 --> <input type="button">	--> a clickable button
+--> <button type="button">	--> a clickable button
+--> <button type="submit">	--> a clickable button
+--> <button type="reset">	--> a reset button
+--> <input type="image">        
 
 (**==> each input field must have a name attribute to be submitted.
    ==> If the name attribute is omitted, the value of the input field will not be sent at all.    ==> name in radio button must have the same value)
@@ -19,18 +33,70 @@ Form :
 	- is useful for screen-reader users, because the screen-reader will read out loud the label when the user focuses on the input element.
 	- also helps users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.
 	-The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+	==> <label for="id">text</label>
+
+attribute:
+------------
+--> id
+--> name
+--> placeholder
+--> value
+--> maxlength
+--> required(no values)
+--> minlength
+--> min		--> used for numbers
+--> max		--> used for numbers
+--> step	--> used for numbers
 
 
 
+<textarea>	--> used get lines of data (Eg:-about)
+	--> cols = "2" rows = "4"
+
+--> <select>:
+---------------
+	--> <option value="..">text</option>
+
+attribute:
+-----------
+--> id
+--> name
+--> multiple(no value)
 
 
-
-
-
-
-
-
-
-
-
-
+==============================================================
+--> <input type="button">
+--> <input type="checkbox">
+--> <input type="color">
+--> <input type="date">
+--> <input type="datetime-local">
+--> <input type="email">
+--> <input type="file">
+--> <input type="hidden">
+--> <input type="image">
+--> <input type="month">
+--> <input type="number">
+--> <input type="password">
+--> <input type="radio">
+--> <input type="range">
+--> <input type="reset">
+--> <input type="search">
+--> <input type="submit">
+--> <input type="tel">
+--> <input type="text">
+--> <input type="time">
+--> <input type="url">
+--> <input type="week">
+============================================================
+List in input:
+--------------
+<form>
+  <input list="browsers">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+</form>

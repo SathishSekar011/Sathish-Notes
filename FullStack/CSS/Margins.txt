@@ -1,0 +1,97 @@
+CSS Margins:
+=============
+	- The CSS margin properties are used to create space around elements, outside of any defined borders.
+
+Margin - Individual Sides:
+--------------------------
+properties:
+------------
+--> margin-top
+--> margin-right
+--> margin-bottom
+--> margin-left
+
+values:
+--------
+--> auto    - the browser calculates the margin to horizontally center the element within its 	      container
+--> length  - specifies a margin in px, pt, cm, etc.
+--> %       - specifies a margin in % of the width of the containing element
+--> inherit - specifies that the margin should be inherited from the parent element
+
+p {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+Margin - Shorthand Property:
+-----------------------------
+four values:
+==> margin: 25px 50px 75px 100px;
+	- top margin is 25px
+	- right margin is 50px
+	- bottom margin is 75px
+	- left margin is 100px
+
+
+three values:
+--------------
+==> margin: 25px 50px 75px;
+	- top margin is 25px
+	- right and left margins are 50px
+	- bottom margin is 75px
+
+two values:
+-----------
+==> margin: 25px 50px;
+	- top and bottom margins are 25px
+	- right and left margins are 50px
+
+one value:
+----------
+==> margin: 25px;
+	- all four margins are 25px
+
+
+
+inherit Value:
+---------------
+	- will get the value from parent
+div {
+  border: 1px solid red;
+  margin-left: 100px;
+}
+
+p.ex1 {
+  margin-left: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

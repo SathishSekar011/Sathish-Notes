@@ -32,7 +32,7 @@ ii)Relative X-Path:
 
 	Syntax:- //tagname[@attribute name = 'attribute value']
 	========
-
+ (==> * as tagname will represent all tags)
 Different ways of Using Relative X-Path:
 ------------------------------------------
 1)X-Path by Attribute:

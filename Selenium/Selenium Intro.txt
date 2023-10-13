@@ -71,11 +71,7 @@ Different Versions or components of Selenium:
 
 
 
-Name:
-Batch : 10:30 Selenium
-Form Link
 
-Sathish - 8925811149
 
 
 

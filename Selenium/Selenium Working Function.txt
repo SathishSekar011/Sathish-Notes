@@ -1,0 +1,17 @@
+	--> Selenium 3 communicates with browser through driver
+	--> Selenium 4 communicates directly with browser through W3C protocal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

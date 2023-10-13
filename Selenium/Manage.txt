@@ -6,7 +6,6 @@ Manage:
 -------------------------
 	--> Syntax:- driver.manage().window().maximize();
 
-
 		==> manage() is a abstract method it returns Option[I]
 
 		==> Option[I] has following Abstract method 
