@@ -44,7 +44,7 @@ Disadvantages:
 1, Selenium will not automate OTP, captcha, Puzzle, Image, Video and Animation
 
 Different Versions or components of Selenium:
-============================================
+=============================================
 1, Selenium IDE:
 -----------------
 	-Integrated Development Environment

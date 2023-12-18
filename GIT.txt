@@ -67,7 +67,12 @@ Steps:
 
 
 
+--> For the First Time in a Project:
+	- we have to clone the existing data
 
+==> git clone repourl      --> to clone a repository
+==> git pull		   --> to get the updated code
+==> git checkout	   --> to switch the branches
 
 
 

@@ -6,39 +6,41 @@ Type of testing:
 	- done by testers
 	- without knowing the internal coding knowledge of the application
 	- User Perspective
+
 2) White box testing:
 -----------------------
 	- done by developers
 	- by knowing the internal coding knowledge
 	- glass box testing, clear box testing, structural testing
 	- developer perspective
-* Grey Box testing:
+
+3) Grey Box testing:
 -------------------
 	- done by testers
 	- by knowing the internal coding knowledge
 	- user perspective with some internal access
 
-3) Positive testing:
+4) Positive testing:
 --------------------
 	- testing with valid input data
 	- to determine what system supposed to do
 	- helps to check whether the application is justifying the requirements or not
  
-4) Negative testing:
+5) Negative testing:
 ---------------------- 
 	- testing with invalid data
  	- to determine what system not supposed to do
 	- helps to find the defects from the software
 
-5) Formal testing:
+6) Formal testing:
 ------------------
 	 - preplanned procedures and proper documentation
 
-6) Informal testing:
+7) Informal testing:
 --------------------
 	 - not following the procedure and not documented
 
-7) smoke testing:
+8) smoke testing:
 -----------------
 	- day zero check
 	- this is done at initial stages when build is unstable
@@ -49,7 +51,7 @@ Type of testing:
 	- helps to not wasting time in whole application when the key features not working properly
 	- done by both developers and testers
 
-8) Sanity testing:
+9) Sanity testing:
 -------------------
 	- this is done once the build becomes stable
 	- it is a subset of regression testing
@@ -58,7 +60,7 @@ Type of testing:
 	- time constraint
 	- done by testers
  
-9) Regression testing:
+10) Regression testing:
 ----------------------- 
 	- adding new feature or deleting / modifying  existing feature in a build may impact the other integrated builds also
 	- testing new feature alone not sufficient
@@ -109,13 +111,11 @@ Type of testing:
 
 14) Globalization and Localization Testing :
 ---------------------------------------------
-
   > Globalization Testing:
   -------------------------
 	- Performed to ensure the system or software application can run in any cultural or local environment.
 	- Different aspects of the software application are tested to ensure that it supports every language and different attributes.
 	- It tests the different currency formats, mobile number formats and address formats are supported by the application.
-
 	--> Example:  Facebook.com , Google.com
 
   > Localization Testing:

@@ -1,0 +1,223 @@
+To Create a Table:
+-------------------
+CREATE TABLE table_name (
+    column1 datatype constraint,
+    column2 datatype constraint,
+    column3 datatype constraint,
+    ....
+);
+
+
+DataType:
+---------
+Datatype 	Range
+---------	------
+number		35
+char		2000
+varchar		4000
+date		dd-mm-yyyy 
+TimeStamp	dd-mm-yyyy hh:mm:ss
+long		2G
+
+
+Constraints:
+------------
+1) Primary Key	--> only one column --> No Null --> No Duplicates
+2) Unique	--> n no of column  --> 1 Null  --> No Duplicates
+3) Not Null	--> n no of column  --> No Null --> Accept Duplicates
+4) Check	--> Used to Check Conditions
+5) Foreign Key  --> Common values between tables (Used for Joins)
+
+Create Table Using Another Table:
+---------------------------------
+CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;
+
+==========================================================================
+CREATE TABLE Student_Details (
+Roll_No number(6) PRIMARY KEY,
+Name varchar(15) NOT NULL,
+Course varchar(15)
+)
+----------------------------------------
+CREATE TABLE Student_Status (
+Roll_No number(6) PRIMARY KEY,
+Fees_Paid number(6) NOT NULL,
+Remaining number(6),
+Course_Completed varchar(10) NOT NULL,
+FOREIGN KEY(Roll_No) REFERENCES student_Details(Roll_No)
+)
+
+===========================================================================
+
+
+
+CREATE TABLE TestTable AS
+SELECT customername, contactname
+FROM customers;
+============================================================================
+CREATE TABLE emp AS
+Select * From Employees
+Where salary > 12000
+============================================================================
+
+
+Insert Values in a Table:
+----------------------------
+1)  both the column names and the values:
+------------------------------------------
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+**********************************
+INSERT INTO student_details(Roll_No,Name,Course)
+VALUES(5,'Sadham','Full Stack ')
+*********************************
+
+2)adding values for all the columns of the table:
+--------------------------------------------------
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+3)insert multiple rows of data:
+-------------------------------
+INSERT ALL 
+INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...)
+INTO table_name (column1, column2, column3, ...)
+VALUES(value1, value2, value3, ...)
+INTO table_name (column1, column2, column3, ...)
+VALUES(value1, value2, value3, ...);
+
+
+
+Updating Values in a Table:
+------------------------------
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+*******************************************
+UPDATE student_details
+SET Name='Sasi'
+Where Roll_No=3
+*******************************************
+
+
+Delete:
+--------
+1) Delete a particular data:
+----------------------------
+DELETE FROM table_name WHERE condition;
+
+2) Delete All Records in a Table:
+----------------------------------
+DELETE FROM Customers;
+
+3) Delete a Table:
+--------------------
+DROP TABLE Customers;
+
+
+
+Joins:
+======
+	--> Clause used to combine two tables based on a common column(Foreign Key)
+ 
+
+Types:
+------
+--> Inner Join
+--> Left Join
+--> Right Join
+--> Full Join
+
+
+Inner Join:
+-----------
+	--> will return the matching data in both table
+
+SELECT OrderID,CustomerID,Name 
+FROM Orders INNER JOIN Customers
+ON
+Orders.CustomerID = Customers.CustomerID;
+
+
+--> Left Join:
+----------------
+	--> All Data From left table and common data from right table
+
+SELECT OrderID,CustomerID,Name 
+FROM Orders LEFT JOIN Customers
+ON
+Orders.CustomerID = Customers.CustomerID;
+
+
+--> Right Join:
+----------------
+	--> All Data From right table and common data from left table
+
+SELECT OrderID,CustomerID,Name 
+FROM Orders RIGHT JOIN Customers
+ON
+Orders.CustomerID = Customers.CustomerID;
+
+
+--> Right Join:
+----------------
+	--> All Data From both table
+
+SELECT OrderID,CustomerID,Name 
+FROM Orders FULL OUTER JOIN Customers
+ON
+Orders.CustomerID = Customers.CustomerID;
+
+
+
+SELECT column1,column2,....
+FROM Right_Table JOIN_TYPE Left_Table
+ON
+Right_Table.common_column = Left_Table.common_column
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

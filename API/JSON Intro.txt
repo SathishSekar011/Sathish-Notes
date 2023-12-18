@@ -1,0 +1,59 @@
+JSON - Java Script Object Notation:
+====================================
+	- JSON is a syntax for storing and exchanging data.
+	- Basically it was designed for human-readable data interchange.
+	- JSON is text, written with Java Script Object Notation.
+	- It has been extended from the JavaScript scripting language
+	- The filename extension is .json
+	- JSON internet Media type is application/json
+
+JSON Object:
+-------------
+	{ 
+          key:value,
+	  key:value,
+          key: {
+                 key:value,
+		 key:value
+               }
+	 key:[value1,value2,value3]
+        }
+
+Datatypes:
+-----------
+==> Key --> String
+==> Value --> String
+	  --> Number
+	  --> Boolean
+	  --> Array ==> [ ]
+	  --> Object
+
+
+
+Own API:
+--------
+--> Instal node.js
+--> Check ==> cmd promp --> node --version
+			--> npm --version
+
+--> Install json-server
+	==> cmd	--> npm instal -g json-server
+
+--> cmd --> cd to the json file location --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

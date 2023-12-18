@@ -70,9 +70,9 @@ Step 3:   Download dependancies and add in the pom.xml file
 
                     For Selenium Project
 
-                    Selenium java dependancy            3.141.59
+                    Selenium java dependancy            
                    
-                    WebDriverManager dependancy  	5.0.3
+                    WebDriverManager dependancy  	
 
 
 	-->Ctrl+S

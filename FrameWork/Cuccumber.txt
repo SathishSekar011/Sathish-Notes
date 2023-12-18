@@ -136,7 +136,7 @@ Data Tables:
 --> 2D Datable with Heading		--> asMaps();	--> List<Map>
 
 
-
+==> UndefinedDataTableTypeException
 
 
 plugin :
@@ -151,11 +151,6 @@ Background:
 	- used to define a step or series of steps that are common to all the tests in the feature file. 	- It allows you to add some context to the scenarios for a feature where it is defined. 
 	- A Background is much like a scenario containing a number of steps but it runs before each and every scenario were for a feature in which it is defined. 
 
-
-
-
-
-
 HooksClass:
 ==============
 --> @Before
@@ -164,7 +159,6 @@ HooksClass:
 --> @AfterStep
 
 **==> If we are creating HooksClass inside StepDefinition Class no need to add it to glue option, or else we have to add the package that contains Hooks class in glue option
-
 **==> The background is run before each of your scenarios but after any of your @Before hook.
 **==> Any feature level dependency should be tie with the background and any scenario level dependency should be tie with hooks.
 **==>Use Background when you provide customer-readable pre-conditions to your scenarios
@@ -179,7 +173,7 @@ CuccumberOptions ==> tags = "@tagname1 and @tagname2"
 
 Tagged Hooks:
 =============
-@Before("@tagname1")  --> will execute only before that particualr tag
+@Before("@tagname1")  --> will execute only before that particualar tag
 
 
 

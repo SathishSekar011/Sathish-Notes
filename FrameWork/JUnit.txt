@@ -71,13 +71,13 @@ Ignoring a Test Case:
 --> @Ignore at the class level --> to ignore all test in a class
 
 @Test(timeout=500)  -	to set some timeout during test execution
-
 @Test(expected=IllegalArgumentException.class) -to handle some exception during test execution
 
 ASSERTS:
 =========
 	- used to validate a checkpoint 
 ==> assertEquals(string1,string2);
+==> assertNotEquals(string1,string2);
 ==> assertSame(string3, string4);
 ==> assertNotSame(string1, string3);
 ==> assertNotNull(string1);
@@ -101,9 +101,38 @@ Junit Test Runner:
 Suite Execution:
 =================
 ==>@Runwith(Suite.class)
-==>@SuiteClasses(test1.class,test2.class……)
+==>@SuiteClasses(test1.class,test2.class,...)
 
 	--> Suites to be executed in a dummy class
+
+
+
+Maven 		--> Build Managment Tool
+DataDriven	--> apache.poi.ooxml library --> for excel
+		--> OJDBC      --> for server
+Page Object Model
+
+JUnit
+TestNg
+
+Cucumber - JUnit
+Cucumber - TestNg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

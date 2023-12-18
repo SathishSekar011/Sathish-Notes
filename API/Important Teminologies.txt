@@ -1,5 +1,25 @@
+API:
+====
+	- Application Programming Interface
+
 Important Terminlogies:
 ========================
+--> Client :
+-------------
+	--> It can be a physical Machine or software or cloud based application or it can be programme which sends the Requests and receives the Response
+
+--> Server:
+--------------
+	--> It can be a physical Machine or software or cloud based application or it can be programme which sends the Response based on Request received from client
+
+--> Request:
+--------------
+	--> It is a kind of signal which contains information inorder to get the data from the server
+
+--> Response:
+-------------
+	--> It is a kind of signal which contains information from the server
+
 --> URI : Uniform Resource Identifier
 --------------------------------------
 	--> It is a string of characters that uniquely identify a name or a resource on the internet.
@@ -47,4 +67,54 @@ Important Terminlogies:
 	--> It refers to touchpoints of the communication between an API and a server.
 	--> The endpoint can be viewed as the means from which the API can access the resources they need from a server to perform their task. 
 	--> An API endpoint is basically a URL of a server or service.
+
+
+Types of Client Server Architecture :
+-------------------------------------
+--> 1 tier architecture
+--> 2 tier architecture
+--> 3 tier architecture
+
+--> 1 tier architecture:
+------------------------
+	- In this type of client server environment the user interface, business logic & data logic are present in same system. 
+	- This kind of client server service is cheapest but it is difficult to handle because of data inconsistency that allows repetition of work.
+
+--> 2 tier architecture:
+-------------------------
+	- In this type of client server environment user interface is stored at client machine and database are stored on server. 
+	- Database logic & business logic are stored at either client or server but it must be unchanged. 
+	- If Business Logic & Data Logic are stored at client side, it is called fat client thin server architecture. 
+	- If Business Logic & Data Logic are stored on server, it is called thin client fat server architecture. 
+	-This kind of architecture are affordable and comparatively better.
+	- 2-tier architecture is useful where a client talks directly to a server. 
+	- There is no intervening server. It is typically used in small environments. Here, the user interface is placed at user’s desktop environment and the DBMS services are usually placed in a server.
+	- Information processing is split between the user system interface environment and the database management server environment.
+
+--> 3 tier architecture :
+--------------------------
+	- In this kind of client server environment an additional middle-ware is used that means client request goes to server through that middle layer and the response of server is firstly accepted by middle-ware then to client. 
+	- This architecture overcomes all the drawbacks of 2-tier architecture and gives best performance. 
+	- It is costly and easy to handle. 
+	- The middle-ware stores all the business logic and data access logic. If there are multiple Business Logic & Data Logic, it is called n-tier architecture. 
+	- The purpose of middle-ware is to database staging, queuing, application execution, scheduling etc. middle-ware can be file server, message server, application server, transaction processing monitor etc. 
+	- It improves flexibility and gives best performance.
+	- The middle-ware are implemented in different ways such as transaction processing monitors, message servers or application servers. 
+	- The middle-ware perform several functions like queuing, application execution, database staging.
+	- It also adds scheduling and prioritisation for work in progress.
+
+
+==> when the Intermediator is uploaded over internet then it is called as Web Services
+==> when intermediater is maintained in local machine it is called as API
+
+==> All WebServices are API but not all the API are WebServices
+
+
+
+
+
+
+
+
+
 

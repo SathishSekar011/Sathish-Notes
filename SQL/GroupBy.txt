@@ -10,7 +10,7 @@ Analytical Functions:
 ==============================================================================================
 
 	===========$$$$$$$$==========
-Select max(salary),min(salary),sum(saalary),avg(salary),count(salary) from Employees
+Select max(salary),min(salary),sum(salary),avg(salary),count(salary) from Employees
 	===========$$$$$$$$==========
 
 
@@ -46,7 +46,7 @@ HAVING:
 
 	===========$$$$$$$$==========
 Select first_name,count(first_name) from Employees
-Group By first_time
+Group By first_name
 Having count(first_name)>1
 	===========$$$$$$$$==========
 
@@ -63,11 +63,43 @@ Result:--> max salary of every department id will be displayed
 
 
 
+Rank Functions:
+=================
+--> rank()		
+--> dense_rank()
 
+--> rank():
+===========
+	- in case of duplicates will share the rank and the next value will not be assigned by the next rank(ranks will be skipped for the number of duplicates)
+98  --> 1
+98  --> 1
+95  --> 3
+92  --> 4
+90  --> 5
+90  --> 5
+90  --> 5
+87  --> 8
 
+--> dense_rank():
+=================
+	- in case of duplicates will share the rank and the next value will  be assigned by the next rank(ranks will not be skipped for the number of duplicates)
+98  --> 1
+98  --> 1
+95  --> 2
+92  --> 3
+90  --> 4
+90  --> 4
+90  --> 4
+87  --> 5
 
+Retraive a Data
 
+Create a Table and Insert a data into a table
+Delete a table
+Update a table
+Joins
 
+JDBC
 
 
 

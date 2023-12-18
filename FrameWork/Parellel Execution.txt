@@ -37,7 +37,8 @@ xml:
  </test>
 </suite>
 
-Test level  
+Test level  :
+=============
    All the test tag will run parallely but inside the test tag all the classes will run in sequential manaer
 
 <suite name="suite" parallel="tests" thread-count="5">

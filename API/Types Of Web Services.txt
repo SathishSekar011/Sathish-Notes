@@ -1,0 +1,57 @@
+Types Of Web Services:
+=======================
+--> REST	--> Representational State Transfer
+--> SOAP	--> Simple Object Access Protocal
+
+
+
+===========================================================================================
+	REST				    |		SOAP
+===========================================================================================
+--> Architectural Protocal		    |	--> Communicational Protocal
+					    |
+--> Supported formats			    |	--> Supported formats
+	- text,JSON,xml,html		    |		- xml
+					    |
+--> It uses http mechanism		    |   --> It uses SMTP mechanism
+					    |
+--> Requires less bandwidth		    |	--> Requires more bandwidth
+					    |
+--> Four different request methods	    |	--> Only one Request method
+	(GET,POST,PUT,DELETE)		    |		(GET)
+=============================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

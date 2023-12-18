@@ -9,7 +9,7 @@ Paragraphs:
 	 
 
 Formating Texts:
---------------------
+----------------
 ==> <b>		--> bold
 ==> <i>		--> italic
 ==> <strong> 	--> used to define text with strong importance(text inside this tag is bold)

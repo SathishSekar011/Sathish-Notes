@@ -8,8 +8,8 @@ Installation:
 	--> Open Postman --> sign-up
 
 
-Request = BaseURI + Resources + Query Parameter/PathParameter
-
+Request = BaseURI + Resources + Query Parameter/Path Parameter
+	= https://reqres.in/api/users?page=2
 
 Navigations in Postman:
 =======================
@@ -52,25 +52,133 @@ Navigations in Postman:
 
 http requests:
 ==============
-	==> Get	   --> to retrive the resource from database
+	==> GET	   --> to retrive the resource from database  --> 200 OK
 	
-	==> Post   --> to create resource on database
+	==> POST   --> to create resource on database  --> 201 CREATED
 
-	==> Put    --> to update existing resource on database
+	==> PUT    --> to update existing resource on database --> 200 OK
 
-	==> Patch  --> to update partial details of resource
+	==> PATCH  --> to update partial details of resource
 
-	==> Delete --> to delete existing resource from database
+	==> DELETE --> to delete existing resource from database --> 204 NO CONTENT
 
 
-API Validations:
-=================
+Response Validations:
+======================
 	--> Status Code
+	--> Headers
+	--> Response Body
+	--> Cookies		
 	--> Response time
 	--> Data size
-	--> Response Body
-	--> Cookies
-	--> Headers
+
+Status Code:
+-------------
+100 series ==> Information
+200 series ==> Sucessfull Response
+300 series ==> Redirectional
+400 series ==> client side error
+500 series ==> server side error
+
+Get:
+----
+	Successful --> 200 Ok
+	Unsuccessful --> 404 Not Found
+
+Post:
+------
+	Successful --> 201 Created
+
+Put:
+----
+	Successful --> 200 Ok
+
+Patch:
+------
+	Successful --> 200 Ok	
+Delete:
+-------
+	Successful --> 200 Ok	
+
+
+
+Assert the Response:
+====================
+	- to assert in Postman we have predefined javascript fumctions in pm library present in Chai Framework
+
+
+Syntax:
+---------
+	pm.test("Test_Name",function() => {
+		//asserts
+	});
+		
+		(OR)
+
+	pm.test("Test_Name",() => {
+		//asserts
+	});	
+
+
+==> Validating Status Codes:
+-----------------------------
+	
+-->//validate using Status Code:
+----------------------------------
+	pm.test("Validate Using Status Code",()=>{
+    		pm.response.to.have.status(200);
+	});
+
+-->//validate using many Status Code:
+---------------------------------------
+	pm.test("Validate Using Status Code",()=>{
+	    pm.expect(pm.response.code).to.be.oneOf([200,201]);
+	});
+
+
+==> Validate Using Headers:
+===========================
+	--> Must Validate Field ==> Content-Type
+
+--> //Validate the presence of the Key in Headers:
+--------------------------------------------------
+	pm.test("Presence of Header Key",()=>{
+	    pm.response.to.have.header("Content-Type");
+	});
+
+--> //Validate the value of the Key in Headers:
+-----------------------------------------------
+	pm.test("Value of Header Key",()=>{
+	    pm.expect(pm.response.headers.get("Content-Type")).to.eql("application/json; 		charset=utf-8");
+	});
+
+
+
+
+
+
+
+
+Types Of Variables:
+--------------------
+--> Global
+--> Collection
+--> Environment		
+--> Local		--> particular request
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

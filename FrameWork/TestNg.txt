@@ -184,5 +184,24 @@ DataProvider:
 ==> @AfterTest
 ==> @AfterSuite
 
-
+<suite>
+   <test name="Test One">
+	<classes>
+		<class name="">
+		<class name="">
+	<classes>
+   <test>
+  <test name="Test Two">
+	<classes>
+		<class name="">
+		<class name="">
+	<classes>
+   <test>
+   <test name="Test Three">
+	<classes>
+		<class name="">
+		<class name="">
+	<classes>
+   <test>
+</suite>
 

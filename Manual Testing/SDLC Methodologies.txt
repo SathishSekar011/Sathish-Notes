@@ -1,5 +1,4 @@
 SDLC --> Waterfall Methodology , Spiral Methodology , V-shape Methodology , Agile 
-
 Waterfall Model:
 =================
 	--> Docomentation Process
@@ -10,17 +9,14 @@ Waterfall Model:
 4)Testing
 5)Deployment
 6)Maintenance
-
 	--> Every phase will be input for the next phase
 	--> Until one phase completed we can't go for next phase
-
 Advantages:
 ------------
 	- Quality will be good(Every phase will have detailed documentation)
 	- Requirements changes are not allowed so there is less chance in finding bugs
 	- Initial Investment is less
 	- When Requirements are freezed Waterfall is Preferd
-
 Disadvantages of WaterFall:
 -----------------------------
 	- Requirements changes are not allowed

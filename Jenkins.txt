@@ -73,7 +73,7 @@ Executing Programmes Using Jenkins:
 ===================
 1) Set Up Environment:
 =======================
-Open Jenkins --> Manage Jenkins
+Open Jenkins --> Manage Jenkins --> Tools
  	--> JDK	--> JDK Installation --> Add JDK
 		Name : JAVA_HOME
 		Location : Location of JDK
@@ -118,13 +118,66 @@ To Run Jobs Periodically:
 Schedule:
 =========
 	1 2 3 4 5
+	* * * * *  ==> every minute every hour every day in month ......
+
 1 ==> minute
 2 ==> hour
 3 ==> day in month
 4 ==> month of year
 5 ==> day in week
 
-	* * * * *  ==> every minute every hour every day in month ......
+
+
+
+Configuring GITHUB with Jenkins:
+=================================
+
+Step 1:
+========
+	--> Dashboard --> Manage Plugin --> GITHUB --> 1.37 --> install
+
+Step 2: To get the public server(ngrok)
+=================================
+	--> Google --> ngrok download --> windows --> Download ZIP file --> Extract --> Run ngrok.exe --> cmd prompt
+	--> sign up and login to ngrok --> Your Authtoken --> Copy authentication code --> paste it on ngrok cmd prompt --> enter
+	--> ngrok http 8080   /  --> ngrok http 8081   ==> enter
+	--> ngrok will establish the public connection
+	--> copy the url next to Forwading
+	--> Launch the above url in Browser --> Jenkins will open --> Login
+	(Here after we are going to use only the above url for jenkins)
+
+Step 3: GITHUB Configuration:
+-----------------------------
+	--> Repository --> settings --> webhooks --> add webhook 
+		==> PayLoad Url : (==>jenkins url by ngrok/github-webhook/)
+==>https://8b3e-2401-4900-1cc8-7293-c96a-31b5-47c0-a882.ngrok-free.app/githug-webhook/
+	--> add webhook
+
+Step 4: Jenkins Configuration:
+------------------------------
+	--> Create a new Job --> configure --> Source Code Management --> GIT --> copy and paste repository url
+	--> Configure --> Build Trigers --> GitHub hook trigger for GITScm polling
+	--> apply --> save
+	--> First Time --> Build Now
+	--> whenever a new push occurs the build will automatically triggered in Jenkins
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

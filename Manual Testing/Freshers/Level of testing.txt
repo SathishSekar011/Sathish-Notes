@@ -24,6 +24,12 @@ Level of Testing:
 		top down approach  - higher modules to lower modules(Parent to Child)
 		bottom up approach - lower modules to higher Modules
 		big bang approach  - integrated modules
+1,2,3,4
+
+1-->2-->3-->4
+4-->3-->2-->1
+
+1<--2-->3-->4
 
 
 3) System testing:

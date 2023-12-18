@@ -53,15 +53,12 @@ sibling:(+):
 ------------------
 	==> CssSelector:not(CssSelector)
 
-
 Difference between Xpath and CssSelector:
 =========================================
 	- Xpath can traverse in forward and backward direction but Css Selector can traverse only in forward direction  
 	- Success Rate of Xpath is higher than CssSelector
 	- CssSelector is faster than Xpath
 	- Xpath will search based on xml path whereas css selector search will be based on css properties
-
-
 
 
 

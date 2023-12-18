@@ -76,7 +76,11 @@ SDLC - software development life cycle:
 
 
 Sathish----8925811149
-Name:
+Name: 
+Degree :
+YOP :
+Course Fee Paid :
+Topic : Manual Testing
 
 
 
