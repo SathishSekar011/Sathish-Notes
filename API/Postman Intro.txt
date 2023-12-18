@@ -152,6 +152,50 @@ Syntax:
 	    pm.expect(pm.response.headers.get("Content-Type")).to.eql("application/json; 		charset=utf-8");
 	});
 
+==> Validate using Cookies:
+============================
+--> Check the presence:
+-------------------------
+	pm.test("Cookies presence", ()==>{
+		pm.expect(pm.cookies.has('language')).to.be.true;
+	})
+
+--> Check the Value:
+--------------------
+	pm.test("Cookies Value", ()==>{
+		pm.expect(pm.cookies.get('language')).to.eql('en');
+	})
+
+==> Response Time:
+==================	
+	pm.test("Response Time",()=>{
+	    pm.expect(pm.response.responseTime).to.be.below(100);
+	})
+
+==>//Validate the Response Body:
+================================
+	const jsonData = pm.response.json();
+
+--> Validate the Value Type:
+-----------------------------
+	pm.test("Value Type",()=>{
+	    pm.expect(jsonData).to.be.an("Object"),
+	    pm.expect(jsonData.name).to.be.a("string"),
+	    pm.expect(jsonData.id).to.be.a("number");
+	})
+
+-->//values:
+-------------
+	pm.test("Values",()=>{
+	    pm.expect(jsonData.name).to.eql("Sathish"),
+	    pm.expect(jsonData.id).to.eql(1),
+	    pm.expect(jsonData.Courses).to.include("Java");
+	 //  pm.expect(jsonData.Courses).to.have.members(["Selenium,Python,Java"]);
+	   // pm.expect(jsonData.Courses[1]).to.eql("Java");    
+	})
+
+	
+
 
 
 
