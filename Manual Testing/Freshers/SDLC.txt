@@ -44,8 +44,8 @@ SDLC - software development life cycle:
 	- comparing the application(actual) with requirements(BRD)(expected)
 	- expected not matched with actual - Defect - intimate to developer
 		- raise the bug - developer will fix- retest - to ensure bug fix
-	- expected matched with actual - no defect 
-6) Deployment
+	- expected matched with actual - no defect - sign off
+6) Deployment 
 	- live environemnt - non peak hrs
 7) Operation and Maintenance
 	- maintenance - minor bugs will be fixed

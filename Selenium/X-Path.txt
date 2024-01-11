@@ -80,12 +80,16 @@ eg:- (//span[text()='Apple iPhone 13 (128GB) - Blue'])[2]
 
 	Syntax:- //tagname[contains(@attributename,'attribute values')]
                  //tagname[starts-with(@attributename,'attribute values')]
-
+		 //tagname[ends-with(@attributename,'attribute values')]
 
 
 //div[@class ='a-section a-spacing-none puis-padding-right-small s-title-instructions-style']/child::node()[local-name(.) = 'h2' and not(preceding-sibling::div)]
 
 
+<a name="sat" , place-holder="aa">
+<a name="dd" , place-holder="aa">
+
+//a[@place-holder='aa' not @name='sat']
 
 
 

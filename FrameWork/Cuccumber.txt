@@ -148,7 +148,8 @@ xml  ==> "junit:location\\filename.xml"
 
 Background:
 ===========
-	- used to define a step or series of steps that are common to all the tests in the feature file. 	- It allows you to add some context to the scenarios for a feature where it is defined. 
+	- used to define a step or series of steps that are common to all the tests in the feature file.
+ 	- It allows you to add some context to the scenarios for a feature where it is defined. 
 	- A Background is much like a scenario containing a number of steps but it runs before each and every scenario were for a feature in which it is defined. 
 
 HooksClass:
@@ -177,7 +178,6 @@ Tagged Hooks:
 
 
 
- 
 
 
 

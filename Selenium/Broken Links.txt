@@ -16,3 +16,22 @@ URL - url.openConnection();  ---> Returns Open Connection
 --> getResponseCode();			--> 200(not broken link)
 --> getResponseMessage();	
 
+
+
+
+
+Status Code:
+-------------
+100 - 199  ==> Informational 
+200 - 299  ==> Successfull        ==> 200 OK
+300 - 399  ==> Redirectional
+400 - 499  ==> Client Side Error
+500 - 599  ==> Server Side Error
+
+
+
+
+
+
+
+

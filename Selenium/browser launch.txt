@@ -1,5 +1,5 @@
-Launching Chrome:
-===================
+Launching Chrome: 
+=================
 Step 1:Create a new java project
 
 Step 2: Create 2 folders inside a project

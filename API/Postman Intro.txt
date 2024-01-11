@@ -104,11 +104,11 @@ Delete:
 
 Assert the Response:
 ====================
-	- to assert in Postman we have predefined javascript fumctions in pm library present in Chai Framework
+	- to assert in Postman we have predefined javascript functions in pm library present in Chai Framework
 
 
 Syntax:
----------
+-------
 	pm.test("Test_Name",function() => {
 		//asserts
 	});
@@ -196,21 +196,131 @@ Syntax:
 
 	
 
+Scripts:
+=========
+--> Pre-request Script:
+------------------------
+	- it will be executed before request is sent
+
+--> Test Script:
+----------------
+	- it will be executed after response is generated
 
 
+Execution Order ==> Pre-request --> Request --> Response --> Test 
+
+	==> Collection Level
+	==> Folder Level
+	==> Request Level
 
 
+==> Request Level:
+-------------------
+Execution Order ==> Pre-request --> Request --> Response --> Test 
+
+==> Folder Level:
+------------------
+Execution Order 
+  ==> Folder Pre-request --> Pre-request --> Request --> Response --> Folder Test --> Test 
+
+==> Collection Level:
+----------------------
+Execution Order :
+	==> Collection Pre-request --> Folder Pre-request --> Pre-request --> Request -->
+--> Response --> Collection Test --> Folder Test --> Test
 
 
 
 Types Of Variables:
 --------------------
---> Global
---> Collection
---> Environment		
---> Local		--> particular request
+--> Global		- for all Collection
+--> Collection		- for all request in a collection
+--> Environment		- for all collection in a particular Environment
+--> Local		- for a request	
 
 
+--> Global:		- for all Collection:
+-----------
+	--> Postman --> top right box shape --> Gobals --> Add ==> Variable :  , Value:
+	Script: ==> pm.global.set("variable_name","value");  --> to create
+		==> pm.global.unset("variable_name");  --> to delete
+
+--> Collection:
+----------------
+	--> Collection --> variables ==> Variable :  , Value:
+	Script: ==> pm.collectionvariable.set("variable_name","value");  --> to create
+		==> pm.collectionvariable.unset("variable_name");  --> to delete
+
+--> Environment:
+----------------
+	--> create a environment --> No Environment --> top right box shape --> Environment --> add --> Environment Name ==> Variable :  , Value:
+	Script: ==> pm.environment.set("variable_name","value");  --> to create
+		==> pm.environment.unset("variable_name");  --> to delete
+
+--> Local:
+-----------
+	--> params		
+	Script: ==> pm.variable.set("variable_name","value");  --> to create
+		==> pm.variable.unset("variable_name");  --> to delete
+
+
+Authentication:
+==================
+--> Basic Authentication
+--> Digest Authentication
+--> Bearer Token Authentication
+--> API Key Authentiction
+--> OAuth 2.0 Authentication 
+
+
+--> Basic Authentication:
+--------------------------
+	==> https://postman-echo.com/basic-auth
+		--> UserName : postman
+		--> Password : password
+
+	==> https://the-internet.herokuapp.com/basic_auth
+		--> UserName : admin
+		--> Password : admin
+
+
+--> Digest Authentication:
+---------------------------
+	- simillar to basic authentication
+	- username and password will be shares as an encrypted form to the server
+
+	==> https://postman-echo.com/digest-auth
+		--> UserName : postman
+		--> Password : password
+
+	==> https://the-internet.herokuapp.com/digest_auth
+		--> UserName : admin
+		--> Password : admin
+
+
+--> Bearer Token Authentication:
+---------------------------------
+	- api will generate a token using which we can access that api
+	==> https://gorest.co.in/public/v2/users/  ==> POST
+
+  --> to generate token --> get access token --> Sign Up --> token will be generated
+ 
+	--> Authorisation : Beare Token ==> generated token
+
+--> API Key Authentiction:
+---------------------------
+	--> openweathermap.org/api
+	--> Open any API doc for endpoints
+	--> generate the api key by sign in
+	--> copy and paste the api key in API Key Authentication
+
+--> OAuth2.0 Authentication:
+----------------------------
+
+How OAuth will be Generated:
+=============================
+	 --> URL(Client)   ---> Grant Authorization(server) --> a code will be generated and send to client --> Client must incude the code in endpoints and send request --> server will genearte the authentication token and send to client --> client will include the token and send request --> Response will be Generated
+	
 
 
 

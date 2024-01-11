@@ -35,10 +35,8 @@ public class FailureClass implements IRetryAnalyzer{
 	--> Create child class for IAnnotationTransformer interface and implement unimplemented method
 
 public class AllFailures implements IAnnotationTransformer {
-	public void transform(ITestAnnotation annotation, Class testClass, Constructor 		testConstructor,Method testMethod) {
-	
+	public void transform(ITestAnnotation annotation, Class testClass, Constructor 		testConstructor,Method testMethod) {	
 			annotation.setRetryAnalyzer(FailureClass.class);
-	
 	}
 }
 

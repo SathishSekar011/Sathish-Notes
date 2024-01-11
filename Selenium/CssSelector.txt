@@ -61,6 +61,31 @@ Difference between Xpath and CssSelector:
 	- Xpath will search based on xml path whereas css selector search will be based on css properties
 
 
+#  --> id
+.  --> class
+*  --> contains
+^  --> starts-with
+$  --> ends-with
+>  --> parent to child
++  --> siblings(self --> following)
+
+
+//tag[@id='value']
+tag#idvalue
+tag.classname
+
+
+_8esj._95k9._8esf._8opv._8f3m._8ilg._8icx._8op_._95ka
+
+
+
+
+
+
+
+
+
+
 
 
 

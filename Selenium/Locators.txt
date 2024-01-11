@@ -15,7 +15,7 @@ DOM Page:(Document Object Model)
 		--> It will be in html or xml format
 		--> Web Page -->Right Click -->Inspect --> DOM page will Open
 
-		==>  <tagname attributename = "value" \tagname>
+		==>  <tagname attributename = "value">text<\tagname>
 			tagname        -- Purple
 			attributename  -- Brown
 			attributevalue -- Blue

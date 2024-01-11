@@ -138,7 +138,7 @@ Inner Join:
 -----------
 	--> will return the matching data in both table
 
-SELECT OrderID,CustomerID,Name 
+SELECT OrderID,CustomerID,Name,Mobile
 FROM Orders INNER JOIN Customers
 ON
 Orders.CustomerID = Customers.CustomerID;
@@ -164,7 +164,7 @@ ON
 Orders.CustomerID = Customers.CustomerID;
 
 
---> Right Join:
+--> Full Join:
 ----------------
 	--> All Data From both table
 

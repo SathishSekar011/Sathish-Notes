@@ -81,3 +81,29 @@ public class pojo {
 
 
 
+
+
+
+
+
+
+Name :
+Topic : JDBC Connection
+Batch : Online 11am / Offline 11am
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

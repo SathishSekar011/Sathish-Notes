@@ -5,6 +5,9 @@ SVG :
 	- we have to use xpath with some modification to locate svg elements
 
 	==> //*[local-name()='svg' and @attribute='value']
+
+for child inside svg
+==> /*[local-name()='svg' and @attribute='value']//*[name()='tagname' and @att='value']
 	
 	- we can't able to use axes(xpath relations) while locating svg elements.
 

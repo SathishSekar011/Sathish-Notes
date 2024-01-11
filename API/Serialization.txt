@@ -1,0 +1,105 @@
+Read a Data from JSON File:
+---------------------------
+
+1) Create a project and add Dependecies ==> json simple 1.1.1
+2) Create a Class and Test
+3) Create Object for FileReader
+4) Create Object for JSONParser
+5) Call the parse() method from JSONParser
+6) Type Caste Object to JSONObject
+7) Call get() from JSON Object
+
+		FileReader fileReader = new FileReader("C:\\Users\\Lenovo\\"
+				+ "eclipse-workspace\\MavenDemo\\src\\test\\resources\\"
+				+ "employee.json");
+		
+		JSONParser jsonParser = new JSONParser();
+		
+		Object parse = jsonParser.parse(fileReader);
+		
+		JSONObject js = (JSONObject)parse;
+		
+		Object object = js.get("Address");
+		System.out.println(object);
+
+
+Serialization:
+--------------
+	--> Creating JSON file from POJO Objects(Writing in a JSON File)
+
+Deserialization:
+----------------
+	--> Retreiving JSON Object by POJO Objects(Reading a JSON File)
+
+==> Dependencies:  --> Jackson Databind
+
+Deserialization:
+----------------
+Step 1: Create a seperate class to maintain POJO Objects for all Objects in JSON
+
+Step 2: Create a Class and Test
+
+Step 3: Create Object for FileReader
+
+Step 4: Create Object for ObjectMapper
+
+Step 5: Call the method readValue(reader,POJOObject.class)
+	--> all of the values in JSON Objects will be stored in POJO Objects
+
+Step 6: Call the getter methods from POJO class using object from readValue()
+
+		FileReader fileReader = new FileReader("C:\\Users\\Lenovo\\"
+				+ "eclipse-workspace\\MavenDemo\\src\\test\\resources\\"
+				+ "employee.json");
+		ObjectMapper mapper = new ObjectMapper();		
+		POJORead readValue = mapper.readValue(fileReader, POJORead.class);
+		
+		String name = readValue.getName();	
+		int age = readValue.getAge();	
+		ArrayList<String> skills = readValue.getSkills();
+		
+		AddressPOJOObject address = readValue.getAddress();
+		int street = address.getStreet();
+		String city = address.getCity();
+		
+		System.out.println("Name : "+name);
+		System.out.println("age : "+age);
+		System.out.println("Skills : "+skills);
+		System.out.println("Street : "+street);
+		System.out.println("City : "+city);
+
+
+Serialization:
+--------------
+--> Create the POJO Class for the Objects that we want in the JSON
+
+--> Generate the getters , setters and constructor using field
+
+--> Create the Class for Writing in a JSON
+
+--> Create Object for File , ObjectMapper
+--> Create Object for POJO Class
+--> Call the method writeValue(file,pojoObject);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

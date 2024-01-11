@@ -1,6 +1,5 @@
 Waits:
 ======
-
 --> Synchronization:    If the speed of the browser and speed of the selenium matches 
 			then they are called as Synchronized
 
