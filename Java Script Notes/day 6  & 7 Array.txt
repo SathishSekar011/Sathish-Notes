@@ -1,0 +1,378 @@
+Array:
+---------
+It is used to store the multiple values of disimilar datatypes
+EX:  let value=["Red",0,'Java',80.379]
+
+How to get the values
+-----------------------------
+variablename[index]
+let arr=["java",50,78.678,'M',true,100];
+console.log(arr);
+console.log(arr[1]);//50
+
+how to replace the values
+-----------------------------
+variablename[index]=value;
+arr[0]="css";
+console.log(arr);//["css",50,78.678,'M',true,100];
+
+how to delete the values---delete particular value, only value will be deleted memory won't
+------------------------------
+delete variablename[index]
+delete arr[1];
+console.log(arr);//["css",empty,78.678,'M',true,100];
+
+Arrays
+------------
+Adding/pushing element to array
+Finding/filtering an element to array
+Removing an element in an array
+Splitting the arrays
+Combining the arrays
+
+Methods
+------------
+Array flat()----if we have 3 separate array in single array, flat method is used to combine all the array in a single array
+let b=[[1,2],[3,4],[5,6]];
+let res=b.flat();
+console.log(res);
+
+Array toString()----it will convert all the values into string
+let s=["css","html",5,76.78];
+let str=s.toString();
+console.log(str);  //css,html,5,76.78
+
+Adding/pushing element in array
+-----------------------------------------
+push---it will add the value at last ie, n-1
+unshift----to add the value at first
+splice---to add the value inbetween we have to pass the index .It is also used to delete the value
+
+	EX: push---->   let details=["red", "yellow","blue"]
+		details.push("Black");
+		console.log(details);// ["red", "yellow","blue","black"]
+		
+	unshift--------> details.unshift("White");
+		console.log(details);// ["white","red", "yellow","blue","black"]
+		
+	Splice--------> details.splice(1,0,3,3)//1--starting index,  0--to delete,  3,3---values
+		console.log(details);// ["white",3,3,"red", "yellow","blue","black"]
+
+Deleting element in Array
+-----------------------------------
+pop---it will delete the value at last
+shift----it will delete the value at first
+splice-----
+	EX: pop----> let details=["red","yellow","blue"]
+		details.pop();
+		console.log(details);// ["red","yellow"]
+		
+	shift------>details.shift();
+		console.log(details);// ["yellow"]
+		
+	splice------> let data=["red","yellow","blue","black","white"]
+		data.splice(1,3);
+		console.log(data);//["red","white"]
+		
+                 let data=["red","yellow","blue","black","white"]
+                 
+                data.splice(1,3,"java");----> 1->Starting Index, 2--> Delete element (How many), 3--> insert and Replace
+		console.log(data);// ["red","java","white"]
+
+Removing all the value in array
+-----------------------------------------
+EX: let details=["red","yellow","blue"]
+	details=[];
+	console.log(details);//frequently used
+	
+using splice----> details.splice(0,details.length)
+	console.log(details);
+	
+using pop-----> while(details.length>0){
+	details.pop();
+	}
+	console.log(details);
+
+------>  details.length=0;
+	console.log(details);
+
+Combining 2 Arrays
+=================
+1.concat  EX;   let details=["red","yellow","blue"]
+	let data=[1,2,3,4]
+	let value=details.concat(data)///// take returntype
+	console.log(value);
+
+2. spread Operator EX:  let value1=[1,2,3,4,5]
+		let value2=[6,7,8,9,0]
+		let result=[...value1,...value2]
+		console.log(result);
+
+Joining in Arrays
+---------------------
+EX:  let data=["red","yellow","blue"]// red*yello*blue
+console.log(data.join("*"));
+output
+--------
+red*yellow*blue
+
+
+Splitting in array
+---------------------------
+it splits the words in array
+EX: let data="Iam learning javascript";
+let value=data.split(" ");
+console.log(value);
+output:
+----------
+['Iam','learning',',javascript']
+
+Finding an element to array
+=====================
+Primitive datatypes:
+------------------------
+1.indexOf
+2.lastIndexOf
+3.includes
+
+indexOf
+=========
+to find the particular index value
+
+EX:  let colors=["red","yellow","red","white"]
+console.log(colors.indexOf("red"));
+
+output:
+-----------
+
+0
+
+lastIndexOf--- to find the last index value
+====================
+EX:
+let colors=["yellow","blue","black","yellow"];
+console.log(colors.lastIndexOf("yellow"));
+
+Output
+---------
+3
+
+includes
+========
+if the value is present the result will be true or else false
+EX:
+let colors=["yellow","blue","black","yellow"];
+console.log(colors.includes("yellow"));
+
+output
+--------
+true
+
+Reference datatypes(objects)
+======================
+methods
+------------
+1.find----If the 1st value statisfy it will print
+2.findIndex----if the value statisfy at 0th index itself it will print the index value but if the value in 1st index statisfy it wont print
+3.filter---if all the value statisfy it will print all the value
+
+Find
+--------
+Example:
+	let vegitables=[
+
+	{id:1, vegName:"tomato",price:20},
+	{id:2, vegName:"onion",price:30},
+	{id:3, vegName:"banana",price:40},
+	{id:2, vegName:"onion",price:90},
+	];
+	let result=vegitables.find(function(veg){
+	return veg.vegName==="banana"
+	})
+	console.log(result);/////output:{id:3, vegName:"banana",price:40}
+findIndex
+-------------
+let vegitables=[
+	{id:1, vegName:"tomato",price:20},
+	{id:2, vegName:"onion",price:30},
+	{id:3, vegName:"banana",price:40},
+	];
+	let result=vegitables.findIndex(function(veg){
+	return veg.vegName==="banana"
+	})
+	console.log(result);/////output-2
+filter
+----------
+let results=vegitables.filter(function(veg){
+return veg.price>20
+})
+console.log(results);
+
+Extracting values in Array
+----------------------------------
+slice()---it will print the values with starting index and ending index(like substring in Java)
+EX:
+let details=["java","python","selenium","javascript"]
+console.log(details.slice(1,3));/////python, selenium
+
+
+Extracting values using forEach
+----------------------------------------------
+let details=["java","python","selenium","javascript"]
+details.forEach(function(data){
+console.log(data);
+})
+
+using arrow function
+-----------------------------
+details.forEach((data)=>{
+console.log(data);
+})
+
+Using forloop
+-------------------
+let details=["java","python","selenium","javascript"]
+for(let i=0,i<details.length;i++){
+console.log(details[i]);
+}
+
+Using forIn loop
+-----------------------
+let details=["java","python","selenium","javascript"]
+for(const key in details){
+console.log(details[key])
+}
+
+Using forOf loop
+-------------------------
+let details=["java","python","selenium","javascript"]
+for(const iterator of details){
+console.log(iterator)
+}
+
+Sorting
+=======
+to get the values in ascending order.
+EX:
+let a=[3,5,2,6,7]
+a.sort()
+console.log(a);
+
+Disadvantage:
+----------------------
+	it will check only the 1st value
+to overcome this we can use function,
+EX:
+	let a=[1,20,43,100,4,]
+	a.sort(function(a,b){// from a it will sort
+	return(a-b})///// a-b means ascending order,   b-a means decending order
+	console.log(a)
+
+Decending Order
+---------------------
+	let a=[1,20,43,100,4,]
+	a.sort(function(a,b){
+	return(b-a)})
+	console.log(a)
+
+Sorting in Object     (first letter of word)
+-----------------------
+let items=[
+{id:1, name:"redmi","isdeliverable:true},// it will print based on ASCII values--114
+ {id:2,name:"oppo",isdeliverable:true},///111
+ {id:3,name:"vivo",isdeliverable:true},///118
+]
+//a<b -1  //a>b 1 // ===0
+items.sort(function(a,b){
+if(a.name<b.name)return -1;
+if(a.name>b.name)return 1;
+return 0;
+})
+console.log(items);
+
+Output
+========
+{id:2,name:"oppo",isdeliverable:true}
+{id:1, name:"redmi",isdeliverable:true}
+{id:3,name:"vivo",isdeliverable:true}
+
+Reverse
+========
+EX:let a=[1,20,43,100,4,]
+a.reverse()
+console.log(a);   // [4,100,43,20,1]
+
+Every
+--------
+if all the conditions satisfies, the result will be true
+
+Ex:
+Let no=[23,55,42,56,17]
+let boolean=no.every(function(value){
+return value>=18;
+});
+console.log(boolean);/// false
+
+Some
+---------
+if one condition satisfy, the result will be true
+
+EX:
+Let no=[23,55,42,56,17]
+let boolean1=no.some(function(value){
+return value>=18;
+});
+console.log(boolean1);// true
+
+Every and some methods in object
+-----------------------------------------------
+EX:
+let items=[
+{id:1, name:"redmi",isdeliverable: true},
+{id:2, name:"oppo", isdeliverable: true},
+{id:3, name:"vivo", isdeliverable: true}
+]
+let boolean =items.every(function(value){
+return value.isdeliverable===true;
+})
+console.log(boolean);////true
+
+
+
+let items={
+{id:1, name:"redmi",isdeliverable: true},
+{id:2, name:"oppo", isdeliverable: true},
+{id:3, name:"vivo", isdeliverable: true}
+{;
+let boolean =items.some(function(value){
+return value.isdeliverable===true;
+})
+console.log(boolean);////true
+
+Mapping
+------------
+Let value=[1,2,3,4,5];
+let v=value.map((val)=>{
+return val*2
+})
+console.log(v);
+output
+---------
+[2,4,6,8,10]
+
+Mapping in objects
+---------------------------
+let details=[
+{id:1, firstname:"vijay", lastname:"kumar"},
+{id:2, firstname:"Ajith", lastname:"kumar"},
+{id:3, firstname:"Vinay", lastname:"kumar"},
+];
+let fullname=details.map(function(value){
+return value.firstname+" "+value.lastname
+})
+console.log(fullname);
+output
+-----------
+['vijay kumar','Ajith kumar','Vinay Kumar']
+
+

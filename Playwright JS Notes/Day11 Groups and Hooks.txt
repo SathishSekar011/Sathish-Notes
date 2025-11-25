@@ -1,0 +1,106 @@
+Day 11
+=======
+
+Hooks 
+Groups
+
+
+Hooks 
+=====
+1. beforeAll
+2. afterAll
+3. beforeEach
+4. afterEach
+
+
+Groups:
+========
+test.describe.only("Group1", ()=>{
+   test("Testcase_01", async function ({browser}) {
+      const context = await browser.newContext()
+      const page = await context.newPage()
+      await page.goto("https://demowebshop.tricentis.com/")
+      console.log("test case one");
+     
+   })
+   
+   test("Testcase_02", async function ({browser}) {
+      const context = await browser.newContext()
+      const page = await context.newPage()
+      await page.goto("https://testautomationpractice.blogspot.com/")
+      console.log("test case two executed");
+     
+   })
+})
+
+test.describe("Group2",()=>{
+   test("Testcase_03", async function ({browser}) {
+      const context = await browser.newContext()
+      const page = await context.newPage()
+      await page.goto('https://www.google.com/')
+      console.log("test case three");
+     
+   })
+   
+   test("Testcase_04", async function ({browser}) {
+   
+      const context = await browser.newContext()
+      const page = await context.newPage()
+      await page.goto("https://demo.competethemes.com/")
+      console.log("test case four");
+     
+   })
+   
+})
+
+
+Hooks 
+=====
+// https://www.google.com/
+
+const {test, expect} = require('@playwright/test')
+
+test.beforeAll(async()=>{
+console.log("before all executed");
+})
+test.afterAll(async()=>{
+   console.log("after all executed");
+})
+test.afterEach(async()=>{
+   console.log("after each executed");
+})
+test.beforeEach(async()=>{
+   console.log("before each executed");
+})
+
+
+
+test.describe.only("Group1", ()=>{
+   test("Testcase_01", async function ({page}) {
+      console.log("test case one");
+     
+   })
+   
+   test("Testcase_02", async function ({page}) {
+      console.log("test case two executed");
+     
+   })
+})
+
+test.describe("Group2",()=>{
+   test("Testcase_03", async function ({page}) {
+      console.log("test case three");
+     
+   })
+   
+   test("Testcase_04", async function ({page}) {
+      console.log("test case four");
+     
+   })
+   
+})
+
+
+
+
+

@@ -1,0 +1,48 @@
+For Each Loop:
+==============
+	- iterate on the basis of values in a variable
+	- for each value in a variable the loop will execute once
+	- for each time of execution the next value in the old variable will be assigned to the new variable
+
+Syntax:
+=========
+for(datatype newVariable:oldVariable){
+}
+
+int a[] = {10,20,30,40};
+
+for(int b:a){
+	Sysout(b);
+}
+
+1*   	b=10 --> loop will execute
+	==> 10
+
+2*   	b=20 --> loop will execute
+	==> 20
+
+3*	b=30 --> loop will execute
+	==> 30
+
+4*	b=40 --> loop will execute
+	==> 40
+
+5* 	b=no value --> loop terminted
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

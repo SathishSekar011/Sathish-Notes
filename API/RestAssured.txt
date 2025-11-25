@@ -10,6 +10,7 @@ Automation --> RestAssured --> Java Library used to automate Rest API
 			--> jackson databind
 			--> Rest Assured
 			--> hamcrest all
+			--> JSON Schema Validator
 
 --> Create a Class and Test
 
@@ -51,22 +52,86 @@ using static packages:
 ==> when()   --> Request
 ==> then()   --> Validations
 
+Response Body:
+==============
+	--> HashMap
+	--> POJO Object
+	--> JSONObject  --> (use to string)
 
+Content Type : application/json
 
+Authentication:
+===============
+	--> requestSpecification.auth().basic("username","password");
+	--> requestSpecification.auth().digest("username","password");
+	--> requestSpecification.auth().oauth2("token");
+	--> requestSpecification.header("Authorization", "Bearer " + bearerToken);
+	--> requestSpecification.header("api-key", apiKey);
+	--> requestSpecification.queryParam("api-key", apiKey);
 
+Assert:
+=======
+	--> statusCode();
+	--> body();
+	--> Header
+	--> Json Schema
+	--> time
 
 
+then.assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonschema));
+then().asserThat(JsonPath.with("json body").get("data.name"),hasItem("Sathish"));
+then().asserThat(JsonPath.with("json body").get("data.name"),hasItem("Sathish","Yogi")); 
+		--> to check atleast one item is present are not
+then().asserThat(JsonPath.with("json body").get("data.name"),contains("Sathish","Yogi"));
+		--> to check prescence of all items in same given order
+then().asserThat(JsonPath.with("json body").get("data.name"),containsInAnyOrder("Sathish","Yogi"));
+		--> to check prescence of all items in any order
 
 
+public class Steps {
+	RequestSpecification requestSpecification;
+	Response response;
 
+	@Given("User Sets the necessary parameters")
+	public void user_sets_the_necessary_parameters() {
+		HashMap map = new HashMap();
+		map.put("Sasa", "a");
 
+		requestSpecification = RestAssured.given().contentType("application/json").body(map);
+	}
 
+	@When("User send GET Request")
+	public void user_send_get_request() {
+		response = requestSpecification.when().post("https://reqres.in/api/users");
+	}
 
+	@Then("Validate the Response code")
+	public void validate_the_response_code() {
+		String asPrettyString = response.body().asPrettyString();
+		System.out.println(asPrettyString);
+		String asPrettyString2 = response.getBody().asPrettyString();
+		String string = response.body().jsonPath().get("Sasa").toString();
+		System.out.println(asPrettyString2);		
+		response.then().assertThat().body("Sasa", Matchers.equalTo("a"));
+		File file = new File("C:\\Users\\Lenovo\\eclipse-workspace\\RestAPITesting\\src\\test\\resources\\schema.json");
+		response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(file));
+		response.then().assetThat().header("Content-Type", "application/json");
+		
+	}
 
+}
 
+To print all data belongs to id:
+================================
+.then().extract().jsonPath().getString("employees.find { it.id == " + desiredId + " }");
 
+To print only name belongs to id:
+================================
+.then().extract().jsonPath().getString("employees.find { it.id == " + desiredId + " }.name");
+	
 
 
+//span[@class='a-price-whole' and translate(text(),',','')<10000]/ancestor::div[@class='puisg-row']/preceding-sibling::div[@data-cy='title-recipe'][not(.//div)]
 
 
 
@@ -114,7 +179,10 @@ using static packages:
 
 
 
+js.executeScript("arguments[0].setAttribute('value','text')",ele);
 
+
+element.getScreenShotAs(OutputType.FILE);
 
 
 

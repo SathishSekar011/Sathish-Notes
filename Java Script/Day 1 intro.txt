@@ -1,0 +1,164 @@
+
+Javascript: mocha, livescript
+===========
+* Javascript (JS) is a cross-platform,object-oriented programming language used by developers to make web pages interactive.
+* It allows developers to create dynamically updating content, use animations,pop-up menus, clickable buttons, control multimedia, etc.
+
+With javascript, we can build:
+==============================
+1. Websites- amazon,facebook ect..
+2. Web app- remote server
+3. Mobile apps- installed by  	Google Play Store
+4. Games-puzzle solving
+5. Ai and machine learning(TensorFlow -NLP)
+
+Why we should learn javascript:
+==============================
+1. Great career opportunity
+2. Easy to learn
+3. Wide range of usages
+4. Easy to solve the issues
+
+* Cypress only support - javascript
+* Palywright - javascript, python, c# and java
+* Selenium - javascript, java, python, ruby, c#
+
+Javascript frameworks:
+======================
+1. React js
+2. Vue js
+3. Angular js
+4. Electron js
+
+Javascript careers:
+===================
+1. Front end developer
+2. Back end developer
+
+Why we go for node:
+===================
+* Previously - Browser having the javascript engine, using javascript engine the javascript will run only for browsers(javascript engine inbuild for the browser).
+* Now we have the node, using node without javascript engine, we can run the browser.
+Using node, we can create
+1. Web applications
+2. Mobile applications
+3. Backend applications
+
+Softwares need to download:
+===========================
+1. Vs code - after download vs code and add plugin of live server.
+2. Node js
+
+Node.js:
+=======
+Node.js is an open source, cross platform, back end javascript runtime environment that runs on the v8 engine
+ and executes javascript code outside a web browser.
+
+Download Node.js:
+=================
+1. Download node.js based on bits(32, 64).msi file
+2. Install ths node.js
+3. Set path to system environmental variables
+4. Under system variables we have a path select and click on edit
+5. Click new button and paste the path of node file
+6. Where i get the path
+   go to C-drive -> program files -> nodejs -> copy the path( c:\program file\nodejs)
+7. Paste the path to system variables path and click on ok
+8. Open command prompt type node -v its shows version of node.
+
+VS code:
+========
+1. Search vs code download in local machine
+2. Open first link and download vs code zip file
+3. Extract zip file and open exe file open to install
+
+
+
+Did You Know?
+JavaScript and Java are completely different languages, both in concept and design.
+
+JavaScript was invented by Brendan Eich in 1995, and became an ECMA(European Computer Manufacturers Association) standard in 1997.
+
+ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.
+
+ECMAScript is the official name of the language.
+
+ECMAScript versions have been abbreviated to ES1, ES2, ES3, ES5, and ES6.
+
+Since 2016, versions are named by year (ECMAScript 2016, 2017, 2018, 2019, 2020).
+
+ECMAScript Editions
+
+Ver	Official Name	Description
+ES1	ECMAScript 1 (1997)	First edition
+ES2	ECMAScript 2 (1998)	Editorial changes
+
+ES3	ECMAScript 3 (1999)	Added regular expressions
+
+                                Added try/catch
+                                Added switch
+                                Added do-while
+
+ES4	ECMAScript 4	Never released
+
+ES5	ECMAScript 5 (2009)
+
+                                Added "strict mode"
+                                Added JSON support
+                                Added String.trim()
+                                Added Array.isArray()
+                                Added Array iteration methods
+Allows trailing commas for object literals
+
+
+ES6	ECMAScript 2015
+
+Added let and const
+Added default parameter values
+Added Array.find()
+Added Array.findIndex()
+ECMAScript 2016
+
+Added exponential operator (**)
+Added Array.includes()
+
+ECMAScript 2017
+
+Added string padding
+Added Object.entries()
+Added Object.values()
+Added async functions
+Added shared memory
+Allows trailing commas for function parameters
+
+ECMAScript 2018
+
+Added rest / spread properties
+Added asynchronous iteration
+Added Promise.finally()
+Additions to RegExp
+
+ECMAScript 2019
+
+String.trimStart()
+String.trimEnd()
+Array.flat()
+Object.fromEntries
+Optional catch binding
+
+ECMAScript 2020
+
+The Nullish Coalescing Operator (??)
+
+
+Task:
+=====
+1) Install visual studio code, node js and verify in cmd and share the screenshot
+2) Write HTML for the web page contains title
+	i) Learning JScourse
+	ii)GreensTechnologys, Velachery
+	iii)FullStackDeveloper
+3) Write a javascript for showing alert message like
+	i)Accept me
+	ii)Hi,How are you
+	iii)I am Learning Javascript course

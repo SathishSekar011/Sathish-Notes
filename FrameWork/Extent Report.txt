@@ -1,4 +1,4 @@
-xExtent Report:
+Extent Report:
 =================
 
 Step 1: Add Extent Report Dependency:

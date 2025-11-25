@@ -1,0 +1,100 @@
+Excel Read and write
+====================
+Step1: create sample excel file 
+Step2: paste this excel file in project folder 
+Step3: open terminal and type npm install exceljs
+Step4: check packages added message 
+Step5: open package.json file and check the exceljs version displayed or not 
+
+Step6: create javascript class 
+Step7: import exceljs class 
+	eg: const ExcelJs = require('exceljs')
+Step8: create object for workbook 
+	eg: const workbook = new ExcelJs.Workbook()
+Step9: then read the files 
+	
+	workbook.xlsx.readFile("C:/Users/user/Desktop/JavaScriptDay1/UploadFiles/excelDetailsSheet.xlsx").then(function () {
+    const sheet = workbook.getWorksheet('Sheet1');
+    sheet.eachRow((row,rowNumber)=>{
+    row.eachCell((cell, colNumber)=>{
+        console.log(cell.value)
+        
+    })
+})
+
+})
+
+Ste10: execute the file->  node C:\Users\user\Desktop\JavaScriptDay1\tests\excelRead.js
+
+Get matched rownumber and colNumber
+=====================================
+
+const ExcelJs = require('exceljs')
+const workbook = new ExcelJs.Workbook()
+workbook.xlsx.readFile("C:/Users/user/Desktop/JavaScriptDay1/UploadFiles/excelDetailsSheet.xlsx").then(function () {
+    const sheet = workbook.getWorksheet('Sheet1');
+    sheet.eachRow((row,rowNumber)=>{
+    row.eachCell((cell, colNumber)=>{
+        if(cell.value === "ms"){
+            console.log(rowNumber);
+            console.log(colNumber);
+        }
+        
+    })
+})
+
+})
+
+How to promise the steps using await
+======================================
+const ExcelJs = require('exceljs')
+
+async function getData() {
+    const workbook = new ExcelJs.Workbook()
+    await workbook.xlsx.readFile("C:/Users/user/Desktop/JavaScriptDay1/UploadFiles/excelDetailsSheet.xlsx")
+    const sheet = workbook.getWorksheet('Sheet1');
+    sheet.eachRow((row,rowNumber)=>{
+    row.eachCell((cell, colNumber)=>{
+        if(cell.value === "ms"){
+            console.log(rowNumber);
+            console.log(colNumber);
+        }
+        
+    })
+})
+}
+
+getData()
+
+
+How to update the data to excel
+================================
+const ExcelJs = require('exceljs')
+
+
+async function getData() {
+    let output = {row:-1, column:-1}
+    const workbook = new ExcelJs.Workbook()
+    await workbook.xlsx.readFile("C:/Users/user/Desktop/JavaScriptDay1/UploadFiles/excelDetailsSheet.xlsx")
+    const sheet = workbook.getWorksheet('Sheet1');
+    sheet.eachRow((row,rowNumber)=>{
+    row.eachCell((cell, colNumber)=>{
+        if(cell.value === "ms"){
+            console.log(rowNumber);
+            console.log(colNumber);
+            output.row = rowNumber
+            output.column = colNumber
+        }
+        
+        })
+    })
+    const cell = sheet.getCell(output.row, output.column)
+    cell.value = "mahendra singh"
+    await workbook.xlsx.writeFile("C:/Users/user/Desktop/JavaScriptDay1/UploadFiles/excelDetailsSheet.xlsx")
+
+
+}
+
+getData()
+
+

@@ -1,0 +1,341 @@
+Control statements:
+===================
+1. Conditional
+2. Looping
+3. Jumping
+
+Conditional statement:
+======================
+1. if
+2. if else
+3. nested if
+4. switch case
+
+true -> set of statement
+false -> set of statement
+
+if:
+---
+Syntax
+======
+if(condition){
+logics to perform
+}
+if block accepts -> Boolean -> true or false
+if(true){}-> enter into the block
+if(false){}-> cannot enter into the block
+
+condition -> true -> enter into the if block -> logics will be perform
+
+if else:
+--------
+syntax
+======
+if(condition){
+business logics
+}else{
+buisness logics
+}
+
+condition  -> true -> enter into the if block -> busines logic will perform
+condition  -> false -> enter into else block -> else block business logic will perform						
+
+
+let age=20;
+
+if(age>18){
+console.log("Eligible to vote");
+}else{
+console.log("Not eligible to vote");
+}
+
+//either if block or else block
+//true -> if block, false -> else block
+if(true){
+    console.log("conditon true : if block will execute");
+}else{
+    console.log("condition false : else block will execute");
+}
+
+Logical operators:
+------------------
+//and operator , or operator
+//and -> && , or -> ||
+//possible to add two condtions  or more conditions in if block -> (condition1 condition2 condition3)
+
+// && - and operator -> all conditions true -> then only it will enter into the block
+// || - or operator  ->either one condition true -> then it will enter into the block
+
+nested if:
+----------
+Syntax:
+=======
+if(condition){
+  business logic;
+  }
+else if(condition){
+  business logic;
+  }
+else if(condition){
+  business logic;
+  }
+else{
+  business logic;
+  }
+// if- hour is between 12am(0) to 12pm(12)-> good morning
+//else if- hour is between 12pm(12) to 3pm(15)-> good afternoon
+//else - hour is between 3pm(15) to 12am(0)-> good evening
+
+and (&&):
+---------
+let hour=15;
+if(hour>=0 && hour<=12){
+    console.log("good morning");
+}
+else if(hour>=12 && hour<=15){
+    console.log("good afternoon");
+}
+
+else{
+    console.log("good evening");
+}
+
+or (||):
+--------
+let age=20;
+let gender="male";
+if(age>18 || gender=="female"){
+    console.log("eligible");
+}
+
+switch case:
+------------
+Syntax:
+=======
+switch(variable){
+case 1:{
+     business logic;
+     break;
+     }
+case 2:{
+     business logic;
+     break;
+     }
+default:{
+     businness logic;
+     }
+
+let mon=1;
+switch(mon){
+    case 1:{
+        console.log("jan");
+        break;
+    }
+     case 2:{
+        console.log("feb");
+        break;
+    }
+     case 3:{
+        console.log("mar");
+        break;
+    }
+    default:{
+        console.log("not found");
+    }
+
+}
+
+
+
+let trafficLight = "green";
+let message = ""
+ 
+switch (trafficLight) {
+    case "red":
+        message = "Stop immediately.";
+        break;
+    case "yellow":
+        message = "Prepare to stop.";
+        break;
+    case "green":
+        message = "Proceed or continue driving.";
+        break;
+    default:
+        message = "Invalid traffic light color.";
+}
+ 
+console.log(message)
+
+Looping statement:
+==================
+1. for loop
+2. while loop
+3. do while loop
+4. for in loop
+5. for of loop
+
+Same logic can be repeated we use looping  statement.
+ex, print 1 to 10
+console.log(1);
+console.log(2);
+console.log(3);
+console.log(4);
+......
+start=1, end =10, one by one increment
+initialization(start), condition(end), inc/dec 
+condition-true - loop start - untill the condition fail the loop will not break
+
+for loop:
+=========
+Syntax:
+	 for(initial expression; condition; inc/dec){
+		console.log();
+		}
+ex:
+	for(let i=1;i<=5;i++){-------i--->index
+	console.log(i);
+	}
+
+while loop:
+===========
+syntax:
+
+        initial expression;
+	while(condition){
+	console.log();
+        inc/dec;
+	}
+	
+
+Ex:
+	let i=15;
+	while(i>=1){
+	console.log(i);
+        i--;
+	}
+
+do while loop
+===========
+syntax:
+	initial expression
+	do{
+	console.log();
+        inc/dec;
+	} 
+        while(condition);
+
+EX:
+	let i=20;
+	do{
+	console.log(i);
+        i--;
+	}
+        while(i>=1);
+
+For in loop(index)
+==========
+Syntax:
+	object or Array
+	for(variable variablename in array/object name){
+	//code
+	}
+
+//for in
+ex:
+let person={
+    name:"siva",
+    age:23,
+    gender:"female"
+}
+for(let key in person){
+   // console.log(key);
+   // console.log("Key:",key);
+   // console.log(person[key]);
+      console.log(key +":",person[key]);
+}
+
+
+we can use 2 notations for calling objects
+	1.dot notation(.)
+	2.Bracket notation([])
+EX:
+
+const person={
+	name:'Yuvasri',
+	age:27,
+	sex:'female'
+	};
+
+	for(let key in person){
+	console.log("Key:", person[key]);  //bracket notation
+	}
+        for (let key of Object.Values(person)) {
+    console.log(key);
+}
+ 
+
+
+for in Array:
+------------------
+EX:	let colors=['red','blue','green'];
+	for(let key in colors){
+		console.log(key);   //////output:  0 1 2
+		console.log(colors[key]); /////output: red blue green
+		}
+
+for of loop(value)
+==========
+EX:
+	for(let color of colors){
+	console.log("color:"+color);//color:red blue green
+	}
+
+Jumping statements:
+===================
+1) break ........>>> it will terminate the loop ( use only in inside the loop ).
+2) continue .....>>> it will skip the particular value ( use only in inside the loop ).
+
+break:
+-----
+for(let i=0;i<=10;i++){
+if(i>5){
+    break;
+}
+console.log(i);
+}
+
+continue:
+---------
+for(let i=0;i<=10;i++){
+    if(i==0){
+        continue;
+    }
+    console.log(i);
+    }
+    	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

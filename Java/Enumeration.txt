@@ -10,7 +10,12 @@ Three Types:
 
 Enumeration:
 ============
-	- Used to retrive data from old collection objects(legacy collection)
+	- also known as Legacy Cursor
+	- Introduced in JDK 1.0
+	- Used with legacy classes like Vector, Hashtable
+	- Read-only traversal — cannot remove or modify elements
+	- Forward-only traversal
+	
 
 Enumeration e = v.element();
 	v ==> Vector
@@ -31,7 +36,22 @@ Limitations:
 	--> Only Legacy Classes(not universal)
 	--> can't able to remove , replace and add
 
+--------------------------------------
+public class EnumerationExample {
+    public static void main(String[] args) {
+        Vector<String> vector = new Vector<>();
+        vector.add("Java");
+        vector.add("Selenium");
+        vector.add("RestAssured");
 
+        Enumeration<String> e = vector.elements();
+        System.out.println("Enumeration traversal:");
+        while (e.hasMoreElements()) {
+            System.out.println(e.nextElement());
+        }
+    }
+}
+---------------------------------------------
 
 
 

@@ -1,0 +1,156 @@
+PlayWright
+===========
+* Playwright enables reliable end to end testing for modern web apps with its auto wait capability	 
+* Application supported: Web Browser apps , mobile web apps, API
+* languages supported: javaScript, TypeScript, java,python, .Net
+* Browsers suppoted: Chromium, webKit(safari), fire fox -> headed and headless
+* OS supported: windows, mac , linux, supported CI runs
+* playwright have excellent inbuild features called Traces which can take automatic screenshots, test video recording flaky test retry& logging mechanism 
+* playwright provides inspector tool which help us to moniter and debug every step of execution, see click points and verify page locators on fly
+* playwright has inbuild API testing libraries to fire the network calls on fly with in web application.(test edge cases scenarios with the mix of web and API testing)
+* playwrights provides browser context feature which helps to save and transfer the browser state to any other new browser.
+* playwright provides codegen tool which Generate test code by recording your actions. save them into any language.
+
+Why Playwright?
+================
+
+1 Reliable End-to-End Testing
+-----------------------------
+Playwright's Auto-wait capability ensures reliable and stable end-to-end testing for modern web applications, even in the face of dynamic and complex user interactions. I
+	eg:
+		if like to click any element 
+		locator.click() -> first it will check 
+				1. Element should be visible 
+				2. Element should be stable 
+				3. Element should be enable 
+			If these conditions aren’t met within the default timeout (usually 30 seconds), it throws a TimeoutError.
+		https://playwright.dev/docs/actionability
+
+2. Multiplatform Support
+-------------------------
+Playwright works seamlessly on Windows, macOS, and Linux, and also supports native mobile emulation for Google Chrome on Android and Safari on IOS, enabling comprehensive testing across different devices and operating systems.
+
+3. Cross-Browser Compatibility
+--------------------------------
+Playwright supports all major browsers, including Chromium-based (Chrome and Edge), Firefox, Safari (WebKit), and Opera, allowing you to test your web applications across a wide range of browsers and platforms.
+
+4. Multi language Flexibility
+-----------------------------
+Playwright provides language bindings for JavaScript, TypeScript, Java, Python, and C# (.NET), allowing you to choose the programming language that best fits your team's preferences and expertise
+
+
+Features Playwright:
+--------------------
+1. Free and open source
+2. suports multi browsers and multi languages 
+3. Easy set up and configurations
+4. Functional, API, accessbility testing 
+5. generates Build in reports and custom reports 
+6. suports for cloud based execution like CI CD , Docker
+7. suports parrallel testing 
+8. Auto wait is available 
+9. Contains Build in assertions 
+10. supports multi tap and multi windows 
+11. supports or handles frames and shadow elements
+12. Test parameter
+13. Emulate mobile devices 
+14. ! we can track the each and every step before screenshot and after screenshot
+It’s also check the field is enable or not , editable or not , visible or not , default scrolling available for element 
+
+Playwright's Advanced Features
+==============================
+
+1. Tracing and Debugging
+---------------------
+Playwright's built-in tracing and debugging capabilities, including automatic screenshots, test video recording, and comprehensive logging, to simplify the process of identifying and resolving issues in your test suite.
+
+2. Network Interception
+---------------------
+Utilize Playwright's API testing libraries to intercept and validate network calls within your web application, enabling you to test edge case scenarios and ensure the resilience of your application's network interactions.
+
+3. Browser Context Management
+--------------------------------
+Explore Playwright's browser context feature, which allows you to save and transfer browser state across your test suite, improving test efficiency and reducing the overhead of setting up the same browser state for each test case.
+	eg: we can login to application one time with valid credentials 
+		open incognito also it will get all cache and cookies for the previous window - using this without login we can directly moved to 		dashboard page
+
+4. Codegen Tool
+---------------
+Discover Playwright's codegen tool, which can generate test code by recording your actions, saving you time and effort In creating initial test cases and providing a starting point for further customization
+
+
+
+Installation:
+=============
+1. Node js 
+2. VS code 
+
+what is Node.js
+===============
+ * node.js is an open source, cross platform, back end javascript runtime environment that runs on the v8 engine and executes javascript code outside the browser.
+
+Install Playwright:
+-------------------
+Step1: open VS code 
+step2: Create folder in local machine 
+step3: Open same folder in VS code 
+Step4: go to extension search Playwright test for VS Code 
+	install 
+Step5: go to View Click on command palette - search "test: install playwright" 
+	choose browsers what you need and select javaScript also
+	and click on button 
+	Automatically downloaded the playwright
+	
+	npm init playwright@latest --yes -- --quiet --browser=chromium 
+	--browser=firefox --browser=webkit --gha
+ or 
+
+Step4: Open terminal 
+	npm init playwright
+	
+	
+
+it provides some folder structure 
+Node modules
+tests			-- we can add all the tests 
+tests example
+package-lock.json
+package.json 		-- node project management file 
+playwright.config.ts	-- playwright configuration - its like runner file
+
+
+
+Inside that directory, you can run several commands:
+
+  npx playwright test
+    Runs the end-to-end tests.
+
+  npx playwright test --ui
+    Starts the interactive UI mode.
+
+  npx playwright test --project=chromium
+    Runs the tests only on Desktop Chrome.
+
+  npx playwright test example
+    Runs the tests in a specific file.
+
+  npx playwright test --debug
+    Runs the tests in debug mode.
+
+  npx playwright codegen
+    Auto generate tests with Codegen.
+
+We suggest that you begin by typing:
+
+    npx playwright test
+ 
+
+
+Run default test cases provide by the smaple project:
+----------------------------------------------------
+npx playwright test 
+npx playwright test --headed
+
+To open last HTML report run:                                                                     ──
+-----------------------------                                                                                                  ──
+  npx playwright show-report

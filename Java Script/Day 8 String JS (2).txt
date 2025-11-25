@@ -1,0 +1,90 @@
+String
+======
+
+//String- collection of characters/words
+//String - starting index - 0, last Index - stringref.length-1(n-1)
+//length -> gives the length of the String
+
+const string1 = "A string primitive";//Declaration 1
+const string2 = 'Also a string primitive';//Declaration 2
+const string3 = `Yet another string primitive`;//Declaration 3 const string4 = new String("A String object");//Declaration 4
+
+console.log(typeof (string1));//string
+console.log(typeof string2);//string
+console.log(typeof string3);//string
+console.log(typeof string4);//object
+
+//charAt -> arguments - index, return -> string(character corresponding to the index)
+
+let character = string1.charAt(0);
+console.log(character);//A
+console.log(string1.charAt(string1.length-1));//e-last index
+
+//toLowerCase() -> converting the entire string into lowercase
+console.log(string1.toLowerCase());//a string primitive
+
+//toUpperCase() -> converting the entire string into uppercase
+console.log(string1.toUpperCase());//A STRING PRIMITIVE
+
+//concat -> add two strings
+console.log(string1.concat(string2));
+
+//startsWith -> arguments - string, return - Boolean, -> Case sensitive
+//Check the string startswith given string
+console.log(string1.startsWith('A'));//true
+console.log(string1.startsWith('B'));//false
+console.log(string1.startsWith('a'));//false 
+
+//endsWith -> arguments - string, return - Boolean -> Case sensitive
+//check the string endswith given string
+console.log(string1.endsWith("e"));//true
+console.log(string1.endsWith("a"));//false
+console.log(string1.endsWith("E"));//false
+
+//indexOf -> arguments - string -> return - number
+//to find the first index of the given value in the string
+
+console.log(string1.indexOf("i"));//5
+console.log(string1.indexOf("@"));//-1
+
+//lastIndexOf -> arguments - String, return - number
+console.log(string1.lastIndexOf("i"));//l5
+console.log(string1.lastIndexOf("@"));//-1
+
+const string1 = "A string primitive";
+
+//replace - accepts two arguments - value needs to be updated, updating value 
+//will update only the given first index value
+
+console.log(string1.replace("A","B"));//B string primitive
+console.log(string1.replace("i","B"));//A strBng primitive
+console.log(string1.replace("#","B"));//A string primitive -> No change,because value needs to be updated not present in the String
+
+//replaceAll -> accepts two argument - value needs to be update, updating value
+//bt replace the value in the string everywhere it matches
+console.log(string1.replaceAll("i","Replaced"));//A strReplacedng prReplacedmReplacedtReplacedve
+
+//slice -> arguments - single index- returns all the value from that index
+//slice -> arguments - two index - return the values inbetween of these index
+console.log(string1.slice(5));//ing primitive
+console.log(string1.slice(2,5));//str
+
+//split -> arguments -> string, return - array
+console.log(string1.split('i'));//[ 'A str', 'ng pr', 'm', 't', 've' ]
+
+//includes -> arguments -> check whether the string contains a particular value or not
+console.log(string1.includes("A"));
+
+//repeat -> arguments -> repeat the content based on arguments
+console.log(string1.repeat(5));
+
+//trim -> trim the unwanted spaces
+console.log(string1.trim());//A string primitive0
+
+let s="  spring contains unwanted spaces    "
+console.log(s);//  spring contains unwanted spaces    
+console.log(s.trim());//spring contains unwanted spaces  -> remove both end and start unwanted space
+console.log(s.trimEnd());//  spring contains unwanted spaces  -> remove only end unwanted space
+console.log(s.trimStart());//spring contains unwanted spaces  -> remove only start unwanted space
+
+

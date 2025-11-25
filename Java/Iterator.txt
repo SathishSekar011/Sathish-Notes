@@ -1,8 +1,13 @@
 Iterator:
 =========
+	- Introduced in JDK 1.2
+	- Works with all collection classes (ArrayList, HashSet, etc.)
 	- Universal cursor - can retrive data from any collection
-	- Remove operation can be done iterator 
+	- Fail-fast — throws ConcurrentModificationException if modified outside iterator
 
+Supports:
+	- Forward traversal
+	- Element removal using remove()
 
 ==> Iterator i = c.iterator();
 	c--> Collection
@@ -20,6 +25,29 @@ Limitations of Iterator:
 	- will move in a single direction(only forward directional)
 	- can't perform replacement operation
 
+import java.util.*;
+
+public class IteratorExample {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("Java");
+        list.add("Selenium");
+        list.add("API");
+
+        Iterator<String> itr = list.iterator();
+        System.out.println("Iterator traversal:");
+        while (itr.hasNext()) {
+            String value = itr.next();
+            if (value.equals("API")) {
+                itr.remove(); // removing element
+            } else {
+                System.out.println(value);
+            }
+        }
+
+        System.out.println("After removal: " + list);
+    }
+}
 
 
 

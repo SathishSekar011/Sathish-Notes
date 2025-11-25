@@ -33,7 +33,7 @@ Create the Account GITHUB:
 
 Steps:
 ======
-1) Right Click(Anywhere in a fiolder) --> GIT Bash here
+1) Right Click(Anywhere in a folder) --> GIT Bash here
 
 2) Configuring with GITHUB
 ===========================
@@ -67,12 +67,68 @@ Steps:
 
 
 
+
+Steps:
+========
+Configuration:
+--------------
+1) Initialize the Local Repository
+	--> $ git init
+2) Create the Remote Repository in GitHub
+	
+3) Link the Local and Remote Repository
+	i) Configure username and email
+	--> $ git config --global user.name "username"
+	--> $ git config --global user.email "emailid"
+	ii) Add the Remote repository
+	--> $ git remote add origin "repository url"
+
+Defining Versions:
+------------------
+4) Add to Staging Area
+	--> $ git add "filename.ext"    ==> to add a single file
+	--> $ git add .			==> to add all file
+
+5) Commit to Local Repository
+	--> $ git commit -m "message"
+
+6) Push to Remote Repository
+	--> $ git push -u origin master
+
+
+
+
+
+
+
+
+
 --> For the First Time in a Project:
 	- we have to clone the existing data
 
-==> git clone repourl      --> to clone a repository
-==> git pull		   --> to get the updated code
-==> git checkout	   --> to switch the branches
+==> git clone repourl      	   --> to clone a repository
+==> git pull		  	   --> to get the updated code from all branches
+==> git pull origin <branchname>   --> to get the updated code from particular branches
+==> git log 		           --> to get the commit details
+==> git log --oneline              --> to get the commit details precisely
+==> git checkout <branchname>	   --> to switch the branches
+==> git checkout <commit_hash>	   --> to switch the branches
+==> git restore --staged filename  --> to remove a from staging area
+==> git stash			   --> to remove all files from staging area
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

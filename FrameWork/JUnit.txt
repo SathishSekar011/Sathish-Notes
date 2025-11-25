@@ -84,7 +84,7 @@ ASSERTS:
 ==> assertNull(string5);
 ==> assertTrue(condition);
 ==> assertFalse(condition);
-==>assertArrayEquals(airethematicArrary1, airethematicArrary2);
+==> assertArrayEquals(airethematicArrary1, airethematicArrary2);
 
 
 

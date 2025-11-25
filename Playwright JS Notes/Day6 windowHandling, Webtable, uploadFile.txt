@@ -1,0 +1,136 @@
+1. how to handle child windows
+==============================
+	* here i am going use concept called newContext and newPage concepts 
+
+	* And i am going to use waitForEvent('page')-> method if any new page open its going to fetch the new page details 
+
+	*  use waitForEvent('page') method before clicking the page navigation method 
+	
+	* use promise.all([])-> method its used to promose the array of lines here i am able to pass the multiple lines of code 
+	
+	* based newpages it  will return array of pages line const [newPage1, newPage2, newPage3]
+
+	* i need to handle first child window then use newPage1.locator("cssselector").click();
+
+ 
+
+import {test, expect} from '@playwright/test'
+
+test.only("Test_01", async({browser})=>{
+  
+  const context = await browser.newContext()
+  const page = await context.newPage()
+
+  const newTab = page.locator("//button[text()='New Tab']")
+  
+  await page.goto("https://testautomationpractice.blogspot.com/")
+  const [newPage] = await Promise.all([
+    context.waitForEvent('page'),// we have 3 states pending, fullfilled, rejected
+    newTab.click()
+  ])
+  const text = await newPage.locator("(//ul//li//a)[1]").textContent()
+  expect("Home").toEqual(text)
+
+// to go for parent window 
+await nameTextBox.fill("Tester")
+
+})
+
+
+
+How To Handle WebTables:
+========================
+// sttaic webTable
+   await page.goto("https://testautomationpractice.blogspot.com/")
+   const rows = await page.locator("[name='BookTable'] tbody tr")
+   console.log(await rows.count());
+   await expect(await rows.count()).toBe(7);
+
+   const matchedRow = rows.filter({
+      has: page.locator('td'),
+      hasText: 'Master In Java'
+   });
+  1.  // find the perticular value
+   console.log(await matchedRow.locator('td').nth(2).textContent())
+   await expect(await matchedRow.locator('td').nth(2).textContent()).toEqual("JAVA");
+
+  2.  // get all the cell values 
+   const totalRows = await rows.count()
+   for(let i=0;i<totalRows;i++){
+      const totalCells = await rows.nth(i).locator('td')
+      console.log(await totalCells.count());
+      const totalCellsCount = await totalCells.count()
+      for(let j=0;j<totalCellsCount;j++){
+         console.log(await totalCells.nth(j).textContent())
+      }
+   }
+
+3. //get the perticular value 
+   await page.goto("https://testautomationpractice.blogspot.com/")
+   const rows = await page.locator("[name='BookTable'] tbody tr")
+
+   // get all the cell values 
+   const totalRows = await rows.count()
+   for(let i=1;i<totalRows;i++){
+      const value = await rows.nth(i).locator('td').nth(0).textContent()
+         if(value.includes("Master In Java")){
+            console.log(await rows.nth(i).locator('td').nth(2).textContent())
+            break
+         }
+   }
+
+
+4. //handle dyanamic table
+   await page.goto("https://testautomationpractice.blogspot.com/")
+   const rows = await page.locator("[id='taskTable'] tbody tr")
+
+   // get all the cell values 
+   const totalRows = await rows.count()
+   for(let i=0;i<totalRows;i++){
+      const value = await rows.nth(i).locator('td').nth(0).textContent()
+         if(value.includes("Internet Explorer")){
+            console.log(await rows.nth(i).locator('td').nth(3).textContent())
+            break
+         }
+   }
+
+5. //handle dyanamic table
+   await page.goto("https://testautomationpractice.blogspot.com/")
+   const rows = await page.locator("[id='productTable'] tbody tr")
+
+   // click on perticular check box 
+   const totalRows = await rows.count()
+   for(let i=0;i<totalRows;i++){
+      const value = await rows.nth(i).locator('td').nth(1).textContent()
+         if(value.includes("Tablet")){
+            await rows.nth(i).locator("td [type='checkbox']").click()
+            break
+         }
+   }
+
+
+
+File upload:
+============
+1. //handle single file upload
+   await page.goto("https://testautomationpractice.blogspot.com/")
+   const chooseFileBtn =  page.locator("#singleFileInput")
+
+   await chooseFileBtn.setInputFiles("UploadFiles/Maheshwaran .V (3).pdf")
+
+   await page.locator("//button[text()='Upload Single File']").click()
+
+2. // handle multiple file upload 
+   await page.goto("https://testautomationpractice.blogspot.com/")
+   const chooseFileBtn =  page.locator("#multipleFilesInput")
+
+   await chooseFileBtn.setInputFiles(["UploadFiles/Maheshwaran .V (3).pdf", "UploadFiles/Maheshwaran .V (3) - Copy.pdf"])
+
+   await page.locator("//button[text()='Upload Multiple Files']").click()
+
+
+
+
+
+
+

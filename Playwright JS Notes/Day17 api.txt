@@ -1,0 +1,104 @@
+Day17
+=====
+GET 
+POST
+PUT
+DELETE
+
+GET
+===
+test.only("Get the date from server", async function({request}) {
+      const response = await request.get("https://reqres.in/api/users/2");
+      const responsebody = await response.json()
+      console.log(responsebody);
+      expect(await response.status()).toBe(200)
+   })
+
+validate body details
+---------------------
+test.only("Get the date from server", async function({request}) {
+      const response = await request.get("https://reqres.in/api/users/2");
+      const responsebody = await response.json()
+      console.log(responsebody);
+      expect(await response.status()).toBe(200)
+      expect(await responsebody.data.first_name).toBe("Janet")
+      console.log(responsebody.data.id);
+   })
+
+POST
+====
+post request need to get auth id otherwise it will return 401
+
+test.only("create date from server", async function({request}) {
+      const response = await request.post("https://reqres.in/api/users",{
+         data:{
+               "name": "morpheus",
+               "job": "leader"
+         },
+         headers:{
+            "Content_Type":"application/json",
+            "x-api-key":"reqres-free-v1"
+         }
+
+      });
+      const responsebody = await response.json()
+      console.log(responsebody);
+      expect(await response.status()).toBe(201)
+      expect(await responsebody.name).toBe("morpheus")
+   })
+
+
+
+PUT
+====
+var userId;
+   test.only("create date from server", async function({request}) {
+      const response = await request.post("https://reqres.in/api/users",{
+         data:{
+               "name": "morpheus",
+               "job": "leader"
+         },
+         headers:{
+            "Content_Type":"application/json",
+            "x-api-key":"reqres-free-v1"
+         }
+
+      });
+      const responsebody = await response.json()
+      console.log(responsebody);
+      expect(await response.status()).toBe(201)
+      expect(await responsebody.name).toBe("morpheus")
+      userId = await responsebody.id
+   })
+
+   test.only("update date from server", async function({request}) {
+      const response = await request.put("https://reqres.in/api/users/"+userId,{
+         data:{
+               "name": "Vijay",
+               "job": "QA Tester"
+         },
+         headers:{
+            "Content_Type":"application/json",
+            "x-api-key":"reqres-free-v1"
+         }
+
+      });
+      const responsebody = await response.json()
+      console.log(responsebody);
+      expect(await response.status()).toBe(200)
+      expect(await responsebody.name).toBe("Vijay")
+   })
+
+
+DELETE
+======
+test.only("delete date from server", async function({request}) {
+      const response = await request.delete("https://reqres.in/api/users/"+userId,{
+         headers:{
+            "Content_Type":"application/json",
+            "x-api-key":"reqres-free-v1"
+         }
+      })
+      expect(await response.status()).toBe(204)
+      
+   })

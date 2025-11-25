@@ -14,3 +14,11 @@ Step 1: Create a Private constructor to prevent instantiation of the class from 
 Step 2: Create a Private static variable of the class
 
 Step 3: Generate getter for that static variable
+
+
+
+Name :
+Topic : Singleton
+Batch : 1pm
+
+Sathish - 8925811149

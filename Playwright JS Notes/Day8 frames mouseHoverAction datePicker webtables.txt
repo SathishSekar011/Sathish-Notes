@@ -1,0 +1,145 @@
+1. How to handle frames 
+2. mouse hover actions 
+3. Kayboard Actions
+4. date picker handling
+
+
+Frames:
+======
+Sample Website:
+https://ui.vision/demo/webtest/frames/
+
+How to handle frames
+=====================
+1. Based on locator
+==================
+await page.goto("https://ui.vision/demo/webtest/frames/")
+
+   const frame1 = await page.frameLocator("[src='frame_1.html']")
+
+   await frame1.locator("[name='mytext1']").fill('Vijay')
+
+2. based on url 
+===============
+await page.goto("https://ui.vision/demo/webtest/frames/")
+
+    const frame1 = await page.frame({url: 'https://ui.vision/demo/webtest/frames/frame_1.html'})
+
+   await frame1.fill("[name='mytext1']",'Vijay')
+   await page.pause()
+
+3. based on name:
+================
+await page.goto("https://ui.vision/demo/webtest/frames/")
+
+    const frame1 = await page.frame({name: 'framename'})
+
+   await frame1.fill("[name='mytext1']",'Vijay')
+   await page.pause()
+  
+
+
+How to handle Inner frame:
+==========================
+await page.goto("https://ui.vision/demo/webtest/frames/")
+
+    const frame3 = await page.frameLocator("[src='frame_3.html']")
+
+   await frame3.locator("[name='mytext3']").fill('Vijay')
+
+   const innerframe = await frame3.frameLocator("[src='https://docs.google.com/forms/d/1yfUq-GO9BEssafd6TvHhf0D6QLDVG3q5InwNE2FFFFQ/viewform?embedded=true']")
+   await innerframe.locator("[aria-label='I am a human'] div+div+div div").first().click()
+   await page.pause()
+
+
+
+Mouse Hover
+=============
+1. Mouse hover action
+2. Right click
+3. double click
+4. Drag and drop 
+5. KeyBoard Action
+
+Mouse hover action
+==================
+await page.goto("https://testautomationpractice.blogspot.com/")
+
+   await page.locator("[class='dropbtn']").hover();
+   await page.pause()
+   await page.locator("[class='dropdown-content'] a").last().click()
+
+Right click
+===========
+await page.goto("https://testautomationpractice.blogspot.com/")
+
+   await page.locator("[class='dropbtn']").hover();
+   
+   const rightClickElement = await page.locator("[class='dropdown-content'] a").last()
+   await rightClickElement.click({button: 'right'})
+   await page.pause()
+
+Double click
+============
+await page.goto("https://testautomationpractice.blogspot.com/")
+
+   const copyTextBtn = await page.locator("[ondblclick='myFunction1()']")
+   await copyTextBtn.dblclick();
+   await page.pause()
+ 
+
+Drag and drop 
+=============
+await page.goto("https://testautomationpractice.blogspot.com/")
+
+   const source = await page.locator("div#draggable")
+   
+   const destination = await page.locator("[id='droppable']")
+   await source.dragTo(destination)
+   await page.pause()
+
+
+Keyboard Actions:
+================
+ await page.goto("https://platform.text.com/tools/diff-checker")
+
+   await page.locator("//textarea[@class='text-editor_editor__pymkg']").first().fill('test automation');
+   await page.keyboard.press('Control+A');
+   await page.keyboard.press('Control+C');
+   await page.keyboard.down('Tab');
+   await page.keyboard.up('Tab')
+   await page.keyboard.press('Control+V');
+   await page.pause()
+
+
+date picker handling
+===================
+await page.goto("https://testautomationpractice.blogspot.com/")
+
+   const year = "2023";
+   const month = "September"
+   const day = "22";
+
+   // await page.locator("[class='hasDatepicker']").last().click();
+   // await page.locator("[aria-label='Select year']").selectOption(year)
+   // await page.locator("[aria-label='Select month']").selectOption(month)
+   // await page.locator("//td[@data-handler='selectDay']//a[text()='"+day+"']").click()
+
+
+   await page.locator("[class='hasDatepicker']").first().click();
+   while(true){
+      const currentYear = await page.locator(".ui-datepicker-year").textContent();
+      const currentMonth = await page.locator(".ui-datepicker-month").textContent();
+      if(currentMonth == month && currentYear == year){
+         break;
+      }
+      if (currentYear> year || currentMonth !=month) {// 2025> 2023
+         await page.locator("//span[text()='Prev']").click();
+
+      } else {
+         await page.locator("//span[text()='Next']").click();
+      }
+   }
+   await page.locator("//td[@data-handler='selectDay']//a[text()='"+day+"']").click()
+
+   await page.pause()

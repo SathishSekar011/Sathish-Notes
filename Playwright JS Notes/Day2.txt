@@ -1,0 +1,120 @@
+Day2:
+======
+
+Create sample test case:
+------------------------
+Step1: create spec.js file under the tests folder
+	LoginPage.spec.js
+	
+Step2: import {test,expect}  from '@playwright/test'
+	test - to write the test cases 
+	expect - for validation purpose 
+	
+Step3: create sample test 
+
+	test("first test case",async({page})=>{
+await page.goto('https://demowebshop.tricentis.com/login')
+        const pageTiltle = page.title()
+        console.log(pageTiltle);
+        await expect(page).toHaveTitle('Demo Web Shop. Login')
+        await page.close()
+})
+
+async - it will return the promise 
+await - it will wait for the promise 
+These two used to execute in sequential execution
+await page.goto('url') - its used to launch the url 
+
+
+
+Execution:
+----------
+execute chrome browser :
+	npx playwright test LoginPage.spec.js --project="chromium"
+	npx playwright test LoginPage.spec.js --project="chromium" --headed
+	npx playwright test LoginPage.spec.js --project="chromium" --headed --debug
+
+How to debug the project:
+---------------------------
+npx playwright test LoginPage.spec.js --project="chromium" --headed --debug
+press F10 for step over
+
+==========================================================
+
+test("my first test case",async({browser})=>{
+    const context = await browser.newContext()
+    const page = await context.newPage()
+    await page.goto("https://demowebshop.tricentis.com/login")
+    await expect(page).toHaveTitle("Demo Web Shop. Login")
+})
+
+
+to avoid  these two stpes 
+const context = await browser.newContext() - it will create new browser context 
+const page = await context.newPage()  -> it will intiate the new page in browser
+
+we can mention page directly for the async function -> because we didnt pass any browser context 
+
+
+======================================================================
+How to execute perticular test cases 
+test.only 
+-----------
+import { test,expect } from "@playwright/test";
+
+test("my first test case",async({browser})=>{
+    const context = await browser.newContext()
+    const page = await context.newPage()
+    await page.goto("https://demowebshop.tricentis.com/login")
+    await expect(page).toHaveTitle("Demo Web Shop. Login")
+});
+
+test.only("my second test case",async({page})=>{
+    await page.goto("https://www.google.com/")
+    
+})
+
+
+* if i have mention test.only the perticular method only going to execute here , remaining all test method getting skiped 
+
+
+Default timeout:
+===============
+playwright gives default time out 30s  , if need more time out based projects, use below concepts
+
+
+How to Add the timeout
+======================
+Step1: goto the playwright config.js file 
+Step2: add  timeout:5*1000  -> its for 5s 
+
+this one supports for all methods
+
+
+how to add timeout for specific method:
+======================================
+test.only("my first test case",async({browser})=>{
+  const context = await browser.newContext()
+  const page = await context.newPage()
+  await page.goto("https://demowebshop.tricentis.com/login")
+  await expect(page).toHaveTitle("Demo Web Shop. Login")
+  const loginButton = await page.locator("a.ico-login")
+  await expect(loginButton).toBeVisible({timeout: 5000})
+})
+
+this one supports for specific method
+
+How to add the timeout for assertions or expect timeout:
+========================================================
+
+Step1: goto the playwright config.js file 
+Step2: add below code
+
+expect: {
+    timeout: 10*1000
+  },
+
+its support for all expect assertions
+
+
+

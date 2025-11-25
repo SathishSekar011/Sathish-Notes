@@ -1,0 +1,273 @@
+DOM (Document Object Model):
+============================
+With the HTML DOM, JavaScript can access and change all the elements of an HTML document.
+
+The HTML DOM (Document Object Model)
+When a web page is loaded, the browser creates a Document Object Model of the page.
+
+The HTML DOM model is constructed as a tree of Objects:
+With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+What is the HTML DOM?
+The HTML DOM is a standard object model and programming interface for HTML. 
+In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+Finding html elements:
+=====================
+Finding HTML elements by id => document.getElementById('value')
+	* Finding HTML Tag values => document.getElementById('value').id or classList
+	* Finding HTML Elements values (To access the content) => document.getElementById('value').innerText	
+        * To modify the content => document.getElementById('value').innerHtml="value"
+
+Finding HTML elements by tag name => document.getElementByTagName('tagName')
+
+Finding HTML elements by class name => document.getElementByClassName('value')
+
+Finding HTML elements by Query selectors
+	* Finding the first HTML Elements => document.querySelector('tag name')
+        * Finding all the HTML Elements => document.querySelectorall('tag name')
+        * Finding all the HTML Elements by using id => document.queryselectorall('#idname')
+	* Finding all the HTML Elements by using Class => document.queryselectorall('.className')
+	* Finding all the HTML Elements By using particular tag with classs name and id name =>document.querySelectorall('tagname.className')
+
+Changing HTML Content
+=====================
+The easiest way to modify the content of an HTML element is by using the innerHTML property.
+To change the content of an HTML element, use this syntax:
+
+document.getElementById(id).innerHTML = new HTML
+
+Changing the Value of an Attribute
+===================================
+To change the value of an HTML attribute, use this syntax:
+
+document.getElementById(id_name).setattribute('attribute_name', 'value');
+
+To get an attribute=> document.getElementById(id_name).getattribute('attribute_name');
+
+if the attribute is present or not we use=>document.getElementById(id_name).Hasattribute('attribute_name');
+
+Changing HTML Style
+===================
+To change the style of an HTML element, use this syntax:
+
+document.getElementById(id).style.property = new style
+
+To add a class in the tag:
+==========================
+<style>
+     .color{
+       color: blue;
+     }
+     .font{
+      font-family: cursive;
+     }
+</style>
+<body>
+  <h1 id="sty"> hii this is sriranjen</h1>
+    <script>
+      let a = document.getElementById('sty')
+      console.log(a);
+      a.classList.add('color','font');
+    </script>
+</body>
+
+Using Events
+===========
+The HTML DOM allows you to execute code when an event occurs.
+A JavaScript can be executed when an event occurs, like when a user clicks on an HTML element.
+To execute code when a user clicks on an element, add JavaScript code to an HTML event attribute:
+
+Examples of HTML events:
+onClick();
+onInput();
+onChange();
+onfocus();
+
+to change a simple text by using button:
+------------------------------------------
+<body>
+   <h1 id="change"> hii this is sriranjen</h1>
+   <button onclick="change()">click me</button>
+    <script>
+      function change(){
+        document.getElementById('change').innerHTML='oops!';
+
+      }
+    </script>
+</body>
+
+onChange:
+-------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+       <select name="" id="chang" onchange="change()">
+        <option value="fkjd">sd</option>
+        <option value="jsdf">a</option>
+        <option value="jdsf">a</option>
+        <option value="hskjd">a</option>
+        <option value="sdfhj">a</option>
+        <option value="name">name</option>
+       </select>
+       <p id="demo"></p>
+   <script>
+    function change(){
+        let a=document.getElementById('chang').value
+        document.getElementById('demo').innerHTML=`you selected is ${a}`
+
+    }
+   </script>
+</body>
+</html>
+to change a cases by using input:
+---------------------------------
+<body>
+   <label > enter your name </label>
+   <input oninput="change()" id="in" type="text">
+    <script>
+      function change(){
+       let a= document.getElementById('in');
+       a.value=a.value.toUpperCase();
+      }
+    </script>
+</body>
+	
+The addEventListener() method
+=============================
+The addEventListener() method attaches an event handler to the specified element.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="con">Lorem ipsum dolor sit amet consectetur,. Dicta!</p>
+
+    <script>
+        document.getElementById('con').addEventListener('click', function(x){
+            console.log(x.target.innerText);
+        })
+    </script>
+</body>
+</html>
+
+
+Syntax
+------
+element.addEventListener(event, function, useCapture);
+Example
+-------
+Alert "Hello World!" when the user clicks on an element:
+
+element.addEventListener("click", function(){ alert("Hello World!"); });
+
+Event bubbling
+===============
+When an element (like a button) is clicked, an event is directed to the element.
+If an event handler is set for the element, the event handler is triggered.
+<body>
+    
+     <div id="container">
+<p id="con">Lorem ipsum dolor sit amet consectetur,</p>
+        <button id="btn">click me</button>
+     </div>
+    <script>
+      document.getElementById('btn').addEventListener('click',function(x){
+        x.stoppropogation(); // in case we want to stop the parent trigger
+        console.log('buttonclick');
+      })
+      document.getElementById('container').addEventListener('click',function(){
+        console.log('container click');
+      })
+
+    </script>
+</body>
+
+Creating New HTML Elements (Nodes)
+==================================
+To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element.
+<body>
+
+    <div id="con">
+         <p>this is old para</p>
+    </div>
+    <script>
+     let a=document.createElement('p');
+     console.log(a);
+     a.innerText='this is new para'
+     let b=document.getElementById('con');
+     b.appendChild(a);// adding a child
+     b.removeChild(a);// removing a child
+
+    </script>
+</body>
+
+Removing a Child Node
+=====================
+For browsers that does not support the remove() method, you have to find the parent node to remove an element:
+
+HTML DOM Navigation
+====================
+With the HTML DOM, you can navigate the node tree using node relationships.
+According to the HTML DOM standard, everything in an HTML document is a node:
+
+The entire document is a document node
+Every HTML element is an element node
+The text inside HTML elements are text nodes
+Every HTML attribute is an attribute node (deprecated)
+All comments are comment nodes
+
+
+<body>
+
+    <ul id="con">
+        <li> html</li>
+        <li id="js">js</li>
+        <li>java</li>
+        <li>Python</li>
+        <li>css</li>
+    </ul>
+    <script>
+        // parent to child
+     let a = document.getElementById("con")
+     console.log(a);
+     let b=a.children
+     console.log(b);
+     let c=Array.from(b)
+     console.log(c);
+    let d= a.firstElementChild
+    console.log(d);
+    let e=a.lastElementChild
+    console.log(e);
+        // child to parent
+    let f=document.getElementById('js');
+    console.log(f);
+    let g=f.parentElement
+    console.log(g);
+    let h=f.previousElementSibling
+    console.log(h);
+    let i=f.nextElementSibling
+    console.log(i);
+
+    let j=a.firstChild
+    console.log(j)
+    </script>
+
+

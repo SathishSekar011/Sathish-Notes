@@ -14,7 +14,7 @@ Build Management Tool(Maven, Ant, Gradle)
 How to Configure Maven:
 ------------------------
 Step 1: Download apache Maven
-	-->google --> download apache maven --> click first link(mvn repository) --> binary zip archive
+	--> google --> download apache maven --> click first link(mvn repository) --> binary zip archive
 		--> extract  
 Step 2: Open Environment Variable
 		RC on ThisPC-->Properties-->Advanced System Settings-->Environment Variables

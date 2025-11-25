@@ -1,0 +1,101 @@
+Day12:
+=====
+How to take the Screenshot
+==========================
+Take the screenshot of the webpage
+-----------------------------------
+test("Testcase_01", async function ({page}) {
+      await page.goto("https://demowebshop.tricentis.com/login")
+      await page.locator("#Email").fill("cypresstester22@gmail.com")
+      await page.locator("#Password").fill("tester@123")
+      await page.locator("[value='Log in']").click()
+      await page.screenshot({path:'tests/Screenshots/'+Date.now()+'demowebshopscreenshot.png'})
+     
+   })
+
+how to take the screenshot for full page:
+----------------------------------------
+test("Testcase_01", async function ({page}) {
+      await page.goto("https://demowebshop.tricentis.com/login")
+      await page.locator("#Email").fill("cypresstester22@gmail.com")
+      await page.locator("#Password").fill("tester@123")
+      await page.locator("[value='Log in']").click()
+      await page.screenshot({path:'tests/Screenshots/'+Date.now()+'fullpagedemowebshopscreenshot.png', fullPage:true})
+     
+   })
+
+How to take the screenshot for perticular product
+---------------------------------------------------
+test("Testcase_01", async function ({page}) {
+      await page.goto("https://demowebshop.tricentis.com/login")
+      await page.locator("#Email").fill("cypresstester22@gmail.com")
+      await page.locator("#Password").fill("tester@123")
+      await page.locator("[value='Log in']").click()
+      await page.locator("[class='product-item']").first().screenshot({path:'tests/Screenshots/'+Date.now()+'productscreenshot.png'})
+     
+   })
+
+
+how to take screenshot for all steps and Add the traces
+--------------------------------------------------------
+How to take the screenshot for all steps 
+How to take the traces -> it will give zip file we can track before what happen and after what happed for each steps:
+
+goto playwright config files and paste the below code 
+
+use: {
+    screenshot: 'on',
+    trace: 'on',
+  },
+
+1. execute all test cases 
+2. open report and check screenshots and trace zip file present or not 
+3. and in project folder also it will added the palywright report and test-results folder also.
+
+
+
+How record the test case execution
+==================================
+Step1:open playwright.config.js file
+Step2: go to use section 
+Step3: under user add video: 'on'
+eg:
+use: {
+    screenshot: 'on',
+    trace: 'on',
+    video: 'on'
+  },
+
+Step4: execute all test cases 
+Step5: open the report in browser and check video is present 
+
+
+How to take the screenshot and video for failure scenario
+-----------------------------------------------------------
+test("Testcase_01", async function ({page}) {
+      await page.goto("https://demowebshop.tricentis.com/login")
+      await page.locator("#Email").fill("cypresstester22@gmail.com")
+      await page.locator("#Password").fill("tester@123")
+      await page.locator("[value='Log in']").click()
+      await page.locator("[class='product-m']").first().screenshot({path:'tests/Screenshots/'+Date.now()+'productscreenshot.png'})
+     
+   })
+
+last locator is incorret
+
+
+eg:
+use: {
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    trace: 'on',
+  },
+
+Step4: execute all test cases 
+Step5: open the report in browser and check video is present 
+
+
+
+
+
+

@@ -178,6 +178,7 @@ DataProvider:
 
  --> DataProvider from other package
 	==> @Test(dataProvider="name",dataProviderClass=org.packagename.ClassName.class)
+--> we can get Data in methods by passing arguments(if need pass as String,int or any datatype ditectly - type conversion will be done automatically)
 
 ==> @BeforeSuite
 ==> @BeforeTest

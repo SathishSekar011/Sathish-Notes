@@ -36,10 +36,10 @@ Expected Result:
 Actual Result:
 --------------
 	- results obtained by executing programme
+
 Status:
 -------
 	- expected results and actual result matches -- PASS
-
 	- expected results and actual result not matches -- FAIL
 
 Defect:

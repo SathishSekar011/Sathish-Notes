@@ -1,8 +1,7 @@
 1. Insprint in Agile:
 ======================
 	• To develop and automate user stories in the same sprint, is called in-sprint automation.
-	• If there are 4 User stories in a sprint-We will write a skeleton scripts for the User stories
-	 which we are going to automate it in this sprint. 
+	• If there are 4 User stories in a sprint-We will write a skeleton scripts for the User stories which we are going to automate it in this sprint. 
 	• In a 2 weeks sprint, for 6 days developer will Develop the application 
 	 7th day the build is delivered to Automation team.
 	• After that we will execute the scripts.
@@ -26,7 +25,7 @@
 5. Risk Based Testing:
 ========================
 	- Identifying the functionalities which seems to cause failures to the application 
-	  and then testing those functionalities.
+and then testing those functionalities.
 
 6. Bug Leakage:
 ===============
@@ -58,12 +57,18 @@
 
 12. Test Strategy:
 =====================
-	• It is a high-level document which captures the approach on how we go about testing the product 
-	    and achieve the goals.
+	• It is a high-level document which captures the approach on how we go about testing the product and achieve the goals.
 	• It is developed by project manager.
 	• Documents like Test Plan are prepared by keeping this document as a base.
 
-13. Test Environment:
+13. Test Plan:
+==============
+	- testing activities involved to fullfil test strategy 
+		--> test cases
+		--> team memmbers - rolls and responsibilities
+		--> schedules
+
+14. Test Environment:
 ======================
 	- It is the combination of hardware and software on which Test Team performs testing
 

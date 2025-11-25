@@ -1,0 +1,24 @@
+
+java
+used in enterprise market,mobile,web development
+called jvm(java virtual machine)
+readable language
+1995 by sun microsystems,team james gosling,bought oracle,belongs to reichel
+ide integrated development environment
+
+
+
+
+hello.java(byte code)
+java code>compiler(jovac)>byte code>jvm(run)(osjava runtime environment)>main method(string a())>output
+hello.java
+step 1:class hello
+step 2:(
+step3:public static void main(string a())
+step:4(
+step 5:system.out.print("hello world");        (improtant)
+step 6:)
+step 7:)
+
+string(name)
+c

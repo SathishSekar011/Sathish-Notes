@@ -1,0 +1,8 @@
+File Uploading:
+===============
+
+WebElement fileUploadElement = driver.findElement(By.xpath("(//input[]");
+
+LocalFileDetector detect = new LocalFileDetector();
+((RemoteWebElement) fileUploadElement).setFileDetector(detect);
+fileUploadElement.sendKeys(getFile());

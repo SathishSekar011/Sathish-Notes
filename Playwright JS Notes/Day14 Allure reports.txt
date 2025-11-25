@@ -1,0 +1,34 @@
+Day14:
+======
+Allure report configuration:
+============================
+Step1: open terminal 
+Step2: Enter the command -> npm install --save-dev @playwright/test allure-playwright
+Step3: check added package message
+Step4: open package.json file and check Allure-report version displayed 
+
+Step5: open playwright.config.js file and paste the below value 
+
+	reporter: [["line"], ["allure-playwright"]],
+
+Step6: Then execute the test cases using -> npx playwright test --headed
+
+Step7: once the execution is done , check allure results folder aaded 
+
+Step8: in terminal execute this command -> npm install -g allure-commandline --save-dev
+
+Step9: check this package is added or not 
+
+Step10: In terminal execute the below command 
+allure generate C:\Users\user\Desktop\JavaScriptDay1\allure-results --clean
+
+Step11: in terminal execute this 
+ allure open ./allure-report
+
+Step12: it will open browser and display the allure reports
+
+if terminal is not working or if you got any error 
+Step1: open powershell and execute below command 
+	Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+Step2: execute this -> allure generate C:\Users\user\Desktop\JavaScriptDay1\allure-results --clean
+Step3: eecute this ->  allure open ./allure-report

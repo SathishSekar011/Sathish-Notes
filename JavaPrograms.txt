@@ -1,0 +1,93 @@
+1) String Particular Word occurence in a Sentence
+===================================================
+public static void main(String[] args) {		
+		String s = "iaminchennaichennaiisintamilnadutamilnaduisinindia";
+		String s1 = "in";		
+		int count = 0;
+		int startIndex = 0;	
+		while(startIndex < s.length()) {
+			int indexOfS1 = s.indexOf(s1, startIndex);
+			if(indexOfS1!=-1) {
+				count++;
+				startIndex = indexOfS1+s1.length();
+			} else {
+				break;
+			}
+		}
+		System.out.println(count);		
+	}
+=================================================================================
+2) Prodapt Interview Program
+============================
+public class Sample{
+	
+	@Test
+	public void tc1() throws StreamWriteException, DatabindException, IOException {
+		
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://shino.de/parkcalc/");
+		driver.manage().window().maximize();
+		
+		String today = getDate(0);      // e.g., "07/11/2025"
+		String tomorrow = getDate(1);   // e.g., "07/12/2025"
+
+		// 2. Locate input fields and send dates
+		WebElement startDateField = driver.findElement(By.id("StartingDate"));
+		startDateField.clear();
+		startDateField.sendKeys(today);
+
+		WebElement endDateField = driver.findElement(By.id("LeavingDate"));
+		endDateField.clear();
+		endDateField.sendKeys(tomorrow);
+		
+		
+		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		String price1 = driver.findElement(By.xpath("//div[text()='estimated Parking costs']"
+				+ "/parent::td/following-sibling::td/span[@class='SubHead']/b")).getText();
+		
+		
+		String estPrice = price1.replaceAll("[$]", "");
+		
+		
+		WebElement findElements = driver.findElement(By.xpath("//strong[text()='Valet Parking']/parent::p"));
+		String[] l = findElements.getText().split("\n");
+		
+		String perDayprice = l[1].replaceAll("[^0-9.]", "");
+		
+		System.out.println(Double.parseDouble(estPrice));
+			System.out.println(Double.parseDouble(perDayprice));
+		driver.quit();
+		
+		
+		
+
+	}
+	
+	public static String getDate(int daysToAdd) {
+		Calendar date = Calendar.getInstance();
+		date.add(Calendar.DATE, daysToAdd);
+		Date time = date.getTime();
+		SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy");
+		return format.format(time);
+	}
+	
+}
+===============================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

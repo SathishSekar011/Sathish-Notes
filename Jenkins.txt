@@ -1,5 +1,6 @@
 Jenkins:
 ========
+	- Is a CI/CD(Continuous Integration / Continuous Deployment) pipeline tool
 	
 ==> Running Java Programme using cmd:
 =======================================
@@ -139,6 +140,7 @@ Step 1:
 Step 2: To get the public server(ngrok)
 =================================
 	--> Google --> ngrok download --> windows --> Download ZIP file --> Extract --> Run ngrok.exe --> cmd prompt
+	--> cd to current folder where ngrok.exe is placed
 	--> sign up and login to ngrok --> Your Authtoken --> Copy authentication code --> paste it on ngrok cmd prompt --> enter
 	--> ngrok http 8080   /  --> ngrok http 8081   ==> enter
 	--> ngrok will establish the public connection
@@ -150,7 +152,7 @@ Step 3: GITHUB Configuration:
 -----------------------------
 	--> Repository --> settings --> webhooks --> add webhook 
 		==> PayLoad Url : (==>jenkins url by ngrok/github-webhook/)
-==>https://8b3e-2401-4900-1cc8-7293-c96a-31b5-47c0-a882.ngrok-free.app/githug-webhook/
+==>https://8b3e-2401-4900-1cc8-7293-c96a-31b5-47c0-a882.ngrok-free.app/github-webhook/
 	--> add webhook
 
 Step 4: Jenkins Configuration:

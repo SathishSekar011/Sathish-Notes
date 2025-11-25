@@ -15,10 +15,18 @@ Syntax:
 ========
 	==> knownelementxpath/relation::unknownelement
 	==> //div[@class='_6ltj']/preceding-sibling::div[@class='_6ltg']/child::button
+	==> //span[contains(text(),'Dell Latitude 5420 || Intel Core i7')]/ancestor::div[@data-cy='title-recipe']/following-sibling::div[@class='puisg-row puis-desktop-list-row']/descendant::span[@class='a-price-whole']
 
 
+For filtering:
+==============
+//span[@class='a-price-whole' and translate(text(),',','')<'12000']
+
+when text with unusual spaces line breaks --> normalize-space()
+//tagname[normalize-space(text())='text without giving unusal space']
 
 
+==> http://www.uitestingplayground.com/home
 
 
 

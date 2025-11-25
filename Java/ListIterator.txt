@@ -1,7 +1,10 @@
 ListIterator:
 =============
-	- Bidirectional (Both forward and backward)
-	- can able to replacement and addition of new object
+	- introduced in JDK 1.2
+	- Used only with List classes (ArrayList, LinkedList)
+ 	- Bidirectional traversal (forward & backward)
+	- Can add, remove, or modify elements during iteration
+	- Inorder to iterate backward listIterator must be iterated forward once 
 
 ==> ListIterator ltr = l.listIterator();
   
@@ -20,6 +23,42 @@ Methods in ListIterator:
 Limitations:
 ==============
 	--> Applicable only for List(not Universal)
+
+===========================================
+import java.util.*;
+
+public class ListIteratorExample {
+    public static void main(String[] args) {
+        List<String> list = new ArrayList<>();
+        list.add("Java");
+        list.add("Selenium");
+        list.add("RestAssured");
+
+        ListIterator<String> listItr = list.listIterator();
+        System.out.println("Forward traversal:");
+        while (listItr.hasNext()) {
+            System.out.println(listItr.next());
+        }
+
+        System.out.println("Backward traversal:");
+        while (listItr.hasPrevious()) {
+            System.out.println(listItr.previous());
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,3 +1,4 @@
+
 Waits:
 ======
 --> Synchronization:    If the speed of the browser and speed of the selenium matches 
@@ -40,14 +41,14 @@ Cons:--
 ================
 	- Apart from locating the elements it will also check if the element is intractable or not 
 	- For every instance Explicit wait has to be declared
-		-- elementToBeClickable()
-		-- elementToBeSelected()
-		-- Element is present or not
-		-- Element contains text or not
-		-- Alert is present
-		-- WebPage is loaded completely
-		-- Button is clickable
-		-- frames is present
+		- alertIsPresent()
+		- elementToBeClickable()
+		- elementToBeSelectable()
+		- visiblityOfElementLocated();
+		- visiblityOfAllElementsLocated();
+		- presenceOfElementLocated();
+		- presenceOfAllElementsLocated();
+
 	- It is achieved by WebDriverWait
 	- This WebDriverWait will always require ExpectedConditions
 
@@ -63,6 +64,17 @@ Syntax:
 	- Used to set the frequency or polling period 
 	- If Exceptions occurs within the polling period it can also be handled by fluent wait
 
+Syntax:
+========
+Wait<WebDriver> wait = new FluentWait<>(driver)
+        .withTimeout(Duration.ofSeconds(20))
+        .pollingEvery(Duration.ofSeconds(2))
+        .ignoring(NoSuchElementException.class)
+        .ignoring(StaleElementReferenceException.class)
+        .withMessage("Element not found within the given time");
+
+WebElement element = wait.until(driver -> driver.findElement(By.id("username")));
+element.click();
 
 
 

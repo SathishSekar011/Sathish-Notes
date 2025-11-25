@@ -85,6 +85,8 @@ eg:- (//span[text()='Apple iPhone 13 (128GB) - Blue'])[2]
 
 //div[@class ='a-section a-spacing-none puis-padding-right-small s-title-instructions-style']/child::node()[local-name(.) = 'h2' and not(preceding-sibling::div)]
 
+//div[@class='_30jeq3 _1_WHN1' and translate(normalize-space(),'₹,','')<60000]
+
 
 <a name="sat" , place-holder="aa">
 <a name="dd" , place-holder="aa">

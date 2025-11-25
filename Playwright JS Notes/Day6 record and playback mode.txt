@@ -1,0 +1,18 @@
+Day7:
+=====
+Record And Playback mode 
+
+Step1 : open terminal 
+
+Step2: enter npx playeright codegen url 
+	ex: npx playwright codegen https://www.google.com
+
+Step3: click enter 
+
+Step4: its opened playwright inspector 
+
+Syep5: do some actions manually in the browser and see the scripts automatically generated or not 
+
+Step6: copy the code from playwright inspector and paste to the spec.js file 
+
+Step7: execute the test cases and check its executes or not.

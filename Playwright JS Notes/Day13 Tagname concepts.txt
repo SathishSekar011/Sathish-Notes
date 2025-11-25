@@ -1,0 +1,42 @@
+Day13
+=====
+TagName concepts
+-----------------
+
+
+test("Testcase_01@sanity", async function ({page}) {
+      console.log("test case one");
+     
+   })
+   test("Testcase_02@sanity", async function ({page}) {
+      console.log("test case two");
+     
+   })
+   test("Testcase_03@sanity@regression", async function ({page}) {
+      console.log("test case three");
+     
+   })
+   test("Testcase_04@sanity@regression", async function ({page}) {
+      console.log("test case four");
+     
+   })
+   test("Testcase_05@regression", async function ({page}) {
+      console.log("test case five");
+     
+   })
+   
+How to execute sanity test cases
+----------------------------------
+npx playwright test --grep '@sanity'
+ 
+how to execute only sanity tagname alone not included regression
+-----------------------------------------------------------------
+npx playwright test --grep '@sanity' --grep-invert '@regression'
+
+how to execute regression test cases
+------------------------------------
+npx playwright test --grep '@regression'
+
+how to execute only regression not included sanity
+---------------------------------------------------
+npx playwright test --grep '@regression' --grep-invert '@sanity'

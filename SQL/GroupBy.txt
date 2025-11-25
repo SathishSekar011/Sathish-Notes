@@ -17,13 +17,14 @@ Select max(salary),min(salary),sum(salary),avg(salary),count(salary) from Employ
 Group By:
 =========
 	- The GROUP BY statement groups rows that have the same values into summary rows
+	- used to group rows based on the values in one or more columns using aggregate functions like SUM, COUNT, AVG, etc., to perform operations on each group of rows.
+	
 
 Syntax:
 	===========$$$$$$$$==========
-	SELECT column_name(s)
-	FROM table_name
-	WHERE condition
-	GROUP BY column_name(s)
+	SELECT column1, aggregate_function(column2)
+	FROM your_table
+	GROUP BY column1;
 	===========$$$$$$$$==========
 
 
@@ -91,6 +92,12 @@ Rank Functions:
 90  --> 4
 90  --> 4
 87  --> 5
+
+
+Select First_Name , Salary ,
+dense_rank() Over(Order By Salary) 
+From Employees
+
 
 Retraive a Data
 

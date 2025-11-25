@@ -1,6 +1,5 @@
 Testing Data Design Techniques:
 ================================
-
 	- to prepare data that covers all the scenarios of testing
 
 1)Equivalence Class partitioning Technique(ECP):
@@ -36,8 +35,8 @@ Testing Data Design Techniques:
 =============================
 	- this technique will be used when the build is having different states of transition
 	- pick test cases from the application we need to test different system transitions
-	- an application gives different output for the same input depending on 
-	    what has happened in the earlier state.
+	- an application gives different output for the same input depending on what has happened in the earlier state.
+
 Example:
 ---------
 	--> invalid username and password -3 times - account blocked until change password

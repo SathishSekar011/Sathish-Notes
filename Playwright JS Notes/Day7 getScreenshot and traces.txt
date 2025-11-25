@@ -1,0 +1,16 @@
+Day7:
+=====
+How to take the screenshot for all steps 
+How to take the traces -> it will give zip file we can track before what happen and after what happed for each steps:
+
+goto playwright config files and paste the below code 
+
+use: {
+    screenshot: 'on',
+    trace: 'on',
+  },
+
+1. execute all test cases 
+2. open report and check screenshots and trace zip file present or not 
+3. and in project folder also it will added the palywright report and test-results folder also.
+

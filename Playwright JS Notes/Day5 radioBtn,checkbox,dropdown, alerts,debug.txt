@@ -1,0 +1,212 @@
+Day5:
+=====
+1. How to debug
+2. How to handle radio button 
+3. how to handle checkbox 
+4. how to handle static dropdown
+5. how to check attribute name is present , how to validate attribute value
+	await expect(locator).toHaveAttribute('attributName', 'attributeValue')
+6. How to handle the alerts 
+
+
+1. How to debug
+================
+
+* await page.pause()-> method it will pause the execution and it will open playwright inspector, from here we able debug step by step
+
+* form playwright inspector we have step over button click on this we can move one step to next step , otherwise click on F10
+
+* if you want resume the exeution click on resume button 
+
+2. How to handle radio button
+===============================
+url - https://testautomationpractice.blogspot.com/
+
+test.only("Test_01", async({page})=>{
+  const alertBtn = page.locator("[id='alertBtn']")
+  const maleRadioButton = page.locator("[id='male']")
+  const femaleRadioButton = page.locator("[id='female']")
+
+  await page.goto("https://testautomationpractice.blogspot.com/")
+  await maleRadioButton.check()
+  await expect(maleRadioButton).toBeChecked()
+  const isTrue = await maleRadioButton.isChecked()
+  await expect(true).toEqual(isTrue)
+
+  await femaleRadioButton.click()
+  await expect(femaleRadioButton).toBeChecked()
+  const isboolean = await femaleRadioButton.isChecked()
+  await expect(true).toEqual(isboolean)
+
+})
+
+
+3. How to handle checkBox
+==========================
+
+test.only("Test_01", async({page})=>{
+  const alertBtn = page.locator("[id='alertBtn']")
+  const maleRadioButton = page.locator("[id='male']")
+  const femaleRadioButton = page.locator("[id='female']")
+  const tuesdayCheckbox = page.locator("[id='tuesday']")
+  const mondayCheckBox = page.locator("[id='monday']")
+
+  await page.goto("https://testautomationpractice.blogspot.com/")
+  await tuesdayCheckbox.check()
+  await expect(tuesdayCheckbox).toBeChecked()
+  const isTrue = await tuesdayCheckbox.isChecked()
+  await expect(true).toEqual(isTrue)
+  
+  const isboolean = await mondayCheckBox.isChecked()
+  await expect(false).toEqual(isboolean)
+
+})
+
+
+
+4. How to handle static dropdown
+================================
+url - https://practice.expandtesting.com/dropdown
+
+const dropdown = page.locator("[id='country']")
+
+  await page.goto("https://practice.expandtesting.com/dropdown")
+// to select the value
+  await dropdown.selectOption("India")
+// to check india is present or not
+  await expect(dropdown).toHaveValue("IN")
+//  get the selected value from dropdown
+  const seleted = await dropdown.inputValue()
+// assert the selected values
+  await expect('IN').toEqual(seleted)
+
+
+
+6. How to handle the alerts 
+==============================
+	alerts are auto handled in playwright
+
+test.only("Test_01", async({page})=>{
+  const alertBtn = page.locator("[id='alertBtn']")
+
+  await page.goto("https://testautomationpractice.blogspot.com/")
+  await alertBtn.click()
+
+})
+
+
+How to Handle Dropdowns:
+========================
+user able to select the values based on 
+index 
+value 
+visible text
+
+await page.goto('https://testautomationpractice.blogspot.com/');
+   const countryDropDown = page.locator("#country")
+
+   await countryDropDown.selectOption({value: 'uk'});
+   const selectedOption = await countryDropDown.inputValue()
+   await expect(selectedOption).toEqual('uk');
+
+   await countryDropDown.selectOption({index: 1})
+   const selectedOption2 = await countryDropDown.inputValue()
+   await expect(selectedOption2).toEqual('canada');
+
+   await countryDropDown.selectOption({label: 'Japan'})
+   const selectedOption3 = await countryDropDown.inputValue()
+   await expect(selectedOption3).toEqual('japan');
+
+   console.log(await countryDropDown.textContent())
+   const alltext = await countryDropDown.textContent()
+   await expect(alltext).toContain('India')
+   console.log(await countryDropDown.locator("option").count());
+
+   await expect(await countryDropDown.locator("option").count()).toBe(10)
+
+   const count = await countryDropDown.locator("option").count()
+   
+   for(let i=1;i<=count;i++){
+      console.log("//select[@id='country']//option["+i+"]");
+         const text = await page.locator("//select[@id='country']//option["+i+"]").textContent()
+         if(text.includes('India')){
+            console.log(text);
+            break;
+         }
+   }
+
+How to handle multiSelect dropdown
+===================================
+await page.goto('https://testautomationpractice.blogspot.com/');
+   
+   await page.selectOption("#colors",['Red', 'Blue', 'Yellow'])
+   
+   const selectedOption = await page.$$eval("#colors option:checked", function (options) {
+      return options.map(function(option) {
+         return option.textContent.trim()
+      });
+   });
+   console.log(selectedOption);
+
+
+How to handle alerts:
+=====================
+Simple alert:
+=============
+const alertBtn = page.locator("button#alertBtn").first();
+
+   page.on('dialog', async dialog=>{
+      console.log(dialog.message());
+      expect(dialog.message()).toContain('I am an alert box!')
+      await dialog.accept()
+   })
+   
+   await alertBtn.click()
+
+confirm alert:
+=============
+const alertBtn = page.locator("button#confirmBtn").first();
+
+   page.on('dialog', async dialog=>{
+      console.log(dialog.message());
+      expect(dialog.message()).toContain('Press a button!')
+      // await dialog.dismiss()
+      await dialog.accept()
+   })
+   
+   await alertBtn.click()
+
+
+prombt alert:
+=============
+const alertBtn = page.locator("button#promptBtn").first();
+
+   page.on('dialog', async dialog=>{
+      console.log(dialog.message());
+      expect(dialog.message()).toContain('Please enter your name:')
+      // await dialog.dismiss()
+      console.log(dialog.defaultValue());
+      await dialog.accept('Vijay')
+   })
+   
+   await alertBtn.click()
+
+
+
+Handle dyanamic dropdown
+==========================
+ await page.goto('https://www.redbus.in/');
+   
+   await page.locator("//div[text()='From']").click();
+   await page.locator("input#srcDest").fill('che');
+   await page.waitForSelector("//div[contains(@class,'listItem')]//div[contains(@class,'listHeader')]")
+   const count = await page.locator("//div[contains(@class,'listItem')]//div[contains(@class,'listHeader')]").count()
+   console.log(count);
+   for(let i=1;i<=count;i++){
+      const text = await page.locator("(//div[contains(@class,'listItem')]//div[contains(@class,'listHeader')])["+i+"]").textContent()
+      if(text.includes('Tambaram')){
+         await page.locator("(//div[contains(@class,'listItem')]//div[contains(@class,'listHeader')])["+i+"]").click()
+      }
+   }
+
+   await page.waitForTimeout(5000)

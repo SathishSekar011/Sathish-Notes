@@ -11,8 +11,15 @@ Syntax:
 	--> driver.navigate().back();
 	--> driver.navigate().refresh();
 
+driver.get():
+	--> open a webpage and wait untill the the page is completely loaded
+	--> used when we open only a specific url
 
+navigate.to();
+	--> open a webpage but don't wait for page to load
+	--> used when we want to do navigation like back , forward
 
+37944 --> 47944
 
 
 

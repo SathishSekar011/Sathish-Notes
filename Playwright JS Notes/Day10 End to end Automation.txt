@@ -1,0 +1,108 @@
+End to End Automation
+=====================
+// https://www.google.com/
+
+const {test, expect} = require('@playwright/test')
+
+test("Testcase_01", async function ({browser}) {
+   const context= await browser.newContext()
+   const page = await context.newPage()
+   
+   await page.goto("https://demowebshop.tricentis.com/login")
+   const emailTextBox = page.locator("#Email")
+   const passwordTextBox = page.locator("#Password")
+   const loginBtn = page.locator("[value='Log in']")
+   const logoutbtn = page.locator("[class='ico-logout']")
+   const apparalAndShoes = page.locator("[href='/apparel-shoes']").first()
+   const appralAndShoesHeader = page.locator("//h1[text()='Apparel & Shoes']")
+   const allProducts = page.locator("[class='product-title']")
+   const addTocartBtn = page.locator("[value='Add to cart']")
+   const shoppingCartLink = page.locator("[class='ico-cart']").first()
+   const shoppingCartProductTitle = page.locator("[class='product-name']")
+   // estimate shipping locators
+   const countryDropDown = page.locator("#CountryId")
+   const estimateShippingtn = page.locator("[name='estimateshipping']")
+   // checkout process locators
+   const iagreeCheckbox = page.locator("[id='termsofservice']")
+   const checkoutBtn = page.locator("[id='checkout']")
+   const checkoutPageHeader = page.locator("//h1[text()='Checkout']")
+   const billingAddressContinueBtn = page.locator("[id='billing-buttons-container'] input[title='Continue']")
+   const shippingAddressContinueBtn = page.locator("[onclick='Shipping.save()']")
+   const groundRadioBox = page.locator("[value*='Ground']")
+   const shippingMethodContinueBtn = page.locator("[onclick='ShippingMethod.save()']")
+   // payment method locators 
+   const cashOnDeliveryRadioBtn = page.locator("[id='paymentmethod_0']")
+   const paymentMethodContinueBtn = page.locator("[onclick='PaymentMethod.save()']")
+   const paymentInfoContinueBtn = page.locator("[onclick='PaymentInfo.save()']")
+   // confirm order 
+   const confirmorderBtn = page.locator("[value='Confirm']")
+   // order details 
+   const orderNumber = page.locator("[class='details'] li").first()
+
+
+
+   // login to application with valid credential
+   await emailTextBox.fill("cypresstester22@gmail.com")
+   await passwordTextBox.fill("tester@123")
+   await loginBtn.click()
+   // verify user successfully logged in 
+   await expect(await logoutbtn).toBeVisible()
+
+   //click on appral and shoes and verify page opened
+   await apparalAndShoes.click()
+   await expect(appralAndShoesHeader).toBeVisible()
+
+   // get All productList and select Blue jeans and add to cart button
+   const totalProduct = await allProducts.count()
+   for(let i=1;i<=totalProduct;i++){
+      const text = await allProducts.nth(i).textContent()
+      if(text.includes("Blue Jeans")){
+         await addTocartBtn.nth(i).click()
+         break;
+      }
+   }
+
+   // click and open shopping cart 
+   await shoppingCartLink.click()
+   const productName = await shoppingCartProductTitle.textContent()
+   await expect(productName).toEqual("Blue Jeans")
+
+   // fill the estimate shipping 
+   await countryDropDown.selectOption('India')
+   const selectedOption = await countryDropDown.inputValue()
+   await expect(selectedOption).toEqual('41')
+   await estimateShippingtn.click();
+
+   //Checkout process
+   await iagreeCheckbox.click()
+   await checkoutBtn.click()
+   await expect(await checkoutPageHeader).toBeVisible()
+
+   // shipping address
+   await page.waitForSelector("[id='billing-buttons-container'] input[title='Continue']")
+   await billingAddressContinueBtn.click()
+   await page.waitForSelector("[onclick='Shipping.save()']")
+   await shippingAddressContinueBtn.click()
+
+   // shipping method
+   await groundRadioBox.click({timeout: 3000});
+   await shippingMethodContinueBtn.click()
+
+   // payment method
+   await page.pause() 
+   await page.waitForSelector("[id='paymentmethod_0']")
+   await cashOnDeliveryRadioBtn.click()
+   await paymentMethodContinueBtn.click()
+
+   // payment info
+   await page.pause()
+   await page.waitForSelector("[onclick='PaymentInfo.save()']")
+   await paymentInfoContinueBtn.click()
+   // confirm order
+   await page.waitForSelector("[value='Confirm']")
+   await confirmorderBtn.click();
+   await page.waitForSelector("//h1[text()='Thank you']")
+   console.log(await orderNumber.textContent())
+   await page.pause()
+   
+})

@@ -1,0 +1,130 @@
+Day9:
+======
+
+
+Locators Built in function
+-----------------------------
+page.getByRole()	-> to locate by explicit and implicit accessibility attributes.
+page.getByText() 	-> to locate by text content.
+page.getByLabel() 	-> to locate a form control by associated label's text.
+page.getByPlaceholder() -> to locate an input by placeholder.
+page.getByAltText() 	-> to locate an element, usually image, by its text alternative.
+page.getByTitle() 	-> to locate an element by its title attribute.
+page.getByTestId() 	-> to locate an element based on its data-testid attribute (other attributes can be configured).
+
+ build in functions
+	await page.getByLabel('User Name').fill('John');
+
+	await page.getByLabel('Password').fill('secret-password');
+
+	await page.getByRole('button', { name: 'Sign in' }).click();
+
+	await expect(page.getByText('Welcome, John!')).toBeVisible();
+
+
+1. const locator = page.getByRole('button', { name: 'Sign in' });
+
+	await locator.hover();
+	await locator.click();
+
+2. const locator = page
+    .frameLocator('#my-frame')
+    .getByRole('button', { name: 'Sign in' });
+
+	await locator.click();
+
+3. await expect(page.getByRole('heading', { name: 'Sign up' })).toBeVisible();
+
+4. await page.getByRole('checkbox', { name: 'Subscribe' }).check();
+
+5. await page.getByRole('button', { name: /submit/i }).click();
+
+6. <label>Password <input type="password" /></label>
+	await page.getByLabel('Password').fill('secret');
+
+7. <input type="email" placeholder="name@example.com" />
+	await page.getByPlaceholder('name@example.com').fill('playwright@microsoft.com');
+
+8. <span>Welcome, John</span>
+	await expect(page.getByText('Welcome, John')).toBeVisible();
+	await expect(page.getByText('Welcome, John', { exact: true })).toBeVisible();
+	await expect(page.getByText(/welcome, [A-Za-z]+$/i)).toBeVisible();
+
+9. <img alt="playwright logo" src="/img/playwright-logo.svg" width="100" />
+	await page.getByAltText('playwright logo').click();
+
+10. <span title='Issues count'>25 issues</span>
+	await expect(page.getByTitle('Issues count')).toHaveText('25 issues');
+
+11. <button data-testid="directions">Itinéraire</button>
+	await page.getByTestId('directions').click();
+
+
+
+
+
+
+
+
+
+
+Day4:
+========
+How to record test script in playwright:
+----------------------------------------
+
+Step1 : in terminal type 
+	npx playwright codegen
+
+step2: it will open 2 windows 
+	one is browser 
+	another one is record screen 
+	
+step3: 	
+	1. launch the url 
+	2. click on element 
+	3. enter date into the text fields 
+	
+check for record screen all the scripts automaticall added.
+
+we can convert this test script for any languages
+	1. java
+	2. java Script 
+	3. Python 
+	4. .net
+
+Steps: near bu test runner one down arrow is available press and select the language what ever you want
+
+Step4: copy the all scripts and paste into the perticular class
+
+
+
+npx playwright codegen --help 
+here its shows all commands 
+
+How to store code directly in the perticular file automatically:
+----------------------------------------------------------------
+npx playwright codegen -o fileName.spec.js
+
+Start the recording capture the actions 
+and stop the recordings
+
+
+If i need to run any devices:
+------------------------------
+npx playwright codegen --device "iphone 13"
+its opening the new device and record screen 
+
+If i need to generate javaScript languages:
+-----------------------------------------------
+npx playwright codegen --targer javascript
+
+If i need to run in chrome
+-----------------------------------------------
+npx playwright codegen --browser chromium
+
+if i need to view the browser for specified size:
+--------------------------------------------------
+npx playwright codegen --viewport-size "1280,720"
+
+	

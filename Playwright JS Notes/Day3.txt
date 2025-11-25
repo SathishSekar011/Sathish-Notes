@@ -1,0 +1,69 @@
+Day3
+====
+1. locators - css, xpath
+2. How to enter value to textbox
+3. how to click the element 
+4. how to validate element to be visible 
+5. how to use xpath and css selectors
+6. how to extract the text value from web page
+
+Sample Code:
+============
+test("first test case",async({page})=>{
+await page.goto('https://demowebshop.tricentis.com/login')
+        const pageTiltle = page.title()
+        console.log(pageTiltle);
+        await expect(page).toHaveTitle('Demo Web Shop. Login')
+})
+
+
+How to enter the data to textBox:
+==================================
+
+1. we have two methods type() or fill()
+2. for latest vertion of playwright type() method is officialy deprecated.
+3. So we can use fill()-> method for enter the data to the text boxes.
+
+
+test.only("Test_01", async({page})=>{
+  await page.goto("https://demowebshop.tricentis.com/login")
+  await expect(page).toHaveTitle("Demo Web Shop. Login")
+  const loginButton = await page.locator("a.ico-login")
+  await expect(loginButton).toBeVisible({timeout: 5000})
+  await page.locator("#Email").fill("cypresstester22@gmail.com")
+  await page.locator("#Password").fill("tester@123")
+  await page.locator("[value='Log in']").click()
+  await expect(page.locator("[class='ico-logout']")).toBeVisible()
+})
+
+
+5. how to use xpath and css selectors
+======================================
+const loginButton = await page.locator("//a[text()='Log in']")
+  await expect(loginButton).toBeVisible({timeout: 5000})
+  await page.locator("//input[@id='Email']").fill("cypresstester22@gmail.com")
+  await page.locator("//input[@id='Password']").fill("tester@123")
+  await page.locator("//input[@value='Log in']").click()
+  await expect(page.locator("//a[@class='ico-logout']")).toBeVisible()
+
+6. how to extract the text value form web page:
+===============================================
+
+use textContent() -> method to extract the text value
+
+
+test.only("Test_01", async({page})=>{
+  await page.goto("https://demowebshop.tricentis.com/login")
+  await expect(page).toHaveTitle("Demo Web Shop. Login")
+  const loginButton = await page.locator("a.ico-login")
+  await expect(loginButton).toBeVisible({timeout: 5000})
+  await page.locator("#Email").fill("cyprstester22@gmail.com")
+  await page.locator("#Password").fill("tester@123")
+  await page.locator("[value='Log in']").click()
+  console.log(await page.locator("[class='validation-summary-errors'] span").textContent())
+  await expect(await page.locator("[class='validation-summary-errors'] span")).toContainText("Login was unsuccessful")
+  console.log(await page.locator("[class='validation-summary-errors'] span+ul li").textContent())
+  expect(await page.locator("[class='validation-summary-errors'] span+ul li")).toContainText("No customer account found")
+  
+})
+

@@ -1,0 +1,141 @@
+Day4
+====
+1. How to create reuseable locator
+2. How to extract the first and last and nth element text value and how to click the specific element
+3. How to extract all text values from the web page
+4. incase page to some time to load all the product data allTextContents()- will return []
+
+1. How to create reuseable locator:
+===================================
+
+test.only("Test_01", async({page})=>{
+
+  const loginButton = page.locator("a.ico-login")
+  const emailTextBox = page.locator("#Email")
+  const passwordTextBox = page.locator("#Password")
+  const signInButton = page.locator("[value='Log in']")
+
+  await page.goto("https://demowebshop.tricentis.com/login")
+  await expect(page).toHaveTitle("Demo Web Shop. Login")
+  await expect(loginButton).toBeVisible({timeout: 5000})
+  await emailTextBox.fill("cypresstester22@gmail.com")
+  await passwordTextBox.fill("tester@123")
+  await signInButton.click()
+  
+})
+
+
+2. How to extract the first and last and nth element text value and how to click the specific element:
+======================================================================================================
+
+we have first(), last() , nth(index) - methods to get single element from list of elements 
+
+test.only("Test_01", async({page})=>{
+
+  const loginButton = page.locator("a.ico-login")
+  const emailTextBox = page.locator("#Email")
+  const passwordTextBox = page.locator("#Password")
+  const signInButton = page.locator("[value='Log in']")
+  const appralAndShoes = page.locator("[href='/apparel-shoes']").first()
+  const pageTitle = page.locator("[class='page-title'] h1")
+
+  await page.goto("https://demowebshop.tricentis.com/login")
+  await expect(page).toHaveTitle("Demo Web Shop. Login")
+  await expect(loginButton).toBeVisible({timeout: 5000})
+  await emailTextBox.fill("cypresstester22@gmail.com")
+  await passwordTextBox.fill("tester@123")
+  await signInButton.click()
+  await appralAndShoes.click()
+  await expect(pageTitle).toHaveText("Apparel & Shoes")
+
+  console.log(await page.locator("[class='product-title']").first().textContent())
+  console.log(await page.locator("[class='product-title']").last().textContent())
+  console.log(await page.locator("[class='product-title']").nth(2).textContent())
+
+})
+
+3. How to extract all text values from the web page:
+====================================================
+
+Use allTextContents()-> method to extract all the text values
+
+test.only("Test_01", async({page})=>{
+
+  const loginButton = page.locator("a.ico-login")
+  const emailTextBox = page.locator("#Email")
+  const passwordTextBox = page.locator("#Password")
+  const signInButton = page.locator("[value='Log in']")
+  const appralAndShoes = page.locator("[href='/apparel-shoes']").first()
+  const pageTitle = page.locator("[class='page-title'] h1")
+
+  await page.goto("https://demowebshop.tricentis.com/login")
+  await expect(page).toHaveTitle("Demo Web Shop. Login")
+  await expect(loginButton).toBeVisible({timeout: 5000})
+  await emailTextBox.fill("cypresstester22@gmail.com")
+  await passwordTextBox.fill("tester@123")
+  await signInButton.click()
+  await appralAndShoes.click()
+  await expect(pageTitle).toHaveText("Apparel & Shoes")
+
+  console.log(await page.locator("[class='product-title']").first().textContent())
+  console.log(await page.locator("[class='product-title']").last().textContent())
+  console.log(await page.locator("[class='product-title']").nth(2).textContent())
+  const allProductNames = await page.locator("[class='product-title']").allTextContents()
+  console.log(allProductNames)
+})
+
+4. incase page to some time to load all the product data allTextContents()- will return []
+============================================================================================
+await page.waitForLoadState("networkidle");-> its going to check all network calls completed or not
+if network calls completed then all product should be peroperly displayed. 
+
+
+test.only("Test_01", async({page})=>{
+
+  const loginButton = page.locator("a.ico-login")
+  const emailTextBox = page.locator("#Email")
+  const passwordTextBox = page.locator("#Password")
+  const signInButton = page.locator("[value='Log in']")
+  const appralAndShoes = page.locator("[href='/apparel-shoes']").first()
+  const pageTitle = page.locator("[class='page-title'] h1")
+
+  await page.goto("https://demowebshop.tricentis.com/login")
+  await expect(page).toHaveTitle("Demo Web Shop. Login")
+  await expect(loginButton).toBeVisible({timeout: 5000})
+  await emailTextBox.fill("cypresstester22@gmail.com")
+  await passwordTextBox.fill("tester@123")
+  await signInButton.click()
+  await appralAndShoes.click()
+  await expect(pageTitle).toHaveText("Apparel & Shoes")
+
+  await page.waitForLoadState("networkidle");
+  const allProductNames = await page.locator("[class='product-title']").allTextContents()
+  console.log(allProductNames)
+})
+
+
+otherwise use below code:
+=======================
+test.only("Test_01", async({page})=>{
+
+  const loginButton = page.locator("a.ico-login")
+  const emailTextBox = page.locator("#Email")
+  const passwordTextBox = page.locator("#Password")
+  const signInButton = page.locator("[value='Log in']")
+  const appralAndShoes = page.locator("[href='/apparel-shoes']").first()
+  const pageTitle = page.locator("[class='page-title'] h1")
+
+  await page.goto("https://demowebshop.tricentis.com/login")
+  await expect(page).toHaveTitle("Demo Web Shop. Login")
+  await expect(loginButton).toBeVisible({timeout: 5000})
+  await emailTextBox.fill("cypresstester22@gmail.com")
+  await passwordTextBox.fill("tester@123")
+  await signInButton.click()
+  await appralAndShoes.click()
+  await expect(pageTitle).toHaveText("Apparel & Shoes")
+
+  //await page.waitForLoadState("networkidle");
+  await page.locator("[class='product-title']").waitfor();
+  const allProductNames = await page.locator("[class='product-title']").allTextContents()
+  console.log(allProductNames)
+})

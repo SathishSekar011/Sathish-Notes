@@ -1,0 +1,102 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                           DATA TYPES
+
+1. Primitive datatypes
+2. Reference datatypes / non-primitive datatypes
+
+Primitive datatypes:
+====================
+1. Number/Integer
+2. String
+3. undefined
+4. null
+5. Boolean
+6.Bigint
+
+
+// Numbers:
+let length = 16;
+let weight = 7.5;
+
+// Strings:
+let color = "Yellow";
+let lastName = "Johnson";
+
+// undefine
+let x;
+let y= undefine;
+
+// null
+let w= null;
+
+// Booleans
+let x = true;
+let y = false;
+
+// bigint
+let x=BigInt("64627166518787875876578757676868")
+
+
+
+Non-primitive datatypes:
+========================
+1. Object---->  pair (key: value)
+2. function ----->   function functionName (a,b){console.log(a+b) ; }
+3. array ---->   
+
+
+// Object:
+const person = {firstName:"John", lastName:"Doe"};
+
+two types of operation:
+1. dot 2. bracket
+
+methods:
+--------
+to print only keys ==>Object.keys(objname)
+
+to print only values ==>Object.values(objname)
+
+to print only entries ==>Object.entries(objname)
+
+to delete a obj==> delete objname.key
+
+to add at run time ==> objname.keyname=value;
+
+
+// Array object:
+const cars = ["Saab", "Volvo", "BMW"];
+
+
+function
+
+A JavaScript function is a block of code designed to perform a particular task.
+A JavaScript function is executed when "something" invokes it (calls it).
+
+Why Functions?
+
+With functions you can reuse code
+You can write code that can be used many times.
+You can use the same code with different arguments, to produce different results.
+
+<body>
+<input type="text" id="demo1">
+<input type="text" id="demo2">   
+<button type="button" onclick="add()"> Click Me</button>
+<p > sum = <input id="demo"></p>
+
+<script src="script.js"><script>
+
+</body>
+
+function add(a, b){
+
+    a = parseInt(document.getElementById('demo1').value);
+    b = parseInt(document.getElementById('demo2').value);
+    let output = a+b;
+    document.getElementById('demo').value =output;
+    console.log(output);
+}
+
+
+

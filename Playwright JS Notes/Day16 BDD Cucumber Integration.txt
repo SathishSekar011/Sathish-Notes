@@ -1,0 +1,259 @@
+Day16
+=====
+BDD Cucumber Integeration
+========================
+Step1: open terminal Enter the command  -> npm install @cucumber/cucumber
+Step2: click on enter button 
+Step3: check added package message displayed 
+Step4: open package.json file and check cucumber version displayed 
+
+Then Add cucumber extension in VS code 
+======================================
+Step1: open extensions 
+Step2: type cucumber
+Step3: click on cucumber gherkin 
+Step4: then click on install button 
+
+
+
+Create Feature file 
+====================
+Step1: create one folder under project like "features"
+Step2: create product.feature file under features folder 
+Step3: add the scenarios:
+	Feature: check user able to buy the product
+    		Scenario: Check user able to buy the product
+        		Given User login to the appliation using "cypresstester22@gmail.com" and "tester@123"
+        		When User click on apparal and shoes option
+        		And User select the "Blue jeans" product and add the product to cart
+        		Then Validate prodcut displayed under shopping cart
+
+Step4: open terminal and enter -> npx cucumber-js-> click on enter it will give all the snippets 
+otherwise-> npx cucumber-js --require tests/step-definitions/**/*.js --snippets true 
+
+1) Scenario: Check user able to buy the product # features\Product.feature:2
+   ? Given User login to the appliation using "cypresstester22@gmail.com" and "tester@123"
+       Undefined. Implement with the following snippet:
+
+         Given('User login to the appliation using {string} and {string}', function (string, string2) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? When User click on apparal and shoes option
+       Undefined. Implement with the following snippet:
+
+         When('User click on apparal and shoes option', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? And User select the "Blue jeans" product and add the product to cart
+       Undefined. Implement with the following snippet:
+
+         When('User select the {string} product and add the product to cart', function (string) {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+   ? Then Validate prodcut displayed under shopping cart
+       Undefined. Implement with the following snippet:
+
+         Then('Validate prodcut displayed under shopping cart', function () {
+           // Write code here that turns the phrase above into concrete actions
+           return 'pending';
+         });
+
+
+Step5: Under features folder create another folder called Step_definitions 
+Step6: create steps.js file 
+Step7: copy and paste all snippets in steps.js file 
+
+const {Given, When, Then, And} = require('@cucumber/cucumber')
+const playwright = require('@playwright/test');
+const { LoginPage } = require('../../tests/Login');
+const { HomePage } = require('../../tests/HomePgae');
+Given('User login to the appliation using {string} and {string}',{timeout:10000}, async function (username, password) {
+    const browser = await playwright.chromium.launch()
+    const context = await browser.newContext()
+    const page = await context.newPage()
+    await page.goto("https://demowebshop.tricentis.com/login")
+    let product = "Blue Jeans"
+    const loginpage = await new LoginPage(page)
+    await loginpage.LoginToApplication(username, password)
+  });
+
+When('User click on apparal and shoes option', async function () {
+    
+  });
+
+When('User select the {string} product and add the product to cart', function (productName) {
+    
+  });
+
+Then('Validate prodcut displayed under shopping cart', function () {
+    
+  });
+
+
+Step8: execute this check first step passed 
+
+World constructor:
+==================
+
+if i want to use page variable globally then we need to world constructor concepts 
+use this keyword to store value to globally
+
+
+const {Given, When, Then, And} = require('@cucumber/cucumber')
+const playwright = require('@playwright/test');
+const { LoginPage } = require('../../tests/Login');
+const { HomePage } = require('../../tests/HomePgae');
+const { ProductPage } = require('../../tests/Product');
+const { ShoppingCartPage } = require('../../tests/ShoppingcartPage');
+
+Given('User login to the appliation using {string} and {string}',{timeout:10000}, async function (username, password) {
+    const browser = await playwright.chromium.launch()
+    const context = await browser.newContext()
+    this.page = await context.newPage()
+    await this.page.goto("https://demowebshop.tricentis.com/login")
+    let product = "Blue Jeans"
+    const loginpage = await new LoginPage(this.page)
+    await loginpage.LoginToApplication(username, password)
+  });
+
+When('User click on apparal and shoes option', {timeout:10000},async function () {
+    const homepage = await new HomePage(this.page)
+    await homepage.clickOnAppralAndShoes()
+  });
+
+When('User select the {string} product and add the product to cart', {timeout:10000},async function (productName) {
+    const productpage = await new ProductPage(this.page)
+    await productpage.getAllProductTextValue()
+    await productpage.selectPerticularProduct(productName)
+    this.productName = productName
+  });
+
+Then('Validate prodcut displayed under shopping cart', {timeout:10000}, async function () {
+    const shoppingcartpage = await new ShoppingCartPage(this.page)
+    await shoppingcartpage.clickOnShoppingCartLink()
+    await shoppingcartpage.validate_expected_product_displayed_in_shopping_cart(this.productName)
+  });
+
+
+
+Cucumber Hooks
+==============
+Step1: under features folder create one new folder called support.
+Step2: under support folder create one file called hooks.js
+Step3: add below details 
+
+const { Before, After } = require("@cucumber/cucumber");
+const playwright = require('@playwright/test');
+
+Before(async function() {
+    const browser = await playwright.chromium.launch({
+        headless: false
+    })
+    const context = await browser.newContext()
+    this.page = await context.newPage()
+    await this.page.goto("https://demowebshop.tricentis.com/login")
+})
+
+After(async function(){
+    console.log("execution completed");
+})
+
+
+hooks file 
+=========
+const { Before, After, BeforeStep, AfterStep, Status } = require("@cucumber/cucumber");
+const playwright = require('@playwright/test');
+
+Before(async function() {
+    const browser = await playwright.chromium.launch({
+        headless: false
+    })
+    const context = await browser.newContext()
+    this.page = await context.newPage()
+    await this.page.goto("https://demowebshop.tricentis.com/login")
+})
+
+After(async function(){
+    console.log("execution completed");
+})
+
+BeforeStep(async function(){
+
+})
+
+AfterStep(async function({result}){
+    if(result.status === Status.FAILED){
+        await this.page.screenshot({path: 'screenshot1.png'})
+    }
+})
+
+Steps file
+=========
+const {Given, When, Then, And} = require('@cucumber/cucumber')
+
+const { LoginPage } = require('../../tests/Login');
+const { HomePage } = require('../../tests/HomePgae');
+const { ProductPage } = require('../../tests/Product');
+const { ShoppingCartPage } = require('../../tests/ShoppingcartPage');
+Given('User login to the appliation using {string} and {string}',{timeout:10000}, async function (username, password) {
+    const loginpage = await new LoginPage(this.page)
+    await loginpage.LoginToApplication(username, password)
+  });
+
+When('User click on apparal and shoes option', {timeout:10000},async function () {
+    const homepage = await new HomePage(this.page)
+    await homepage.clickOnAppralAndShoes()
+  });
+
+When('User select the {string} product and add the product to cart', {timeout:10000},async function (productName) {
+    const productpage = await new ProductPage(this.page)
+    await productpage.getAllProductTextValue()
+    await productpage.selectPerticularProduct(productName)
+    this.productName = productName
+  });
+
+Then('Validate prodcut displayed under shopping cart', {timeout:10000}, async function () {
+    const shoppingcartpage = await new ShoppingCartPage(this.page)
+    await shoppingcartpage.clickOnShoppingCartLink()
+    await shoppingcartpage.validate_expected_product_displayed_in_shopping_cart(this.productName)
+  });
+
+
+
+hooks file:
+==========
+const { Before, After, BeforeStep, AfterStep, Status } = require("@cucumber/cucumber");
+const playwright = require('@playwright/test');
+
+Before(async function() {
+    const browser = await playwright.chromium.launch({
+        headless: false
+    })
+    const context = await browser.newContext()
+    this.page = await context.newPage()
+    await this.page.goto("https://demowebshop.tricentis.com/login")
+})
+
+After(async function(){
+    console.log("execution completed");
+})
+
+BeforeStep(async function(){
+
+})
+
+AfterStep(async function({result}){
+    if(result.status === Status.FAILED){
+        await this.page.screenshot({path: 'screenshot1.png'})
+    }
+})
+
+Cucumber Tags:
+================
+npx cucumber-js --tags "@Regression"

@@ -1,0 +1,168 @@
+Variables:
+==========
+* Variables are containers for store the data.
+* Javascript variables can be declared in 4 ways:
+1. Automatically
+2. Using var
+3. Using let
+4. Using const
+
+Rules to declare the variables:
+==============================
+1) No javascript keywords used -> var var=10;-> cannot declare like that
+2) should not start with number
+3) No space and No -
+4) Its case sensitive
+var ab=10;
+console.log(Ab); -> won't accept
+5) use Meaningful name
+
+Initialization, reassignment and redeclaration, scope
+=====================================================
+Initialization
+==============
+var a=0;//initialization
+console.log(a); //op - 0
+var b;//only declration not initialized
+console.log(b);//op-undefined
+
+var can be declared with initialization
+var can be declared without initialization
+it wont throw any error.
+
+let a=0;//initialization
+
+console.log(a); //op - 0
+let a;//only declaration not initialized
+console.log(a);//op-undefined
+
+let can be declared with initialization
+let can be declared without initialization
+it wont throw any error.
+
+const a=0;;/declared with initialization
+const a;//declared without initialization -> throw error
+because, const must be declared with initialization
+
+Reassginment
+============
+var a=10;
+console.log(a);//op- 10
+a=20;
+console.log(a);//op - 20
+
+var declared variable values can be reassigned
+variable value will be updated
+
+let a=10;
+console.log(a);//op-10
+a=20;
+console.log(a);//op-20
+
+let declared variable values can be reassigned
+variable value will be updated
+
+const a=10;
+a=20;
+console.log(a);
+//op - TypeError: Assignment to constant variable
+
+const values cannot be reassigned, cannot be changes
+const -> final variable -> final value
+
+Redeclaration
+=============
+var a=20;
+console.log(a);//op-20
+var a=30;//redeclaration
+console.log(a);//op-30
+
+var variables can be redeclared
+var variables can be duplicated
+
+let a=20;
+console.log(a);
+let a=30;
+console.log(a);//error -> cannot redeclare the block scope variable
+
+let variables cannot be redeclared
+
+const a=20;
+console.log(a);
+const a=30;
+console.log(a);//error -> cannot redeclare the block scope variable
+
+const variables cannot be redeclared
+
+Scope
+=====
+Global
+block - { 
+}
+
+{
+let a=30;
+console.log(a);//op - 30
+}
+console.log(a);//Reference a is not defined
+
+let -> scope -> block level only -> declared in the block
+
+let a=20;
+{
+console.log(a);//op-20
+}
+console.log(a);//op-20
+
+let declared outside block-> global level -> can be called inside the block
+also
+
+{
+var a=30;
+console.log(a);//op - 30
+}
+console.log(a);//op -30
+
+var-> scope -> global level-> var values can be declared inside the block
+can be called outside the block also -> No reference error will come
+
+var a=20;
+{
+console.log(a);//op-20
+}
+console.log(a);//op-20
+
+{
+const a=30;
+console.log(a);//op - 30
+}
+console.log(a);//ReferenceError: a is not defined
+
+const-> scope -> block level only -> declared in the block
+
+const a=20;
+{
+console.log(a);//op-20
+}
+console.log(a);//op-20
+
+const declared outside block-> global level -> can be called inside the
+block also
+
+var - with initialization, without initialization can be declared
+can be reassigned
+can be redeclared
+global level scope
+
+let - with initialization, without initialization can be declared
+can be reassigned
+cannot be redeclared
+block level scope
+
+const- declared only with initialization, cannot declared without initialization
+cannot be reassigned
+cannot be redeclared
+block level scope
+
+
+

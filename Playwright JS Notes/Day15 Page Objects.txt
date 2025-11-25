@@ -1,0 +1,212 @@
+Day15 
+=====
+Page Objects 
+=============
+
+const { expect } = require("@playwright/test");
+
+exports.LoginPage = class LoginPage{
+
+    constructor(page){
+        this.page = page;
+        this.usernameTextBox = "#Email"
+        this.passwordTextBox = "#Password"
+        this.loginBtn = "[value='Log in']"
+        this.logoutLink = "[class='ico-logout']"
+    }
+
+    async LoginToApplication(username, password){
+        await this.page.locator(this.usernameTextBox).fill(username)
+        await this.page.locator(this.passwordTextBox).fill(password)
+        await this.page.locator(this.loginBtn).click()
+        await expect(await this.page.locator(this.logoutLink)).toBeVisible()
+    }
+}
+
+
+
+
+const { expect } = require("@playwright/test");
+
+exports.HomePage = class HomePage{
+
+    constructor(page){
+        this.page = page;
+        this.appralAndShoesLink = "(//a[contains(text(),'Apparel & Shoes')])[1]"
+        this.pageHeader = "[class='page-title'] h1"
+
+    }
+
+    async clickOnAppralAndShoes() {
+        await this.page.locator(this.appralAndShoesLink).click()
+        await expect(await this.page.locator(this.pageHeader)).toBeVisible()
+        
+    }
+}
+
+
+
+
+
+
+
+
+const { expect } = require("@playwright/test");
+
+exports.ProductPage = class ProductPage{
+    constructor(page){
+        this.page = page;
+        this.productTitle = "[class='product-title']"
+        this.addToCartBtn = "[value='Add to cart']"
+    }
+
+    async getAllProductTextValue(){
+        console.log(await this.page.locator(this.productTitle).allTextContents())
+        
+    }
+
+    async selectPerticularProduct(expectedProductName){
+        const totalProductCount = await this.page.locator(this.productTitle).count()
+        for(let i=1;i<=totalProductCount;i++){
+            const product = await this.page.locator(this.productTitle).nth(i).textContent()
+            if(product.includes(expectedProductName)){
+                await this.page.locator(this.addToCartBtn).nth(i).click()
+                break
+            }
+        }
+    }
+}
+
+
+const { test, expect } = require("@playwright/test")
+
+exports.ShoppingCartPage = class ShoppingCartPage{
+
+    constructor(page){
+        this.page = page
+        this.shoppingcartLink = "//span[text()='Shopping cart']"
+        this.productText = "[class='product-name']"
+        this.removeCheckBox = "[name='removefromcart']"
+        this.updateShoppingcartBtn = "[name='updatecart']"
+        this.emptyProdcutTextValue = "[class='order-summary-content']"
+        // estimate shipping locators 
+        this.selectCountry = "[id='CountryId']"
+        this.zipcode = "[id='ZipPostalCode']"
+        this.estimateShippingBtn = "[name='estimateshipping']"
+        this.shiipingaddedText = "[class='shipping-option-item'] strong"
+        this.termsandServiceCheckBox = "[id='termsofservice']"
+        this.checkoutBtn = "[id='checkout']"
+
+    }
+    async clickOnShoppingCartLink(){
+        await this.page.locator(this.shoppingcartLink).click()
+    }    
+    async validate_expected_product_displayed_in_shopping_cart(expectedProductName){
+        const productName = await this.page.locator(this.productText).textContent()
+        await expect(expectedProductName).toContain(productName)
+    }
+    async deleteProduct(){
+        await this.page.locator(this.removeCheckBox).click()
+        await this.page.locator(this.updateShoppingcartBtn).click()
+        await this.page.pause()
+        await this.page.waitForSelector(this.emptyProdcutTextValue)
+        const emptyTextValue =await this.page.locator(this.emptyProdcutTextValue).textContent()
+        await expect(emptyTextValue).toContain("Your Shopping Cart is empty!")
+    }
+
+    async addEstimationDetails(countryName, pincode){
+        await this.page.selectOption(countryName)
+        await this.page.locator(this.zipcode).fill(pincode)
+        await this.page.locator(this.estimateShippingBtn).click()
+        await this.page.waitForSelector(this.shiipingaddedText).first()
+        await expect(await this.page.locator(this.shiipingaddedText).first()).toBeVisible()
+
+    }
+
+    async clickOnTermsandServiceCheckBox(){
+        await this.page.locator(this.termsandServiceCheckBox).click()
+    }
+    async clickOnCheckoutBtn(){
+        await this.page.locator(this.checkoutBtn).click()
+    }
+}
+
+
+
+const {test, expect} = require('@playwright/test')
+exports.ShipingAddress = class ShipingAddress{
+    constructor(page){
+        this.page= page
+        this.shippingAddressContinueBtn = "[id='co-shipping-form']+script+div input"
+    }
+
+    async clickonShiipingAddressContinueButton(){
+        await this.page.waitForSelector(this.shippingAddressContinueBtn)
+        await this.page.locator(this.shippingAddressContinueBtn).click()
+    }
+}
+
+
+
+
+const { test, expect } = require("@playwright/test")
+exports.BillingAddress = class BillingAddress{
+    constructor(page){
+        this.page = page
+        this.billingAddressContinueBtn = "[id='co-billing-form']+script+div input"
+
+    }
+
+
+    async clickOnBIllingAddressContinueButton(){
+        await this.page.locator(this.billingAddressContinueBtn).click()
+    }
+
+}
+
+
+
+Execution class
+====================
+// https://www.google.com/
+
+const {test, expect} = require('@playwright/test')
+import { HomePage } from './HomePgae';
+import { LoginPage } from './Login';
+import { ProductPage } from './Product';
+import { ShoppingCartPage } from './ShoppingcartPage';
+
+
+   test("Testcase_02", async function ({page}) {
+      await page.goto("https://demowebshop.tricentis.com/login")
+      let product = "Blue Jeans"
+      const loginpage = await new LoginPage(page);
+      await loginpage.LoginToApplication("cypresstester22@gmail.com", "tester@123")
+      const homepage = await new HomePage(page)
+      await homepage.clickOnAppralAndShoes()
+      // const productpage = await new ProductPage(page)
+      // await productpage.getAllProductTextValue()
+
+      // await productpage.selectPerticularProduct(product)
+      // const shoppingcartpage = await new ShoppingCartPage(page)
+      // await shoppingcartpage.clickOnShoppingCartLink()
+      // await shoppingcartpage.validate_expected_product_displayed_in_shopping_cart(product)
+      // await shoppingcartpage.deleteProduct()
+      
+      
+      
+
+   })
+   
+
+
+
+
+
+
+
+
+
+
+
+

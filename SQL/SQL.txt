@@ -177,8 +177,7 @@ Sathish - 8925811149
 Name :
 Degree :
 Year Of Passout :
-Course Fees Paid:
-IPT Paid : 
+Course Fees Paid: 
 Topic : SQL
 
 

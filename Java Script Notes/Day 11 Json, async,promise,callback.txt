@@ -1,0 +1,67 @@
+Callback function:
+==================
+A callback function in JavaScript is simply a function that is passed as an argument to another function and is executed after the completion of that function.
+for ex,
+// A function that takes another function as a callback
+function greet(name, callback) {
+  console.log("Hello, " + name);
+  callback();  // Execute the callback function
+}
+
+// Callback function that will be passed into the greet function
+function sayGoodbye() {
+  console.log("Goodbye!");
+}
+
+// Passing the sayGoodbye function as a callback to greet
+greet("Alice", sayGoodbye);
+
+JavaScript Promise Object
+-------------------------
+In JavaScript, a Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It allows you to handle asynchronous operations more easily, avoiding callback hell.
+
+A Promise can be in one of three states:
+
+Pending: The operation is still in progress.
+Fulfilled: The operation has completed successfully.
+Rejected: The operation has failed.
+
+Basic Structure of a Promise
+A Promise is created using the new Promise() constructor, which takes a function with two parameters: resolve and reject.
+
+resolve: This is called when the operation completes successfully.
+reject: This is called if there is an error or failure.
+
+Using the Promise:
+------------------
+.then() is called when the promise is fulfilled.
+.catch() is called when the promise is rejected.
+
+Static methods
+--------------
+Promise.all()--Fulfills when all of the promises fulfill;rejects when any of the promises rejects.
+Promise.allSettled--Fulfills when all promises settle.
+Promise.any()--Fulfills when any of the promises fulfills;rejects when all of the promises reject.
+Promise.race()--Settles when any of the promises settles. In other words,fulfills when any of the promises fulfills,rejects when any of the promises rejects.
+
+Async Syntax
+------------
+The keyword async before a function makes the function return a promise:
+
+Example
+async function myFunction() {
+  return "Hello";
+}
+
+Await Syntax
+------------
+The await keyword can only be used inside an async function.
+
+The await keyword makes the function pause the execution and wait for a resolved promise before it continues:
+
+let value = await promise;
+
+Key Points:
+------------
+async makes a function return a Promise.
+await makes JavaScript wait until the Promise is resolved and then returns the result.

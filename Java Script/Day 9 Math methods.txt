@@ -1,0 +1,123 @@
+Math methods
+------------------
+1. Math.min()---- to find the minimum value
+2. Math.max()----to the maximum value
+3. Math.random()---- to generate the random number
+4. Math.floor()----to  convert double value to whole number(it will not consider after point)
+5. Math.round()---it will round to its nearest value
+6. Math.pow(x,y)---to find the power of the value
+7. Math.ceil()-----it will round up its nearest integer
+8. Math.trunc()---Same as floor
+9. Math.sqrt()----To find the square root
+10. Math.abs()-------it will change from positive number to positive number and negative number to positive number
+
+
+FUNCTIONS
+--------------------
+1. function declaration
+========================
+* normal function declaration
+------------------------------
+        user()
+	function user(){
+    		console.log('user name is ram');
+	}
+        user()
+* function with parameter
+--------------------------
+	sum(2,3)
+	function sum(n1,n2){
+    		console.log(n1+n2);
+	}
+	sum(2,3)
+* function with return statement:
+---------------------------------
+	let result1 = sum(2,3);
+	console.log(result1);
+	function sum(n1,n2){
+    		return n1+n2
+	}
+	console.log(sum(2,3)); (or)
+	let result = sum(2,3);
+	console.log(result);
+* to print all function in the console
+----------------------------------------
+	console.log(sum);// error
+	let sum=function sum(n1,n2){
+    		return n1+n2
+	}
+	console.log(sum);
+
+2.function expression---taking returntype for the function
+	In function expression, if we are taking returntype we can call the function after initilization(we cannot call function
+before expression)
+* take return type to the function and call the function:
+---------------------------------------------------------
+        exp()// error
+	let exp=function sum(){
+    		console.log('hii');
+	}
+	exp()
+* declare variables outside the function:
+------------------------------------------
+	let n1=10;
+	let n2=20;
+	function sub(a,b){
+    		console.log(a-b)
+	}
+	sub(n1,n2)
+
+3.self invoking function--------without calling the function.
+	let n1=10;
+	let n2=20;
+
+	(function sub(a,b){
+   		 console.log(a-b)
+	})(n1,n2)
+
+4.argument function
+*it adding the first two number
+--------------------------------
+	function sum(a,b){
+   		 return a+b
+	}
+	let res=sum(1,2,3,4,5);
+	console.log(res);
+*if we want to add all by using agruments:
+-------------------------------------------
+	function sum(a,b){
+    		let total =0;
+    		for(const i of arguments){
+       			 total=total+i
+    		}
+		return total
+		}
+	let res=sum(1,2,3,4,5);
+	console.log(res);
+*if we want to add all the array element by using reduce:
+---------------------------------------------------------- 
+	let a=[10,20,30,40,50]
+	let res=a.reduce(function(previous,current){
+    		console.log('previous value '+previous);
+    		console.log('previous value'+current);
+    		return previous+current;
+	})
+	console.log(res);
+
+5.Rest Operator
+================
+ 	function sum(...arguments){
+    		let res1=arguments.reduce(function(a,b){
+        	return a+b;
+    	})
+    	return res1
+  	}
+  	let res=sum(1,2,3,4,5)
+  	console.log(res);
+6.Default parameter
+====================
+	function sum(a,b){
+       		b=b??10
+    		console.log(a+b)
+	}
+	zsum(10)

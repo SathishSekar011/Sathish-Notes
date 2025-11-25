@@ -14,8 +14,10 @@ Shadow DOM:
 
 Ways to access the Shadow DOM locators:
 ----------------------------------------
+	--> Using getShadowRoot()
 	--> Using JavaScriptExecutor
-	--> Using getShadowRoot() 
+	--> Full JavaScript Query
+ 
 
 Demo Site : http://watir.com/examples/shadow_dom.html
 
@@ -40,8 +42,12 @@ Step 1: find WebElement for Shadow Host or Root Element
 Step 2: find WebElement for Shadow Root
 	==> rootWebElement.getShadowRoot();
 
-
-
+--> Full JavaScript Query:
+============================
+WebElement input = (WebElement) js.executeScript(
+    "return document.querySelector('#host').shadowRoot.querySelector('#username')"
+);
+input.sendKeys("text");
 
 
 
