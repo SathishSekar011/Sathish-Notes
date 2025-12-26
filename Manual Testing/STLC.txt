@@ -45,7 +45,8 @@ understand - plan - design - execution - sign off
 	
 		- preparation of test scenarios, test data, test case 	
 		- review the test case,approval
-		- RTM (requirement traceability matrix) --> excel that maps requirements and 								Test Cases
+		- RTM (requirement traceability matrix) 
+			--> excel that maps requirements and Test Cases
 		- test script
 		- test case sign-off
 

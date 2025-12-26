@@ -85,8 +85,11 @@ ASSERTS:
 ==> assertTrue(condition);
 ==> assertFalse(condition);
 ==> assertArrayEquals(airethematicArrary1, airethematicArrary2);
-
-
+sum = 10, total = 10, total2 = 20;
+Assert.assetTrue(sum==total); condition - true --> Pass
+Assert.assetTrue(sum==total2); condition - false --> Fail
+Assert.assertFalse(sum==total); condition - true --> Fail
+Assert.assertFalse(sum==total2); condition - false --> Pass
 
 Junit Test Runner:
 ===================
