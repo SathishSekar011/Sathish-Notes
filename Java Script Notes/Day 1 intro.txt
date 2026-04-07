@@ -117,6 +117,7 @@ Added let and const
 Added default parameter values
 Added Array.find()
 Added Array.findIndex()
+
 ECMAScript 2016
 
 Added exponential operator (**)

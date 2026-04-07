@@ -7,7 +7,6 @@ Installation:
 
 ==> Dependencies:
 	--> testng 6.14.3
-	--> jcommander 1.72
 ==> TestNG Plugin:
 	--> Eclipse --> Help --> Eclipse MarketPlace --> search - TestNG --> Install TestNG for Eclipse
 
